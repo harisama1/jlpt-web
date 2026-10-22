@@ -87,7 +87,7 @@ function quiz(el, makeQ, sess) {
   btns.forEach(b => b.addEventListener('click', () => choose(b)));
   $('.next', card).addEventListener('click', () => quiz(el, makeQ, sess));
   el._keys = e => {
-    if (e.target.closest('input, textarea, select')) return;
+    if (e.target && e.target.closest && e.target.closest('input, textarea, select')) return;
     if (!done && /^[1-4]$/.test(e.key) && btns[+e.key - 1]) { choose(btns[+e.key - 1]); e.preventDefault(); }
     else if (done && (e.key === 'Enter' || e.key === ' ')) { quiz(el, makeQ, sess); e.preventDefault(); }
   };
@@ -116,8 +116,10 @@ function vocabQ() {
   if (mode === 'read') pool = pool.filter(v => HAS_KANJI.test(v.w) && v.r);
   if (!pool.length) return null;
   const v = pickItem(pool, x => x.id);
-  const near = DB.vocab.filter(x => x.t === v.t && x.id !== v.id);
-  const lvPool = DB.vocab.filter(x => x.lv === v.lv && x.id !== v.id);
+  // never offer another reading / meaning of the same word, or a synonym, as a wrong answer
+  const fair = x => x.id !== v.id && x.w !== v.w && x.vi !== v.vi && (!v.r || x.r !== v.r);
+  const near = DB.vocab.filter(x => x.t === v.t && fair(x));
+  const lvPool = shuffle(DB.vocab.filter(x => x.lv === v.lv && fair(x)));
   let opts, prompt, ask, jp = false;
   if (mode === 'mean') {
     opts = [v.vi, ...distract(v.vi, near.map(x => x.vi).concat(lvPool.slice(0, 400).map(x => x.vi)))];
@@ -146,15 +148,15 @@ function renderVocab(main) {
   DB.vocab.forEach(v => { cnt[v.t] = (cnt[v.t] || 0) + 1; if (learned(v.id)) done[v.t] = (done[v.t] || 0) + 1; });
   const cur = UI.vTopic === 'all' ? 'Tất cả chủ đề' : DB.topicName[UI.vTopic];
   main.innerHTML = `<h1>Từ vựng</h1>
+  <div class="toolbar">${['all', 'N5', 'N4', 'N3'].map(l => `<button type="button" class="chip" data-lv="${l}" aria-pressed="${UI.vLv === l}">${l === 'all' ? 'Mọi cấp' : l}</button>`).join('')}</div>
+  <div class="toolbar">${[['mean', 'Từ → nghĩa'], ['read', 'Kanji → cách đọc'], ['rev', 'Nghĩa → từ'], ['list', 'Danh sách']].map(([m, n]) =>
+    `<button type="button" class="chip" data-mode="${m}" aria-pressed="${UI.vMode === m}">${n}</button>`).join('')}</div>
   <details class="panel" ${UI.vTopic === 'all' ? 'open' : ''}><summary>Chủ đề: ${esc(cur)}</summary>
     <div class="topics">
       <button type="button" class="chip" data-topic="all" aria-pressed="${UI.vTopic === 'all'}">Tất cả (${DB.vocab.length})</button>
       ${Object.entries(groups).map(([g, ts]) => `<div class="group-label">${esc(g)}</div>` + ts.map(t =>
         `<button type="button" class="chip" data-topic="${t.id}" aria-pressed="${UI.vTopic === t.id}">${esc(t.name)} · ${done[t.id] || 0}/${cnt[t.id] || 0}</button>`).join('')).join('')}
     </div></details>
-  <div class="toolbar">${['all', 'N5', 'N4', 'N3'].map(l => `<button type="button" class="chip" data-lv="${l}" aria-pressed="${UI.vLv === l}">${l === 'all' ? 'Mọi cấp' : l}</button>`).join('')}</div>
-  <div class="toolbar">${[['mean', 'Từ → nghĩa'], ['read', 'Kanji → cách đọc'], ['rev', 'Nghĩa → từ'], ['list', 'Danh sách']].map(([m, n]) =>
-    `<button type="button" class="chip" data-mode="${m}" aria-pressed="${UI.vMode === m}">${n}</button>`).join('')}</div>
   <div id="stage"></div>`;
   main.querySelectorAll('[data-topic]').forEach(b => b.onclick = () => { UI.vTopic = b.dataset.topic; saveUI(); render(); });
   main.querySelectorAll('[data-lv]').forEach(b => b.onclick = () => { UI.vLv = b.dataset.lv; saveUI(); render(); });
@@ -179,14 +181,15 @@ function kanjiQ() {
     const opts = [k.hv, ...distract(k.hv, DB.kanji.filter(x => x.lv === k.lv).map(x => x.hv))];
     return { id: k.id, sec: 'kanji', label: k.k + ' ' + k.hv, tag, prompt: `<div class="big-kanji">${esc(k.k)}</div>`, ask: 'Chọn âm Hán Việt', opts, answer: 0, explain: kanjiExplain(k) };
   }
-  const words = k.words.filter(w => w.r && (mode === 'wread' || w.vi) && HAS_KANJI.test(w.w));
+  const words = k.words.filter(w => w.r && (mode === 'wread' || w.vi) && HAS_KANJI.test(w.w) && !w.w.includes('・'));
   if (!words.length) return kanjiQ.retry++ < 20 ? kanjiQ() : null;
   kanjiQ.retry = 0;
   const w = pick(words);
-  const others = DB.kanji.filter(x => x.lv === k.lv && x.id !== k.id).flatMap(x => x.words);
+  const others = DB.kanji.filter(x => x.lv === k.lv && x.id !== k.id).flatMap(x => x.words).filter(x => x.w !== w.w && x.vi !== w.vi && x.r !== w.r);
   const hl = esc(w.w).split(k.k).join(`<span style="color:var(--accent)">${esc(k.k)}</span>`);
   if (mode === 'wread') {
-    const same = others.filter(x => x.r && Math.abs(x.r.length - w.r.length) <= 1).map(x => x.r);
+    let same = others.filter(x => x.r && Math.abs(x.r.length - w.r.length) <= 1).map(x => x.r);
+    if (new Set(same).size < 6) same = same.concat(others.filter(x => x.r).map(x => x.r));
     return { id: k.id, sec: 'kanji', label: w.w + ' (' + k.k + ')', tag, prompt: `<div class="big-jp">${hl}</div>`, ask: 'Chọn cách đọc của từ ghép', opts: [w.r, ...distract(w.r, same)], answer: 0, jpOpts: true, explain: kanjiExplain(k) };
   }
   return { id: k.id, sec: 'kanji', label: w.w + ' (' + k.k + ')', tag, prompt: `<div class="big-jp">${hl}</div><div class="jp muted">${esc(w.r)}</div>`, ask: 'Từ ghép này nghĩa là gì?', opts: [w.vi, ...distract(w.vi, others.map(x => x.vi))], answer: 0, explain: kanjiExplain(k) };
@@ -278,10 +281,10 @@ function renderRead(main) {
   const text = esc(p.text).replace(/【(\d)】/g, (m, n) => `<span class="blank" id="bl${n}">【${n}】</span>`);
   main.innerHTML = `<div class="row"><button type="button" class="btn ghost" id="back">← Danh sách bài</button></div>
     <h1>${esc(p.title)}</h1><div class="muted small">${esc(p.type)}</div>
-    <div class="card"><div class="passage">${text}</div>
+    <div class="card read-grid"><div class="passage">${text}</div><div class="rq-list">
     ${items.map((it, k) => `<div class="rq" data-k="${k}"><div class="${it.kind === 'q' ? 'q-jp' : ''}" style="${it.kind === 'q' ? 'font-size:17px' : 'font-weight:600'}">${esc(it.q)}</div>
       <div class="opts">${shuffle([it.a, ...it.d]).map(o => `<button type="button" class="opt jp" data-v="${esc(o)}"><span>${esc(o)}</span></button>`).join('')}</div></div>`).join('')}
-    <div id="readScore"></div></div>`;
+    <div id="readScore"></div></div></div>`;
   $('#back', main).onclick = () => { UI.view.read = null; saveUI(); render(); };
   main.querySelectorAll('.rq').forEach(box => {
     const it = items[+box.dataset.k];
@@ -353,9 +356,9 @@ function renderMiss(main) {
   };
 }
 function forceVocab(v) {
-  const near = DB.vocab.filter(x => x.t === v.t && x.id !== v.id).map(x => x.vi);
+  const near = DB.vocab.filter(x => x.t === v.t && x.w !== v.w && x.vi !== v.vi).map(x => x.vi);
   return { id: v.id, sec: 'vocab', label: v.w + ' — ' + v.vi, tag: DB.topicName[v.t] || '', prompt: `<div class="big-jp">${esc(v.w)}</div>${v.r ? `<div class="jp muted">${esc(v.r)}</div>` : ''}`,
-    ask: 'Chọn nghĩa đúng', opts: [v.vi, ...distract(v.vi, near.concat(DB.vocab.slice(0, 500).map(x => x.vi)))], answer: 0, explain: vocabExplain(v) };
+    ask: 'Chọn nghĩa đúng', opts: [v.vi, ...distract(v.vi, near.concat(DB.vocab.filter(x => x.lv === v.lv && x.w !== v.w).map(x => x.vi)))], answer: 0, explain: vocabExplain(v) };
 }
 function kanjiForce(k) {
   return { id: k.id, sec: 'kanji', label: k.k + ' ' + k.hv, tag: 'Kanji ' + k.lv, prompt: `<div class="big-kanji">${esc(k.k)}</div>`, ask: 'Chọn âm Hán Việt',
@@ -392,14 +395,23 @@ function renderHome(main) {
 
 // ---------------- router
 const VIEWS = { home: renderHome, vocab: renderVocab, kanji: renderKanji, grammar: renderGrammar, sent: renderSent, read: renderRead, miss: renderMiss };
+function twoCol(main) {
+  const st = $('#stage', main); if (!st) return;
+  const side = document.createElement('aside'); side.className = 'side';
+  while (main.firstChild && main.firstChild !== st) side.appendChild(main.firstChild);
+  const lay = document.createElement('div'); lay.className = 'layout';
+  st.classList.add('stage'); main.insertBefore(lay, st); lay.append(side, st);
+}
 function render() {
   KEYS = null;
   const main = $('#main');
+  main.className = 'wrap tab-' + UI.tab;
   document.querySelectorAll('.tabs button').forEach(b => {
     b.setAttribute('aria-current', b.dataset.tab === UI.tab ? 'page' : 'false');
     if (b.dataset.tab === UI.tab) b.scrollIntoView({ inline: 'center', block: 'nearest' });
   });
   (VIEWS[UI.tab] || renderHome)(main);
+  if (['vocab', 'kanji', 'grammar', 'sent'].includes(UI.tab) || (UI.tab === 'miss' && UI.view.miss)) twoCol(main);
   const d = daysLeft(); $('#countChip').textContent = d > 0 ? 'Còn ' + d + ' ngày' : '';
 }
 function go(tab) { UI.tab = tab; if (tab === 'miss') UI.view.miss = null; saveUI(); render(); window.scrollTo(0, 0); if (location.hash !== '#' + tab) history.replaceState(null, '', '#' + tab); }

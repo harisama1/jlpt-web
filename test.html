@@ -1,0 +1,93 @@
+<!doctype html><meta charset="utf-8"><title>test</title>
+<header class="top"><span id="countChip"></span><nav class="tabs"><button data-tab="home">h</button><button data-tab="miss">m<span id="missBadge"></span></button></nav></header>
+<main id="main"></main><pre id="out" style="font:14px monospace;white-space:pre-wrap"></pre>
+<script>
+const ERR = [];
+window.onerror = (m, s, l) => { ERR.push(m + ' @' + l); };
+const _sync = n => { const x = new XMLHttpRequest(); x.open('GET', 'data/' + n + '.json', false); x.send(); return JSON.parse(x.responseText); };
+const CACHE = {};
+window.fetch = url => { const n = url.replace('data/', '').replace('.json', ''); CACHE[n] = CACHE[n] || _sync(n);
+  return Promise.resolve({ ok: true, json: () => Promise.resolve(CACHE[n]) }); };
+try { localStorage.clear(); } catch (e) {}
+</script>
+<script src="app.js"></script>
+<script>
+(async () => {
+  for (let i = 0; i < 80; i++) await null;
+  const out = [], bad = [];
+  const fail = (what, q) => bad.push(what + ' :: ' + JSON.stringify(q && { a: q.opts && q.opts[q.answer], o: q.opts, p: (q.prompt || '').slice(0, 60) }));
+  const checkQ = (name, q, extra) => {
+    if (!q) return fail(name + ' null', q);
+    if (q.opts.length !== 4) return fail(name + ' opts!=4', q);
+    if (new Set(q.opts).size !== 4) return fail(name + ' dup opts', q);
+    if (q.opts.some(o => !String(o).trim())) return fail(name + ' empty opt', q);
+    if (extra) extra(q);
+  };
+  try {
+    const n0 = DB.vocab.length;
+    out.push('data loaded: vocab ' + n0 + ', kanji ' + DB.kanji.length + ', gq ' + DB.gq.length + ', sent ' + DB.sentences.length);
+    const byW = {}; DB.vocab.forEach(v => (byW[v.w] = byW[v.w] || []).push(v));
+    for (const mode of ['mean', 'read', 'rev']) {
+      UI.vMode = mode; let n = 0;
+      for (const t of ['all', ...DB.topics.map(t => t.id)]) for (const lv of ['all', 'N5', 'N3']) {
+        UI.vTopic = t; UI.vLv = lv;
+        for (let i = 0; i < 8; i++) { const q = vocabQ(); if (!q) continue; n++;
+          const v = DB.vById[q.id];
+          checkQ('vocab/' + mode, q, q => {
+            const same = byW[v.w];   // other readings / meanings of the same written word must not be distractors
+            const wrong = q.opts.filter((o, i) => i !== q.answer);
+            if (mode === 'mean' && wrong.some(o => same.some(x => x.vi === o))) fail('vocab/mean ambiguous', q);
+            if (mode === 'read' && wrong.some(o => same.some(x => x.r === o))) fail('vocab/read ambiguous', q);
+            if (mode === 'rev' && wrong.some(o => DB.vocab.some(x => x.w === o && x.vi === v.vi))) fail('vocab/rev ambiguous', q);
+          }); }
+      }
+      out.push('vocab ' + mode + ': ' + n + ' câu');
+    }
+    for (const mode of ['hv', 'word', 'wread']) { UI.kMode = mode; let n = 0;
+      for (const lv of ['all', 'N5', 'N4', 'N3']) { UI.kLv = lv; for (let i = 0; i < 150; i++) { const q = kanjiQ(); if (q) { n++; checkQ('kanji/' + mode, q); } } }
+      out.push('kanji ' + mode + ': ' + n + ' câu'); }
+    for (const lv of ['all', 'N5', 'N4', 'N3']) { UI.gLv = lv; for (let i = 0; i < 200; i++) checkQ('grammar ' + lv, grammarQ()); }
+    out.push('grammar: 800 câu');
+    for (const k of ['all', '文脈規定', '言い換え']) { UI.sKind = k; for (let i = 0; i < 150; i++) checkQ('sent ' + k, sentQ()); }
+    out.push('mẫu câu: 450 câu');
+    // DOM: every tab, answer 15 questions per drill tab (alternating right / wrong), keyboard too
+    for (const tab of ['home', 'vocab', 'kanji', 'grammar', 'sent', 'read', 'miss']) {
+      UI.tab = tab; render();
+      if (['vocab', 'kanji', 'grammar', 'sent'].includes(tab)) {
+        for (const m of (tab === 'vocab' ? ['mean', 'read', 'rev', 'list'] : tab === 'kanji' ? ['hv', 'word', 'wread', 'list'] : ['x'])) {
+          if (tab === 'vocab') UI.vMode = m; if (tab === 'kanji') UI.kMode = m; UI.vTopic = 'all'; render();
+          if (m === 'list') { if (!$('.list')) fail(tab + ' list missing'); continue; }
+          if (!$('.layout .side') || !$('.layout .stage')) fail(tab + ' two-column layout missing');
+          for (let i = 0; i < 15; i++) {
+            const opts = [...document.querySelectorAll('.stage .opt')];
+            if (opts.length !== 4) { fail(tab + '/' + m + ' dom opts ' + opts.length); break; }
+            const right = opts.find(o => o.dataset.i === '0'), wrong = opts.find(o => o.dataset.i !== '0');
+            (i % 3 ? right : wrong).click();
+            if ($('.stage .explain').hidden) fail(tab + ' explain hidden after answer');
+            if (i % 2) $('.stage .next').click(); else document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+          }
+        }
+      }
+    }
+    out.push('tabs rendered, answers saved: ' + Object.keys(S.r).length + ', lỗi sai: ' + Object.keys(S.m).length);
+    // reading: every passage, all right answers
+    for (const r of DB.reading) {
+      UI.tab = 'read'; UI.view.read = r.id; render();
+      document.querySelectorAll('.rq').forEach(box => { const ok = [...box.querySelectorAll('.opt')].find(b => {
+        const it = r.blanks.concat(r.questions); return it.some(x => x.a === b.dataset.v); }); if (ok) ok.click(); });
+      const sc = $('#readScore .score'); if (!sc) fail('read ' + r.id + ' no score'); else if (!/(\d+)\/\1/.test(sc.textContent)) fail('read ' + r.id + ' score ' + sc.textContent);
+    }
+    out.push('đọc hiểu: ' + DB.reading.length + ' bài làm xong');
+    // mistake review for each section
+    for (const sec of ['vocab', 'kanji', 'grammar', 'sent']) {
+      UI.tab = 'miss'; UI.view.miss = sec; render();
+      if (Object.values(S.m).some(m => m.sec === sec) && document.querySelectorAll('.opt').length !== 4) fail('miss review ' + sec);
+    }
+    UI.view.miss = null; render();
+    UI.tab = 'home'; render();
+    out.push('ôn lỗi sai: OK; trang chính: ' + ($('.days') ? 'OK' : 'thiếu'));
+  } catch (e) { ERR.push('EXC ' + e.message + ' ' + (e.stack || '').split('\n')[1]); }
+  document.getElementById('main').innerHTML = '';
+  document.getElementById('out').textContent = out.join('\n') + '\n\nLỖI LOGIC: ' + bad.length + '\n' + [...new Set(bad)].slice(0, 25).join('\n') + '\n\nLỖI JS: ' + ERR.length + '\n' + ERR.slice(0, 10).join('\n');
+})();
+</script>

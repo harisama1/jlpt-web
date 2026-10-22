@@ -31,6 +31,8 @@ vocab, seen = [], set()
 def add(word, read, vi, lv, topic, ex='', src='pdf'):
     word = word.strip(); read = read.strip()
     if not word or not JP.search(word) or re.search(r'[A-Za-zÀ-ỹ]', word): return
+    if word[0] in '／/' or re.search(r'[A-Za-zÀ-ỹ:]', read): return     # rows of the "easily confused words" table
+    if word == '生む' and not read: read = 'うむ'
     if not vi or not lv: return
     key = (word, read, topic)
     if key in seen: return
@@ -59,6 +61,7 @@ print('vocab', len(vocab), '| supplements without meaning:', nomean)
 kraw = json.load(open(os.path.join(SRC, 'kanji_raw.json'), encoding='utf-8'))
 by_char = collections.defaultdict(list)
 for v in vocab:
+    if '・' in v['w'] or '／' in v['w']: continue          # lists like 東・西・南・北 are not compounds
     for ch in set(KANJI.findall(v['w'])): by_char[ch].append(v)
 kanji = []
 for k in kraw:
