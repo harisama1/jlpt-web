@@ -1,0 +1,111 @@
+# lv | mẫu | nghĩa | cấu trúc | câu (phần cần điền trong 【】) | dịch | 3 đáp án nhiễu (;)
+N5|NにNがあります／います|Ở (nơi chốn) có (vật / người)|N(nơi)＋に＋N＋が＋あります(vật)／います(người, con vật)|机の上に本が【あります】。|Trên bàn có quyển sách.|います;です;します
+N5|NはNにあります／います|(Vật / người) ở (nơi chốn)|N＋は＋N(nơi)＋に＋あります／います|母は台所【に】います。|Mẹ đang ở trong bếp.|で;を;へ
+N5|何も／だれも／どこも＋〜ない|Không … gì / không ai / không đâu cả|疑問詞＋も＋Vない|朝から何【も】食べていません。|Từ sáng tới giờ tôi chưa ăn gì cả.|か;が;を
+N5|何か／だれか／どこか|Cái gì đó / ai đó / đâu đó|疑問詞＋か|だれ【か】来ましたよ。|Có ai đó đến kìa.|も;が;は
+N5|Aく／Aに＋なる|Trở nên …|Aい→Aく＋なる；Aな／N＋に＋なる|春になって、暖か【く】なりました。|Sang xuân, trời đã ấm lên.|に;で;と
+N5|Aく／Aに＋する|Làm cho …|Aい→Aく＋する；Aな／N＋に＋する|部屋をきれい【に】してください。|Hãy dọn phòng cho sạch.|く;で;が
+N5|AよりBのほうが〜|B … hơn A|N1＋より＋N2＋のほうが＋A|バスより電車の【ほう】が速いです。|Tàu điện nhanh hơn xe buýt.|より;ほど;だけ
+N5|あまり〜ない|Không … lắm|あまり＋Vない／Aくない|このりんごは【あまり】甘くないです。|Quả táo này không ngọt lắm.|とても;よく;たくさん
+N5|全然〜ない|Hoàn toàn không …|全然＋Vない／Aくない|テレビは【全然】見ません。|Tôi hoàn toàn không xem TV.|よく;ときどき;いつも
+N5|N（phương tiện）＋で|Bằng (phương tiện, công cụ)|N＋で＋V|はし【で】ご飯を食べます。|Tôi ăn cơm bằng đũa.|に;を;へ
+N5|Nをください|Cho tôi …|N(＋số lượng)＋をください|このパンを二つ【ください】。|Cho tôi hai cái bánh mì này.|あげます;もらいます;ほしいです
+N5|〜てもいいですか|Tôi … có được không?|Vて＋もいいですか|写真を撮って【も】いいですか。|Tôi chụp ảnh có được không?|は;が;を
+N5|〜んです／〜のです|Giải thích, nhấn mạnh lý do|普通形(Aな/N＋な)＋んです|頭が痛い【んです】。|Tôi bị đau đầu (nên…).|でした;ません;ましょう
+N5|どうして〜んですか|Tại sao … vậy?|どうして＋普通形＋んですか|【どうして】昨日休んだんですか。|Tại sao hôm qua bạn nghỉ vậy?|どこで;いつも;どれ
+N5|〜ませんでした|Đã không … (quá khứ phủ định)|Vます→Vませんでした|昨日は雨で、出かけ【ませんでした】。|Hôm qua trời mưa nên tôi đã không ra ngoài.|ません;ました;ましょう
+N5|Aかったです／Aでした|Tính từ ở quá khứ|Aい→Aかったです；Aな／N＋でした|旅行は楽し【かった】です。|Chuyến du lịch đã rất vui.|いでした;くて;くない
+N5|NはNが〜|(Chủ đề) thì (bộ phận) …|N1＋は＋N2＋が＋A|象は鼻【が】長いです。|Con voi thì mũi dài.|を;に;で
+N5|N（thời gian）にN回|Bao nhiêu lần trong (khoảng thời gian)|期間＋に＋数＋回|一週間【に】二回、プールへ行きます。|Một tuần tôi đi bơi hai lần.|で;を;と
+N5|Nに乗る／Nを降りる|Lên / xuống (xe)|N＋に＋乗る；N＋を＋降りる|駅で電車【を】降ります。|Xuống tàu ở nhà ga.|に;で;へ
+N5|N（nơi）＋を＋V di chuyển|Đi qua, rời khỏi, đi dạo (nơi)|N＋を＋出る／通る／散歩する／渡る|毎朝、公園【を】散歩します。|Sáng nào tôi cũng đi dạo trong công viên.|に;へ;で
+N5|Nにします|Chọn, quyết định là N|N＋にします|飲み物はコーヒー【に】します。|Đồ uống thì tôi chọn cà phê.|を;が;で
+N5|〜から〜まで（thời gian, địa điểm）|Từ … đến …|N＋から＋N＋まで|学校は九時【から】三時までです。|Trường học từ 9 giờ đến 3 giờ.|まで;に;で
+N5|〜くらい／〜ぐらいかかります|Mất khoảng …|時間・お金＋くらい（ぐらい）かかります|駅まで歩いて十分【ぐらい】かかります。|Đi bộ đến ga mất khoảng 10 phút.|ごろ;だけ;まで
+N5|〜ごろ|Khoảng (thời điểm)|時刻＋ごろ|毎晩十一時【ごろ】寝ます。|Tối nào tôi cũng ngủ khoảng 11 giờ.|ぐらい;まで;だけ
+N5|まだ〜ていません|Vẫn chưa …|まだ＋Vて＋いません|宿題は【まだ】していません。|Bài tập về nhà thì tôi vẫn chưa làm.|もう;よく;すぐ
+N5|もう〜ました|Đã … rồi|もう＋Vました|【もう】昼ご飯を食べましたか。|Bạn đã ăn trưa chưa?|まだ;あとで;これから
+N5|〜が、〜（nối câu）|…, nhưng …|普通形／丁寧形＋が、…|日本語は難しいです【が】、おもしろいです。|Tiếng Nhật khó nhưng thú vị.|から;と;や
+N5|Vて、Vます（trình tự）|Làm … rồi làm …|V1て、V2|朝起きて、顔を洗っ【て】、ご飯を食べます。|Buổi sáng tôi dậy, rửa mặt rồi ăn cơm.|た;ない;る
+N5|Nの＋N（sở hữu, thuộc tính）|N của N; N bằng / về N|N1＋の＋N2|これは日本語【の】本です。|Đây là sách tiếng Nhật.|が;を;に
+N5|〜が上手です／〜が下手です|Giỏi / kém (môn gì)|N＋が＋上手／下手です|田中さんは料理【が】上手です。|Anh Tanaka nấu ăn giỏi.|を;に;で
+N4|Vた＋ほうがいい|Nên làm … (khuyên)|Vた＋ほうがいいです|熱があるなら、早く寝【た】ほうがいいですよ。|Nếu bị sốt thì nên ngủ sớm đấy.|る;て;ない
+N4|Vない＋ほうがいい|Không nên làm …|Vない＋ほうがいいです|夜遅く甘い物を食べ【ない】ほうがいい。|Không nên ăn đồ ngọt vào đêm muộn.|た;て;る
+N4|受身（〜られる）|Bị, được (thể bị động)|V→Vられる／Vれる|弟に私のケーキを食べ【られた】。|Tôi bị em trai ăn mất cái bánh.|させた;させられた;てあげた
+N4|使役（〜させる）|Bắt, cho phép (ai) làm|V→Vさせる／Vせる|母は子どもに野菜を食べ【させました】。|Mẹ bắt con ăn rau.|られました;てもらいました;ていました
+N4|〜てほしい|Muốn (người khác) làm …|N＋に＋Vて＋ほしい|母にもっと長生きして【ほしい】。|Tôi muốn mẹ sống lâu hơn nữa.|たい;ほしがる;あげたい
+N4|Vる／Vない＋ようになる|Trở nên (có thể / không còn) …|Vる(khả năng)／Vない＋ようになる|毎日練習して、泳げる【ように】なりました。|Luyện tập mỗi ngày nên tôi đã biết bơi.|ことに;ために;そうに
+N4|Vる／Vない＋ようにする|Cố gắng (tạo thói quen) …|Vる／Vない＋ようにする|毎日野菜を食べる【ように】しています。|Tôi cố gắng ăn rau mỗi ngày.|ことが;ために;そうに
+N4|Vる＋ことがある|Có khi …, thỉnh thoảng …|Vる／Vない＋ことがある|忙しいときは、朝ご飯を食べない【ことがあります】。|Lúc bận có khi tôi không ăn sáng.|ことにします;ことができます;ことになります
+N4|〜ことにしている|Đặt ra quy tắc cho bản thân, thường …|Vる／Vない＋ことにしている|寝る前にスマホを見ない【ことにしている】。|Tôi có quy tắc không xem điện thoại trước khi ngủ.|ようになった;ばかりだ;ところだ
+N4|Vた／Vない＋まま|Để nguyên, cứ thế mà …|Vた／Vない／Nの＋まま|電気をつけた【まま】寝てしまった。|Tôi lỡ ngủ mà để nguyên đèn.|ながら;うちに;あとで
+N4|〜たばかり|Vừa mới … (cảm nhận thời gian ngắn)|Vた＋ばかり|日本に来た【ばかり】なので、まだ友達がいません。|Tôi vừa mới đến Nhật nên chưa có bạn.|ところ;まま;あと
+N4|〜場合は|Trường hợp …, nếu …|Vる／Vた／Aい／Aな／Nの＋場合は|雨の【場合は】、試合は中止です。|Trường hợp trời mưa thì trận đấu bị hủy.|ために;ように;ところ
+N4|〜のは〜だ（nhấn mạnh）|Điều … chính là …|普通形(Nな)＋のは＋N＋だ|私が生まれた【のは】東京です。|Nơi tôi sinh ra là Tokyo.|のを;のに;ので
+N4|〜ないと（いけない）|Phải … (khẩu ngữ)|Vない→Vないと(いけない／だめ)|もう行か【ないと】。電車に遅れる。|Phải đi thôi. Không là lỡ tàu.|なくても;ないで;なければよかった
+N4|〜なくちゃ／〜なきゃ|Phải … (khẩu ngữ của なければ)|Vない→Vなくちゃ／Vなきゃ|明日テストだから、勉強し【なくちゃ】。|Mai thi nên phải học thôi.|なくても;ちゃった;てもいい
+N4|お＋Vます＋になる|(Tôn kính) ai đó làm …|お＋Vます＋になる|社長はもうお帰り【になりました】。|Giám đốc đã về rồi ạ.|しました;いたしました;ございました
+N4|お＋Vます＋する|(Khiêm nhường) tôi làm … cho ngài|お＋Vます＋する／いたす|重そうですね。お持ち【します】。|Trông nặng quá, để tôi cầm cho ạ.|になります;ください;なさい
+N4|〜でございます|Là … (lịch sự của です)|N＋でございます|こちらが会議室【でございます】。|Đây là phòng họp ạ.|でいらっしゃいます;におります;になります
+N4|〜ほど〜ない|Không … bằng …|N＋ほど＋Aくない／Vない|今年の夏は去年【ほど】暑くない。|Mùa hè năm nay không nóng bằng năm ngoái.|より;まで;だけ
+N4|〜しか〜ない|Chỉ … (mang nghĩa ít)|N＋しか＋Vない|財布に百円【しか】ありません。|Trong ví chỉ có 100 yên.|だけ;まで;ほど
+N4|NというN|N có tên là …|N1＋という＋N2|「さくら」【という】店を知っていますか。|Bạn có biết quán tên là "Sakura" không?|ような;らしい;そうな
+N4|〜とか〜とか|Nào là … nào là …|N／普通形＋とか＋N／普通形＋とか|休みの日は掃除【とか】洗濯とかをします。|Ngày nghỉ tôi làm nào là dọn dẹp, nào là giặt giũ.|しか;だけ;ほど
+N4|Vます＋始める／終わる／続ける|Bắt đầu / làm xong / tiếp tục …|Vます＋始める／終わる／続ける|この本はやっと読み【終わりました】。|Cuối cùng tôi cũng đọc xong cuốn sách này.|始めました;出しました;合いました
+N4|Vます＋方|Cách làm …|Vます＋方|この漢字の読み【方】を教えてください。|Hãy chỉ tôi cách đọc chữ Kanji này.|ため;よう;こと
+N4|Aい／Aな＋さ|Danh từ hóa tính từ (độ …)|Aい→Aさ；Aな→Aさ|この川の深【さ】は二メートルです。|Độ sâu của con sông này là 2 mét.|い;く;み
+N4|〜てよかった|May mà đã …, thật tốt vì đã …|Vて＋よかった|この大学に入って【よかった】。|Thật tốt vì đã vào trường đại học này.|ほしい;もいい;はいけない
+N4|〜てすみません|Xin lỗi vì đã …|Vて＋すみません|遅れて【すみません】。|Xin lỗi vì đã đến muộn.|ください;あげます;おきます
+N4|〜ばいい|Chỉ cần … là được; nên …|Vば＋いい|分からなければ、先生に聞け【ば】いい。|Không hiểu thì cứ hỏi thầy là được.|たら;ても;のに
+N4|〜あいだ／〜あいだに|Trong suốt khoảng / trong lúc …|Vている／Nの＋あいだ(に)|夏休みの【あいだに】運転免許を取りたい。|Tôi muốn lấy bằng lái trong kỳ nghỉ hè.|まえに;あとで;うちは
+N4|〜ために（mục đích）|Để …, vì …|Vる／Nの＋ために|家を買う【ために】、貯金しています。|Tôi đang tiết kiệm để mua nhà.|ように;のに;ので
+N4|〜かどうか|… hay không|普通形＋かどうか|明日行けるか【どうか】、まだ分かりません。|Mai đi được hay không thì tôi vẫn chưa biết.|なにか;ばかり;だけ
+N3|〜ものだ（hồi tưởng）|Ngày xưa thường hay … (hoài niệm)|Vた＋ものだ|子どものころ、この川でよく泳いだ【ものだ】。|Hồi nhỏ tôi hay bơi ở con sông này.|ことだ;わけだ;はずだ
+N3|〜ものだ（lẽ thường）|Lẽ thường là …, vốn dĩ là …|Vる／Vない＋ものだ|人の話は最後まで聞く【ものだ】。|Nghe người khác nói thì nên nghe đến hết.|ことか;わけがない;らしい
+N3|〜ものだから／〜もんだから|Vì … nên (biện minh)|普通形(Nな)＋ものだから|道が込んでいた【ものだから】、遅れてしまいました。|Vì đường đông quá nên tôi đến muộn mất.|ものの;ものなら;くせに
+N3|〜ものの|Tuy … nhưng (kết quả không như mong đợi)|普通形＋ものの|免許は取った【ものの】、ほとんど運転していない。|Tuy đã lấy bằng lái nhưng tôi hầu như không lái xe.|ものだから;ために;おかげで
+N3|〜に決まっている|Chắc chắn là … (khẳng định chủ quan)|普通形(N/Aな bỏ だ)＋に決まっている|こんなに練習したんだから、勝つ【に決まっている】。|Luyện tập nhiều thế này thì chắc chắn sẽ thắng.|わけがない;ことはない;とは限らない
+N3|〜てたまらない|… không chịu nổi (cảm xúc, cảm giác)|Aくて／Aで／Vて＋たまらない|今日は暑くて【たまらない】。|Hôm nay nóng không chịu nổi.|ほしい;ばかりいる;もいい
+N3|〜てしょうがない／〜てしかたがない|… quá, … hết sức (không kìm được)|Aくて／Aで／Vて＋しょうがない|試験の結果が気になって【しょうがない】。|Tôi lo về kết quả thi quá.|みせる;おく;ある
+N3|〜てならない|Cứ thấy …, không sao ngăn được (cảm giác tự nhiên)|Aくて／Aで／Vて＋ならない|故郷の母のことが心配で【ならない】。|Tôi cứ lo lắng không yên về mẹ ở quê.|はいけない;もかまわない;くる
+N3|〜ずにはいられない|Không thể không …|Vない(bỏ ない)＋ずにはいられない（する→せずに）|その映画を見て、泣か【ずにはいられなかった】。|Xem bộ phim đó, tôi không thể không khóc.|ないことはなかった;なくてもよかった;ずにすんだ
+N3|〜気味|Hơi …, có vẻ … (thường là xấu)|Vます／N＋気味|最近、少し太り【気味】です。|Dạo này tôi hơi béo lên.|がち;っぽい;だらけ
+N3|〜向き|Phù hợp với …|N＋向き|このコースは初心者【向き】です。|Khóa này phù hợp với người mới bắt đầu.|向け;気味;だらけ
+N3|〜向け|Dành cho (đối tượng) …|N＋向け|これは子ども【向け】の番組です。|Đây là chương trình dành cho trẻ em.|向き;っぽい;がち
+N3|〜おきに|Cứ cách … một lần|数量＋おきに|このバスは十分【おきに】来ます。|Xe buýt này cứ 10 phút có một chuyến.|ごとに;ずつ;ほど
+N3|〜ごとに|Mỗi …, cứ mỗi …|N＋ごとに|オリンピックは四年【ごとに】開かれる。|Thế vận hội được tổ chức mỗi 4 năm.|おきに;ばかり;うちに
+N3|〜て以来|Kể từ khi … (đến nay)|Vて＋以来|日本に来て【以来】、一度も国に帰っていない。|Kể từ khi sang Nhật, tôi chưa về nước lần nào.|から先;うちに;ところ
+N3|〜をこめて|Gửi gắm (tình cảm) vào …|N＋をこめて|感謝の気持ち【をこめて】手紙を書いた。|Tôi viết thư gửi gắm lòng biết ơn.|をめぐって;をとおして;について
+N3|〜を通じて／〜を通して|Thông qua …; suốt (thời gian)|N＋を通じて／を通して|友人【を通して】彼女と知り合った。|Tôi quen cô ấy thông qua một người bạn.|をこめて;に対して;にとって
+N3|〜に代わって／〜に代わり|Thay cho …|N＋に代わって|社長【に代わって】、部長が挨拶した。|Trưởng phòng phát biểu thay cho giám đốc.|に対して;にとって;に比べて
+N3|〜にわたって|Suốt, trải rộng (thời gian, phạm vi)|N＋にわたって|会議は三時間【にわたって】続いた。|Cuộc họp kéo dài suốt 3 tiếng.|にとって;において;について
+N3|〜に応じて|Tùy theo, đáp ứng theo …|N＋に応じて|収入【に応じて】税金が決まる。|Thuế được quyết định tùy theo thu nhập.|に反して;にかけて;に加えて
+N3|〜にしては|So với … thì (khác mong đợi)|普通形(N)＋にしては|初めて作った【にしては】、上手にできたね。|So với lần đầu làm thì làm khéo đấy.|としては;にしても;からには
+N3|〜にしても|Dù là … đi nữa thì cũng|普通形(N)＋にしても|忙しい【にしても】、電話ぐらいできるでしょう。|Dù bận đến đâu thì gọi điện cũng được chứ.|にしては;からこそ;ものの
+N3|〜からといって|Không phải chỉ vì … mà …|普通形＋からといって|日本人だ【からといって】、敬語が上手とは限らない。|Không phải cứ là người Nhật thì giỏi kính ngữ.|からこそ;からには;ものだから
+N3|〜からこそ|Chính vì … nên|普通形＋からこそ|あなたのことを思っている【からこそ】、厳しく言うのです。|Chính vì nghĩ cho bạn nên tôi mới nói nghiêm khắc.|からといって;のに;くせに
+N3|〜上で（sau khi）|Sau khi … rồi mới|Vた／Nの＋上で|家族と相談した【上で】、決めます。|Tôi sẽ quyết định sau khi bàn với gia đình.|うちに;最中に;とたん
+N3|〜うえに|Không những … mà còn|普通形(Nの／Aな)＋うえに|この店は安い【うえに】、おいしい。|Quán này không những rẻ mà còn ngon.|わりに;くせに;反面
+N3|〜ふりをする|Giả vờ …|普通形(Nの／Aな)＋ふりをする|彼は聞こえない【ふりをした】。|Anh ta giả vờ không nghe thấy.|ことにした;ようにした;ところだった
+N3|〜ばよかった|Giá mà đã … (hối tiếc)|Vば＋よかった|もっと早く出発すれ【ばよかった】。|Giá mà xuất phát sớm hơn.|てもよかった;たらいい;ないといけない
+N3|〜ないことには|Nếu không … thì không thể|Vない＋ことには|実際に会ってみ【ないことには】、どんな人か分からない。|Nếu không thử gặp thực tế thì không biết người thế nào.|ないうちに;ずに;ないで
+N3|〜に加えて|Thêm vào …, cộng với …|N＋に加えて|雨【に加えて】、風も強くなってきた。|Đã mưa lại còn gió mạnh lên.|に反して;に応じて;に代わって
+N3|〜に限らず|Không chỉ …|N＋に限らず|この歌は若者【に限らず】、お年寄りにも人気がある。|Bài hát này không chỉ được giới trẻ mà cả người già yêu thích.|に比べて;に対して;によって
+N3|〜をきっかけに|Nhân dịp …, lấy … làm cơ hội|N＋をきっかけに|留学【をきっかけに】、料理を始めた。|Nhân dịp đi du học, tôi bắt đầu nấu ăn.|をもとに;を中心に;をこめて
+N3|〜をもとに|Dựa trên …|N＋をもとに|この映画は実話【をもとに】作られた。|Bộ phim này được làm dựa trên chuyện có thật.|をきっかけに;をこめて;を通して
+N3|〜一方だ|Ngày càng … (một chiều)|Vる＋一方だ|物価は上がる【一方だ】。|Vật giá cứ ngày càng tăng.|ばかりか;わけだ;ことだ
+N3|〜つつある|Đang dần …|Vます＋つつある|町の様子は少しずつ変わり【つつある】。|Diện mạo thị trấn đang dần thay đổi.|かけている;きっている;っぱなしだ
+N3|〜恐れがある|Có nguy cơ …|Vる／Nの＋恐れがある|台風が来る【恐れがある】。|Có nguy cơ bão sẽ đến.|ことがある;わけがない;はずがない
+N3|〜せいか|Có lẽ tại …|普通形(Nの／Aな)＋せいか|寝不足の【せいか】、頭が痛い。|Có lẽ tại thiếu ngủ nên đầu tôi đau.|おかげで;ために;うえに
+N3|〜ことはない|Không cần phải …|Vる＋ことはない|心配する【ことはない】。すぐ治るよ。|Không cần phải lo. Sẽ khỏi ngay thôi.|ものではない;わけではない;ことになる
+N3|〜ようがない|Không có cách nào để …|Vます＋ようがない|住所が分からないので、連絡し【ようがない】。|Không biết địa chỉ nên không có cách nào liên lạc.|かねない;っぽい;がちだ
+N3|〜しかない／〜ほかない|Chỉ còn cách …|Vる＋しかない／ほかない|終電がないから、歩いて帰る【しかない】。|Hết tàu cuối rồi nên chỉ còn cách đi bộ về.|ことはない;ようにする;わけがない
+N3|〜ことだ（lời khuyên）|Nên …, tốt nhất là …|Vる／Vない＋ことだ|上手になりたければ、毎日練習する【ことだ】。|Muốn giỏi thì tốt nhất là luyện tập mỗi ngày.|ものか;わけだ;はずだ
+N3|なんと〜ことか|… biết bao!|疑問詞＋普通形＋ことか|合格できて、どんなにうれしかった【ことか】。|Đỗ được, tôi đã vui biết bao!|ものか;わけか;はずか
+N3|〜ずつ|Mỗi …, từng … một|数量＋ずつ|毎日、単語を十個【ずつ】覚えています。|Mỗi ngày tôi nhớ 10 từ một.|ごとに;おきに;ほど
+N3|〜わけにはいかない|Không thể … (vì lý do đạo đức, xã hội)|Vる＋わけにはいかない|明日は試験なので、休む【わけにはいかない】。|Mai thi nên tôi không thể nghỉ được.|ことはない;はずがない;ようがない
+N3|〜ば〜のに|Giá mà … thì đã (tiếc nuối)|Vば＋〜のに|もう少し安けれ【ば】買うのに。|Giá mà rẻ hơn chút thì tôi đã mua.|ても;と;から
+N3|〜たとたん（に）|Vừa … thì ngay lập tức|Vた＋とたん(に)|ドアを開けた【とたん】、猫が飛び出した。|Vừa mở cửa thì con mèo nhảy vọt ra.|うちに;最中に;以来
+N3|〜にかけては|Về mặt … thì (không ai bằng)|N＋にかけては|料理【にかけては】、母に勝てる人はいない。|Về khoản nấu ăn thì không ai hơn được mẹ tôi.|に代わって;にわたって;に応じて
+N3|〜ほど（mức độ）|Đến mức …|Vる／Aい／Aな＋ほど|お腹が痛くて、歩けない【ほど】だった。|Đau bụng đến mức không đi nổi.|ばかり;だけ;しか
+N3|〜とは限らない|Không hẳn là …, chưa chắc …|普通形＋とは限らない|高い物がいい物だ【とは限らない】。|Đồ đắt chưa chắc đã là đồ tốt.|に決まっている;に違いない;はずだ

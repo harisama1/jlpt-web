@@ -1,0 +1,457 @@
+831|đề tài, nhiệm vụ|2.22
+832|nêm nếm; cân nhắc thêm|2.23
+833|đi săn|2.18
+834|ống|2.8
+835|quan điểm, cách nhìn|2.22
+836|ung thư|2.4
+837|phát hành (sách báo)|2.21
+838|tập quán, thông lệ|2.21
+839|tiếng reo hò|2.18
+840|quan chức|2.21
+841|cơ quan (cơ thể)|2.4
+842|(tạp chí) ra theo quý|2.21
+843|nguồn gốc, khởi nguyên|2.22
+844|cơ cấu, tổ chức|2.21
+845|xây dựng, gây dựng|2.24
+846|quy chế, hạn chế|2.21
+847|đồi núi thấp|2.16
+848|bàn bạc, thương lượng|2.23
+849|hưởng thụ|2.23
+850|hợp tác, hài hòa|2.23
+851|giới hạn, chỗ dừng|2.22
+852|vi khuẩn|2.4
+853|cận thị|2.4
+854|nỗi khổ|2.20
+855|nhóm, bầy|2.22
+856|hình phạt|2.21
+857|đầu đuôi sự việc|2.22
+858|đồng hồ đo, máy đo|2.8
+859|cơ hội, nhân tố khởi đầu|2.22
+860|mang theo; điện thoại di động|2.17
+861|hình thái|2.22
+862|mạch máu|2.4
+863|quyết tâm thực hiện|2.23
+864|vụ việc, việc|2.22
+865|công diễn|2.18
+866|hành trình trên biển|2.11
+867|ràng buộc, giam giữ|2.23
+868|đổ nát, hoang tàn|2.22
+869|đầu hàng|2.21
+870|hưng phấn, kích động|2.20
+871|từ ngữ|2.14
+872|từng cái, cá thể|2.22
+873|người đã khuất|2.2
+874|không chừng, có khi|2.27
+875|cuộc thi|2.28
+876|sưu tầm, thu thập|2.23
+877|tác phẩm; vụ mùa|2.22
+878|kế sách|2.22
+879|tấn công|2.24
+880|đổ lỗi, trách móc|2.24
+881|điều thiện|2.22
+882|toàn bộ, toàn …|S
+883|toàn thể thành viên|2.2
+884|toàn quốc|2.21
+885|toàn thân|2.4
+886|tuyên truyền, quảng cáo|2.23
+887|con voi|2.16
+888|vì thế, do đó|2.27
+889|tổ chức; cơ cấu; mô (cơ thể)|2.21
+890|giống y hệt; toàn bộ|2.27
+891|được trang bị, có sẵn|2.24
+892|hơn nữa, ngoài ra|2.27
+893|chẳng mấy chốc, ít lâu nữa|2.27
+894|mì soba|2.9
+895|và, với lại|2.27
+896|hay là|2.27
+897|đủ bộ; đồng đều|2.24
+898|sắp xếp cho đều; gom đủ|2.24
+899|ruộng lúa|2.16
+900|khác, cái khác|2.22
+901|cặp, đối|2.22
+902|lớn, đại …|S
+903|đầu đề, tiêu đề|2.14
+904|đại hội, giải đấu lớn|2.18
+905|tiền hàng, giá tiền|2.10
+906|đại sứ|2.21
+907|đối chiếu, tương phản|2.23
+908|đối với; đối diện|2.24
+909|máy đánh chữ|2.28
+910|nhưng|2.27
+911|lẫn nhau|2.22
+912|nâng cao|2.24
+913|nhà (của ai)|2.7
+914|nấu (cơm)|2.9
+915|đốt (lửa)|2.24
+916|nhưng mà|2.27
+917|ít nhiều, một chút|2.27
+918|được cứu; được giúp đỡ|2.24
+919|giúp đỡ; cứu|2.24
+920|miễn phí; chỉ, đơn thuần|2.27
+921|miễn phí; chỉ (viết khác)|2.27
+922|chỉ, đơn thuần|2.27
+923|chiến đấu, thi đấu|2.24
+924|(nhà) được xây|2.24
+925|chỉ vẻn vẹn|2.27
+926|nhưng mà; vì; ngay cả|2.27
+927|dù cho|2.27
+928|thung lũng|2.16
+929|người dưng, người khác|2.2
+930|hạt giống; nguồn cơn|2.16
+931|bó, xấp|2.6
+932|tất tabi (xỏ ngón)|2.8
+933|mỗi lần, lần|2.22
+934|chuyến đi|2.11
+935|viên, hạt, quả cầu|2.8
+936|quả bóng, quả cầu|2.8
+937|viên đạn|2.21
+938|thỉnh thoảng (hiếm)|2.27
+939|lừa gạt|2.24
+940|tích tụ, đọng lại|2.24
+941|thử|2.22
+942|thử|2.24
+943|tích lũy, để dành|2.24
+944|dựa vào, nhờ cậy|2.24
+945|bậc, cấp|2.22
+946|tín chỉ; đơn vị|2.14
+947|nhảy, khiêu vũ|2.18
+948|đoàn thể, tổ chức|2.21
+949|chỉ đơn giản là|2.27
+950|đất, mặt đất|2.16
+951|đội|2.18
+952|chắc chắn là|2.27
+953|khu vực|2.12
+954|người cha|2.2
+955|địa phương, vùng|2.12
+956|trà|2.9
+957|chú thích|2.14
+958|trung học cơ sở|2.14
+959|đồ cũ, đã qua sử dụng|2.10
+960|đỗ xe|2.11
+961|bữa trưa|2.9
+962|trực tiếp|2.26
+963|làm rải rác, làm tản ra|2.24
+964|(hoa) rụng, tản ra|2.24
+965|tiền tệ|2.10
+966|đi học (đi lại)|2.14
+967|giao du; hẹn hò; đi cùng|2.24
+968|dính; được gắn|2.24
+969|chọc, đâm|2.24
+970|kế tiếp, tiếp theo sau|2.24
+971|gắn, đính; bật (đèn)|2.24
+972|mặc, đeo|2.24
+973|được truyền lại, truyền đến|2.24
+974|đất|2.16
+975|công việc|2.15
+976|nhiệm vụ|2.15
+977|được nối, liên quan|2.24
+978|nối lại|2.24
+979|luôn luôn|2.27
+980|tội|2.21
+981|câu cá|2.18
+982|bạn đồng hành|2.2
+983|xuất thân; đi ra|2.22
+984|cuộc gặp gỡ|2.3
+985|cuộc gặp gỡ (tình cờ)|2.3
+986|đề xuất|2.23
+987|mất điện|2.17
+988|nếu được thì|2.27
+989|sắt|2.8
+990|điển hình|2.22
+991|câu hỏi|2.14
+992|đồng xu (đồng)|2.10
+993|đồng thời|2.5
+994|bằng mọi giá; dù thế nào cũng (không)|2.27
+995|rất mong được giúp đỡ|2.19
+996|phương Đông|2.21
+997|đồng dao|2.18
+998|đường sá|2.11
+999|cho đi qua; xuyên suốt|2.24
+1000|hòa tan|2.24
+1001|cởi, gỡ; giải (bài)|2.24
+1002|tránh ra, lùi ra|2.24
+1003|đọc sách|2.18
+1004|điểm mạnh, ưu điểm|2.22
+1005|độc lập|2.21
+1006|ở đâu đó|2.1
+1007|thế nhưng|2.27
+1008|năm tháng|2.5
+1009|sách vở|2.14
+1010|người già|2.2
+1011|đóng (sách, mắt)|2.24
+1012|đất đai|2.16
+1013|cho ở lại qua đêm|2.24
+1014|bạn|2.2
+1015|cùng với|2.27
+1016|tập luyện|2.28
+1017|bùn|2.16
+1018|tấn|2.6
+1019|tên; danh tiếng|2.22
+1020|hơn nữa; vẫn còn|2.27
+1021|nội dung, ruột bên trong|2.22
+1022|dòng chảy|2.16
+1023|cái gì đó|2.1
+1024|sóng|2.16
+1025|nước mắt|2.4
+1026|trở thành (viết Kanji)|2.24
+1027|ra quả|2.24
+1028|thuần hóa; quen|2.24
+1029|tại sao|2.1
+1030|bất cứ thứ gì|2.1
+1031|bằng cách nào đó|2.27
+1032|được nấu chín|2.9
+1033|nắm, cầm chặt|2.24
+1034|ngày|2.5
+1035|thường ngày|2.22
+1036|ban ngày|2.5
+1037|Nhật Bản (đọc にっぽん)|2.12
+1038|Nhật Bản|2.12
+1039|vào cửa, vào hội trường|2.13
+1040|được yêu thích|2.21
+1041|con người|2.2
+1042|làm ướt|2.24
+1043|rễ cây|2.16
+1044|giá tiền|2.10
+1045|mong muốn, cầu mong|2.24
+1046|năm tháng (đọc ねんげつ)|2.5
+1047|cánh đồng|2.16
+1048|năng lực; kịch Nô|2.22
+1049|nông nghiệp|2.15
+1050|không|2.28
+1051|đặt lên; đăng (báo)|2.24
+1052|nhìn trộm, ghé nhìn|2.24
+1053|nguyện vọng|2.20
+1054|mong muốn; ngắm nhìn|2.24
+1055|sau này|2.5
+1056|kéo dài; vươn ra|2.24
+1057|kéo dài; hoãn lại|2.24
+1058|dài ra; tiến bộ|2.24
+1059|bị kéo dài, bị hoãn|2.24
+1060|đi lên|2.24
+1061|(mặt trời) mọc|2.24
+1062|được đăng (báo)|2.24
+1063|địa điểm, trường hợp|2.22
+1064|vâng; haizz|2.19
+1065|mọc (cây, răng)|2.24
+1066|đo (thời gian)|2.24
+1067|cân (trọng lượng)|2.24
+1068|đo (độ dài, nhiệt độ)|2.24
+1069|quét|2.24
+1070|vỗ tay|2.18
+1071|qua (vòng thi); chuyền bóng|2.28
+1072|rời ra; trật, trượt|2.24
+1073|phóng, bắn|2.23
+1074|rời xa|2.24
+1075|lông vũ|2.16
+1076|thịnh hành|2.24
+1077|bụng|2.4
+1078|cánh đồng, thảo nguyên|2.16
+1079|cân bằng|2.28
+1080|kim (khâu, đồng hồ)|2.8
+1081|ánh đèn|2.8
+1082|bay (máy bay)|2.11
+1083|khẩn cấp; phi thường|2.26
+1084|chuyển nhà|2.3
+1085|kéo|2.24
+1086|phủ định|2.23
+1087|một lời|2.19
+1088|đám đông|2.12
+1089|bí mật|2.22
+1090|giây|2.5
+1091|đánh giá|2.23
+1092|bình đẳng|2.26
+1093|tiếng tăm, lời đồn|2.22
+1094|bề mặt|2.22
+1095|mở rộng, trải ra|2.24
+1096|truyền bá, làm lan rộng|2.24
+1097|phẩm cách, hàng hóa|2.22
+1098|chuyến (bay); tiện lợi|2.11
+1099|bất …, không …|S
+1100|bất …, vô … (đọc ぶ)|S
+1101|vô …, không …|S
+1102|phần, tỷ lệ|2.6
+1103|trở nên sâu sắc|2.24
+1104|lau|2.24
+1105|bao gồm|2.24
+1106|đốt, đoạn; giai điệu|2.22
+1107|kỳ lạ, bí ẩn|2.26
+1108|bất chính, gian lận|2.21
+1109|thiếu, không đủ|2.22
+1110|thường ngày|2.5
+1111|đánh (khẩu ngữ)|2.24
+1112|gián đoạn (giao thông, liên lạc)|2.11
+1113|bút lông|2.8
+1114|chợt, bỗng|2.27
+1115|tăng lên, làm tăng|2.24
+1116|nhân lên, sinh sôi|2.24
+1117|cộng; điểm cộng|2.28
+1118|nhựa|2.28
+1119|kế hoạch|2.28
+1120|vẫy, lắc; rắc|2.24
+1121|phanh, thắng|2.28
+1122|chạm vào; đề cập|2.24
+1123|chuyên nghiệp|2.28
+1124|phần, phần việc|2.22
+1125|câu văn|2.14
+1126|cơm hộp|2.9
+1127|luật|2.21
+1128|cây gậy|2.8
+1129|phương hướng|2.1
+1130|đóng gói, gói hàng|2.10
+1131|phong phú|2.26
+1132|bồi bàn; cậu bé|2.28
+1133|khác, ngoài ra|2.22
+1134|vỉa hè|2.11
+1135|xương|2.4
+1136|ngọn lửa|2.16
+1137|hào, kênh|2.12
+1138|thật (khẩu ngữ)|2.26
+1139|chính người đó|2.2
+1140|trẻ đi lạc|2.2
+1141|trừ; điểm trừ|2.28
+1142|cuộn, quấn|2.24
+1143|gieo (hạt)|2.24
+1144|rải, rắc|2.24
+1145|được trộn lẫn|2.24
+1146|lẫn vào (vật khác loại)|2.24
+1147|bị lẫn, pha trộn|2.24
+1148|xen lẫn|2.24
+1149|trộn|2.24
+1150|sai lầm, nhầm lẫn|2.22
+1151|hoàn toàn; thật là|2.27
+1152|lễ hội|2.18
+1153|được tập hợp lại; được giải quyết|2.24
+1154|tổng hợp, gom lại|2.24
+1155|chói mắt|2.26
+1156|hàng rào|2.7
+1157|bị rách, nứt toác|2.24
+1158|xét xử|2.24
+1159|ô-xy hóa|2.16
+1160|cái chết|2.4
+1161|thị giác|2.4
+1162|chỉ huy|2.23
+1163|từ tính|2.17
+1164|đồ sứ|2.8
+1165|bản thân, tự …|2.22
+1166|kiểu chữ|2.14
+1167|từ chối, khước từ|2.23
+1168|quan điểm, góc nhìn|2.22
+1169|mỡ (cơ thể)|2.4
+1170|nguyện vọng|2.23
+1171|quần chúng|2.21
+1172|chỗ ở|2.7
+1173|tu sức, bổ nghĩa (ngữ pháp)|2.14
+1174|việc riêng|2.15
+1175|cách làm; thông số kỹ thuật|2.22
+1176|tình cảm|2.20
+1177|cả cuộc đời|2.5
+1178|chân tướng|2.22
+1179|chiếu sáng|2.8
+1180|bà, quý bà (học giả)|S
+1181|trợ từ|2.14
+1182|cú sốc|2.28
+1183|tiến hành, tiến triển|2.23
+1184|mới nổi|2.21
+1185|chấn hưng|2.23
+1186|khai báo|2.17
+1187|chân lý|2.22
+1188|xả nước (bồn cầu)|2.7
+1189|chà, cọ xát|2.24
+1190|chính quy|2.26
+1191|tinh xảo|2.26
+1192|thanh toán (chênh lệch)|2.10
+1193|tuổi thành niên|2.2
+1194|tuyên bố|2.21
+1195|họ và tên|2.2
+1196|sinh lý; kinh nguyệt|2.4
+1197|dịp; đoạn, tiết|2.22
+1198|mâm (cơm)|2.9
+1199|Thiền|2.21
+1200|đi trước, dẫn đầu|2.23
+1201|tuyển chọn|2.23
+1202|tướng mạo, tướng|2.22
+1203|đi dọc theo; theo đúng|2.24
+1204|đi theo, kèm|2.24
+1205|nhà sư|2.21
+1206|bức tượng, hình ảnh|2.22
+1207|điều tra (vụ án)|2.21
+1208|điều khiển (máy móc)|2.23
+1209|sáng tạo|2.23
+1210|đội|2.21
+1211|tiêu đề|2.28
+1212|giảm xuống; gục|2.28
+1213|dâng cao, tăng lên|2.24
+1214|cắt đứt, đoạn tuyệt|2.24
+1215|cái khiên|2.8
+1216|ví dụ; dù cho|2.22
+1217|chuông (cửa, trường)|2.28
+1218|thử thách, thách thức|2.23
+1219|cặp, đôi|2.6
+1220|ghép nối; nối (xương)|2.24
+1221|kế thừa|2.24
+1222|hái, ngắt|2.24
+1223|giọt sương|2.16
+1224|mạnh lên|2.24
+1225|làm mạnh thêm, nhấn mạnh|2.24
+1226|thiết kế|2.28
+1227|món tráng miệng|2.9
+1228|chuyển trường|2.14
+1229|lời nhắn|2.19
+1230|và|2.27
+1231|hỏi; truy cứu|2.24
+1232|tòa nhà, dãy nhà|2.12
+1233|phá sản|2.15
+1234|cùng là …, với nhau|2.2
+1235|đồng chí|2.2
+1236|đương nhiên|2.26
+1237|dao động, xao động|2.20
+1238|thuyết giảng, giải thích|2.24
+1239|đóng (tập), kẹp hồ sơ|2.24
+1240|người tùy tùng, đi cùng|2.2
+1241|trung bình, bình thường|2.22
+1242|làm cho quen|2.24
+1243|thuần hóa|2.24
+1244|khó khăn, tai nạn|2.22
+1245|âm thanh (tiếng chuông, đàn)|2.22
+1246|niên giám|2.14
+1247|não|2.4
+1248|đối diện; tham dự|2.24
+1249|phổi|2.4
+1250|… trận thua|S
+1251|trông đẹp, nổi bật|2.24
+1252|hỏi ý kiến, trưng cầu|2.24
+1253|mưu tính, cố gắng|2.24
+1254|để mọc (râu)|2.24
+1255|tổ, nhóm|2.14
+1256|ấn bản|2.21
+1257|bia đá|2.12
+1258|hành vi sai trái (trẻ vị thành niên)|2.21
+1259|phiếu (bầu)|2.21
+1260|lan rộng|2.24
+1261|làm sâu sắc thêm|2.24
+1262|phúc, may mắn|2.22
+1263|làm bộ; vẻ ngoài|2.22
+1264|trải qua; đi qua|2.24
+1265|bảo vệ, bảo hộ|2.23
+1266|bảo đảm|2.23
+1267|bồi thường|2.23
+1268|thở phào nhẹ nhõm|2.27
+1269|trước, sẵn từ trước|2.27
+1270|màng|2.4
+1271|truyền thông đại chúng|2.28
+1272|đùi, háng|2.4
+1273|cuối (tháng, năm)|2.5
+1274|xoa bóp, mát-xa|2.28
+1275|bắt gặp, tình cờ thấy|2.24
+1276|lật (trang)|2.24
+1277|tin nhắn, thông điệp|2.28
+1278|đảng đối lập|2.21
+1279|ưu tú; hạng giỏi|2.22
+1280|hữu cơ|2.17
+1281|thế gian, thời đại|2.21
+1282|tốt|2.26
+1283|yếu đi|2.24
+1284|làm yếu đi|2.24
+1285|nhãn mác|2.28
+1286|khung|2.8
+1287|hiển thị, biểu thị|2.17

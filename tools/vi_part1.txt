@@ -1,0 +1,377 @@
+1|màu xanh (lam, lá)|M
+2|xanh (lam, lá)|M
+3|màu đỏ|M
+4|đỏ|M
+5|(cửa…) mở ra|2.24
+6|nâng lên; tặng, cho|2.24
+7|bữa sáng|2.9
+8|ngày kia|2.5
+9|chỗ kia, đằng kia|2.1
+10|phía kia (lịch sự)|2.1
+11|nóng (đồ vật)|2.26
+12|sau, sau đó; phần còn lại|2.5
+13|bạn, anh, chị (ngôi 2)|2.2
+14|… kia; à, ừm…|2.1
+15|(không) lắm; phần thừa|2.27
+16|có, ở (đồ vật)|2.24
+17|có (sở hữu)|2.24
+18|cái kia|2.1
+19|tốt, được|2.26
+20|nói|2.24
+21|số một|2.6
+22|một ngày (khoảng thời gian)|2.5
+23|cùng nhau|2.27
+24|năm cái|2.6
+25|ghét, không thích|2.20
+26|cần|2.24
+27|cho vào, bỏ vào|2.24
+28|màu sắc|M
+29|nhiều loại, đủ thứ|2.26
+30|hát|2.18
+31|nhà (của mình)|2.7
+32|tiếng Anh|2.14
+33|yên (tiền Nhật)|2.10
+34|ngon|2.9
+35|to, lớn|2.26
+36|cái đĩa|2.9
+37|nhà vệ sinh|2.7
+38|giống nhau|2.26
+39|cô, dì, bác gái|2.2
+40|thú vị, buồn cười|2.26
+41|kết thúc|2.24
+42|… tháng (đếm số tháng)|2.5
+43|chữ Katakana|2.14
+44|gia đình, gia đình (tổ ấm)|2.2
+45|thứ Ba|2.5
+46|(người khác) tỏ ra, cảm thấy …|S
+47|cà ri|2.9
+48|lịch (treo tường)|2.28
+49|dễ thương|2.26
+50|số chín|2.6
+51|thịt bò|2.9
+52|thứ Sáu|2.5
+53|số chín (đọc く)|2.6
+54|xin hãy (làm cho tôi)|2.19
+55|gam|2.6
+56|màu đen|M
+57|đen; tối|M
+58|thứ Hai|2.5
+59|số năm|2.6
+60|tiếng …, ngôn ngữ …|S
+61|chỗ này, ở đây|2.1
+62|chín cái|2.6
+63|phía này; vị này (lịch sự)|2.1
+64|… này|2.1
+65|cơm; bữa ăn|2.9
+66|sao chép, photo|2.15
+67|cái này|2.1
+68|khoảng, tầm (thời gian)|S
+69|như thế này|2.1
+70|phía trước; trước đây; tương lai|2.5
+71|bài văn, tập làm văn|2.14
+72|anh, chị, ông, bà (gắn sau tên)|S
+73|số ba|2.6
+74|số bốn (đọc し)|2.6
+75|… giờ|2.5
+76|số bảy (đọc しち)|2.6
+77|ô tô|2.11
+78|từ điển (cách nói cũ)|2.14
+79|(cửa…) đóng lại|2.24
+80|số mười|2.6
+81|… tuần|2.5
+82|giỏi, khéo|2.26
+83|chắc chắn, bền; khỏe|2.26
+84|màu trắng|M
+85|trắng|M
+86|thứ Tư|2.5
+87|hút (thuốc), hít|2.24
+88|quá …, hơn … (giờ)|S
+89|ngay lập tức|2.27
+90|mỗi …, từng … một|S
+91|làm|2.24
+92|xà phòng|2.7
+93|nghìn|2.6
+94|vậy, đúng vậy|2.19
+95|… đó|2.1
+96|cái đó|2.1
+97|không sao, ổn|2.19
+98|chỉ …|2.27
+99|nhiều|2.27
+100|lấy ra; nộp; gửi|2.24
+101|các …, những … (số nhiều)|S
+102|thuốc lá|2.9
+103|có lẽ|2.27
+104|ai đó|2.1
+105|dần dần|2.27
+106|nhỏ, bé|2.26
+107|khác; sai|2.24
+108|màu nâu|M
+109|bát (ăn cơm)|2.9
+110|vừa đúng|2.27
+111|ngày mùng 1|2.5
+112|tiếp theo, kế tiếp|2.5
+113|lạnh (đồ vật); lạnh lùng|2.26
+114|máy ghi âm băng|2.28
+115|có thể; làm xong; được tạo ra|2.24
+116|vậy thì|2.27
+117|cửa (kiểu Nhật)|2.7
+118|… lần; … độ|S
+119|cảm ơn; hình như; dù cố thế nào|2.19
+120|mười (cái)|2.6
+121|ngày mùng 10; mười ngày|2.5
+122|khi …, lúc …|2.5
+123|nơi, chỗ|2.12
+124|… nào|2.1
+125|bay, nhảy|2.24
+126|thứ Bảy|2.5
+127|thịt gà|2.9
+128|cái nào|2.1
+129|như thế nào, loại nào|2.1
+130|không có|2.26
+131|kỳ nghỉ hè|2.14
+132|vân vân|S
+133|bảy cái|2.6
+134|số hai|2.6
+135|ngày …, … ngày|2.5
+136|Chủ nhật|2.5
+137|leo, trèo|2.24
+138|gạt tàn thuốc|2.7
+139|đũa|2.9
+140|20 tuổi|2.6
+141|số tám|2.6
+142|rưỡi, một nửa|2.5
+143|bữa tối|2.9
+144|thấp|2.26
+145|một cái|2.6
+146|một tháng|2.5
+147|một người; một mình|2.6
+148|trăm|2.6
+149|chữ Hiragana|2.14
+150|bữa trưa|2.9
+151|hai cái|2.6
+152|hai người|2.6
+153|… phút|2.5
+154|kém, vụng|2.26
+155|thú cưng|2.28
+156|bút|2.8
+157|muốn có|2.26
+158|hòm thư; chức vụ|2.13
+159|cúc áo; nút bấm|2.8
+160|thật, sự thật|2.26
+161|mỗi sáng|2.5
+162|hằng năm|2.5
+163|rẽ, quẹo; cong|2.11
+164|mười nghìn (vạn)|2.6
+165|ngày mùng 3; ba ngày|2.5
+166|ba cái|2.6
+167|màu xanh lá|M
+168|sáu cái|2.6
+169|thứ Năm|2.5
+170|a lô (gọi điện thoại)|2.19
+171|đồ vật|2.8
+172|cổng|2.7
+173|cửa hàng …; người bán …|S
+174|cửa hàng rau quả|2.10
+175|ngày nghỉ, kỳ nghỉ; vắng mặt|2.3
+176|tám cái|2.6
+177|làm; cho (con vật, người dưới)|2.24
+178|bốn cái|2.6
+179|máy cát-sét|2.28
+180|số sáu|2.6
+181|trẻ|2.26
+182|tôi|2.2
+183|tôi (trang trọng); việc riêng|2.2
+184|xấu, tồi; có lỗi|2.26
+185|giẫm lên, đạp lên|2.24
+186|quận …|S
+187|thường thường, đại khái|2.27
+188|dàn âm thanh stereo|2.28
+189|y học|2.14
+190|nghe thấy, nghe được|2.24
+191|tiệm cắt tóc|2.12
+192|vận động, tập thể dục|2.18
+193|nếu|2.27
+194|sinh viên đại học|2.14
+195|khác, riêng biệt|2.22
+196|có, là (lịch sự)|K
+197|tinh thần, tâm trạng|2.20
+198|định, dự định|2.22
+199|Tết, năm mới|2.5
+200|ừ (thân mật)|2.19
+201|sân thượng|2.7
+202|thất lễ; xin lỗi, xin phép|2.19
+203|điểm; dấu chấm|2.14
+204|xây dựng|2.24
+205|đi, đến, ở (tôn kính)|K
+206|chăn nệm futon|2.7
+207|sản xuất tại …, làm bằng …|S
+208|mặt trời; ngày|2.16
+209|vậy à; đúng thế|2.19
+210|lá cây|2.16
+211|khoa (đại học) …|2.14
+212|thang cuốn|2.28
+213|rơi, rớt; thi trượt|2.24
+214|thịnh vượng, sôi nổi|2.26
+215|hơn nữa, thêm vào đó|2.27
+216|làm bán thời gian|2.15
+217|thời đại|2.5
+218|nói (khiêm nhường)|K
+219|lễ …; kiểu …|S
+220|đón, chào đón|2.24
+221|sờ, chạm|2.24
+222|(nhà) … tầng; nhà riêng|S
+223|mở; tổ chức (sự kiện)|2.24
+224|chạy trốn|2.24
+225|chiếu tatami|2.7
+226|cố gắng hết mức có thể|2.27
+227|vô lý, quá sức, không thể|2.26
+228|búp bê|2.8
+229|dù … bao nhiêu đi nữa|2.27
+230|việc bận, việc cần làm|2.3
+231|tòa nhà cao tầng|2.12
+232|ném|2.24
+233|sức mạnh|2.22
+234|nhận; dự (thi, phỏng vấn)|2.24
+235|như thế, như vậy|2.1
+236|tháng sau nữa|2.5
+237|đường kẻ; dây|2.8
+238|ngủ dậy muộn|2.3
+239|bố (gọi trẻ con)|2.2
+240|(lỡ) … mất rồi|S
+241|nhất quyết không|2.27
+242|trường tiểu học|2.14
+243|khách|2.10
+244|làm (tôn kính)|K
+245|việc, chuyện|2.22
+246|một lần|2.6
+247|nhiệt tình|2.20
+248|lễ hội|2.18
+249|nước máy|2.7
+250|mùi|2.4
+251|chuông|2.28
+252|em bé|2.2
+253|lạ, kỳ quặc|2.26
+254|dựng đứng; lập (kế hoạch)|2.24
+255|nhân viên …, thành viên …|S
+256|câu trả lời, đáp án|2.14
+257|bên trong; trong lúc|2.1
+258|vừa mới …; toàn là …|S
+259|bắt đầu …|2.25
+260|chuyển đến, gửi đến|2.24
+261|trong vòng|2.22
+262|áo khoác; vượt quá; phóng đại|2.28
+263|việc cần làm|2.3
+264|chuẩn bị|2.23
+265|hình dạng|2.22
+266|lữ quán kiểu Nhật|2.11
+267|bờ biển|2.16
+268|lửa|2.16
+269|dẫn theo (người)|2.24
+270|chim nhỏ|2.16
+271|gương|2.7
+272|chắc chắn là, lẽ ra|2.22
+273|tiến lên; tiến triển|2.24
+274|tận hưởng, vui thú|2.24
+275|nói (khiêm nhường)|K
+276|nhân viên bán hàng|2.10
+277|trọ lại|2.11
+278|tối nay|2.5
+279|kiểm tra|2.28
+280|máy đánh chữ|2.28
+281|tàu nhanh, xe tốc hành|2.11
+282|mọi người|2.2
+283|máy lạnh, điều hòa|2.7
+284|biếu, tặng (khiêm nhường)|K
+285|cảng|2.11
+286|máy tính cá nhân|2.28
+287|đầy; một cốc|2.27
+288|nước Mỹ|2.28
+289|đồ chơi|2.8
+290|bé … (gọi thân mật)|S
+291|đánh, đập|2.24
+292|như thế kia|2.1
+293|cản trở, phiền|2.26
+294|hỏi, đến thăm (khiêm nhường)|K
+295|tuần sau nữa|2.5
+296|máu|2.4
+297|khá là; mãi mà (không)|2.27
+298|khá là, rất|2.27
+299|giảng đường|2.14
+300|đứa trẻ|2.2
+301|phố …, đường …|2.12
+302|như thế này|2.1
+303|nhất định, bằng mọi giá|2.27
+304|đi, đến, ở (tôn kính)|K
+305|thay đổi, biến đổi|2.24
+306|ngoài …, ngoại trừ|2.22
+307|thịt băm viên (hamburg)|2.9
+308|thành phố|2.12
+309|chuẩn bị|2.23
+310|nhìn thấy; đến (tôn kính)|2.24
+311|âm thanh|2.22
+312|gãy; gập; rẽ|2.24
+313|đúng, chính xác|2.26
+314|thủ đô (Tokyo)|2.12
+315|trên …, hơn …; xin hết|2.22
+316|vẫn nguyên như thế|S
+317|theo … (thì)|2.19
+318|phát sóng|2.19
+319|thị dân, công dân|2.21
+320|thua|2.24
+321|nhẫn|2.8
+322|học sinh cấp 3|2.14
+323|đến mức đó, như thế|2.27
+324|lý do; ý nghĩa|2.22
+325|biết, đồng ý (khiêm nhường)|K
+326|giống|2.24
+327|con (của người khác)|2.2
+328|hội trường, địa điểm|2.12
+329|chỗ ngồi|2.13
+330|ngài …, quý …|S
+331|biết (tôn kính)|K
+332|chữ|2.14
+333|a!, à|2.19
+334|hợp, vừa|2.24
+335|… tuổi (thập niên); tiền …|S
+336|muộn, trễ|2.24
+337|ăn, uống (tôn kính)|K
+338|béo lên|2.4
+339|cách, kiểu|2.22
+340|(tiền tố kính ngữ) quý …|S
+341|tiếp tục|2.24
+342|trăm triệu|2.6
+343|môn toán|2.14
+344|bị cháy, được nướng|2.24
+345|(đèn…) bật lên|2.24
+346|dáng vẻ, bề ngoài|2.22
+347|đánh rơi, làm rơi|2.24
+348|xem (khiêm nhường)|K
+349|quay, xoay|2.24
+350|nói (tôn kính)|K
+351|mức độ, khoảng|2.22
+352|công nghiệp|2.15
+353|chuyển (nhà, chỗ); lây|2.24
+354|phòng nghiên cứu|2.14
+355|nhưng|2.27
+356|về …|2.22
+357|thắng|2.24
+358|đi, đến (khiêm nhường)|K
+359|sắp sửa, sắp tới|2.27
+360|chính giữa|2.1
+361|bánh ngọt|2.9
+362|đông đúc|2.24
+363|dạo này|2.5
+364|chia tay|2.24
+365|y tá|2.4
+366|tham quan|2.18
+367|quần vợt|2.18
+368|ngủ|2.3
+369|nhờ có|2.22
+370|nước nóng|2.7
+371|cạnh tranh|2.23
+372|khó … (làm gì)|S
+373|sợi chỉ|2.8
+374|đàn piano|2.18
+375|gấp; đột ngột; dốc|2.26
+376|kẻ móc túi|2.21
+377|điện báo|2.19

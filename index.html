@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ôn JLPT N3</title>
+<meta name="description" content="Flashcard và bài tập ôn JLPT N5–N3: từ vựng theo chủ đề, Kanji và từ ghép, ngữ pháp, mẫu câu, đọc hiểu, sổ lỗi sai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#home" data-tab="home"><span class="brand-jp">合格</span> Ôn JLPT N3</a>
+    <span class="count-chip" id="countChip"></span>
+  </div>
+  <nav class="tabs wrap" aria-label="Các phần ôn tập">
+    <button type="button" data-tab="home">Tổng quan</button>
+    <button type="button" data-tab="vocab">Từ vựng</button>
+    <button type="button" data-tab="kanji">Kanji</button>
+    <button type="button" data-tab="grammar">Ngữ pháp</button>
+    <button type="button" data-tab="sent">Mẫu câu</button>
+    <button type="button" data-tab="read">Đọc hiểu</button>
+    <button type="button" data-tab="miss">Lỗi sai <span class="badge" id="missBadge"></span></button>
+  </nav>
+</header>
+<main class="wrap" id="main">
+  <p class="loading">Đang tải dữ liệu…</p>
+</main>
+<footer class="wrap foot">
+  Dữ liệu: bộ tài liệu ôn N5–N3 của bạn + danh sách từ vựng JLPT (Jonathan Waller, tanos.co.uk). Câu hỏi do bộ ôn tự soạn, không phải đề thi thật.
+  Đề mẫu chính thức: <a href="https://www.jlpt.jp/e/samples/forlearners.html" target="_blank" rel="noopener">jlpt.jp</a>.
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

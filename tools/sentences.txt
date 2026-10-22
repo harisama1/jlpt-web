@@ -1,0 +1,97 @@
+# 文脈規定: câu (phần cần điền trong 【】) | dịch | 3 đáp án nhiễu (;) | cấp
+# 言い換え: ~câu với từ gạch chân trong ［］ | dịch | đáp án đúng | 3 đáp án nhiễu
+B|試験の前の日は、【ぐっすり】眠れなかった。|Hôm trước kỳ thi tôi không ngủ say được.|はっきり;すっきり;うっかり|N3
+B|【うっかり】して、傘を電車に忘れてしまった。|Sơ ý một chút mà tôi để quên ô trên tàu.|しっかり;ぴったり;きっぱり|N3
+B|このシャツは私のサイズに【ぴったり】だ。|Cái áo này vừa khít cỡ của tôi.|ぎりぎり;そっくり;うっかり|N3
+B|約束の時間に【ぎりぎり】間に合った。|Tôi kịp giờ hẹn trong gang tấc.|ぴったり;たっぷり;のんびり|N3
+B|休みの日は家で【のんびり】過ごしたい。|Ngày nghỉ tôi muốn thong thả ở nhà.|いらいら;どきどき;はらはら|N3
+B|電車がなかなか来なくて、【いらいら】した。|Tàu mãi không đến nên tôi bực bội.|わくわく;にこにこ;ぐっすり|N3
+B|明日から旅行なので、【わくわく】している。|Từ mai đi du lịch nên tôi háo hức.|いらいら;がっかり;ぼんやり|N3
+B|試合に負けて、みんな【がっかり】した。|Thua trận nên ai cũng thất vọng.|わくわく;すっきり;にっこり|N3
+B|彼女はいつも【にこにこ】していて、感じがいい。|Cô ấy lúc nào cũng tươi cười, rất dễ mến.|いらいら;ふらふら;ぺこぺこ|N3
+B|朝から何も食べていないので、お腹が【ぺこぺこ】だ。|Từ sáng chưa ăn gì nên bụng đói meo.|ぺらぺら;ぶらぶら;ころころ|N3
+B|彼は英語が【ぺらぺら】だ。|Anh ấy nói tiếng Anh trôi chảy.|ぺこぺこ;ばらばら;ぴかぴか|N3
+B|熱があって、頭が【ふらふら】する。|Bị sốt nên đầu choáng váng.|からから;ぴかぴか;そわそわ|N3
+B|部屋を掃除したら、気分が【すっきり】した。|Dọn phòng xong, tâm trạng thấy sảng khoái.|がっかり;うっかり;ぐったり|N3
+B|日曜日は駅前を【ぶらぶら】歩いた。|Chủ nhật tôi đi lang thang trước nhà ga.|ばらばら;ぺらぺら;ぎりぎり|N3
+B|靴をみがいたら、【ぴかぴか】になった。|Đánh giày xong, giày bóng loáng.|ぺらぺら;ぶらぶら;がらがら|N3
+B|平日の昼の電車は【がらがら】だった。|Tàu buổi trưa ngày thường vắng tanh.|ぎりぎり;ぴかぴか;ふらふら|N3
+B|面接の前は、【どきどき】して何も考えられなかった。|Trước buổi phỏng vấn tim đập thình thịch, không nghĩ được gì.|のんびり;すっきり;にこにこ|N3
+B|外国に住むのは大変だが、【かえって】いい経験になった。|Sống ở nước ngoài vất vả nhưng ngược lại lại là trải nghiệm tốt.|せめて;つい;まさか|N3
+B|全部は無理でも、【せめて】半分は終わらせたい。|Không làm hết được thì ít ra cũng muốn xong một nửa.|かえって;たしか;いよいよ|N3
+B|難しいと思っていたが、試験は【案外】簡単だった。|Tưởng khó nhưng bài thi lại dễ không ngờ.|せっかく;わざわざ;どうせ|N3
+B|【一応】準備はしたが、まだ心配だ。|Tôi đã chuẩn bị tạm ổn nhưng vẫn lo.|まさか;ついに;さっぱり|N3
+B|【まさか】彼が嘘をつくとは思わなかった。|Tôi không ngờ anh ta lại nói dối.|せめて;やっと;たしか|N3
+B|【せっかく】作った料理を、だれも食べてくれなかった。|Món đã mất công nấu mà chẳng ai ăn.|わざと;つい;どうせ|N3
+B|遠いところを【わざわざ】来てくださって、ありがとうございます。|Cảm ơn anh đã cất công từ xa đến.|せっかく;やっと;さっそく|N3
+B|ダイエット中なのに、【つい】ケーキを食べてしまった。|Đang ăn kiêng mà lỡ ăn bánh mất.|わざと;ぜひ;けっして|N3
+B|彼は【わざと】聞こえないふりをした。|Anh ta cố tình giả vờ không nghe thấy.|つい;うっかり;偶然|N3
+B|【どうせ】間に合わないから、ゆっくり行こう。|Đằng nào cũng không kịp nên cứ đi từ từ thôi.|せめて;まさか;さすが|N3
+B|新しいパソコンが届いたので、【さっそく】使ってみた。|Máy tính mới đến nên tôi dùng thử ngay.|やっと;ようやく;とうとう|N3
+B|三年かかって、【ようやく】論文が完成した。|Mất 3 năm, cuối cùng luận văn cũng hoàn thành.|さっそく;いきなり;しばらく|N3
+B|【いよいよ】明日は試験の日だ。|Cuối cùng thì mai cũng là ngày thi.|せっかく;どうせ;せめて|N3
+B|説明を聞いても、【さっぱり】分からなかった。|Nghe giải thích mà chẳng hiểu gì cả.|すっきり;ぴったり;しっかり|N3
+B|【さすが】プロだ。とても上手だね。|Đúng là dân chuyên nghiệp, giỏi thật.|まさか;せめて;どうせ|N3
+B|彼は【いきなり】部屋に入ってきた。|Anh ta đột ngột bước vào phòng.|ようやく;そろそろ;だんだん|N3
+B|雨が【しだいに】強くなってきた。|Mưa dần dần nặng hạt hơn.|いきなり;たちまち;さっそく|N3
+B|彼の話は【ほとんど】うそだった。|Chuyện anh ta kể gần như toàn là dối trá.|ちっとも;めったに;けっして|N3
+B|この辺りでは雪は【めったに】降らない。|Vùng này hiếm khi có tuyết rơi.|しばしば;たびたび;よく|N3
+B|彼は約束を【けっして】破らない。|Anh ấy tuyệt đối không thất hứa.|たまに;すこし;ときどき|N3
+B|あの二人は顔が【そっくり】だ。|Hai người đó mặt giống hệt nhau.|ぴったり;はっきり;ぎっしり|N3
+B|箱の中にはチョコレートが【ぎっしり】入っていた。|Trong hộp đựng đầy ắp sô-cô-la.|がらがら;そっくり;ぶらぶら|N3
+B|会議の時間を【確認】するために、メールを送った。|Tôi gửi mail để xác nhận giờ họp.|確保;確定;確実|N3
+B|新しい商品の【宣伝】のために、テレビにCMを出した。|Để quảng cáo sản phẩm mới, công ty chạy quảng cáo trên TV.|伝言;報告;連絡|N3
+B|事故のため、電車が【不通】になっている。|Do tai nạn, tàu đang bị gián đoạn.|不足;不安;不正|N3
+B|大雨で川の水が【あふれ】そうだ。|Mưa lớn nên nước sông có vẻ sắp tràn.|こぼれ;ながれ;もれ|N3
+B|この仕事は【締め切り】が明日までだ。|Công việc này có hạn chót là ngày mai.|期間;予定;延期|N3
+B|雨で試合が来週に【延期】された。|Do mưa, trận đấu bị hoãn sang tuần sau.|中止;変更;予約|N3
+B|彼女は【責任】感が強いので、任せて安心だ。|Cô ấy có tinh thần trách nhiệm cao nên giao việc rất yên tâm.|自信;信用;関心|N3
+B|この町は観光客が多く、いつも【にぎやか】だ。|Thị trấn này đông khách du lịch nên lúc nào cũng nhộn nhịp.|おだやか;さわやか;なめらか|N3
+B|窓を開けると、【さわやか】な風が入ってきた。|Mở cửa sổ, làn gió mát lành thổi vào.|にぎやか;はなやか;あざやか|N3
+B|田中さんは【おだやか】な性格で、怒ったことがない。|Anh Tanaka tính ôn hòa, chưa bao giờ nổi giận.|にぎやか;ゆたか;さかん|N3
+B|この地域は農業が【さかん】だ。|Vùng này nông nghiệp phát triển mạnh.|ゆたか;おだやか;さわやか|N3
+B|毎日【規則】正しい生活を送っている。|Tôi sống điều độ mỗi ngày.|規制;規模;法則|N3
+B|山田さんは会社を【辞め】て、自分の店を開いた。|Anh Yamada nghỉ việc ở công ty và mở cửa hàng riêng.|止め;断っ;離れ|N3
+B|彼の意見に【賛成】する人は少なかった。|Ít người tán thành ý kiến của anh ấy.|反対;賛否;承知|N3
+B|道に迷ったので、交番で道を【尋ね】た。|Bị lạc đường nên tôi hỏi đường ở đồn cảnh sát.|訪ね;調べ;答え|N3
+B|日曜日に先生のお宅を【訪ね】た。|Chủ nhật tôi đến thăm nhà thầy.|尋ね;迎え;招い|N3
+B|この薬はよく【効く】。|Thuốc này rất hiệu nghiệm.|聞く;利く;聴く|N3
+B|ボタンを押すと、ドアが自動で【開く】。|Ấn nút là cửa tự động mở.|開ける;空く;明く|N4
+B|彼は毎朝六時に【起きる】ことにしている。|Anh ấy có thói quen dậy lúc 6 giờ sáng.|起こす;起こる;起きた|N4
+B|会議室の【予約】は、一週間前までにお願いします。|Vui lòng đặt phòng họp trước một tuần.|予定;予報;予習|N4
+B|駅から会社まで歩いて十五分【ほど】です。|Từ ga đến công ty đi bộ khoảng 15 phút.|しか;だけ;ばかり|N4
+B|風邪を【ひいて】、学校を休んだ。|Bị cảm nên tôi nghỉ học.|かかって;なって;とって|N4
+B|医者に【みて】もらったほうがいいですよ。|Bạn nên đi bác sĩ khám đi.|なおして;かかって;つれて|N4
+B|この料理は塩が【足りない】。|Món này thiếu muối.|多すぎる;まずい;うすい|N4
+B|雨の日は道が【すべり】やすいので、気をつけて。|Ngày mưa đường dễ trơn trượt, hãy cẩn thận.|ころび;たおれ;おち|N3
+B|時間が【経つ】のは早いものだ。|Thời gian trôi qua thật nhanh.|建つ;立つ;絶つ|N3
+B|この小説は百万部も【売れ】た。|Cuốn tiểu thuyết này bán được tới một triệu bản.|買え;読め;書け|N3
+B|子どものころの夢が【かなっ】た。|Giấc mơ hồi nhỏ đã thành hiện thực.|ためっ;かわっ;まよっ|N3
+B|彼女は【明るい】性格で、だれとでもすぐ仲良くなる。|Cô ấy tính vui vẻ nên làm thân với ai cũng nhanh.|暗い;細かい;厳しい|N4
+B|新しい職場の雰囲気に、やっと【慣れ】てきた。|Cuối cùng tôi đã quen dần với không khí nơi làm việc mới.|馴染ま;似;向い|N3
+B|大切な書類なので、【なくさ】ないように気をつけてください。|Giấy tờ quan trọng nên hãy cẩn thận đừng làm mất.|わすれ;こわさ;よごさ|N4
+B|彼はみんなの前で【恥】をかいた。|Anh ta bị bẽ mặt trước mọi người.|汗;息;癖|N3
+B|台風の【影響】で、飛行機が飛ばなかった。|Do ảnh hưởng của bão, máy bay không cất cánh.|原因;効果;結果|N3
+B|この問題の【原因】を調べる必要がある。|Cần tìm hiểu nguyên nhân của vấn đề này.|結果;影響;効果|N3
+B|店の前に長い【列】ができていた。|Trước cửa hàng có một hàng dài người xếp.|線;輪;段|N3
+B|今年の目標は、毎月本を一冊読むことだ。目標を【達成】できるように頑張りたい。|Mục tiêu năm nay là mỗi tháng đọc một cuốn sách. Tôi muốn cố gắng để đạt được mục tiêu.|完成;成功;到着|N3
+P|このかばんは［丈夫］だ。|Cái cặp này bền.|こわれにくい|かるい;やすい;おおきい|N3
+P|彼は［たちまち］いなくなった。|Anh ta biến mất ngay lập tức.|すぐに|ゆっくり;ときどき;やっと|N3
+P|部屋が［散らかって］いる。|Căn phòng đang bừa bộn.|きたなくなって|ひろくなって;きれいになって;せまくなって|N3
+P|［あいにく］その日は都合が悪い。|Tiếc là hôm đó tôi không tiện.|ざんねんながら|さいわい;もちろん;とくに|N3
+P|彼の話は［おおげさ］だ。|Chuyện anh ta kể thật phóng đại.|じっさいより大きく言っている|とてもおもしろい;よくわからない;みじかい|N3
+P|会議は［中止］になった。|Cuộc họp đã bị hủy.|やらないことになった|あとですることになった;はやく終わった;はじまった|N3
+P|この料理は［手間］がかかる。|Món này tốn công.|時間やてつだいが必要だ|お金がたくさん必要だ;あまりおいしくない;すぐできる|N3
+P|彼は［いつのまにか］帰っていた。|Anh ta đã về lúc nào không hay.|気づかないうちに|いつもより早く;何度も;急いで|N3
+P|田中さんは［几帳面］な人だ。|Anh Tanaka là người cẩn thận, chỉn chu.|きちんとしている|やさしい;おもしろい;いそがしい|N3
+P|そのニュースを聞いて［ほっとした］。|Nghe tin đó tôi thở phào nhẹ nhõm.|あんしんした|がっかりした;おどろいた;おこった|N3
+P|［およそ］百人が集まった。|Khoảng một trăm người đã tập trung.|だいたい|ちょうど;すくなくとも;たった|N3
+P|今日は［ずいぶん］寒い。|Hôm nay lạnh ghê.|かなり|すこし;まだ;もう|N3
+P|［たまたま］駅で先生に会った。|Tình cờ tôi gặp thầy ở nhà ga.|ぐうぜん|いつも;やっと;わざと|N3
+P|彼の説明は［あいまい］だった。|Lời giải thích của anh ấy mập mờ.|はっきりしなかった|ながかった;わかりやすかった;みじかかった|N3
+P|この仕事は［きつい］。|Công việc này vất vả.|たいへんだ|かんたんだ;たのしい;ひまだ|N3
+P|毎朝［ジョギング］をしている。|Sáng nào tôi cũng chạy bộ.|ゆっくり走ること|およぐこと;さんぽすること;たいそうすること|N3
+P|あの人は［けち］だ。|Người đó keo kiệt.|お金を使いたがらない|いつもいそがしい;よくしゃべる;よくわらう|N3
+P|［さっき］田中さんから電話があった。|Lúc nãy có điện thoại của anh Tanaka.|すこし前に|きのう;これから;あした|N4
+P|この部屋は［清潔］だ。|Căn phòng này sạch sẽ.|きれいだ|ひろい;あかるい;しずかだ|N3
+P|彼はその話を聞いて［あきれた］。|Nghe chuyện đó anh ấy ngán ngẩm.|ひどくて言葉が出なかった|とてもよろこんだ;なきだした;わらいだした|N3
