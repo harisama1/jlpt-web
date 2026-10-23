@@ -1,0 +1,295 @@
+二月|tháng Hai
+三月|tháng Ba
+四月|tháng Tư
+五月|tháng Năm
+六百|sáu trăm
+七月|tháng Bảy
+九月|tháng Chín
+三百|ba trăm
+百円|một trăm yên
+三千|ba nghìn
+千円|một nghìn yên
+一万円|mười nghìn yên
+円い|tròn
+五分|năm phút
+三時半|ba giờ rưỡi
+何人|mấy người
+日本人|người Nhật
+三人|ba người
+女の人|người phụ nữ
+女性|phụ nữ, nữ giới
+男性|nam giới
+中国|Trung Quốc
+右折|rẽ phải
+富士山|núi Phú Sĩ
+小川|con suối nhỏ
+田中|Tanaka (họ người)
+水田|ruộng nước
+天国|thiên đường
+駅前|trước nhà ga
+日本語|tiếng Nhật
+見学|tham quan học hỏi
+飲食|ăn uống
+売買|mua bán
+方言|tiếng địa phương
+国立|quốc lập
+白紙|giấy trắng
+東京|Tokyo
+東|phía đông
+関西|vùng Kansai
+西|phía tây
+南|phía nam
+南北|nam bắc
+北|phía bắc
+東北|vùng Tohoku; đông bắc
+耳鼻科|khoa tai mũi họng
+一足|một đôi (giày, tất)
+花火|pháo hoa
+金魚|cá vàng
+大学院|cao học
+英国|nước Anh
+遠足|dã ngoại
+夏|mùa hè
+開店|mở cửa hàng
+帰国|về nước
+京都|Kyoto
+区役所|ủy ban quận
+県立|tỉnh lập
+元日|ngày mùng 1 Tết
+工事|công trình, thi công
+好物|món khoái khẩu
+私立|tư thục, dân lập
+写す|chụp, chép lại
+秋|mùa thu
+終電|chuyến tàu cuối
+春|mùa xuân
+春分|xuân phân
+残暑|cái nóng cuối hè
+森林|rừng
+音声|âm thanh, giọng nói
+夕食|bữa tối
+早朝|sáng sớm
+競走|chạy đua
+民族|dân tộc
+農村|nông thôn
+町長|thị trưởng (thị trấn)
+朝食|bữa sáng
+回答|câu trả lời, giải đáp
+冬|mùa đông
+冬季|mùa đông (văn viết)
+売店|quầy bán hàng
+薬局|hiệu thuốc
+太平洋|Thái Bình Dương
+仕入れる|nhập hàng
+担任|giáo viên chủ nhiệm
+代わる|thay thế
+付近|vùng lân cận
+二倍|gấp đôi
+何倍|gấp mấy lần
+個性|cá tính
+仲良し|bạn thân
+提供|cung cấp
+停止|dừng lại
+係員|nhân viên phụ trách
+徒歩|đi bộ
+投資|đầu tư
+値上げ|tăng giá
+押さえる|ấn giữ; nắm chắc
+探査|thăm dò
+負担|gánh nặng
+一億|một trăm triệu
+最悪|tồi tệ nhất
+恋愛|tình yêu
+初恋|mối tình đầu
+悲観的|bi quan
+悩み|nỗi phiền muộn
+精神的|về mặt tinh thần
+精一杯|hết sức mình
+支社|chi nhánh
+活発|hoạt bát, sôi nổi
+交流|giao lưu
+深夜|đêm khuya
+一泊|một đêm (trọ)
+湿度|độ ẩm
+塩分|lượng muối
+賃金|tiền lương
+賃貸|cho thuê
+交通費|chi phí đi lại
+社員|nhân viên công ty
+満員|kín chỗ
+貧困|nghèo khó
+貯める|tiết kiệm, tích lũy
+敗れる|bị đánh bại
+通販|mua bán qua mạng/bưu điện
+業績|thành tích kinh doanh
+面積|diện tích
+積もる|chất đống, phủ dày
+改めて|một lần nữa
+配る|phân phát
+坂道|đường dốc
+仮に|giả sử
+仮病|giả ốm
+乾杯|cạn ly
+千円札|tờ một nghìn yên
+名札|bảng tên
+教材|tài liệu giảng dạy
+何枚|mấy tờ
+枚数|số tờ
+大根|củ cải trắng
+歩道橋|cầu vượt cho người đi bộ
+ごみ箱|thùng rác
+内科|khoa nội
+一秒|một giây
+秒針|kim giây
+消費税|thuế tiêu dùng
+助手席|ghế phụ (cạnh tài xế)
+出勤|đi làm
+吐き気|buồn nôn
+和食|món Nhật
+造る|chế tạo, xây dựng
+高級|cao cấp
+中級|trung cấp
+温泉|suối nước nóng
+路線|tuyến (xe, tàu)
+遊園地|công viên giải trí
+逆さ|lộn ngược
+緑茶|trà xanh
+録画|ghi hình
+空く|trống, rảnh
+留守番|trông nhà
+在宅|ở nhà
+警察官|cảnh sát
+追加|thêm vào
+教師|giáo viên
+容量|dung lượng
+浴室|phòng tắm
+老後|tuổi già
+飼い主|chủ (thú cưng)
+電柱|cột điện
+柱|cái cột
+複数|nhiều, số nhiều
+満腹|no bụng
+腕時計|đồng hồ đeo tay
+野原|cánh đồng
+圧力|áp lực
+血圧|huyết áp
+責任感|tinh thần trách nhiệm
+超過|vượt quá
+内側|bên trong
+回転|quay vòng
+回る|quay, đi vòng
+頑固|cứng đầu
+固定|cố định
+忘年会|tiệc tất niên
+多忙|bận rộn
+豆腐|đậu phụ
+納豆|natto (đậu nành lên men)
+濃度|nồng độ
+電波|sóng điện
+鼻血|chảy máu cam
+一冊|một cuốn
+曲|bài hát, bản nhạc
+焼肉|thịt nướng
+干す|phơi
+月刊誌|nguyệt san
+週刊誌|tuần san
+目次|mục lục
+姿勢|tư thế
+順番|thứ tự, lượt
+願書|đơn đăng ký
+分類|phân loại
+規律|kỷ luật
+形式|hình thức
+未成年|vị thành niên
+車庫|nhà để xe
+軽自動車|xe hơi cỡ nhỏ
+乗車|lên xe
+点検|kiểm tra (định kỳ)
+室内|trong phòng
+三角|hình tam giác
+紅葉|lá đỏ mùa thu
+一兆|một nghìn tỷ
+逃亡|bỏ trốn
+映像|hình ảnh, video
+乗車券|vé lên tàu xe
+両側|hai bên
+典型的|điển hình
+血液型|nhóm máu
+時刻表|bảng giờ chạy tàu xe
+日本製|hàng Nhật
+預金|tiền gửi ngân hàng
+預ける|gửi (đồ, tiền)
+各国|các nước
+各地|các nơi
+落ちる|rơi; thi trượt
+神様|thần, Chúa
+正常|bình thường
+調整|điều chỉnh
+等|vân vân
+煙|khói
+撮影|chụp ảnh, quay phim
+食器|bát đĩa
+欧米|Âu Mỹ
+取材|lấy tin
+受験|dự thi
+人権|nhân quyền
+点数|điểm số
+返済|trả nợ
+勝負|thắng thua
+昨年|năm ngoái
+招待状|thiệp mời
+構造|cấu trúc
+回収|thu hồi
+公害|ô nhiễm môi trường
+年末|cuối năm
+皆様|quý vị
+不良|kém chất lượng; hư hỏng
+日程|lịch trình
+対処|đối phó, xử lý
+お客さん|khách hàng
+殺人|giết người
+削除|xóa bỏ
+以降|kể từ sau
+捕まえる|bắt giữ
+競馬|đua ngựa
+余る|thừa ra
+夫妻|vợ chồng
+背景|bối cảnh
+風船|bóng bay
+用途|công dụng
+選抜|tuyển chọn
+解散|giải tán
+浮かぶ|nổi lên; hiện lên
+絶えず|không ngừng
+住居|nơi ở
+更新|gia hạn, cập nhật
+払い戻し|hoàn tiền
+相互|tương hỗ, lẫn nhau
+花束|bó hoa
+行列|hàng người xếp
+〜君|bạn … (gọi nam)
+閉店|đóng cửa hàng
+内緒|bí mật
+草原|thảo nguyên
+お歳暮|quà cuối năm
+日本酒|rượu sake
+掛ける|treo; gọi (điện)
+手掛かり|manh mối
+寝室|phòng ngủ
+御中|kính gửi (tổ chức)
+大雪|tuyết lớn
+娘さん|con gái (người khác)
+誤る|nhầm lẫn
+昔話|chuyện cổ tích
+皆勤|đi học/làm đầy đủ
+鳴る|kêu, reo
+悲鳴|tiếng thét
+髪型|kiểu tóc
+天才|thiên tài
+〜才|… tuổi
+恥|sự xấu hổ
+偶数|số chẵn
+偉人|vĩ nhân
+子猫|mèo con
+幾つ|mấy cái; mấy tuổi
+幾ら|bao nhiêu (tiền)

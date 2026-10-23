@@ -1,37 +1,77 @@
-/* Ôn JLPT N3 — flashcards and fill-in-the-blank drills over data/*.json.
+/* Ôn JLPT N3 — flashcards and fill-in-the-blank drills over data/*.json, in rounds of 10 questions.
    Progress and the mistake book live in this browser (localStorage) and can be exported / imported as a JSON file. */
 'use strict';
-const EXAM = new Date(2026, 11, 6);          // JLPT 06/12/2026
-const KEY = 'jlpt-web-v1', UIKEY = 'jlpt-web-ui-v1';
+const EXAM = new Date(2026, 11, 6);                 // JLPT: Sunday 06/12/2026
+const START = new Date(2026, 9, 12);                // first study day, for the countdown ring
+const DAILY_GOAL = 40;
+const ROUND = 10;
+const KEY = 'jlpt-web-v1', UIKEY = 'jlpt-web-ui-v2';
 const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const pick = a => a[Math.floor(Math.random() * a.length)];
 const HAS_KANJI = /[一-鿿々]/;
-const SEC_NAME = { vocab: 'Từ vựng', kanji: 'Kanji', grammar: 'Ngữ pháp', sent: 'Mẫu câu', read: 'Đọc hiểu' };
+
+// ---------------- icons (inline SVG, stroke = currentColor)
+const P = {
+  home: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>',
+  vocab: '<rect x="4" y="3" width="13" height="17" rx="2"/><path d="M8 3v17"/><path d="M11 8h3M11 12h3"/><path d="M17 7h3v14H8"/>',
+  kanji: '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 9h10M12 6v12M8 14l-2 3M16 14l2 3"/>',
+  grammar: '<path d="M4 6h16M4 12h10M4 18h7"/><path d="M17 15l2 2 3-4"/>',
+  syn: '<path d="M7 7h11l-3-3M17 17H6l3 3"/>',
+  sent: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h3M13 10h3"/>',
+  read: '<path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1z"/><path d="M12 6v14"/>',
+  miss: '<circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/>',
+  more: '<rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/>',
+  bolt: '<path d="M13 3L5 14h6l-1 7 8-11h-6z"/>',
+  speak: '<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 010 6M18.5 6.5a8 8 0 010 11"/>',
+  check: '<path d="M5 12l5 5 9-10"/>', x: '<path d="M6 6l12 12M18 6L6 18"/>', back: '<path d="M15 5l-7 7 7 7"/>'
+};
+const icon = (n, cls = 'ic') => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n]}</svg>`;
+const SECTIONS = [
+  { id: 'home', name: 'Trang chủ', ic: 'home' },
+  { id: 'vocab', name: 'Từ vựng', ic: 'vocab', sub: 'Flashcard theo chủ đề' },
+  { id: 'kanji', name: 'Kanji', ic: 'kanji', sub: 'Âm Hán Việt và từ ghép' },
+  { id: 'grammar', name: 'Ngữ pháp', ic: 'grammar', sub: 'Điền vào chỗ trống' },
+  { id: 'syn', name: 'Đồng nghĩa', ic: 'syn', sub: 'Chọn từ gần nghĩa nhất' },
+  { id: 'sent', name: 'Mẫu câu', ic: 'sent', sub: '文脈規定 · 言い換え' },
+  { id: 'read', name: 'Đọc hiểu', ic: 'read', sub: 'Đoạn văn + câu hỏi' },
+  { id: 'miss', name: 'Lỗi sai', ic: 'miss', sub: 'Ôn lại câu đã sai' }];
+const SEC = Object.fromEntries(SECTIONS.map(s => [s.id, s]));
+const color = id => `--c: var(--c-${id})`;
 
 // ---------------- storage
 function loadJSON(k, d) { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } }
 let S = loadJSON(KEY, {});
 S.r = S.r || {}; S.m = S.m || {}; S.day = S.day || {};
-let UI = Object.assign({ tab: 'home', vTopic: 'all', vLv: 'all', vMode: 'mean', kLv: 'all', kMode: 'hv', gLv: 'all', sKind: 'all', view: {} }, loadJSON(UIKEY, {}));
+let UI = Object.assign({ tab: 'home', vTopic: 'all', vLv: 'all', vMode: 'mean', kLv: 'all', kMode: 'hv', gLv: 'all', gView: 'quiz',
+  sKind: 'all', yPos: 'all', yLv: 'all', read: null, miss: null, theme: 'auto', listQ: '' }, loadJSON(UIKEY, {}));
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { } }
 function saveUI() { try { localStorage.setItem(UIKEY, JSON.stringify(UI)); } catch (e) { } }
-const today = () => new Date().toISOString().slice(0, 10);
+const today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
 function record(id, sec, ok, label) {
   const r = S.r[id] || (S.r[id] = { c: 0, w: 0, s: 0 });
   if (ok) { r.c++; r.s++; } else { r.w++; r.s = 0; S.m[id] = { sec, n: (S.m[id] ? S.m[id].n : 0) + 1, t: Date.now(), label }; }
   if (ok && S.m[id] && r.s >= 2) delete S.m[id];         // two right answers in a row clear a mistake
   const d = S.day[today()] || (S.day[today()] = { n: 0, ok: 0 }); d.n++; if (ok) d.ok++;
-  save(); badge();
+  save(); badges();
 }
 const learned = id => S.r[id] && S.r[id].s >= 2;
-function badge() { const n = Object.keys(S.m).length; $('#missBadge').textContent = n ? n : ''; }
+
+// ---------------- speech (Japanese text-to-speech, where the browser has it)
+const canSpeak = 'speechSynthesis' in window && typeof SpeechSynthesisUtterance !== 'undefined';
+function speak(text) {
+  if (!canSpeak || !text) return;
+  try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text.replace(/（　　）/g, '')); u.lang = 'ja-JP'; u.rate = 0.9; speechSynthesis.speak(u); } catch (e) { }
+}
+const speakBtn = t => canSpeak ? `<button type="button" class="speak" data-say="${esc(t)}" aria-label="Nghe phát âm">${icon('speak')}</button>` : '';
+document.addEventListener('click', e => { const b = e.target.closest && e.target.closest('[data-say]'); if (b) { e.preventDefault(); speak(b.dataset.say); } });
 
 // ---------------- data
 const DB = {};
 async function loadData() {
-  const names = ['topics', 'vocab', 'kanji', 'grammar', 'sentences', 'reading'];
+  const names = ['topics', 'vocab', 'kanji', 'grammar', 'sentences', 'reading', 'synonyms'];
   const res = await Promise.all(names.map(n => fetch('data/' + n + '.json').then(r => { if (!r.ok) throw new Error(n); return r.json(); })));
   names.forEach((n, i) => DB[n] = res[i]);
   DB.vById = Object.fromEntries(DB.vocab.map(v => [v.id, v]));
@@ -39,17 +79,12 @@ async function loadData() {
   DB.gq = []; DB.grammar.forEach(g => g.q.forEach((q, i) => DB.gq.push({ id: g.id + '.' + i, g, q })));
   DB.gqById = Object.fromEntries(DB.gq.map(x => [x.id, x]));
   DB.sById = Object.fromEntries(DB.sentences.map(s => [s.id, s]));
+  DB.yById = Object.fromEntries(DB.synonyms.map(s => [s.id, s]));
   DB.topicName = Object.fromEntries(DB.topics.map(t => [t.id, t.name]));
 }
+function daysLeft() { const t = new Date(); t.setHours(0, 0, 0, 0); return Math.round((EXAM - t) / 86400000); }
 
-// ---------------- countdown
-function daysLeft() {
-  const t = new Date(); t.setHours(0, 0, 0, 0);
-  return Math.round((EXAM - t) / 86400000);
-}
-
-// ---------------- generic quiz card
-// q = {id, sec, label, prompt (html), ask, opts: [text], answer (index), jpOpts (bool), explain (html)}
+// ---------------- picking and distractors
 function pickItem(pool, idOf) {
   const miss = pool.filter(x => S.m[idOf(x)]), fresh = pool.filter(x => !S.r[idOf(x)]), weak = pool.filter(x => S.r[idOf(x)] && !learned(idOf(x)));
   const r = Math.random();
@@ -58,43 +93,6 @@ function pickItem(pool, idOf) {
   if (fresh.length && r < 0.92) return pick(fresh);
   return pick(pool);
 }
-function quiz(el, makeQ, sess) {
-  sess = sess || { n: 0, ok: 0 };
-  const q = makeQ();
-  if (!q) { el.innerHTML = '<div class="empty">Không có câu hỏi phù hợp với bộ lọc này. Hãy chọn phạm vi khác.</div>'; return; }
-  const order = shuffle(q.opts.map((t, i) => i));
-  el.innerHTML = `<div class="card" role="group" aria-label="Câu hỏi">
-    <div class="card-top"><span>${esc(q.tag || '')}</span><span>Lượt này: ${sess.ok}/${sess.n} đúng</span></div>
-    <div class="prompt">${q.prompt}<div class="ask">${esc(q.ask)}</div></div>
-    <div class="opts">${order.map((i, k) => `<button type="button" class="opt${q.jpOpts ? ' jp' : ''}" data-i="${i}"><span class="k">${k + 1}</span><span>${esc(q.opts[i])}</span></button>`).join('')}</div>
-    <div class="explain" hidden></div>
-    <div class="row" hidden><button type="button" class="btn next">Câu tiếp</button><span class="muted small">Phím 1–4 để chọn, Enter để qua câu</span></div>
-  </div>`;
-  const card = $('.card', el), btns = [...card.querySelectorAll('.opt')];
-  let done = false;
-  const choose = b => {
-    if (done) return; done = true;
-    const i = +b.dataset.i, ok = i === q.answer;
-    btns.forEach(x => { x.disabled = true; if (+x.dataset.i === q.answer) x.classList.add('right'); });
-    if (!ok) b.classList.add('wrong');
-    sess.n++; if (ok) sess.ok++;
-    record(q.id, q.sec, ok, q.label);
-    const ex = $('.explain', card); ex.hidden = false;
-    ex.innerHTML = `<div class="verdict ${ok ? 'ok' : 'bad'}">${ok ? 'Đúng rồi!' : 'Chưa đúng — đáp án: ' + esc(q.opts[q.answer])}</div>${q.explain || ''}`;
-    const row = card.querySelector('.row'); row.hidden = false;
-    $('.next', card).focus();
-  };
-  btns.forEach(b => b.addEventListener('click', () => choose(b)));
-  $('.next', card).addEventListener('click', () => quiz(el, makeQ, sess));
-  el._keys = e => {
-    if (e.target && e.target.closest && e.target.closest('input, textarea, select')) return;
-    if (!done && /^[1-4]$/.test(e.key) && btns[+e.key - 1]) { choose(btns[+e.key - 1]); e.preventDefault(); }
-    else if (done && (e.key === 'Enter' || e.key === ' ')) { quiz(el, makeQ, sess); e.preventDefault(); }
-  };
-  KEYS = el._keys;
-}
-let KEYS = null;
-document.addEventListener('keydown', e => { if (KEYS) KEYS(e); });
 function distract(answer, pool, n = 3) {
   const out = [], seen = new Set([answer]);
   for (const x of shuffle(pool)) { if (x && !seen.has(x)) { seen.add(x); out.push(x); if (out.length === n) break; } }
@@ -102,17 +100,13 @@ function distract(answer, pool, n = 3) {
 }
 const lvTag = lv => lv ? `<span class="lv">${esc(lv)}</span>` : '';
 
-// ---------------- vocabulary
-function vocabPool() {
-  return DB.vocab.filter(v => (UI.vTopic === 'all' || v.t === UI.vTopic) && (UI.vLv === 'all' || v.lv === UI.vLv));
+// ---------------- question builders: {id, sec, label, tag, prompt, ask, opts, answer, jp, say, info}
+function vocabPool() { return DB.vocab.filter(v => (UI.vTopic === 'all' || v.t === UI.vTopic) && (UI.vLv === 'all' || v.lv === UI.vLv)); }
+function vocabInfo(v) {
+  return `<div class="jp-line">${esc(v.w)}${v.r ? '【' + esc(v.r) + '】' : ''}${lvTag(v.lv)}${speakBtn(v.r || v.w)}</div><div>${esc(v.vi)}</div>
+    ${v.ex ? `<div class="jp small muted">${esc(v.ex)}</div>` : ''}<div class="small muted">Chủ đề: ${esc(DB.topicName[v.t] || v.t)}</div>`;
 }
-function vocabExplain(v) {
-  return `<div class="jp">${esc(v.w)}${v.r ? '【' + esc(v.r) + '】' : ''}${lvTag(v.lv)}</div><div>${esc(v.vi)}</div>
-    ${v.ex ? `<div class="jp muted small">${esc(v.ex)}</div>` : ''}<div class="muted small">Chủ đề: ${esc(DB.topicName[v.t] || v.t)}</div>`;
-}
-function vocabQ() {
-  let pool = vocabPool();
-  const mode = UI.vMode;
+function vocabQ(mode = UI.vMode, pool = vocabPool()) {
   if (mode === 'read') pool = pool.filter(v => HAS_KANJI.test(v.w) && v.r);
   if (!pool.length) return null;
   const v = pickItem(pool, x => x.id);
@@ -123,175 +117,248 @@ function vocabQ() {
   let opts, prompt, ask, jp = false;
   if (mode === 'mean') {
     opts = [v.vi, ...distract(v.vi, near.map(x => x.vi).concat(lvPool.slice(0, 400).map(x => x.vi)))];
-    prompt = `<div class="big-jp">${esc(v.w)}</div>${v.r && HAS_KANJI.test(v.w) ? `<div class="jp muted">${esc(v.r)}</div>` : ''}`;
-    ask = 'Chọn nghĩa đúng';
+    prompt = `<div class="word">${esc(v.w)}</div>${v.r && HAS_KANJI.test(v.w) ? `<div class="reading">${esc(v.r)}</div>` : ''}`;
+    ask = 'Từ này nghĩa là gì?';
   } else if (mode === 'read') {
-    const same = lvPool.filter(x => x.r && Math.abs(x.r.length - v.r.length) <= 1).map(x => x.r);
-    opts = [v.r, ...distract(v.r, same.length > 10 ? same : lvPool.map(x => x.r).filter(Boolean))];
-    prompt = `<div class="big-jp">${esc(v.w)}</div>`; ask = 'Chọn cách đọc đúng'; jp = true;
+    let same = lvPool.filter(x => x.r && Math.abs(x.r.length - v.r.length) <= 1).map(x => x.r);
+    if (new Set(same).size < 6) same = same.concat(lvPool.map(x => x.r).filter(Boolean));
+    opts = [v.r, ...distract(v.r, same)]; prompt = `<div class="word">${esc(v.w)}</div>`; ask = 'Chọn cách đọc đúng'; jp = true;
   } else {
     opts = [v.w, ...distract(v.w, near.map(x => x.w).concat(lvPool.slice(0, 300).map(x => x.w)))];
-    prompt = `<div style="font-size:22px;font-weight:600">${esc(v.vi)}</div>`; ask = 'Chọn từ tiếng Nhật đúng'; jp = true;
+    prompt = `<div class="meaning">${esc(v.vi)}</div>`; ask = 'Chọn từ tiếng Nhật đúng'; jp = true;
   }
   if (opts.length < 4) return null;
-  return { id: v.id, sec: 'vocab', label: v.w + ' — ' + v.vi, tag: (DB.topicName[v.t] || '') + ' · ' + v.lv, prompt, ask, opts, answer: 0, jpOpts: jp, explain: vocabExplain(v) };
+  return { id: v.id, sec: 'vocab', label: v.w + ' — ' + v.vi, tag: (DB.topicName[v.t] || '') + ' · ' + v.lv, prompt, ask, opts, answer: 0, jp,
+    say: mode === 'rev' ? '' : (v.r || v.w), info: vocabInfo(v) };
 }
-function vocabList(el) {
-  const pool = vocabPool();
-  el.innerHTML = `<div class="list">${pool.slice(0, 600).map(v => `<div class="word-row"><span class="jp">${esc(v.w)}${learned(v.id) ? ' ✓' : ''}</span><span>${v.r ? `<span class="jp muted">${esc(v.r)}</span> · ` : ''}${esc(v.vi)}${lvTag(v.lv)}</span></div>`).join('')}</div>
-    ${pool.length > 600 ? `<p class="muted small">Đang hiện 600 / ${pool.length} từ. Chọn một chủ đề để xem đủ.</p>` : ''}`;
-}
-function renderVocab(main) {
-  const groups = {};
-  DB.topics.forEach(t => (groups[t.group] = groups[t.group] || []).push(t));
-  const cnt = {}, done = {};
-  DB.vocab.forEach(v => { cnt[v.t] = (cnt[v.t] || 0) + 1; if (learned(v.id)) done[v.t] = (done[v.t] || 0) + 1; });
-  const cur = UI.vTopic === 'all' ? 'Tất cả chủ đề' : DB.topicName[UI.vTopic];
-  main.innerHTML = `<h1>Từ vựng</h1>
-  <div class="toolbar">${['all', 'N5', 'N4', 'N3'].map(l => `<button type="button" class="chip" data-lv="${l}" aria-pressed="${UI.vLv === l}">${l === 'all' ? 'Mọi cấp' : l}</button>`).join('')}</div>
-  <div class="toolbar">${[['mean', 'Từ → nghĩa'], ['read', 'Kanji → cách đọc'], ['rev', 'Nghĩa → từ'], ['list', 'Danh sách']].map(([m, n]) =>
-    `<button type="button" class="chip" data-mode="${m}" aria-pressed="${UI.vMode === m}">${n}</button>`).join('')}</div>
-  <details class="panel" ${UI.vTopic === 'all' ? 'open' : ''}><summary>Chủ đề: ${esc(cur)}</summary>
-    <div class="topics">
-      <button type="button" class="chip" data-topic="all" aria-pressed="${UI.vTopic === 'all'}">Tất cả (${DB.vocab.length})</button>
-      ${Object.entries(groups).map(([g, ts]) => `<div class="group-label">${esc(g)}</div>` + ts.map(t =>
-        `<button type="button" class="chip" data-topic="${t.id}" aria-pressed="${UI.vTopic === t.id}">${esc(t.name)} · ${done[t.id] || 0}/${cnt[t.id] || 0}</button>`).join('')).join('')}
-    </div></details>
-  <div id="stage"></div>`;
-  main.querySelectorAll('[data-topic]').forEach(b => b.onclick = () => { UI.vTopic = b.dataset.topic; saveUI(); render(); });
-  main.querySelectorAll('[data-lv]').forEach(b => b.onclick = () => { UI.vLv = b.dataset.lv; saveUI(); render(); });
-  main.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { UI.vMode = b.dataset.mode; saveUI(); render(); });
-  const st = $('#stage', main);
-  if (UI.vMode === 'list') vocabList(st); else quiz(st, vocabQ);
-}
-
-// ---------------- kanji
 function kanjiPool() { return DB.kanji.filter(k => UI.kLv === 'all' || k.lv === UI.kLv); }
-function kanjiExplain(k) {
-  return `<div class="row"><span class="big-kanji">${esc(k.k)}</span><div><div style="font-weight:700">${esc(k.hv)} ${lvTag(k.lv)}</div>
+function kanjiInfo(k) {
+  return `<div class="kanji-head"><span class="kanji">${esc(k.k)}</span><div><div><b>${esc(k.hv)}</b>${lvTag(k.lv)}</div>
     <div class="small">Âm On: <span class="jp">${esc(k.on || '—')}</span></div><div class="small">Âm Kun: <span class="jp">${esc(k.kun || '—')}</span></div></div></div>
-    ${k.story ? `<div class="story">${esc(k.story)}</div>` : ''}
-    <div class="words">${k.words.map(w => `<div class="word-row"><span class="jp">${esc(w.w)}</span><span><span class="jp muted">${esc(w.r)}</span>${w.vi ? ' · ' + esc(w.vi) : ''}${lvTag(w.lv)}</span></div>`).join('')}</div>`;
+    ${k.story ? `<div class="story small">${esc(k.story)}</div>` : ''}
+    <div class="words">${k.words.map(w => `<div class="wrow"><span class="jp">${esc(w.w)}</span><span><span class="jp muted">${esc(w.r)}</span>${w.vi ? ' · ' + esc(w.vi) : ''}${lvTag(w.lv)}</span></div>`).join('')}</div>`;
 }
-function kanjiQ() {
-  const pool = kanjiPool(); if (!pool.length) return null;
-  const k = pickItem(pool, x => x.id), mode = UI.kMode;
-  const tag = 'Kanji ' + k.lv;
+function kanjiQ(mode = UI.kMode, pool = kanjiPool(), tries = 0) {
+  if (!pool.length) return null;
+  const k = pickItem(pool, x => x.id), tag = 'Kanji ' + k.lv;
   if (mode === 'hv') {
-    const opts = [k.hv, ...distract(k.hv, DB.kanji.filter(x => x.lv === k.lv).map(x => x.hv))];
-    return { id: k.id, sec: 'kanji', label: k.k + ' ' + k.hv, tag, prompt: `<div class="big-kanji">${esc(k.k)}</div>`, ask: 'Chọn âm Hán Việt', opts, answer: 0, explain: kanjiExplain(k) };
+    const opts = [k.hv, ...distract(k.hv, DB.kanji.filter(x => x.lv === k.lv && x.hv !== k.hv).map(x => x.hv))];
+    return { id: k.id, sec: 'kanji', label: k.k + ' — ' + k.hv, tag, prompt: `<div class="kanji">${esc(k.k)}</div>`, ask: 'Âm Hán Việt của chữ này là gì?', opts, answer: 0, info: kanjiInfo(k) };
   }
-  const words = k.words.filter(w => w.r && (mode === 'wread' || w.vi) && HAS_KANJI.test(w.w) && !w.w.includes('・'));
-  if (!words.length) return kanjiQ.retry++ < 20 ? kanjiQ() : null;
-  kanjiQ.retry = 0;
+  const words = k.words.filter(w => w.r && w.vi && HAS_KANJI.test(w.w) && !w.w.includes('・'));
+  if (!words.length) return tries < 20 ? kanjiQ(mode, pool, tries + 1) : null;
   const w = pick(words);
   const others = DB.kanji.filter(x => x.lv === k.lv && x.id !== k.id).flatMap(x => x.words).filter(x => x.w !== w.w && x.vi !== w.vi && x.r !== w.r);
-  const hl = esc(w.w).split(k.k).join(`<span style="color:var(--accent)">${esc(k.k)}</span>`);
+  const hl = esc(w.w).split(esc(k.k)).join(`<span style="color:var(--c)">${esc(k.k)}</span>`);
   if (mode === 'wread') {
     let same = others.filter(x => x.r && Math.abs(x.r.length - w.r.length) <= 1).map(x => x.r);
     if (new Set(same).size < 6) same = same.concat(others.filter(x => x.r).map(x => x.r));
-    return { id: k.id, sec: 'kanji', label: w.w + ' (' + k.k + ')', tag, prompt: `<div class="big-jp">${hl}</div>`, ask: 'Chọn cách đọc của từ ghép', opts: [w.r, ...distract(w.r, same)], answer: 0, jpOpts: true, explain: kanjiExplain(k) };
+    return { id: k.id, sec: 'kanji', label: w.w + ' (' + k.k + ')', tag, prompt: `<div class="word">${hl}</div>`, ask: 'Chọn cách đọc của từ ghép', opts: [w.r, ...distract(w.r, same)], answer: 0, jp: true, say: w.r, info: kanjiInfo(k) };
   }
-  return { id: k.id, sec: 'kanji', label: w.w + ' (' + k.k + ')', tag, prompt: `<div class="big-jp">${hl}</div><div class="jp muted">${esc(w.r)}</div>`, ask: 'Từ ghép này nghĩa là gì?', opts: [w.vi, ...distract(w.vi, others.map(x => x.vi))], answer: 0, explain: kanjiExplain(k) };
+  return { id: k.id, sec: 'kanji', label: w.w + ' (' + k.k + ')', tag, prompt: `<div class="word">${hl}</div><div class="reading">${esc(w.r)}</div>`, ask: 'Từ ghép này nghĩa là gì?',
+    opts: [w.vi, ...distract(w.vi, others.map(x => x.vi))], answer: 0, say: w.r, info: kanjiInfo(k) };
 }
-kanjiQ.retry = 0;
-function kanjiList(el) {
-  el.innerHTML = `<div class="list">${kanjiPool().map(k => `<details class="word-row" style="display:block"><summary><span class="jp" style="font-size:22px">${esc(k.k)}</span> <b>${esc(k.hv)}</b>${lvTag(k.lv)}${learned(k.id) ? ' ✓' : ''} <span class="muted small">${k.words.slice(0, 4).map(w => esc(w.w)).join('、')}</span></summary>${kanjiExplain(k)}</details>`).join('')}</div>`;
-}
-function renderKanji(main) {
-  main.innerHTML = `<h1>Kanji</h1>
-  <p class="muted small">Mỗi chữ kèm các từ ghép lấy từ kho từ vựng N5–N3 (từ được tạo thành khi ghép Kanji).</p>
-  <div class="toolbar">${['all', 'N5', 'N4', 'N3'].map(l => `<button type="button" class="chip" data-lv="${l}" aria-pressed="${UI.kLv === l}">${l === 'all' ? 'Mọi cấp' : l}</button>`).join('')}</div>
-  <div class="toolbar">${[['hv', 'Chữ → Hán Việt'], ['word', 'Từ ghép → nghĩa'], ['wread', 'Từ ghép → cách đọc'], ['list', 'Danh sách']].map(([m, n]) =>
-    `<button type="button" class="chip" data-mode="${m}" aria-pressed="${UI.kMode === m}">${n}</button>`).join('')}</div>
-  <div id="stage"></div>`;
-  main.querySelectorAll('[data-lv]').forEach(b => b.onclick = () => { UI.kLv = b.dataset.lv; saveUI(); render(); });
-  main.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { UI.kMode = b.dataset.mode; saveUI(); render(); });
-  const st = $('#stage', main);
-  if (UI.kMode === 'list') kanjiList(st); else quiz(st, kanjiQ);
-}
-
-// ---------------- grammar
-function grammarExplain(g) {
-  return `<div class="jp" style="font-weight:700">${esc(g.p)}${lvTag(g.lv)}</div><div>${esc(g.mean)}</div>
+function grammarInfo(g) {
+  return `<div class="jp-line"><b>${esc(g.p)}</b>${lvTag(g.lv)}</div><div>${esc(g.mean)}</div>
     ${g.struct ? `<div class="small muted">Cấu trúc: <span class="jp">${esc(g.struct)}</span></div>` : ''}
-    ${g.ex.slice(0, 2).map(e => `<div class="jp small">${esc(e.jp)}</div>${e.vi ? `<div class="small muted">${esc(e.vi)}</div>` : ''}`).join('')}`;
+    ${g.ex.slice(0, 2).map(e => `<div class="jp small">${esc(e.jp)} ${speakBtn(e.jp)}</div>${e.vi ? `<div class="small muted">${esc(e.vi)}</div>` : ''}`).join('')}`;
 }
-function grammarQ(list) {
-  const pool = list || DB.gq.filter(x => UI.gLv === 'all' || x.g.lv === UI.gLv);
+const blankHTML = s => esc(s).replace('（　　）', '<span class="blank">（　　）</span>');
+function grammarQ(pool = DB.gq.filter(x => UI.gLv === 'all' || x.g.lv === UI.gLv)) {
   if (!pool.length) return null;
   const x = pickItem(pool, y => y.id);
   return { id: x.id, sec: 'grammar', label: x.g.p, tag: 'Ngữ pháp ' + x.g.lv + (x.g.grp ? ' · ' + x.g.grp : ''),
-    prompt: `<div class="q-jp">${esc(x.q.s).replace('（　　）', '<span class="blank">（　　）</span>')}</div>`, ask: 'Chọn từ / mẫu điền vào chỗ trống',
-    opts: [x.q.a, ...x.q.d], answer: 0, jpOpts: true, explain: grammarExplain(x.g) };
+    prompt: `<div class="sentence">${blankHTML(x.q.s)}</div>`, ask: 'Chọn mẫu điền vào chỗ trống', opts: [x.q.a, ...x.q.d], answer: 0, jp: true,
+    say: x.q.s.replace('（　　）', x.q.a), sayAfter: true, info: grammarInfo(x.g) };
 }
-function grammarList(el) {
-  const gs = DB.grammar.filter(g => UI.gLv === 'all' || g.lv === UI.gLv);
-  el.innerHTML = `<div class="list">${gs.map(g => `<details class="word-row" style="display:block"><summary><span class="jp"><b>${esc(g.p)}</b></span>${lvTag(g.lv)} <span class="muted small">${esc(g.mean.slice(0, 70))}</span></summary>${grammarExplain(g)}</details>`).join('')}</div>`;
+function sentQ(pool = DB.sentences.filter(s => UI.sKind === 'all' || s.kind === UI.sKind)) {
+  if (!pool.length) return null;
+  const s = pickItem(pool, x => x.id), para = s.kind === '言い換え';
+  const html = para ? esc(s.s).replace(/［(.+?)］/, '<u class="mark">$1</u>') : blankHTML(s.s);
+  return { id: s.id, sec: 'sent', label: s.s, tag: s.kind + (s.lv ? ' · ' + s.lv : ''), prompt: `<div class="sentence">${html}</div>`,
+    ask: para ? 'Chọn cách nói gần nghĩa nhất với phần gạch chân' : 'Chọn từ phù hợp nhất để điền vào chỗ trống',
+    opts: [s.a, ...s.d], answer: 0, jp: true, say: para ? s.s.replace(/［|］/g, '') : s.s.replace('（　　）', s.a), sayAfter: true,
+    info: `<div>${esc(s.vi)}</div>` };
+}
+const POS = { all: 'Tất cả', n: 'Danh từ', v: 'Động từ', a: 'Tính từ', d: 'Phó từ · từ nối' };
+function synQ(pool = DB.synonyms.filter(y => (UI.yPos === 'all' || y.pos === UI.yPos) && (UI.yLv === 'all' || y.lv === UI.yLv))) {
+  if (!pool.length) return null;
+  const y = pickItem(pool, x => x.id);
+  return { id: y.id, sec: 'syn', label: y.w + ' — ' + y.a, tag: POS[y.pos] + ' · ' + y.lv,
+    prompt: `<div class="word">${esc(y.w)}</div>${y.r ? `<div class="reading">${esc(y.r)}</div>` : ''}`,
+    ask: 'Từ nào gần nghĩa nhất với từ này?', opts: [y.a, ...y.d], answer: 0, jp: true, say: y.r || y.w,
+    info: `<div class="jp-line">${esc(y.w)} ≈ ${esc(y.a)}${lvTag(y.lv)}</div><div>Nghĩa: ${esc(y.vi)}</div>` };
+}
+function mixQ() {
+  const g = pick([() => vocabQ('mean', DB.vocab), () => vocabQ('read', DB.vocab), () => kanjiQ('hv', DB.kanji), () => kanjiQ('word', DB.kanji),
+    () => grammarQ(DB.gq), () => synQ(DB.synonyms), () => sentQ(DB.sentences)]);
+  return g();
+}
+
+// ---------------- round of 10: progress, feedback, result
+let KEYS = null;
+document.addEventListener('keydown', e => { if (KEYS) KEYS(e); });
+function round(el, sec, gen, opts = {}) {
+  const st = { i: 0, ok: 0, wrong: [] };
+  const size = opts.size || ROUND;
+  const next = () => { st.i < size ? ask() : result(); };
+  function ask() {
+    const q = gen();
+    if (!q) { el.innerHTML = '<div class="empty">Không có câu hỏi phù hợp với lựa chọn này. Hãy chọn phạm vi khác.</div>'; KEYS = null; return; }
+    const order = shuffle(q.opts.map((t, i) => i));
+    el.innerHTML = `<div class="card qcard" style="${color(q.sec)}">
+      <div class="qhead"><span class="tag">${esc(q.tag || '')}</span><span>Câu ${st.i + 1}/${size}</span></div>
+      <div class="prog"><i style="width:${100 * st.i / size}%"></i></div>
+      <div class="prompt">${q.prompt}${q.say && !q.sayAfter ? speakBtn(q.say) : ''}<div class="ask">${esc(q.ask)}</div></div>
+      <div class="opts">${order.map((i, k) => `<button type="button" class="opt${q.jp ? ' jp' : ''}" data-i="${i}"><span class="k">${k + 1}</span><span>${esc(q.opts[i])}</span></button>`).join('')}</div>
+      <div class="fb" hidden></div>
+      <div class="next-row" hidden><button type="button" class="btn c next">${st.i + 1 < size ? 'Câu tiếp' : 'Xem kết quả'}</button><span class="hint">Phím 1–4 để chọn, Enter để qua câu</span></div>
+    </div>`;
+    const card = $('.qcard', el), btns = $$('.opt', card);
+    let done = false;
+    const choose = b => {
+      if (done) return; done = true;
+      const i = +b.dataset.i, ok = i === q.answer;
+      btns.forEach(x => { x.disabled = true; if (+x.dataset.i === q.answer) x.classList.add('right'); else if (x !== b) x.classList.add('dim'); });
+      if (!ok) b.classList.add('wrong');
+      st.i++; if (ok) st.ok++; else st.wrong.push({ label: q.label, a: q.opts[q.answer] });
+      record(q.id, q.sec, ok, q.label);
+      const fb = $('.fb', card); fb.hidden = false; fb.className = 'fb feedback ' + (ok ? 'ok' : 'bad');
+      fb.innerHTML = `<div class="verdict">${icon(ok ? 'check' : 'x')}${ok ? 'Chính xác!' : 'Chưa đúng. Đáp án: ' + esc(q.opts[q.answer])}</div><div class="info">${q.info || ''}</div>`;
+      $('.prog i', card).style.width = (100 * st.i / size) + '%';
+      $('.next-row', card).hidden = false; $('.next', card).focus({ preventScroll: true });
+    };
+    btns.forEach(b => b.addEventListener('click', () => choose(b)));
+    $('.next', card).addEventListener('click', next);
+    KEYS = e => {
+      if (e.target && e.target.closest && e.target.closest('input, textarea, select')) return;
+      if (!done && /^[1-4]$/.test(e.key) && btns[+e.key - 1]) { choose(btns[+e.key - 1]); e.preventDefault(); }
+      else if (done && (e.key === 'Enter' || e.key === ' ')) { next(); e.preventDefault(); }
+    };
+  }
+  function result() {
+    KEYS = null;
+    const pct = Math.round(100 * st.ok / size);
+    const msg = pct === 100 ? 'Tuyệt vời, không sai câu nào!' : pct >= 80 ? 'Rất tốt! Ôn lại vài câu sai là ổn.' : pct >= 50 ? 'Khá rồi, cố thêm chút nữa.' : 'Đừng nản, các câu sai đã được lưu để ôn lại.';
+    el.innerHTML = `<div class="card result" style="${color(sec)}"><div class="muted small">Kết quả lượt này</div><div class="score">${st.ok}/${size}</div><div><b>${msg}</b></div>
+      ${st.wrong.length ? `<ul>${st.wrong.map(w => `<li><span class="jp">${esc(w.label)}</span><br><span class="small muted">Đáp án: </span><span class="jp">${esc(w.a)}</span></li>`).join('')}</ul>` : ''}
+      <div class="row"><button type="button" class="btn c again">Lượt mới</button>${st.wrong.length && sec !== 'miss' ? `<button type="button" class="btn sec tomiss">Ôn lỗi sai</button>` : ''}</div></div>`;
+    $('.again', el).onclick = () => round(el, sec, gen, opts);
+    const tm = $('.tomiss', el); if (tm) tm.onclick = () => go('miss');
+    $('.again', el).focus({ preventScroll: true });
+  }
+  ask();
+}
+
+// ---------------- page helpers
+const pageHead = (id, title, sub) => `<div class="page-head" style="${color(id)}"><span class="badge-ic">${icon(SEC[id] ? SEC[id].ic : 'more')}</span><div><h1>${esc(title)}</h1>${sub ? `<p>${sub}</p>` : ''}</div></div>`;
+const seg = (key, items, cur) => `<div class="seg">${items.map(([v, n]) => `<button type="button" data-k="${key}" data-v="${esc(v)}" aria-pressed="${cur === v}">${esc(n)}</button>`).join('')}</div>`;
+const LVS = [['all', 'Mọi cấp'], ['N5', 'N5'], ['N4', 'N4'], ['N3', 'N3']];
+function bindSeg(root) {
+  $$('[data-k]', root).forEach(b => b.onclick = () => { UI[b.dataset.k] = b.dataset.v; saveUI(); render(); });
+}
+// filters: always open on a wide screen; on a phone folded into a one-line summary so the question is visible at once
+const WIDE = matchMedia('(min-width: 1000px)');
+function drillPage(main, id, title, sub, filtersHTML, run, summary) {
+  const open = WIDE.matches || UI.fOpen;
+  main.innerHTML = pageHead(id, title, sub) + `<div class="drill" style="${color(id)}"><details class="filters card" ${open ? 'open' : ''}>
+    <summary><span class="flabel">Tuỳ chọn</span><span class="fsum">${esc(summary || '')}</span><span class="fchev" aria-hidden="true">▾</span></summary>
+    <div class="fbody">${filtersHTML}</div></details><div class="stage"></div></div>`;
+  const d = $('details.filters', main);
+  d.addEventListener('toggle', () => { if (!WIDE.matches) { UI.fOpen = d.open; saveUI(); } });
+  bindSeg(main);
+  run($('.stage', main));
+}
+const segName = (items, v) => (items.find(x => x[0] === v) || ['', ''])[1];
+function listSearch(root, rows, render) {
+  const box = document.createElement('div');
+  box.innerHTML = `<label class="field"><span class="flabel">Tìm kiếm</span><input type="search" id="listq" placeholder="Gõ chữ Nhật, cách đọc hoặc nghĩa…" value="${esc(UI.listQ)}"></label><div class="card wl" style="margin-top:12px"></div>`;
+  root.appendChild(box);
+  const out = $('.wl', box), input = $('#listq', box);
+  const draw = () => {
+    const q = input.value.trim().toLowerCase();
+    const hit = q ? rows.filter(r => r.text.toLowerCase().includes(q)) : rows;
+    out.innerHTML = hit.length ? `<div class="wlist">${hit.slice(0, 400).map(r => r.html).join('')}</div>${hit.length > 400 ? `<p class="small muted">Hiện 400 / ${hit.length} mục. Gõ thêm để lọc.</p>` : ''}` : '<p class="muted">Không tìm thấy.</p>';
+  };
+  input.oninput = () => { UI.listQ = input.value; saveUI(); draw(); };
+  draw();
+}
+
+// ---------------- pages
+function renderVocab(main) {
+  const cnt = {}, done = {};
+  DB.vocab.forEach(v => { cnt[v.t] = (cnt[v.t] || 0) + 1; if (learned(v.id)) done[v.t] = (done[v.t] || 0) + 1; });
+  const groups = {}; DB.topics.forEach(t => (groups[t.group] = groups[t.group] || []).push(t));
+  const sel = `<label class="field"><span class="flabel">Chủ đề</span><select id="topicSel"><option value="all">Tất cả chủ đề (${DB.vocab.length} từ)</option>
+    ${Object.entries(groups).map(([g, ts]) => `<optgroup label="${esc(g)}">${ts.map(t => `<option value="${t.id}" ${UI.vTopic === t.id ? 'selected' : ''}>${esc(t.name)} · ${done[t.id] || 0}/${cnt[t.id] || 0}</option>`).join('')}</optgroup>`).join('')}
+    </select></label>`;
+  const filters = sel + `<div><div class="flabel">Cấp độ</div>${seg('vLv', LVS, UI.vLv)}</div>
+    <div><div class="flabel">Kiểu ôn</div>${seg('vMode', [['mean', 'Từ → nghĩa'], ['read', 'Kanji → cách đọc'], ['rev', 'Nghĩa → từ'], ['list', 'Danh sách']], UI.vMode)}</div>`;
+  const VM = [['mean', 'Từ → nghĩa'], ['read', 'Kanji → cách đọc'], ['rev', 'Nghĩa → từ'], ['list', 'Danh sách']];
+  const sum = (UI.vTopic === 'all' ? 'Tất cả chủ đề' : DB.topicName[UI.vTopic]) + ' · ' + segName(LVS, UI.vLv) + ' · ' + segName(VM, UI.vMode);
+  drillPage(main, 'vocab', 'Từ vựng', 'Chọn chủ đề và kiểu ôn, mỗi lượt 10 câu', filters, st => {
+    $('#topicSel', main).onchange = e => { UI.vTopic = e.target.value; saveUI(); render(); };
+    if (UI.vMode === 'list') listSearch(st, vocabPool().map(v => ({ text: v.w + ' ' + v.r + ' ' + v.vi,
+      html: `<div class="wrow"><span class="jp">${esc(v.w)}${learned(v.id) ? '<span class="ok-mark">✓</span>' : ''}</span><span>${v.r ? `<span class="jp muted">${esc(v.r)}</span> · ` : ''}${esc(v.vi)}${lvTag(v.lv)}</span></div>` })));
+    else round(st, 'vocab', () => vocabQ());
+  }, sum);
+}
+function renderKanji(main) {
+  const filters = `<div><div class="flabel">Cấp độ</div>${seg('kLv', LVS, UI.kLv)}</div>
+    <div><div class="flabel">Kiểu ôn</div>${seg('kMode', [['hv', 'Chữ → Hán Việt'], ['word', 'Từ ghép → nghĩa'], ['wread', 'Từ ghép → cách đọc'], ['list', 'Danh sách']], UI.kMode)}</div>
+    <p class="small muted" style="margin:0">Mỗi chữ kèm các từ ghép lấy từ kho từ vựng N5–N3.</p>`;
+  const KM = [['hv', 'Chữ → Hán Việt'], ['word', 'Từ ghép → nghĩa'], ['wread', 'Từ ghép → cách đọc'], ['list', 'Danh sách']];
+  drillPage(main, 'kanji', 'Kanji', `${DB.kanji.length} chữ N5–N3, âm Hán Việt và từ ghép`, filters, st => {
+    if (UI.kMode === 'list') listSearch(st, kanjiPool().map(k => ({ text: k.k + ' ' + k.hv + ' ' + k.on + ' ' + k.kun + ' ' + k.words.map(w => w.w + w.vi).join(' '),
+      html: `<details class="wrow"><summary><span class="jp" style="font-size:24px">${esc(k.k)}</span><b>${esc(k.hv)}</b>${lvTag(k.lv)}${learned(k.id) ? '<span class="ok-mark">✓</span>' : ''}<span class="small muted jp">${k.words.slice(0, 4).map(w => esc(w.w)).join('、')}</span></summary>${kanjiInfo(k)}</details>` })));
+    else round(st, 'kanji', () => kanjiQ());
+  }, segName(LVS, UI.kLv) + ' · ' + segName(KM, UI.kMode));
 }
 function renderGrammar(main) {
-  const mode = UI.view.grammar || 'quiz';
-  main.innerHTML = `<h1>Ngữ pháp</h1>
-  <div class="toolbar">${['all', 'N5', 'N4', 'N3'].map(l => `<button type="button" class="chip" data-lv="${l}" aria-pressed="${UI.gLv === l}">${l === 'all' ? 'Mọi cấp' : l}</button>`).join('')}
-    <button type="button" class="chip" data-view="quiz" aria-pressed="${mode === 'quiz'}">Điền chỗ trống</button>
-    <button type="button" class="chip" data-view="list" aria-pressed="${mode === 'list'}">Danh sách mẫu</button></div>
-  <div id="stage"></div>`;
-  main.querySelectorAll('[data-lv]').forEach(b => b.onclick = () => { UI.gLv = b.dataset.lv; saveUI(); render(); });
-  main.querySelectorAll('[data-view]').forEach(b => b.onclick = () => { UI.view.grammar = b.dataset.view; saveUI(); render(); });
-  const st = $('#stage', main);
-  if (mode === 'list') grammarList(st); else quiz(st, () => grammarQ());
+  const filters = `<div><div class="flabel">Cấp độ</div>${seg('gLv', LVS, UI.gLv)}</div>
+    <div><div class="flabel">Kiểu ôn</div>${seg('gView', [['quiz', 'Điền chỗ trống'], ['list', 'Danh sách mẫu']], UI.gView)}</div>`;
+  drillPage(main, 'grammar', 'Ngữ pháp', `${DB.grammar.length} mẫu N5–N3, điền vào chỗ trống`, filters, st => {
+    if (UI.gView === 'list') listSearch(st, DB.grammar.filter(g => UI.gLv === 'all' || g.lv === UI.gLv).map(g => ({ text: g.p + ' ' + g.mean,
+      html: `<details class="wrow"><summary><span class="jp"><b>${esc(g.p)}</b></span>${lvTag(g.lv)}<span class="small muted">${esc(g.mean.slice(0, 80))}</span></summary><div class="info">${grammarInfo(g)}</div></details>` })));
+    else round(st, 'grammar', () => grammarQ());
+  }, segName(LVS, UI.gLv) + ' · ' + (UI.gView === 'list' ? 'Danh sách mẫu' : 'Điền chỗ trống'));
 }
-
-// ---------------- sentence patterns
-function sentQ(list) {
-  const pool = list || DB.sentences.filter(s => UI.sKind === 'all' || s.kind === UI.sKind);
-  if (!pool.length) return null;
-  const s = pickItem(pool, x => x.id);
-  const para = s.kind === '言い換え';
-  const html = para ? esc(s.s).replace(/［(.+?)］/, '<u style="text-decoration-thickness:2px">$1</u>') : esc(s.s).replace('（　　）', '<span class="blank">（　　）</span>');
-  return { id: s.id, sec: 'sent', label: s.s, tag: s.kind + (s.lv ? ' · ' + s.lv : ''), prompt: `<div class="q-jp">${html}</div>`,
-    ask: para ? 'Chọn cách nói gần nghĩa nhất với phần gạch chân' : 'Chọn từ phù hợp nhất để điền vào chỗ trống',
-    opts: [s.a, ...s.d], answer: 0, jpOpts: true, explain: `<div class="small">${esc(s.vi)}</div>` };
+function renderSyn(main) {
+  const filters = `<div><div class="flabel">Từ loại</div>${seg('yPos', Object.entries(POS), UI.yPos)}</div>
+    <div><div class="flabel">Cấp độ</div>${seg('yLv', LVS, UI.yLv)}</div>
+    <p class="small muted" style="margin:0">Dạng 言い換え類義 của đề N3: tìm từ hoặc cách nói có nghĩa gần nhất trong 4 đáp án.</p>`;
+  drillPage(main, 'syn', 'Đồng nghĩa', `${DB.synonyms.length} cặp từ đồng nghĩa hay gặp`, filters, st => round(st, 'syn', () => synQ()), POS[UI.yPos] + ' · ' + segName(LVS, UI.yLv));
 }
 function renderSent(main) {
-  main.innerHTML = `<h1>Mẫu câu từ vựng</h1>
-  <p class="muted small">Dạng 文脈規定 (điền từ hợp ngữ cảnh) và 言い換え類義 (chọn cách nói gần nghĩa) như phần 文字・語彙 của đề N3.</p>
-  <div class="toolbar">${[['all', 'Tất cả'], ['文脈規定', '文脈規定 · điền từ'], ['言い換え', '言い換え · gần nghĩa']].map(([k, n]) =>
-    `<button type="button" class="chip" data-kind="${k}" aria-pressed="${UI.sKind === k}">${n}</button>`).join('')}</div>
-  <div id="stage"></div>`;
-  main.querySelectorAll('[data-kind]').forEach(b => b.onclick = () => { UI.sKind = b.dataset.kind; saveUI(); render(); });
-  quiz($('#stage', main), () => sentQ());
+  const filters = `<div><div class="flabel">Dạng bài</div>${seg('sKind', [['all', 'Tất cả'], ['文脈規定', '文脈規定 · điền từ'], ['言い換え', '言い換え · gần nghĩa']], UI.sKind)}</div>
+    <p class="small muted" style="margin:0">Như phần 文字・語彙 của đề N3.</p>`;
+  drillPage(main, 'sent', 'Mẫu câu', `${DB.sentences.length} câu điền từ và chọn cách nói gần nghĩa`, filters, st => round(st, 'sent', () => sentQ()), UI.sKind === 'all' ? 'Tất cả dạng bài' : UI.sKind);
 }
-
-// ---------------- reading
 function renderRead(main) {
-  const open = UI.view.read;
-  const p = open && DB.reading.find(r => r.id === open);
+  const p = UI.read && DB.reading.find(r => r.id === UI.read);
   if (!p) {
-    main.innerHTML = `<h1>Đọc hiểu</h1><p class="muted small">Mỗi bài: điền vào chỗ trống (dạng 文章の文法) rồi trả lời câu hỏi nội dung.</p>
-      <div class="grid">${DB.reading.map(r => { const res = S.r[r.id]; return `<button type="button" class="stat" data-open="${r.id}">
-        <div class="stat-head"><b>${esc(r.title)}</b><span class="stat-num">${res ? (res.best ?? 0) + '/' + (r.blanks.length + r.questions.length) : 'Chưa làm'}</span></div>
-        <span class="muted small">${esc(r.type)}</span></button>`; }).join('')}</div>`;
-    main.querySelectorAll('[data-open]').forEach(b => b.onclick = () => { UI.view.read = b.dataset.open; saveUI(); render(); });
+    main.innerHTML = pageHead('read', 'Đọc hiểu', 'Điền chỗ trống kiểu 文章の文法 rồi trả lời câu hỏi nội dung') +
+      `<div class="rlist" style="${color('read')}">${DB.reading.map(r => { const res = S.r[r.id], tot = r.blanks.length + r.questions.length;
+        return `<button type="button" class="tile" data-open="${r.id}"><span class="chipnum">${res ? 'Đúng ' + (res.best ?? 0) + '/' + tot : 'Chưa làm'}</span><b>${esc(r.title)}</b><span class="sub">${esc(r.type)} · ${tot} câu</span></button>`; }).join('')}</div>`;
+    $$('[data-open]', main).forEach(b => b.onclick = () => { UI.read = b.dataset.open; saveUI(); render(); window.scrollTo(0, 0); });
     return;
   }
   const items = [...p.blanks.map((b, i) => ({ id: p.id + '#b' + (i + 1), kind: 'blank', n: i + 1, q: 'Chỗ trống 【' + (i + 1) + '】', a: b.a, d: b.d })),
     ...p.questions.map((q, i) => ({ id: p.id + '#q' + (i + 1), kind: 'q', q: q.q, a: q.a, d: q.d }))];
   const answers = {};
   const text = esc(p.text).replace(/【(\d)】/g, (m, n) => `<span class="blank" id="bl${n}">【${n}】</span>`);
-  main.innerHTML = `<div class="row"><button type="button" class="btn ghost" id="back">← Danh sách bài</button></div>
-    <h1>${esc(p.title)}</h1><div class="muted small">${esc(p.type)}</div>
-    <div class="card read-grid"><div class="passage">${text}</div><div class="rq-list">
-    ${items.map((it, k) => `<div class="rq" data-k="${k}"><div class="${it.kind === 'q' ? 'q-jp' : ''}" style="${it.kind === 'q' ? 'font-size:17px' : 'font-weight:600'}">${esc(it.q)}</div>
+  main.innerHTML = `<div class="row"><button type="button" class="btn sec" id="back">${icon('back')} Danh sách bài</button></div>` + pageHead('read', p.title, p.type) +
+    `<div class="rgrid" style="${color('read')}"><div class="card passage">${text}<div style="margin-top:10px">${speakBtn(p.text.replace(/【\d】/g, '…'))}</div></div><div class="rqs">
+    ${items.map((it, k) => `<div class="card rq" data-k="${k}"><div class="rq-title${it.kind === 'q' ? ' jp' : ''}">${esc(it.q)}</div>
       <div class="opts">${shuffle([it.a, ...it.d]).map(o => `<button type="button" class="opt jp" data-v="${esc(o)}"><span>${esc(o)}</span></button>`).join('')}</div></div>`).join('')}
     <div id="readScore"></div></div></div>`;
-  $('#back', main).onclick = () => { UI.view.read = null; saveUI(); render(); };
-  main.querySelectorAll('.rq').forEach(box => {
+  $('#back', main).onclick = () => { UI.read = null; saveUI(); render(); };
+  $$('.rq', main).forEach(box => {
     const it = items[+box.dataset.k];
-    box.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+    $$('.opt', box).forEach(b => b.onclick = () => {
       if (it.id in answers) return;
       const ok = b.dataset.v === it.a; answers[it.id] = ok;
-      box.querySelectorAll('.opt').forEach(x => { x.disabled = true; if (x.dataset.v === it.a) x.classList.add('right'); });
+      $$('.opt', box).forEach(x => { x.disabled = true; if (x.dataset.v === it.a) x.classList.add('right'); else if (x !== b) x.classList.add('dim'); });
       if (!ok) b.classList.add('wrong');
       record(it.id, 'read', ok, p.title + ' — ' + it.q);
       if (it.kind === 'blank') { const bl = $('#bl' + it.n, main); bl.textContent = it.a; bl.classList.add(ok ? 'ok' : 'bad'); }
@@ -299,46 +366,42 @@ function renderRead(main) {
         const sc = Object.values(answers).filter(Boolean).length;
         const r = S.r[p.id] || (S.r[p.id] = { c: 0, w: 0, s: 0 });
         r.best = Math.max(r.best || 0, sc); r.s = sc === items.length ? 2 : 0; save();
-        $('#readScore', main).innerHTML = `<div class="score">Kết quả: ${sc}/${items.length}</div><div class="row"><button type="button" class="btn" id="again">Làm lại bài này</button></div>`;
+        $('#readScore', main).innerHTML = `<div class="card result" style="${color('read')}"><div class="score">${sc}/${items.length}</div><div class="row"><button type="button" class="btn c" id="again">Làm lại bài này</button><button type="button" class="btn sec" id="other">Bài khác</button></div></div>`;
         $('#again', main).onclick = () => render();
+        $('#other', main).onclick = () => { UI.read = null; saveUI(); render(); };
       }
     });
   });
 }
-
-// ---------------- mistakes
+const REVIEW = {
+  vocab: ids => { const v = DB.vById[pick(ids)]; return v ? vocabQ('mean', [v]) || null : null; },
+  kanji: ids => { const k = DB.kById[pick(ids)]; return k ? kanjiQ('hv', [k]) : null; },
+  grammar: ids => grammarQ(ids.map(i => DB.gqById[i]).filter(Boolean)),
+  sent: ids => sentQ(ids.map(i => DB.sById[i]).filter(Boolean)),
+  syn: ids => synQ(ids.map(i => DB.yById[i]).filter(Boolean)) };
 function renderMiss(main) {
   const by = {};
   Object.entries(S.m).forEach(([id, m]) => (by[m.sec] = by[m.sec] || []).push([id, m]));
-  const run = UI.view.miss;
-  if (run && by[run]) {
-    main.innerHTML = `<div class="row"><button type="button" class="btn ghost" id="back">← Sổ lỗi sai</button></div><h1>Ôn lỗi sai · ${SEC_NAME[run]}</h1>
-      <p class="muted small">Trả lời đúng 2 lần liên tiếp thì câu đó được xoá khỏi sổ.</p><div id="stage"></div>`;
-    $('#back', main).onclick = () => { UI.view.miss = null; saveUI(); render(); };
-    const ids = () => Object.keys(S.m).filter(id => S.m[id].sec === run);
-    const gen = () => {
-      const list = ids(); if (!list.length) return null;
-      if (run === 'vocab') { const v = DB.vById[pick(list)]; return v ? forceVocab(v) : null; }
-      if (run === 'kanji') { const k = DB.kById[pick(list)]; return k ? kanjiForce(k) : null; }
-      if (run === 'grammar') return grammarQ(list.map(i => DB.gqById[i]).filter(Boolean));
-      if (run === 'sent') return sentQ(list.map(i => DB.sById[i]).filter(Boolean));
-      return null;
-    };
-    quiz($('#stage', main), gen);
+  if (UI.miss && by[UI.miss] && REVIEW[UI.miss]) {
+    const sec = UI.miss;
+    main.innerHTML = `<div class="row"><button type="button" class="btn sec" id="back">${icon('back')} Sổ lỗi sai</button></div>` +
+      pageHead('miss', 'Ôn lỗi sai · ' + SEC[sec].name, 'Trả lời đúng 2 lần liên tiếp thì câu đó được xoá khỏi sổ') + `<div class="stage"></div>`;
+    $('#back', main).onclick = () => { UI.miss = null; saveUI(); render(); };
+    const ids = () => Object.keys(S.m).filter(id => S.m[id].sec === sec);
+    round($('.stage', main), 'miss', () => { const l = ids(); return l.length ? REVIEW[sec](l) : null; }, { size: Math.min(ROUND, Math.max(1, ids().length)) });
     return;
   }
   const total = Object.keys(S.m).length;
-  main.innerHTML = `<h1>Sổ lỗi sai</h1>
-    ${total ? '' : '<div class="empty">Chưa có lỗi sai nào. Câu nào bạn trả lời sai sẽ được lưu ở đây để ôn lại.</div>'}
-    ${Object.entries(by).map(([sec, list]) => `<div class="card"><div class="stat-head"><h2>${SEC_NAME[sec] || sec}</h2><span class="stat-num">${list.length} câu</span></div>
-      ${sec !== 'read' ? `<div class="row"><button type="button" class="btn" data-run="${sec}">Ôn lại phần này</button></div>` : '<div class="muted small">Mở lại bài trong tab Đọc hiểu để làm lại.</div>'}
-      <div class="words">${list.sort((a, b) => b[1].n - a[1].n).slice(0, 60).map(([id, m]) => `<div class="word-row"><span class="jp">${esc((m.label || id).split(' — ')[0])}</span><span class="small">${esc((m.label || '').split(' — ')[1] || '')} <span class="muted">· sai ${m.n} lần</span></span></div>`).join('')}</div></div>`).join('')}
-    <div class="card"><h2>Sao lưu tiến độ (file JSON)</h2>
-      <p class="muted small">Tiến độ và sổ lỗi sai lưu trong trình duyệt này. Xuất ra file để giữ lại hoặc chuyển sang máy khác.</p>
-      <div class="row"><button type="button" class="btn ghost" id="exp">Xuất file JSON</button>
-      <label class="btn ghost" for="imp" style="display:inline-block">Nhập file JSON</label><input type="file" id="imp" accept="application/json,.json" hidden>
-      <button type="button" class="btn danger" id="clr">Xoá sổ lỗi sai</button></div><div id="msg" class="small"></div></div>`;
-  main.querySelectorAll('[data-run]').forEach(b => b.onclick = () => { UI.view.miss = b.dataset.run; saveUI(); render(); });
+  main.innerHTML = pageHead('miss', 'Sổ lỗi sai', total ? `${total} câu cần ôn lại` : 'Câu nào trả lời sai sẽ được lưu ở đây') +
+    (total ? '' : '<div class="empty">Chưa có lỗi sai nào. Làm vài lượt ôn, câu sai sẽ hiện ở đây.</div>') +
+    Object.entries(by).map(([sec, list]) => `<div class="card" style="${color(sec === 'read' ? 'read' : sec)}">
+      <div class="page-head"><span class="badge-ic">${icon(SEC[sec] ? SEC[sec].ic : 'more')}</span><div><h2>${esc(SEC[sec] ? SEC[sec].name : sec)}</h2><p>${list.length} câu</p></div></div>
+      <div class="wlist" style="margin:10px 0">${list.sort((a, b) => b[1].n - a[1].n).slice(0, 30).map(([id, m]) => `<div class="wrow"><span class="jp">${esc((m.label || id).split(' — ')[0])}</span><span class="small">${esc((m.label || '').split(' — ')[1] || '')} <span class="muted">· sai ${m.n} lần</span></span></div>`).join('')}</div>
+      ${REVIEW[sec] ? `<button type="button" class="btn c" data-run="${sec}">Ôn lại phần này</button>` : '<p class="small muted">Mở lại bài trong mục Đọc hiểu để làm lại.</p>'}</div>`).join('') +
+    `<div class="card"><h2>Sao lưu tiến độ</h2><p class="small muted">Tiến độ lưu trong trình duyệt này. Xuất ra file JSON để giữ lại hoặc chuyển sang máy khác.</p>
+      <div class="row"><button type="button" class="btn sec" id="exp">Xuất file JSON</button><label class="btn sec" for="imp">Nhập file JSON</label><input type="file" id="imp" accept="application/json,.json" hidden>
+      <button type="button" class="btn danger" id="clr">Xoá sổ lỗi sai</button></div><p id="msg" class="small"></p></div>`;
+  $$('[data-run]', main).forEach(b => b.onclick = () => { UI.miss = b.dataset.run; saveUI(); render(); });
   $('#exp', main).onclick = () => {
     const blob = new Blob([JSON.stringify(S, null, 1)], { type: 'application/json' });
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'jlpt-tien-do-' + today() + '.json'; a.click();
@@ -346,81 +409,102 @@ function renderMiss(main) {
   };
   $('#imp', main).onchange = e => {
     const f = e.target.files[0]; if (!f) return;
-    f.text().then(t => { const d = JSON.parse(t); if (!d.r) throw 0; S = Object.assign({ r: {}, m: {}, day: {} }, d); save(); badge(); render(); })
+    f.text().then(t => { const d = JSON.parse(t); if (!d.r) throw 0; S = Object.assign({ r: {}, m: {}, day: {} }, d); save(); badges(); render(); })
       .catch(() => { $('#msg', main).textContent = 'File không đúng định dạng tiến độ của trang này.'; });
   };
   let armed = false;
-  $('#clr', main).onclick = e => {
-    if (!armed) { armed = true; e.target.textContent = 'Bấm lần nữa để xoá'; return; }
-    S.m = {}; save(); badge(); render();
-  };
+  $('#clr', main).onclick = e => { if (!armed) { armed = true; e.currentTarget.textContent = 'Bấm lần nữa để xoá'; return; } S.m = {}; save(); badges(); render(); };
 }
-function forceVocab(v) {
-  const near = DB.vocab.filter(x => x.t === v.t && x.w !== v.w && x.vi !== v.vi).map(x => x.vi);
-  return { id: v.id, sec: 'vocab', label: v.w + ' — ' + v.vi, tag: DB.topicName[v.t] || '', prompt: `<div class="big-jp">${esc(v.w)}</div>${v.r ? `<div class="jp muted">${esc(v.r)}</div>` : ''}`,
-    ask: 'Chọn nghĩa đúng', opts: [v.vi, ...distract(v.vi, near.concat(DB.vocab.filter(x => x.lv === v.lv && x.w !== v.w).map(x => x.vi)))], answer: 0, explain: vocabExplain(v) };
+function renderMix(main) {
+  main.innerHTML = pageHead('home', 'Ôn nhanh', '10 câu trộn từ tất cả các phần') + `<div class="stage"></div>`;
+  round($('.stage', main), 'home', mixQ);
 }
-function kanjiForce(k) {
-  return { id: k.id, sec: 'kanji', label: k.k + ' ' + k.hv, tag: 'Kanji ' + k.lv, prompt: `<div class="big-kanji">${esc(k.k)}</div>`, ask: 'Chọn âm Hán Việt',
-    opts: [k.hv, ...distract(k.hv, DB.kanji.filter(x => x.lv === k.lv).map(x => x.hv))], answer: 0, explain: kanjiExplain(k) };
+function renderMore(main) {
+  main.innerHTML = pageHead('more', 'Luyện thêm', 'Các phần ôn khác') + `<div class="hub">${['syn', 'sent', 'read', 'miss'].map(id => tileHTML(id)).join('')}</div>
+    <div class="card row" style="justify-content:space-between"><span><b>Giao diện</b><br><span class="small muted">Sáng, tối hoặc theo máy</span></span><button type="button" class="btn sec" id="themeBtn2"></button></div>`;
+  $$('[data-go]', main).forEach(b => b.onclick = () => go(b.dataset.go));
+  const tb = $('#themeBtn2', main); tb.textContent = $('#themeBtn').textContent.replace('Giao diện: ', '');
+  tb.onclick = () => { $('#themeBtn').click(); tb.textContent = $('#themeBtn').textContent.replace('Giao diện: ', ''); };
 }
-
-// ---------------- home
+function sectionStats(id) {
+  const ids = { vocab: () => DB.vocab.map(v => v.id), kanji: () => DB.kanji.map(k => k.id), grammar: () => DB.gq.map(x => x.id), syn: () => DB.synonyms.map(y => y.id),
+    sent: () => DB.sentences.map(s => s.id), read: () => DB.reading.map(r => r.id) }[id];
+  if (!ids) return null;
+  const all = ids(), done = all.filter(learned).length;
+  return { done, total: all.length, pct: all.length ? Math.round(100 * done / all.length) : 0 };
+}
+function tileHTML(id) {
+  const s = SEC[id], st = sectionStats(id), miss = id === 'miss' ? Object.keys(S.m).length : 0;
+  return `<button type="button" class="tile" data-go="${id}" style="${color(id)}">
+    <div class="tile-top"><span class="badge-ic">${icon(s.ic)}</span><div><b>${esc(s.name)}</b><span class="sub">${esc(s.sub || '')}</span></div></div>
+    ${st ? `<div class="bar"><i style="width:${st.pct}%"></i></div><div class="stats-row"><span>Đã thuộc ${st.done}/${st.total}</span><span>${st.pct}%</span></div>`
+         : `<div class="stats-row"><span>${miss ? miss + ' câu cần ôn' : 'Chưa có lỗi sai'}</span></div>`}</button>`;
+}
 function renderHome(main) {
-  const d = daysLeft();
-  const sec = [
-    ['vocab', 'Từ vựng', DB.vocab.map(v => v.id)],
-    ['kanji', 'Kanji', DB.kanji.map(k => k.id)],
-    ['grammar', 'Ngữ pháp', DB.gq.map(x => x.id)],
-    ['sent', 'Mẫu câu', DB.sentences.map(s => s.id)],
-    ['read', 'Đọc hiểu', DB.reading.map(r => r.id)]];
-  const lvStat = (arr, lv) => { const a = arr.filter(x => x.lv === lv); return [a.filter(x => learned(x.id)).length, a.length]; };
+  const d = daysLeft(), span = Math.round((EXAM - START) / 86400000), pct = Math.max(0, Math.min(100, Math.round(100 * (span - d) / span)));
   const t = S.day[today()] || { n: 0, ok: 0 };
+  const goalPct = Math.min(100, Math.round(100 * t.n / DAILY_GOAL));
   const week = Object.entries(S.day).filter(([k]) => (Date.now() - new Date(k)) / 86400000 < 7).reduce((s, [, v]) => s + v.n, 0);
-  main.innerHTML = `<section class="hero"><div class="days">${d > 0 ? d : 0}<small>ngày</small></div>
-    <div class="hero-text"><h1>${d > 0 ? 'đến kỳ thi JLPT N3' : d === 0 ? 'Hôm nay là ngày thi. Chúc bạn đỗ!' : 'Kỳ thi đã qua'}</h1>
-    <div class="muted">Chủ nhật 06/12/2026 · Hôm nay: ${t.n} câu, đúng ${t.n ? Math.round(100 * t.ok / t.n) : 0}% · 7 ngày qua: ${week} câu</div></div></section>
-  <h2>Tiến độ từng phần</h2>
-  <p class="muted small">Một mục được tính là "đã thuộc" khi bạn trả lời đúng 2 lần liên tiếp.</p>
-  <div class="grid">${sec.map(([k, n, ids]) => { const done = ids.filter(learned).length, pct = ids.length ? Math.round(100 * done / ids.length) : 0;
-    return `<button type="button" class="stat" data-go="${k}"><div class="stat-head"><b>${n}</b><span class="stat-num">${done}/${ids.length} · ${pct}%</span></div><div class="bar${pct >= 80 ? ' ok' : ''}"><i style="width:${pct}%"></i></div></button>`; }).join('')}
-    <button type="button" class="stat" data-go="miss"><div class="stat-head"><b>Lỗi sai cần ôn</b><span class="stat-num">${Object.keys(S.m).length} câu</span></div><span class="muted small">Ôn lại những câu đã trả lời sai</span></button></div>
-  <h2>Theo cấp độ</h2>
-  <div class="grid">${['N5', 'N4', 'N3'].map(lv => { const [a, b] = lvStat(DB.vocab, lv), [c, e] = lvStat(DB.kanji, lv);
-    return `<div class="stat" style="cursor:default"><b>${lv}</b>
-      <div class="small">Từ vựng ${a}/${b}</div><div class="bar"><i style="width:${b ? 100 * a / b : 0}%"></i></div>
-      <div class="small">Kanji ${c}/${e}</div><div class="bar"><i style="width:${e ? 100 * c / e : 0}%"></i></div></div>`; }).join('')}</div>`;
-  main.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
+  const lvStat = (arr, lv) => { const a = arr.filter(x => x.lv === lv); return [a.filter(x => learned(x.id)).length, a.length]; };
+  const missN = Object.keys(S.m).length;
+  main.innerHTML = `<section class="hero">
+      <div class="ring" style="--p:${pct}"><div><span class="big">${Math.max(d, 0)}</span><small>ngày nữa</small></div></div>
+      <div class="hero-text"><h1>${d > 0 ? 'Cố lên, sắp đến kỳ thi JLPT N3!' : d === 0 ? 'Hôm nay là ngày thi. Chúc bạn đỗ!' : 'Kỳ thi đã qua'}</h1>
+        <p>Chủ nhật 06/12/2026 · 7 ngày qua bạn đã làm ${week} câu</p>
+        <div class="row"><button type="button" class="btn" data-go="mix">${icon('bolt')} Ôn nhanh 10 câu</button>${missN ? `<button type="button" class="btn ghost" data-go="miss">Ôn ${missN} lỗi sai</button>` : ''}</div></div>
+    </section>
+    <div class="card goal" style="${color('home')}"><div><b>Mục tiêu hôm nay</b><div class="small muted">${t.n}/${DAILY_GOAL} câu · đúng ${t.n ? Math.round(100 * t.ok / t.n) : 0}%</div></div><div class="bar"><i style="width:${goalPct}%"></i></div></div>
+    <h2>Các phần ôn tập</h2>
+    <div class="tiles">${['vocab', 'kanji', 'grammar', 'syn', 'sent', 'read', 'miss'].map(tileHTML).join('')}</div>
+    <h2>Theo cấp độ</h2>
+    <div class="lvgrid">${['N5', 'N4', 'N3'].map(lv => { const [a, b] = lvStat(DB.vocab, lv), [c, e] = lvStat(DB.kanji, lv);
+      return `<div class="card"><b>${lv}</b><div class="small" style="${color('vocab')}">Từ vựng ${a}/${b}<div class="bar"><i style="width:${b ? 100 * a / b : 0}%"></i></div></div>
+        <div class="small" style="${color('kanji')}">Kanji ${c}/${e}<div class="bar"><i style="width:${e ? 100 * c / e : 0}%"></i></div></div></div>`; }).join('')}</div>
+    <p class="small muted">Một mục được tính là "đã thuộc" khi bạn trả lời đúng 2 lần liên tiếp.</p>`;
+  $$('[data-go]', main).forEach(b => b.onclick = () => go(b.dataset.go));
 }
 
-// ---------------- router
-const VIEWS = { home: renderHome, vocab: renderVocab, kanji: renderKanji, grammar: renderGrammar, sent: renderSent, read: renderRead, miss: renderMiss };
-function twoCol(main) {
-  const st = $('#stage', main); if (!st) return;
-  const side = document.createElement('aside'); side.className = 'side';
-  while (main.firstChild && main.firstChild !== st) side.appendChild(main.firstChild);
-  const lay = document.createElement('div'); lay.className = 'layout';
-  st.classList.add('stage'); main.insertBefore(lay, st); lay.append(side, st);
+// ---------------- navigation
+const VIEWS = { home: renderHome, vocab: renderVocab, kanji: renderKanji, grammar: renderGrammar, syn: renderSyn, sent: renderSent, read: renderRead, miss: renderMiss, mix: renderMix, more: renderMore };
+const BOTTOM = ['home', 'vocab', 'kanji', 'grammar', 'more'];
+function buildNav() {
+  $('#sideLinks').innerHTML = SECTIONS.map(s => `<button type="button" data-tab="${s.id}" style="${color(s.id)}">${icon(s.ic)}<span>${esc(s.name)}</span>${s.id === 'miss' ? '<span class="dot" id="dotSide"></span>' : ''}</button>`).join('');
+  $('#bottomNav').innerHTML = BOTTOM.map(id => { const s = SEC[id] || { name: 'Luyện thêm', ic: 'more' };
+    return `<button type="button" data-tab="${id}" style="${color(id)}">${icon(s.ic)}<span>${esc(s.name)}</span>${id === 'more' ? '<span class="dot" id="dotBottom"></span>' : ''}</button>`; }).join('');
+  $$('[data-tab]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); go(b.dataset.tab); }));
 }
+function badges() {
+  const n = Object.keys(S.m).length;
+  ['#dotSide', '#dotBottom'].forEach(s => { const el = $(s); if (el) el.textContent = n ? (n > 99 ? '99+' : n) : ''; });
+}
+function applyTheme() {
+  if (UI.theme === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', UI.theme);
+  $('#themeBtn').textContent = 'Giao diện: ' + { auto: 'tự động', light: 'sáng', dark: 'tối' }[UI.theme];
+}
+$('#themeBtn').onclick = () => { UI.theme = { auto: 'light', light: 'dark', dark: 'auto' }[UI.theme]; saveUI(); applyTheme(); };
 function render() {
   KEYS = null;
   const main = $('#main');
-  main.className = 'wrap tab-' + UI.tab;
-  document.querySelectorAll('.tabs button').forEach(b => {
-    b.setAttribute('aria-current', b.dataset.tab === UI.tab ? 'page' : 'false');
-    if (b.dataset.tab === UI.tab) b.scrollIntoView({ inline: 'center', block: 'nearest' });
-  });
-  (VIEWS[UI.tab] || renderHome)(main);
-  if (['vocab', 'kanji', 'grammar', 'sent'].includes(UI.tab) || (UI.tab === 'miss' && UI.view.miss)) twoCol(main);
-  const d = daysLeft(); $('#countChip').textContent = d > 0 ? 'Còn ' + d + ' ngày' : '';
+  const t = UI.tab;
+  const navId = ['syn', 'sent', 'read', 'miss', 'more'].includes(t) ? 'more' : t === 'mix' ? 'home' : t;
+  $$('#sideLinks [data-tab]').forEach(b => b.setAttribute('aria-current', b.dataset.tab === (t === 'mix' ? 'home' : t) ? 'page' : 'false'));
+  $$('#bottomNav [data-tab]').forEach(b => b.setAttribute('aria-current', b.dataset.tab === navId ? 'page' : 'false'));
+  (VIEWS[t] || renderHome)(main);
+  const d = daysLeft(), txt = d > 0 ? 'Còn ' + d + ' ngày' : '';
+  $('#topCount').textContent = txt; $('#sideCount').textContent = txt;
 }
-function go(tab) { UI.tab = tab; if (tab === 'miss') UI.view.miss = null; saveUI(); render(); window.scrollTo(0, 0); if (location.hash !== '#' + tab) history.replaceState(null, '', '#' + tab); }
-document.querySelectorAll('[data-tab]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); go(b.dataset.tab); }));
+function go(tab) {
+  if (!VIEWS[tab]) tab = 'home';
+  UI.tab = tab; if (tab === 'miss') UI.miss = null; if (tab === 'read') UI.read = null; UI.listQ = '';
+  saveUI(); render(); window.scrollTo(0, 0);
+  if (location.hash !== '#' + tab) history.replaceState(null, '', '#' + tab);
+}
 window.addEventListener('hashchange', () => { const t = location.hash.slice(1); if (VIEWS[t] && t !== UI.tab) go(t); });
 
+buildNav(); applyTheme();
 loadData().then(() => {
   const t = location.hash.slice(1); if (VIEWS[t]) UI.tab = t;
-  badge(); render();
+  badges(); render();
 }).catch(err => {
   $('#main').innerHTML = `<div class="empty">Không tải được dữ liệu (${esc(err.message)}). Nếu bạn mở file trực tiếp trên máy, hãy chạy <code>python3 -m http.server</code> trong thư mục này rồi mở <code>http://localhost:8000</code>.</div>`;
 });

@@ -2,7 +2,7 @@
 import json, re, collections, os, sys
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
 L = lambda n: json.load(open(os.path.join(D, n + '.json'), encoding='utf-8'))
-V, K, G, S, R, T = L('vocab'), L('kanji'), L('grammar'), L('sentences'), L('reading'), L('topics')
+V, K, G, S, R, T, Y = L('vocab'), L('kanji'), L('grammar'), L('sentences'), L('reading'), L('topics'), L('synonyms')
 probs = collections.defaultdict(list)
 tid = {t['id'] for t in T}
 JP = re.compile(r'[぀-ヿ一-鿿]')
@@ -40,8 +40,14 @@ for r in R:
     if n != len(r['blanks']): probs['đọc hiểu: số chỗ trống ≠ số câu'].append((r['id'], n, len(r['blanks'])))
     for b in r['blanks']: chk('đọc hiểu (chỗ trống)', b['a'], b['d'], r['id'])
     for q in r['questions']: chk('đọc hiểu (câu hỏi)', q['a'], q['d'], r['id'])
+for y in Y:
+    chk('đồng nghĩa', y['a'], y['d'], y['w'])
+    if y['w'] in y['d']: probs['đồng nghĩa: từ gốc nằm trong đáp án'].append(y['w'])
+for k in K:
+    for w in k['words']:
+        if not w['vi']: probs['kanji: từ ghép thiếu nghĩa'].append(w['w'])
 gq = sum(len(g['q']) for g in G)
-print('vocab %d · kanji %d · grammar %d (câu hỏi %d) · mẫu câu %d · đọc hiểu %d' % (len(V), len(K), len(G), gq, len(S), len(R)))
+print('vocab %d · kanji %d · grammar %d (câu hỏi %d) · mẫu câu %d · đọc hiểu %d · đồng nghĩa %d' % (len(V), len(K), len(G), gq, len(S), len(R), len(Y)))
 bad = {k: v for k, v in probs.items() if v}
 for k, v in bad.items(): print('-', k, len(v), v[:6])
 print('OK' if not bad else 'CÓ LỖI'); sys.exit(1 if bad else 0)

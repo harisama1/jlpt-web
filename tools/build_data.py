@@ -37,7 +37,10 @@ def add(word, read, vi, lv, topic, ex='', src='pdf'):
     key = (word, read, topic)
     if key in seen: return
     seen.add(key)
-    vocab.append({'id': 'v%d' % len(vocab), 'w': word, 'r': read if read != word else '', 'vi': vi.strip(), 'lv': lv,
+    vi = vi.strip()
+    if vi[:1].isupper() and vi[1:2].islower() and not re.match(r'^(Tết|Phật|Giáng|Nhật|Mỹ|Trung|Việt|Hàn|Anh|Pháp|Đức|Chúa|Thần|Tokyo|Kyoto|Âu|Thái)', vi):
+        vi = vi[0].lower() + vi[1:]
+    vocab.append({'id': 'v%d' % len(vocab), 'w': word, 'r': read if read != word else '', 'vi': vi, 'lv': lv,
                   't': topic, 'ex': ex.strip(), 'src': src})
 for e in raw:
     add(e['word'], e['read'], e['vi'], e['lv'], e['sec'], e.get('ex', ''))
@@ -63,12 +66,13 @@ by_char = collections.defaultdict(list)
 for v in vocab:
     if '・' in v['w'] or '／' in v['w']: continue          # lists like 東・西・南・北 are not compounds
     for ch in set(KANJI.findall(v['w'])): by_char[ch].append(v)
+kw_vi = dict(l.rstrip('\n').split('|', 1) for l in open(os.path.join(HERE, 'vi_kanji_words.txt'), encoding='utf-8') if '|' in l)
 kanji = []
 for k in kraw:
     words, used = [], set()
     for ex in k['ex']:                      # the PDF's own examples first
         m = next((v for v in by_char.get(k['k'], []) if v['w'] == ex['w']), None)
-        words.append({'w': ex['w'], 'r': ex['r'], 'vi': m['vi'] if m else '', 'lv': m['lv'] if m else ''}); used.add(ex['w'])
+        words.append({'w': ex['w'], 'r': ex['r'], 'vi': m['vi'] if m else kw_vi.get(ex['w'], ''), 'lv': m['lv'] if m else ''}); used.add(ex['w'])
     cands = sorted({v['w']: v for v in by_char.get(k['k'], []) if v['w'] not in used}.values(),
                    key=lambda v: (-len(KANJI.findall(v['w'])) >= -1, -LV[v['lv']], len(v['w'])))
     cands = sorted(cands, key=lambda v: (0 if len(KANJI.findall(v['w'])) >= 2 else 1, -LV[v['lv']], len(v['w'])))
@@ -87,6 +91,7 @@ for g in graw:
     if clean and not re.match(r'^[〜～VNAa-zA-Z（(普可見疑尊丁受迷使Th一-龯ぁ-んァ-ン]', p): clean[-1]['p'] += p; continue
     if clean and re.match(r'^(り|ど|う|される|なら|している)', p) and clean[-1]['lv'] == g['lv']:
         clean[-1]['p'] += p; clean[-1]['ex'] += g['ex']; continue
+    if p.startswith('これ・それ・あれ・どれ'): p = 'こ・そ・あ・ど（これ／この／ここ…）'
     g['p'] = p; clean.append(g)
 def cores(pattern):
     """the Japanese pieces of a pattern that should appear in an example sentence"""
@@ -119,9 +124,10 @@ for l in open(os.path.join(HERE, 'grammar_add.txt'), encoding='utf-8'):
                     'q': [{'s': sent.replace(m.group(0), '（　　）'), 'a': m.group(1), 'd': ds.split(';'), 'vi': tr}]})
 # cloze items for the PDF grammar: blank the pattern inside its own example; distractors = other patterns of the level
 pool = collections.defaultdict(list)
+BAD_CORE = re.compile(r'(この|その|あの|どの|これ|それ|あれ|どれ|だれ|どこ|一番|ここ|そこ)')
 for g in grammar:
     for c in g['cores'][:1]:
-        if len(c) >= 1: pool[g['lv']].append(c)
+        if 1 <= len(c) <= 9 and not BAD_CORE.search(c): pool[g['lv']].append(c)
 PARTICLES = ['は', 'が', 'を', 'に', 'で', 'へ', 'と', 'も', 'から', 'まで', 'や', 'の', 'か', 'ね', 'よ']
 nq = 0
 for g in grammar:
@@ -165,8 +171,20 @@ for v in vocab:
     gen += 1
 print('sentences', len(sents), '(generated from phrases: %d)' % gen)
 
+syn_rows = [l.rstrip('\n').split('|') for l in open(os.path.join(HERE, 'synonyms.txt'), encoding='utf-8') if l.strip() and not l.startswith('#')]
+grp = {}
+def gf(x):
+    grp.setdefault(x, x)
+    while grp[x] != x: grp[x] = grp[grp[x]]; x = grp[x]
+    return x
+for pos, w, r, a, lv, m in syn_rows: grp[gf(w)] = gf(a)       # chains like 突然 = 急に = いきなり form one group
+synonyms = []
+for i, (pos, w, r, a, lv, m) in enumerate(syn_rows):
+    cand = sorted({x[3] for x in syn_rows if x[0] == pos and gf(x[3]) != gf(w)} | {x[1] for x in syn_rows if x[0] == pos and gf(x[1]) != gf(w)})
+    synonyms.append({'id': 'y%d' % i, 'pos': pos, 'w': w, 'r': r if r != w else '', 'a': a, 'lv': lv, 'vi': m, 'd': random.sample(cand, 3)})
+print('synonyms', len(synonyms), collections.Counter(x['pos'] for x in synonyms))
 reading = json.load(open(os.path.join(OUT, 'reading.json'), encoding='utf-8'))
-for name, data in (('topics', list(topics.values())), ('vocab', vocab), ('kanji', kanji), ('grammar', grammar), ('sentences', sents)):
+for name, data in (('topics', list(topics.values())), ('vocab', vocab), ('kanji', kanji), ('grammar', grammar), ('sentences', sents), ('synonyms', synonyms)):
     json.dump(data, open(os.path.join(OUT, name + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 tc = collections.Counter(v['t'] for v in vocab)
 print('topics', len(topics), {t: tc[t] for t in list(topics)[:6]}, '...')
