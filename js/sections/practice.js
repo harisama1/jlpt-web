@@ -1,0 +1,97 @@
+// Mẫu câu (#/sent), Ngữ pháp (#/more/grammar[/nhóm]), Từ đồng nghĩa (#/more/syn).
+import { $, esc, color } from '../core/util.js';
+import { DB, meanOf } from '../core/data.js';
+import { prefs, learned, countLearned } from '../core/store.js';
+import { pickItem } from '../core/deck.js';
+import { register } from '../core/router.js';
+import { round } from '../core/quiz.js';
+import { speakBtn } from '../core/speech.js';
+import { pageHead, cardGrid, seg, bindSeg, listSearch, bindCardSearch, lvTag } from '../core/ui.js';
+
+const blankHTML = s => esc(s).replace('（　　）', '<span class="blank">（　　）</span>');
+const LVS = [['all', 'Mọi cấp'], ['N5', 'N5'], ['N4', 'N4'], ['N3', 'N3']];
+
+// ---------------- Mẫu câu: 文脈規定 + 言い換え
+export function sentQ(pool, scope) {
+  if (!pool.length) return null;
+  const s = pickItem(pool, x => x.id, scope), para = s.kind === '言い換え', opts = [s.a, ...s.d];
+  const html = para ? esc(s.s).replace(/［(.+?)］/, '<u class="mark">$1</u>') : blankHTML(s.s);
+  const marked = para ? (s.s.match(/［(.+?)］/) || [, ''])[1] : '';
+  const full = para ? s.s.replace(/［|］/g, '') : s.s.replace('（　　）', s.a);
+  return { id: s.id, sec: 'sent', label: s.s, tag: s.kind + (s.lv ? ' · ' + s.lv : ''), prompt: `<div class="sentence">${html}</div>`,
+    ask: para ? 'Chọn cách nói gần nghĩa nhất với phần gạch chân' : 'Chọn từ phù hợp nhất để điền vào chỗ trống',
+    opts, answer: 0, jp: true, say: full, sayAfter: true, vi: s.vi, full, notes: opts.map(meanOf),
+    why: para ? `「${marked}」${meanOf(marked) ? ' (' + meanOf(marked) + ')' : ''} gần nghĩa nhất với 「${s.a}」.` : `Chỉ 「${s.a}」 hợp với nghĩa của cả câu.` };
+}
+const KINDS = [['all', 'Tất cả'], ['文脈規定', '文脈規定 · điền từ'], ['言い換え', '言い換え · gần nghĩa']];
+register({
+  id: 'sent', name: 'Mẫu câu', icon: 'sent', order: 30, tile: { sub: '文脈規定 · 言い換え', stat: () => [countLearned(DB.sentences.map(s => s.id)), DB.sentences.length] },
+  render(main) {
+    const kind = prefs.sKind || 'all';
+    main.innerHTML = pageHead('sent', 'Mẫu câu', DB.sentences.length + ' câu điền từ và chọn cách nói gần nghĩa, như phần 文字・語彙 của đề') +
+      `<div class="card topicbar" style="${color('sent')}"><span class="flabel">Dạng bài</span>${seg('sKind', KINDS, kind)}</div><div class="stage" style="${color('sent')}"></div>`;
+    bindSeg(main, () => this.render(main));
+    round($('.stage', main), 'sent', () => sentQ(DB.sentences.filter(s => kind === 'all' || s.kind === kind), 's|' + kind));
+  }
+});
+
+// ---------------- Ngữ pháp: chọn nhóm → điền chỗ trống
+export function grammarInfo(g) {
+  return `<div class="jp-line"><b>${esc(g.p)}</b>${lvTag(g.lv)}</div><div>${esc(g.mean)}</div>
+    ${g.struct ? `<div class="small muted">Cấu trúc: <span class="jp">${esc(g.struct)}</span></div>` : ''}
+    ${g.ex.slice(0, 2).map(e => `<div class="jp small">${esc(e.jp)} ${speakBtn(e.jp)}</div>${e.vi ? `<div class="small muted">${esc(e.vi)}</div>` : ''}`).join('')}`;
+}
+export function grammarQ(pool, scope) {
+  if (!pool.length) return null;
+  const x = pickItem(pool, y => y.id, scope), opts = [x.q.a, ...x.q.d];
+  return { id: x.id, sec: 'grammar', label: x.g.p, tag: 'Ngữ pháp ' + x.g.lv + (x.g.grp ? ' · ' + x.g.grp : ''),
+    prompt: `<div class="sentence">${blankHTML(x.q.s)}</div>`, ask: 'Chọn mẫu điền vào chỗ trống', opts, answer: 0, jp: true,
+    say: x.q.s.replace('（　　）', x.q.a), sayAfter: true, vi: x.q.vi, full: x.q.s.replace('（　　）', x.q.a),
+    notes: opts.map((o, i) => i ? meanOf(o) : 'mẫu ' + x.g.p + ': ' + x.g.mean), why: `Câu cần ý "${x.g.mean}", nên dùng mẫu ${x.g.p}.`, info: grammarInfo(x.g) };
+}
+register({
+  id: 'grammar', name: 'Ngữ pháp', icon: 'grammar', parent: 'more', order: 62, tile: { sub: 'Chọn nhóm, điền chỗ trống', stat: () => [countLearned(DB.gq.map(x => x.id)), DB.gq.length] },
+  render(main, [grp]) {
+    const lv = prefs.gLv || 'all', inLv = x => lv === 'all' || x.g.lv === lv;
+    if (!grp) {
+      const all = DB.gq.filter(inLv);
+      const items = DB.groups.map(name => { const qs = all.filter(x => x.g.grp === name);
+        return { href: '#/more/grammar/' + encodeURIComponent(name), title: name, sub: [...new Set(qs.map(x => x.g.p))].slice(0, 3).join(' · '), done: countLearned(qs.map(x => x.id)), total: qs.length }; }).filter(t => t.total);
+      main.innerHTML = pageHead('grammar', 'Ngữ pháp', 'Chọn nhóm ngữ pháp; mỗi câu có dịch nghĩa và giải thích từng đáp án', ['Mục khác', '#/more']) +
+        `<div style="${color('grammar')}"><div class="row">${seg('gLv', LVS, lv)}</div><input type="search" class="tsearch" placeholder="Tìm nhóm hoặc mẫu…">
+        ${cardGrid([{ href: '#/more/grammar/all', title: 'Tất cả mẫu ngữ pháp', done: countLearned(all.map(x => x.id)), total: all.length, cls: 'wide' }, ...items])}</div>`;
+      bindSeg(main, () => this.render(main, []));
+      return bindCardSearch(main, $('.tsearch', main));
+    }
+    const pool = DB.gq.filter(x => inLv(x) && (grp === 'all' || x.g.grp === grp)), view = prefs.gView || 'quiz';
+    main.innerHTML = pageHead('grammar', grp === 'all' ? 'Tất cả mẫu ngữ pháp' : grp, 'Đã thuộc ' + countLearned(pool.map(x => x.id)) + '/' + pool.length, ['Đổi nhóm', '#/more/grammar']) +
+      `<div class="card topicbar" style="${color('grammar')}">${seg('gView', [['quiz', 'Điền chỗ trống'], ['list', 'Danh sách mẫu']], view)}</div><div class="stage" style="${color('grammar')}"></div>`;
+    bindSeg(main, () => this.render(main, [grp]));
+    const st = $('.stage', main);
+    if (view === 'list') listSearch(st, [...new Map(pool.map(x => [x.g.id, x.g])).values()].map(g => ({ text: g.p + ' ' + g.mean,
+      html: `<details class="wrow"><summary><span class="jp"><b>${esc(g.p)}</b></span>${lvTag(g.lv)}<span class="small muted">${esc(g.mean.slice(0, 80))}</span></summary><div class="info">${grammarInfo(g)}</div></details>` })));
+    else round(st, 'grammar', () => grammarQ(pool, 'g|' + lv + '|' + grp), { back: ['Đổi nhóm', '#/more/grammar'] });
+  }
+});
+
+// ---------------- Từ đồng nghĩa
+const POS = { all: 'Tất cả', n: 'Danh từ', v: 'Động từ', a: 'Tính từ', d: 'Phó từ · từ nối' };
+export function synQ(pool, scope) {
+  if (!pool.length) return null;
+  const y = pickItem(pool, x => x.id, scope), opts = [y.a, ...y.d];
+  return { id: y.id, sec: 'syn', label: y.w + ' — ' + y.a, tag: POS[y.pos] + ' · ' + y.lv,
+    prompt: `<div class="word">${esc(y.w)}</div>${y.r ? `<div class="reading">${esc(y.r)}</div>` : ''}`,
+    ask: 'Từ nào gần nghĩa nhất với từ này?', opts, answer: 0, jp: true, say: y.r || y.w,
+    notes: opts.map(meanOf), why: `${y.w}${y.r ? '【' + y.r + '】' : ''} nghĩa là "${y.vi}", cùng nghĩa với ${y.a}.`,
+    info: `<div class="jp-line">${esc(y.w)} ≈ ${esc(y.a)}${lvTag(y.lv)}</div><div>Nghĩa: ${esc(y.vi)}</div>` };
+}
+register({
+  id: 'syn', name: 'Từ đồng nghĩa', icon: 'syn', parent: 'more', order: 61, tile: { sub: 'Chọn từ gần nghĩa nhất (言い換え類義)', stat: () => [countLearned(DB.synonyms.map(y => y.id)), DB.synonyms.length] },
+  render(main) {
+    const pos = prefs.yPos || 'all', lv = prefs.yLv || 'all';
+    main.innerHTML = pageHead('syn', 'Từ đồng nghĩa', DB.synonyms.length + ' cặp từ đồng nghĩa hay gặp', ['Mục khác', '#/more']) +
+      `<div class="card topicbar" style="${color('syn')}"><div>${seg('yPos', Object.entries(POS), pos)}</div><div>${seg('yLv', LVS, lv)}</div></div><div class="stage" style="${color('syn')}"></div>`;
+    bindSeg(main, () => this.render(main));
+    round($('.stage', main), 'syn', () => synQ(DB.synonyms.filter(y => (pos === 'all' || y.pos === pos) && (lv === 'all' || y.lv === lv)), 'y|' + pos + '|' + lv), { back: ['Mục khác', '#/more'] });
+  }
+});

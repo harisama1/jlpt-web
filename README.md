@@ -1,49 +1,62 @@
-# Ôn JLPT N3 — web flashcard
+# Ôn JLPT — web flashcard
 
-Trang ôn tập nhanh cho JLPT N5–N3 (kỳ thi 06/12/2026). Mở trên điện thoại hoặc máy tính, không cần cài đặt.
+Trang ôn tập JLPT theo cấp độ (hiện có N5–N3; N2, N1 đã có chỗ, hiện "Sắp có"). Mở trên điện thoại hoặc máy tính, không cần cài đặt.
+Bố cục theo bản thiết kế `JLPT_Design.drawio` (4 trang: HOME, Từ mới, Kanji, Mục khác).
 
-| Tab | Nội dung | Cách ôn |
-|---|---|---|
-| Trang chủ | Đếm ngày đến kỳ thi, mục tiêu câu mỗi ngày, tiến độ từng phần và theo cấp độ | Ôn nhanh 10 câu trộn mọi phần |
-| Từ vựng | 3.819 từ, 43 chủ đề (28 chủ đề, màu sắc, kính ngữ, tiền tố – hậu tố, 12 nhóm N3 trọng tâm) | Flashcard chọn đáp án: từ → nghĩa, Kanji → cách đọc, nghĩa → từ; danh sách |
-| Kanji | 754 chữ N5–N3, âm Hán Việt, On/Kun, câu chuyện ghi nhớ, các từ ghép tạo thành từ mỗi chữ | Chữ → Hán Việt, từ ghép → nghĩa, từ ghép → cách đọc |
-| Ngữ pháp | 306 mẫu N5–N3 (có bổ sung N5, N4 và các mẫu N3 còn thiếu) | Điền vào chỗ trống |
-| Đồng nghĩa | 175 cặp từ đồng nghĩa N3 (danh từ, động từ, tính từ, phó từ) | Chọn từ gần nghĩa nhất trong 4 đáp án (dạng 言い換え類義) |
-| Mẫu câu | 文脈規定 và 言い換え類義 | Điền vào chỗ trống / chọn từ gần nghĩa |
-| Đọc hiểu | 10 bài (thư, thông báo, email, bài luận, bài báo) | Điền chỗ trống kiểu 文章の文法 + câu hỏi nội dung |
-| Lỗi sai | Mọi câu trả lời sai được lưu lại; đúng 2 lần liên tiếp thì xoá | Ôn lại theo từng phần; xuất / nhập tiến độ dạng file JSON |
+| Trang | Nội dung |
+|---|---|
+| Trang chủ | Số ngày còn lại tới kỳ thi, tiến độ đã thuộc / tổng, 4 ô: Từ mới · Kanji · Mẫu câu · Mục khác |
+| Từ mới | Chọn cấp N5…N1 → lưới chủ đề có tiến độ → luyện (từ → nghĩa, kanji → cách đọc, nghĩa → từ, danh sách). Chủ đề **Từ bổ sung**: 361 từ ngoài giáo trình (nghĩa dịch máy, ghi chú trong phần xem thêm) |
+| Kanji | Chọn cấp → lưới chữ (âm Hán Việt + từ ghép). Bấm một chữ để luyện các từ ghép của chữ đó; câu "cách đọc" có đáp án nhiễu đọc gần giống nhau. Có nút luyện cả cấp |
+| Mẫu câu | 文脈規定 và 言い換え類義 |
+| Mục khác | Đọc hiểu · Từ đồng nghĩa · Ngữ pháp (theo nhóm) · Nghe hiểu (phát triển sau) · Lỗi sai · Ôn nhanh · Giao diện & sao lưu |
 
-Sau mỗi câu trả lời: **dịch nghĩa** câu (ngữ pháp, mẫu câu, đọc hiểu), **giải thích** vì sao đáp án đúng và nghĩa của cả 4 lựa chọn.
-Câu hỏi **không lặp lại**: mỗi phạm vi (phần + chủ đề + cấp + kiểu ôn) đi hết mọi câu rồi mới xáo lại; câu sai được đưa lên đầu lượt sau.
-**Chủ đề**: Từ vựng (43 chủ đề) và Ngữ pháp (33 nhóm) có trang chọn chủ đề kèm tiến độ, nút "Đổi chủ đề" luôn hiện trên đầu bài ôn.
-**Giao diện**: Luyện thêm → Giao diện: sáng / tối / theo máy và 5 màu chủ đạo.
-
-Tiến độ lưu trong trình duyệt (localStorage). Muốn chuyển sang máy khác: tab **Lỗi sai → Xuất file JSON**, rồi **Nhập file JSON** ở máy kia.
+Sau mỗi câu: dịch nghĩa câu, lý do đáp án đúng và nghĩa của cả 4 lựa chọn. Câu hỏi không lặp lại trong một phạm vi cho tới khi hết.
+Tiến độ lưu trong trình duyệt (localStorage, giữ được tiến độ của bản cũ); xuất / nhập file JSON ở **Mục khác → Giao diện & sao lưu**.
 
 ## Chạy trên máy
 
 ```bash
-python3 -m http.server 8000      # trong thư mục này
-# mở http://localhost:8000
+python3 -m http.server 8000      # trong thư mục này, rồi mở http://localhost:8000
 ```
 
-(Mở thẳng file `index.html` không chạy được vì trình duyệt chặn đọc file JSON từ ổ đĩa.)
+## Kiến trúc (để nâng cấp)
 
-## Dữ liệu (`data/*.json`)
+Không cần bước build: ES modules chạy thẳng trên GitHub Pages.
 
-- `vocab.json`, `kanji.json`, `grammar.json`: bóc từ bộ PDF ôn N5–N3 (`~/workspace/Japanese`) bằng `tools/parse_*.py`,
-  cộng 1.287 từ còn thiếu so với danh sách JLPT của Jonathan Waller (tanos.co.uk, bản CSV của open-anki-jlpt-decks), nghĩa tiếng Việt trong `tools/vi_part*.txt`.
-- Từ ghép của mỗi Kanji được tìm tự động trong kho từ vựng.
-- `tools/grammar_add.txt`, `tools/sentences.txt`, `data/reading.json`: câu hỏi tự soạn theo dạng đề N3 (không phải đề thi thật).
-- `tools/grammar_vi.txt`: bản dịch câu hỏi ngữ pháp. `tools/option_vi.txt` → `data/gloss.json`: nghĩa của các đáp án không có trong kho từ (thể chia, mẫu ngữ pháp, cụm từ).
-  `data/reading.json` có bản dịch đoạn văn, câu hỏi, từng đáp án và giải thích từng chỗ trống.
+```
+index.html            khung trang (menu trái, thanh dưới), nạp js/main.js
+style.css             toàn bộ giao diện; màu theo biến CSS (--c-<section>, --primary)
+data/manifest.json    danh sách cấp độ (available) + các file dữ liệu → thêm dữ liệu không phải sửa code
+js/main.js            khởi động, dựng menu từ registry, điều phối route  #/<section>/<tham số>…
+js/core/              phần dùng chung
+  util.js  store.js (tiến độ, lựa chọn, bộ bài)  data.js (nạp manifest + chỉ mục, meanOf)
+  deck.js (không lặp, đáp án nhiễu, cách đọc gần giống)  quiz.js (lượt 10 câu + giải thích)
+  router.js (registry section + hash router)  ui.js (tiêu đề, hàng cấp độ, lưới thẻ, danh sách)  speech.js
+js/sections/          mỗi trang một file, tự register({...})
+  home.js (Trang chủ + Mục khác)  vocab.js  kanji.js  practice.js (Mẫu câu, Ngữ pháp, Đồng nghĩa)
+  reading.js (Đọc hiểu, Nghe hiểu)  review.js (Lỗi sai, Ôn nhanh, Giao diện)
+tests/                quiz.html (logic) · routes.html (đi qua mọi trang)
+tools/                sinh dữ liệu (build_data.py, check_data.py, extra_words.tsv)
+```
 
-Build lại: `python3 tools/build_data.py tools/src`
+**Thêm một trang mới**: tạo `js/sections/ten.js` gọi `register({ id, name, icon, parent: '' | 'more', order, tile: {sub, stat}, render(main, params) })`
+rồi thêm một dòng `import './sections/ten.js'` trong `js/main.js`. Thẻ ở Trang chủ / Mục khác và menu tự xuất hiện. `soon: true` = hiện mờ "Sắp có".
 
-## Kiểm tra lỗi
+**Thêm N2/N1**: thêm từ/kanji có `"lv": "N2"` vào `data/vocab.json`, `data/kanji.json` (hoặc file riêng rồi khai báo trong `files` của manifest),
+đổi `"available": true` cho cấp đó trong `data/manifest.json`. Nguồn đã tải sẵn trong `tools/ext/` (không đưa lên git): `n1.csv`, `n2.csv`
+(open-anki-jlpt-decks), `kanji-data.json`, `Unihan_Readings.txt` (âm Hán Việt `kVietnamese`).
 
-- `python3 tools/check_data.py`: kiểm tra dữ liệu (mỗi câu có đủ 4 đáp án khác nhau, không rỗng, đúng 1 chỗ trống, không dòng rác…).
-- `test.html` (mở qua `python3 -m http.server`): sinh khoảng 8.500 câu hỏi ở mọi chế độ, kiểm tra không lặp, mọi đáp án có giải nghĩa, chọn chủ đề, bấm thử mọi tab, làm hết bài đọc hiểu, ôn lỗi sai; in số lỗi logic và lỗi JavaScript.
+**Nghe hiểu**: section `listen` trong `reading.js` đang là chỗ trống; thêm file dữ liệu bài nghe vào manifest và viết `render`.
 
-Giao diện: ôn theo lượt 10 câu (thanh tiến độ, màn kết quả liệt kê câu sai), nút nghe phát âm tiếng Nhật, sáng/tối.
-Điện thoại: thanh điều hướng dưới đáy, bộ lọc thu gọn. Máy tính (từ 1000px): menu bên trái, bộ lọc cạnh câu hỏi; đọc hiểu chia đôi đoạn văn / câu hỏi.
+## Dữ liệu
+
+- `vocab.json`, `kanji.json`, `grammar.json`: bóc từ bộ PDF ôn N5–N3 bằng `tools/parse_*.py` + danh sách JLPT của Jonathan Waller; nghĩa tiếng Việt trong `tools/vi_part*.txt`.
+  Build lại: `python3 tools/build_data.py tools/src`.
+- `sentences.json`, `synonyms.json`, `reading.json`, `gloss.json`: câu hỏi tự soạn theo dạng đề (không phải đề thi thật), có bản dịch và giải thích.
+- `tools/extra_words.tsv`: từ bổ sung (từ, cách đọc, nghĩa Việt, nghĩa Anh JMdict, cấp), build_data.py nạp vào chủ đề "Từ bổ sung". Từ thuộc danh sách N2/N1 được gán N2/N1 và hiện khi mở cấp đó.
+
+## Kiểm tra
+
+- `python3 tools/check_data.py`: dữ liệu (4 đáp án khác nhau, không rỗng, đúng 1 chỗ trống…).
+- `tests/quiz.html` và `tests/routes.html` (mở qua `python3 -m http.server`): sinh câu ở mọi chế độ, kiểm không lặp, mọi đáp án có giải nghĩa, đi qua mọi trang; in số lỗi.

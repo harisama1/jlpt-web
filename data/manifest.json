@@ -1,0 +1,16 @@
+{
+  "schema": 2,
+  "exam": "2026-12-06",
+  "start": "2026-10-12",
+  "levels": [
+    { "id": "N5", "available": true },
+    { "id": "N4", "available": true },
+    { "id": "N3", "available": true },
+    { "id": "N2", "available": false, "note": "Sắp có" },
+    { "id": "N1", "available": false, "note": "Sắp có" }
+  ],
+  "files": {
+    "topics": "topics.json", "vocab": "vocab.json", "kanji": "kanji.json", "grammar": "grammar.json",
+    "sentences": "sentences.json", "reading": "reading.json", "synonyms": "synonyms.json", "gloss": "gloss.json"
+  }
+}

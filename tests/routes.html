@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><body><iframe id="f" style="width:1200px;height:900px"></iframe><pre id="o"></pre>
+<script>
+const routes = ['home','vocab','vocab/N3','vocab/N5/all','vocab/N3/2.1','kanji','kanji/N4','kanji/N5/quiz/hv','kanji/N3/quiz/wread','sent','more','more/read','more/read/r01','more/syn','more/grammar','more/grammar/all','more/listen','more/miss','more/mix','more/settings','vocab/N1'];
+const out = [], f = document.getElementById('f'); let i = 0;
+f.src = '../index.html#/home';
+f.onload = () => { f.contentWindow.onerror = (m, s, l) => out.push('JS ERROR ' + m + ' @' + s + ':' + l); setTimeout(step, 1500); };
+function step() {
+  const w = f.contentWindow, d = f.contentDocument;
+  if (i > 0) { const r = routes[i - 1], m = d.getElementById('main');
+    out.push(r.padEnd(22) + ' h1=' + ((d.querySelector('#main h1') || {}).textContent || '-').slice(0, 30) + ' | opts=' + d.querySelectorAll('#main .opt').length +
+      ' cards=' + d.querySelectorAll('#main .ccard,#main .kcard,#main .tile').length + ' lv=' + d.querySelectorAll('#main .lvbtn').length + ' url=' + w.location.hash +
+      (m.querySelector('.empty') ? ' EMPTY:' + m.querySelector('.empty').textContent.slice(0, 50) : ''));
+    const o = d.querySelector('#main .opt'); if (o && i % 2) { o.click(); out.push('   answered → explain rows ' + d.querySelectorAll('#main .xlist li').length); } }
+  if (i < routes.length) { w.location.hash = '#/' + routes[i++]; setTimeout(step, 400); }
+  else { const x = new XMLHttpRequest(); x.open('POST', '/__result', false); x.send(out.join('\n')); document.getElementById('o').textContent = out.join('\n'); }
+}
+</script><img src="/__slow?14">

@@ -82,6 +82,14 @@ for k in kraw:
                   'story': k.get('story', ''), 'words': words})
 print('kanji', len(kanji), '| avg words per kanji %.1f' % (sum(len(k['words']) for k in kanji) / len(kanji)))
 
+# ---------------- extra words (tools/extra_words.tsv: w, r, vi, en, lv) — topic "Từ bổ sung"
+topics['X'] = {'id': 'X', 'name': 'Từ bổ sung', 'group': 'Bổ sung'}
+for _l in open(os.path.join(HERE, 'extra_words.tsv'), encoding='utf-8'):
+    if _l.startswith('#') or not _l.strip(): continue
+    _w, _r, _vi, _en, _lv = _l.rstrip('\n').split('\t')
+    if any(v['w'] == _w for v in vocab): continue
+    vocab.append({'id': 'v%d' % len(vocab), 'w': _w, 'r': _r, 'vi': _vi, 'lv': _lv, 't': 'X', 'ex': '', 'src': 'extra', 'en': _en})
+
 # ---------------- grammar
 graw = json.load(open(os.path.join(SRC, 'grammar_raw.json'), encoding='utf-8'))
 clean = []

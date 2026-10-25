@@ -1,0 +1,40 @@
+<!doctype html><meta charset="utf-8"><title>quiz tests</title>
+<!-- Logic test: open via a local server (python3 -m http.server, then /tests/quiz.html). Prints counts and every failure;
+     also POSTs the report to /__result when a local test runner listens there (ignored otherwise). -->
+<pre id="out" style="font:14px monospace;white-space:pre-wrap">running…</pre>
+<script type="module">
+// run against the real data with a throwaway localStorage
+try { localStorage.clear(); } catch (e) { }
+const origFetch = window.fetch; window.fetch = (u, o) => origFetch(String(u).startsWith('data/') ? '../' + u : u, o);
+const { DB, loadData } = await import('../js/core/data.js');
+const { decks } = await import('../js/core/deck.js').then(() => import('../js/core/store.js'));
+const { vocabQ } = await import('../js/sections/vocab.js');
+const { kanjiQ } = await import('../js/sections/kanji.js');
+const { sentQ, grammarQ, synQ } = await import('../js/sections/practice.js');
+const out = [], bad = [];
+const fail = (what, q) => bad.push(what + ' :: ' + JSON.stringify(q && { a: q.opts && q.opts[q.answer], o: q.opts }));
+const check = (name, q) => {
+  if (!q) return fail(name + ' null', q);
+  if (q.opts.length !== 4 || new Set(q.opts).size !== 4) return fail(name + ' opts', q);
+  if (q.opts.some(o => !String(o).trim())) return fail(name + ' empty opt', q);
+  if (!q.notes || q.notes.filter(Boolean).length < 4) fail(name + ' missing explanation', q);
+  if ((q.sec === 'grammar' || q.sec === 'sent') && !q.vi) fail(name + ' no translation', q);
+};
+const uniq = (name, n, gen) => { for (const k in decks) delete decks[k]; const ids = []; for (let i = 0; i < n; i++) { const q = gen(); if (q) ids.push(q.id); }
+  const u = new Set(ids).size; out.push('không lặp ' + name + ': ' + u + '/' + ids.length); if (u !== ids.length) fail('repeat ' + name); };
+try {
+  await loadData();
+  out.push('data: vocab ' + DB.vocab.length + ', kanji ' + DB.kanji.length + ', gq ' + DB.gq.length);
+  for (const lv of ['N5', 'N4', 'N3']) for (const m of ['mean', 'read', 'rev']) { const items = DB.vocab.filter(v => v.lv === lv); for (let i = 0; i < 80; i++) check('vocab ' + lv + ' ' + m, vocabQ(m, items, 't|' + lv + m)); }
+  for (const lv of ['N5', 'N4', 'N3']) for (const m of ['hv', 'word', 'wread']) { const ks = DB.kanji.filter(k => k.lv === lv); for (let i = 0; i < 80; i++) check('kanji ' + lv + ' ' + m, kanjiQ(m, ks, 'tk|' + lv + m)); }
+  for (let i = 0; i < 200; i++) { check('grammar', grammarQ(DB.gq, 'tg')); check('sent', sentQ(DB.sentences, 'ts')); check('syn', synQ(DB.synonyms, 'ty')); }
+  uniq('đồng nghĩa', DB.synonyms.length, () => synQ(DB.synonyms, 'u1'));
+  uniq('ngữ pháp', DB.gq.length, () => grammarQ(DB.gq, 'u2'));
+  const t21 = DB.vocab.filter(v => v.t === '2.1'); uniq('từ vựng 2.1', t21.length, () => vocabQ('mean', t21, 'u3'));
+  const tx = DB.vocab.filter(v => v.t === 'X' && v.lv === 'N3'); uniq('từ bổ sung', tx.length, () => vocabQ('mean', tx, 'u4'));
+} catch (e) { bad.push('EXC ' + e.message + ' ' + (e.stack || '').split('\n')[1]); }
+const report = out.join('\n') + '\n\nLỖI: ' + bad.length + '\n' + [...new Set(bad)].slice(0, 30).join('\n');
+document.getElementById('out').textContent = report;
+try { const x = new XMLHttpRequest(); x.open('POST', '/__result', false); x.send(report); } catch (e) { }
+</script>
+<img src="/__slow?12" alt="">

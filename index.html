@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ôn JLPT N3</title>
-<meta name="description" content="Ôn JLPT N5–N3: flashcard từ vựng theo chủ đề, Kanji và từ ghép, ngữ pháp, đồng nghĩa, mẫu câu, đọc hiểu và sổ lỗi sai.">
+<title>Ôn JLPT</title>
+<meta name="description" content="Ôn JLPT theo cấp độ: từ mới theo chủ đề, Kanji và từ ghép, Kanji và từ ghép, ngữ pháp, đồng nghĩa, mẫu câu, đọc hiểu và sổ lỗi sai.">
 <meta name="theme-color" content="#f6f3ec">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,15 @@
 <body>
 <div class="app">
   <aside class="sidenav" aria-label="Các phần ôn tập">
-    <a class="logo" href="#home" data-tab="home"><span class="logo-mark" aria-hidden="true">合</span><span><b>Ôn JLPT N3</b><small id="sideCount"></small></span></a>
+    <a class="logo" href="#/home"><span class="logo-mark" aria-hidden="true">合</span><span><b>Ôn JLPT</b><small id="sideCount"></small></span></a>
     <nav id="sideLinks"></nav>
     <div class="side-foot">
-      <button type="button" class="theme-btn" id="themeBtn">Giao diện: tự động</button>
+      <a class="theme-btn" href="#/more/settings">Giao diện & sao lưu</a>
     </div>
   </aside>
   <div class="content">
     <header class="topbar">
-      <a class="logo small" href="#home" data-tab="home"><span class="logo-mark" aria-hidden="true">合</span><b>Ôn JLPT N3</b></a>
+      <a class="logo small" href="#/home"><span class="logo-mark" aria-hidden="true">合</span><b>Ôn JLPT</b></a>
       <span class="count-pill" id="topCount"></span>
     </header>
     <main id="main" class="main"><p class="loading">Đang tải dữ liệu…</p></main>
@@ -33,6 +33,6 @@
   </div>
   <nav class="bottomnav" id="bottomNav" aria-label="Điều hướng"></nav>
 </div>
-<script src="app.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>
