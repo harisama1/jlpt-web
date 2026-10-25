@@ -183,6 +183,21 @@ for i, (pos, w, r, a, lv, m) in enumerate(syn_rows):
     cand = sorted({x[3] for x in syn_rows if x[0] == pos and gf(x[3]) != gf(w)} | {x[1] for x in syn_rows if x[0] == pos and gf(x[1]) != gf(w)})
     synonyms.append({'id': 'y%d' % i, 'pos': pos, 'w': w, 'r': r if r != w else '', 'a': a, 'lv': lv, 'vi': m, 'd': random.sample(cand, 3)})
 print('synonyms', len(synonyms), collections.Counter(x['pos'] for x in synonyms))
+def table(fn):
+    return [l.rstrip('\n').split('|', 1) for l in open(os.path.join(HERE, fn), encoding='utf-8') if '|' in l and not l.startswith('#')]
+# sentence translations for the grammar cloze items
+gvi = dict(table('grammar_vi.txt'))
+for g in grammar:
+    for i, q in enumerate(g['q']):
+        if not q.get('vi'): q['vi'] = gvi.get('%s.%d' % (g['id'], i), '')
+print('grammar cloze translated', sum(1 for g in grammar for q in g['q'] if q['vi']), '/', sum(len(g['q']) for g in grammar))
+# meanings of answer options that are not vocab entries (synonym pairs, conjugated stems, grammar fragments)
+gloss = {}
+for pos, w, r, a, lv, m in syn_rows:
+    gloss.setdefault(w, m); gloss.setdefault(a, m)
+gloss.update(dict(table('option_vi.txt')))
+json.dump(gloss, open(os.path.join(OUT, 'gloss.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+print('gloss', len(gloss))
 reading = json.load(open(os.path.join(OUT, 'reading.json'), encoding='utf-8'))
 for name, data in (('topics', list(topics.values())), ('vocab', vocab), ('kanji', kanji), ('grammar', grammar), ('sentences', sents), ('synonyms', synonyms)):
     json.dump(data, open(os.path.join(OUT, name + '.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))

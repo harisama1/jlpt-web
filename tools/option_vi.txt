@@ -1,0 +1,341 @@
+# Meanings of answer options that are not dictionary entries in vocab.json (word|vi), merged by build_data.py
+# Stems cut before the blank's ending are shown with their dictionary form.
+あいまいな|mơ hồ, không rõ ràng
+あざやか|tươi sáng, rực rỡ (鮮やか)
+あとですることになった|đã quyết định để làm sau
+あふれ|tràn, tràn ngập (あふれる)
+あまりおいしくない|không ngon lắm
+あんしんした|đã yên tâm
+いいところ|điểm tốt, chỗ hay
+いきなり|đột ngột, bất thình lình
+いつもいそがしい|lúc nào cũng bận
+いつもより早く|sớm hơn mọi khi
+うれしく思う|cảm thấy vui
+おこった|đã nổi giận
+おち|rơi, rớt (落ちる)
+おどろいた|đã ngạc nhiên
+およぐこと|việc bơi
+おわびする|xin lỗi (khiêm nhường)
+お金がたくさん必要だ|cần nhiều tiền
+お金を使いたがらない|không muốn tiêu tiền (keo kiệt)
+お願いする|nhờ, xin (khiêm nhường)
+かえって|ngược lại, trái lại
+かかって|tốn, mất (thời gian, tiền) (かかる)
+かなっ|thành hiện thực, như ý (かなう: 夢がかなう)
+からから|khô khốc; trống rỗng; cười ha hả
+かわっ|thay đổi (かわる)
+かんたんだ|đơn giản
+がっかりした|đã thất vọng
+がっかりする|thất vọng
+がらがら|vắng tanh, trống trơn
+きたなくなって|trở nên bẩn
+きちんとしている|ngăn nắp, chỉn chu
+きっぱり|dứt khoát
+きれいだ|đẹp; sạch
+きれいな|đẹp; sạch
+きれいになって|trở nên sạch / đẹp
+ぎっしり|chật cứng, kín đặc
+くたびれる|mệt lả, rã rời
+ぐったり|mệt lử, rũ người
+けちな|keo kiệt, bủn xỉn
+こぼれ|tràn, đổ ra (こぼれる)
+これから先|từ nay về sau
+ころころ|lăn lông lốc; hay thay đổi
+ころび|ngã (ころぶ)
+こわさ|làm hỏng (こわす)
+こわれにくい|khó hỏng, bền
+さすが|quả đúng là, không hổ danh
+さっそく|ngay lập tức, liền
+さわやか|sảng khoái, dễ chịu
+さんぽすること|việc đi dạo
+ざんねんながら|thật đáng tiếc là
+しか|chỉ (đi với phủ định)
+しずかだ|yên tĩnh
+じっさいより大きく言っている|nói quá lên so với thực tế (phóng đại)
+すぐできる|làm được ngay
+すこし前に|cách đây ít lâu
+すべり|trượt (すべる)
+せまくなって|trở nên hẹp
+せめて|ít nhất thì, tối thiểu
+そっくりな|giống hệt
+そわそわ|bồn chồn, đứng ngồi không yên
+たいそうすること|việc tập thể dục
+たいへんだ|vất vả, nghiêm trọng
+たおれ|ngã, đổ (たおれる)
+たくさんの人|nhiều người
+たちまち|ngay tức khắc, chẳng mấy chốc
+ためっ|tích lũy, để dành (ためる)
+だいたい全部|gần như toàn bộ
+ちょうどいい|vừa đúng, vừa vặn
+つれて|dẫn theo (つれる)
+とって|lấy; ghi (とる)
+とてもおもしろい|rất thú vị
+とてもよろこんだ|đã rất vui mừng
+とりわけ|đặc biệt là, nhất là
+どうせ|đằng nào thì cũng
+なおして|sửa, chữa (なおす)
+ながかった|đã dài
+なきだした|bật khóc
+なくさ|làm mất (なくす)
+なって|trở nên (なる)
+なめらか|trơn tru, mượt mà
+ねらい|mục tiêu, nhắm tới
+はじまった|đã bắt đầu
+はじめ|lúc đầu; bắt đầu
+はっきりしない|không rõ ràng
+はっきりしなかった|đã không rõ ràng
+はなやか|lộng lẫy, rực rỡ
+はやく終わった|đã kết thúc sớm
+はらはら|thấp thỏm, lo lắng
+ひいて|kéo; bị (cảm) (ひく)
+ひどくて言葉が出なかった|tệ đến mức không nói nên lời
+ひまだ|rảnh rỗi
+ひろくなって|trở nên rộng
+ぴかぴか|sáng bóng, lấp lánh
+ぴったりな|vừa khít, rất hợp
+ふらふら|loạng choạng, chóng mặt
+ぶらぶら|đi lang thang, nhàn rỗi
+ぺこぺこ|đói meo; khúm núm
+ぺらぺら|nói trôi chảy
+まよっ|lạc đường; phân vân (まよう)
+みじかかった|đã ngắn
+みて|xem, nhìn (みる)
+もれ|rò rỉ, lọt ra (もれる)
+やめること|việc bỏ, thôi
+やらないことになった|đã được quyết định là không làm
+やり方|cách làm
+ゆっくり走ること|việc chạy chậm
+よくしゃべる|nói nhiều
+よくなる|trở nên tốt hơn
+よくわからない|không hiểu rõ lắm
+よくわらう|hay cười
+よく似ている|rất giống
+よごさ|làm bẩn (よごす)
+わかりやすかった|đã dễ hiểu
+わがままな|ích kỷ, bướng bỉnh
+わすれ|quên (わすれる)
+わらいだした|bật cười
+クレーム|phàn nàn, khiếu nại
+スピード|tốc độ
+ミスする|mắc lỗi
+一応|tạm thời, đại khái
+丈夫な|chắc chắn, bền; khỏe mạnh
+上手な|giỏi
+上手になる|trở nên giỏi
+上達する|tiến bộ
+不安な|bất an, lo lắng
+不注意で|do bất cẩn
+不潔な|bẩn thỉu, mất vệ sinh
+乏しい|nghèo nàn, thiếu thốn
+事前に|trước, từ trước
+人がいっぱいなこと|việc đông người
+仲がいい|thân thiết
+休みの日|ngày nghỉ
+休憩する|nghỉ giải lao
+似|giống (似る)
+住んでいる所|nơi đang sống
+何としても|bằng mọi giá
+何も言わない|không nói gì
+何度も|nhiều lần
+修理する|sửa chữa
+偏る|thiên lệch, lệch về một phía
+出発する|xuất phát
+利く|có hiệu quả, hoạt động tốt
+利用する|sử dụng, tận dụng
+到着する|đến nơi
+協力する|hợp tác
+収集する|thu thập, sưu tầm
+向い|hướng về; hợp (向く)
+回復する|hồi phục
+困難な|khó khăn
+増加する|tăng lên
+壊れにくい|khó hỏng
+売れ|bán chạy (売れる)
+変な|kỳ lạ
+変化する|thay đổi
+夕食|bữa tối
+外出する|ra ngoài
+多すぎる|quá nhiều
+大きくなる|trở nên lớn
+大丈夫な|không sao, ổn
+大変な|vất vả, khó khăn
+安心する|yên tâm
+完全に|hoàn toàn
+尋ね|hỏi (尋ねる)
+少しの間|một lúc
+少し前に|cách đây ít lâu
+平気な|bình thản, không hề gì
+延期する|hoãn lại
+得意ではない|không giỏi
+得意な|giỏi, sở trường
+心配な|lo lắng
+思ったこと|điều đã nghĩ
+思ったより|hơn mình nghĩ
+急いで|vội vàng
+急いで落ち着かない|vội vàng, không bình tĩnh
+恥|xấu hổ, nhục nhã
+慣れ|quen (慣れる)
+成長する|trưởng thành, phát triển
+我慢する|chịu đựng, nhẫn nhịn
+招い|mời (招く)
+整理する|sắp xếp, dọn dẹp
+断っ|từ chối (断る)
+日をのばすこと|việc lùi ngày, hoãn
+明く|mở; sáng (明く)
+昨年|năm ngoái
+時間がある|có thời gian
+時間やてつだいが必要だ|cần thời gian và sự giúp đỡ
+暇な|rảnh rỗi
+書いた人|người viết
+書け|viết được (書ける)
+最後には|cuối cùng thì
+本当は|thực ra là
+本日|hôm nay (trang trọng)
+次の日|ngày hôm sau
+止め|dừng (止める)
+正確な|chính xác
+歳|tuổi
+残念ながら|thật đáng tiếc là
+残念に思う|cảm thấy tiếc
+比較する|so sánh
+気づかないうちに|lúc nào không hay
+気持ちがいい|dễ chịu
+決定する|quyết định
+法則|quy luật, định luật
+注意する|chú ý; nhắc nhở
+活発な|hoạt bát, sôi nổi
+清潔な|sạch sẽ
+減少する|giảm
+満員|chật kín người
+焦る|sốt ruột, cuống
+片寄る|thiên lệch, lệch về một bên
+発見する|phát hiện
+目立たない|không nổi bật
+目立つ|nổi bật
+知っている人|người quen
+知らないうちに|lúc nào không biết
+確保|bảo đảm, giữ chỗ
+確定|xác định chắc chắn
+確認する|xác nhận
+空く|trống, vắng
+簡単な|đơn giản
+終わり|kết thúc
+絶つ|cắt đứt, đoạn tuyệt
+絶対に|tuyệt đối
+継続する|tiếp tục, duy trì
+続けて|liên tục
+考え|suy nghĩ, ý kiến
+耐える|chịu đựng
+聴く|lắng nghe
+腹を立てる|nổi giận
+自分の家|nhà mình
+自分勝手な|ích kỷ, tự tiện
+自宅|nhà riêng
+苦手な|kém, không thích
+落ち着いた|điềm tĩnh
+行き先|nơi đến
+行く所|nơi sẽ đi
+製作する|chế tác, sản xuất
+見事な|tuyệt vời, xuất sắc
+規模|quy mô
+言われたこと|điều được bảo
+訪ね|đến thăm (訪ねる)
+訪問する|thăm viếng
+読め|đọc được (読める)
+調べ|tìm hiểu, tra (調べる)
+調査する|điều tra
+買え|mua được (買える)
+賛否|tán thành hay phản đối
+質問する|đặt câu hỏi
+起きた|đã xảy ra; đã thức dậy
+起こる|xảy ra
+足りない|không đủ
+足りないこと|sự thiếu
+辞め|bỏ việc (辞める)
+退屈な|chán, buồn tẻ
+連絡する|liên lạc
+達成|đạt được
+選択する|lựa chọn
+開始する|bắt đầu
+間違いがない|không có sai sót
+集まること|việc tập trung
+集合|tập hợp
+離れ|rời xa (離れる)
+預ける|gửi, giao cho giữ
+頭がいい|thông minh
+馴染ま|thích nghi, quen (馴染む)
+あげたい|muốn cho, muốn tặng
+あげます|cho, tặng
+いたしました|đã làm (khiêm nhường của しました)
+いでした|(sai dạng) – không phải cách chia đúng
+います|có (người, vật sống); đang (thể て+います)
+うちは|trong khi còn ~ (〜うちは)
+おきます|làm sẵn (〜ておきます)
+かけている|đang dở dang (〜かけている)
+かねない|có thể dẫn đến (điều xấu) (〜かねない)
+からには|một khi đã ~ thì
+から先|từ ~ trở đi
+がち|hay, dễ (có khuynh hướng xấu)
+きっている|hoàn toàn, hết mức (〜きっている)
+くない|không (phủ định tính từ い)
+ことが|việc ~ (danh từ hóa + が)
+ことがある|có khi; đã từng
+ことに|thật là ~ (cảm thán)
+ことにした|đã quyết định (tự mình)
+ことにします|quyết định (tự mình)
+ことになります|được quyết định (khách quan)
+ございました|đã có (kính ngữ của ありました)
+させた|đã bắt / cho làm (sai khiến)
+させられた|bị bắt làm (sai khiến bị động)
+しました|đã làm
+ずにすんだ|đã không phải ~ (may mắn tránh được)
+そうな|có vẻ ~ (bổ nghĩa danh từ)
+そうに|có vẻ ~ (bổ nghĩa động từ)
+たらいい|nên ~ thì tốt
+ちゃった|lỡ ~ mất rồi (văn nói của てしまった)
+っぱなしだ|để nguyên, cứ để vậy
+てあげた|đã làm cho (người khác)
+ていました|đã đang ~
+てもいい|~ cũng được
+てもよかった|lẽ ra ~ cũng được
+てもらいました|đã được (ai) làm cho
+でいらっしゃいます|là (tôn kính của です)
+でした|đã là (quá khứ của です)
+ところだった|suýt nữa thì ~
+としては|với tư cách là, xét về
+どこで|ở đâu
+ないうちに|trước khi ~ (khi chưa ~)
+ないことはなかった|không phải là không ~
+ないで|không ~ (mà) / đừng ~
+ないといけない|phải ~
+なくても|dù không ~
+なくてもよかった|lẽ ra không cần ~
+なければよかった|giá mà đừng ~
+において|tại, trong (trang trọng)
+におります|đang ở (khiêm nhường của にいます)
+になります|trở thành
+に反して|trái với
+のを|việc ~ (danh từ hóa + を)
+はいけない|không được
+はずか|chắc là ~ (hỏi lại)
+ほしいです|muốn có
+ほしがる|(người khác) muốn có
+ません|không (phủ định lịch sự)
+もいい|~ cũng được
+もかまわない|~ cũng không sao
+ものか|đời nào mà ~ (phủ định mạnh)
+ものではない|không nên ~
+ものなら|nếu mà ~ (được) thì
+もらいます|nhận
+ような|giống như (bổ nghĩa danh từ)
+ようにした|đã cố gắng để ~
+ようになった|đã trở nên (có thể) ~
+られました|đã bị / được ~ (bị động, tôn kính)
+る|(đuôi động từ thể từ điển)
+わけか|hóa ra là vì ~
+をとおして|thông qua
+をめぐって|xoay quanh (vấn đề)
+出しました|đã gửi / nộp
+合いました|đã hợp nhau / gặp nhau
+始めました|đã bắt đầu
+最中に|đang giữa lúc

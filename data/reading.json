@@ -1,32 +1,586 @@
 [
-{"id":"r01","title":"Thư cảm ơn","type":"Thư (手紙)","text":"山田先生\n\nいつもお世話になっております。先日は、お忙しい【1】、私の作文を見てくださって、ありがとうございました。先生にご指導いただいた【2】、コンテストで二位に入ることができました。\n来月、大学の日本語クラブで発表をすることになりました。【3】、もう一度アドバイスをいただけないでしょうか。ご都合のよい日を教えていただければ幸いです。\n\nグエン・ミン",
-"blanks":[{"a":"ところ","d":["うちに","あいだに","ばかり"]},{"a":"おかげで","d":["せいで","くせに","わりに"]},{"a":"つきましては","d":["ところが","それなのに","なぜなら"]}],
-"questions":[{"q":"グエンさんがこの手紙で一番伝えたいことは何か。","a":"お礼を言って、もう一度アドバイスをお願いしたい。","d":["コンテストの結果が悪かったことを謝りたい。","日本語クラブに先生を招待したい。","作文の締め切りを延ばしてほしい。"]}]},
-{"id":"r02","title":"Thông báo của khu chung cư","type":"Thông báo (お知らせ)","text":"【ごみの出し方が変わります】\n\n4月1日から、燃えるごみの日が月・木曜日【1】火・金曜日に変わります。ペットボトルは、ふたとラベルを取って【2】出してください。\nなお、決められた日以外にごみを出すと、カラスが集まる原因になります。ルールを守っていただけない【3】、マンションの全員が困ることになります。ご協力をお願いします。\n\n管理人",
-"blanks":[{"a":"から","d":["まで","より","ほど"]},{"a":"から","d":["まま","ながら","うちに"]},{"a":"と","d":["ても","のに","ので"]}],
-"questions":[{"q":"4月から、燃えるごみはいつ出すか。","a":"火曜日と金曜日","d":["月曜日と木曜日","毎日","決められた日以外"]},{"q":"ペットボトルを出すとき、どうしなければならないか。","a":"ふたとラベルを取る。","d":["ふたをしたまま出す。","燃えるごみと一緒に出す。","管理人に渡す。"]}]},
-{"id":"r03","title":"Thói quen buổi sáng","type":"Bài luận ngắn (随筆)","text":"私は毎朝五時に起きることにしている。以前は夜遅くまで起きていて、朝はいつもぎりぎりに家を出ていた。【1】、ある本を読んだ【2】、生活を変えてみようと思った。\n早く起きると、静かな時間に本を読んだり、散歩をしたりできる。最初はつらかったが、続けている【3】、体の調子もよくなってきた。今では、朝の一時間が一日で一番大切な時間になっている。",
-"blanks":[{"a":"しかし","d":["そのうえ","つまり","たとえば"]},{"a":"のをきっかけに","d":["にもかかわらず","にかわって","をこめて"]},{"a":"うちに","d":["最中に","とたん","かわりに"]}],
-"questions":[{"q":"筆者が生活を変えた理由は何か。","a":"ある本を読んだから。","d":["医者に注意されたから。","会社が遠くなったから。","友だちに誘われたから。"]},{"q":"筆者にとって、今、朝の時間はどんな時間か。","a":"一日で一番大切な時間","d":["まだつらい時間","仕事をする時間","寝不足になる時間"]}]},
-{"id":"r04","title":"Mua sắm trên mạng","type":"Bài luận (論説)","text":"最近、インターネットで買い物をする人が増えている。店に行かなくても、家にいる【1】欲しい物が手に入るので便利だ。【2】、実際に商品を見たり触ったりできないため、届いた物が思っていたものと違うこともある。\n便利さ【3】、問題点もよく理解した上で、上手に利用することが大切だろう。",
-"blanks":[{"a":"まま","d":["ながら","うちは","とたん"]},{"a":"一方で","d":["そのため","それで","すると"]},{"a":"だけでなく","d":["にかわって","をはじめ","によって"]}],
-"questions":[{"q":"筆者の考えに合うものはどれか。","a":"インターネットの買い物は、問題点も知って使うべきだ。","d":["インターネットの買い物はやめたほうがいい。","商品は必ず店で買うべきだ。","インターネットの買い物には問題がない。"]}]},
-{"id":"r05","title":"Email đổi lịch hẹn","type":"Email (メール)","text":"件名：打ち合わせの日程について\n\n佐藤様\n\nお世話になっております。ABC商事の田中です。\n来週火曜日の打ち合わせですが、急な出張が入ってしまい、伺うことができなくなりました。申し訳ございません。\n【1】、木曜日か金曜日の午後に変更していただくことは可能でしょうか。ご都合が悪い【2】、ほかの日でも構いません。\nお手数ですが、ご返信【3】よろしくお願いいたします。\n\n田中",
-"blanks":[{"a":"つきましては","d":["ところで","それなのに","すると"]},{"a":"ようでしたら","d":["ものの","とたん","うちに"]},{"a":"のほど","d":["ばかり","しだい","ほか"]}],
-"questions":[{"q":"田中さんは佐藤さんに何をお願いしているか。","a":"打ち合わせの日を変えてほしい。","d":["出張に一緒に行ってほしい。","火曜日に会社に来てほしい。","打ち合わせを中止してほしい。"]}]},
-{"id":"r06","title":"Ngủ trưa ở Nhật","type":"Bài báo (記事)","text":"短い昼寝は、午後の仕事の効率を上げると言われている。ある会社では、昼休みに十五分ほど眠れる部屋を作った。その結果、社員のミスが減った【1】。\nただし、三十分以上寝ると、【2】頭がぼんやりしてしまう【3】。昼寝は「短く」がポイントだそうだ。",
-"blanks":[{"a":"という","d":["わけがない","ばかりだ","ことか"]},{"a":"かえって","d":["せっかく","やっと","さっそく"]},{"a":"恐れがある","d":["ことはない","わけにはいかない","しかない"]}],
-"questions":[{"q":"昼寝について、正しいものはどれか。","a":"長く寝すぎるとよくない。","d":["長く寝るほど仕事がよくできる。","昼寝はミスを増やす。","昼寝をする会社は減っている。"]}]},
-{"id":"r07","title":"Lần đầu đi Nhật","type":"Nhật ký (日記)","text":"日本に来て【1】、もう半年になる。来たばかりのころは、言葉が分からなくて、スーパーで買い物をするのも大変だった。\n【2】、近所のおばあさんが毎日のように声をかけてくれた【3】、少しずつ日本語で話せるようになった。今では、そのおばあさんと一緒に料理を作るほど仲良くなった。",
-"blanks":[{"a":"以来","d":["までに","うちに","最中"]},{"a":"でも","d":["だから","つまり","たとえば"]},{"a":"おかげで","d":["せいで","くせに","わりに"]}],
-"questions":[{"q":"筆者が日本語を話せるようになったのはなぜか。","a":"近所のおばあさんがよく話しかけてくれたから。","d":["日本語学校に毎日通ったから。","スーパーで働いたから。","料理教室に通ったから。"]}]},
-{"id":"r08","title":"Thông báo thư viện","type":"Thông báo (お知らせ)","text":"市立図書館からのお知らせ\n\n館内の工事【1】、5月10日から5月20日まで休館いたします。休館中に返却する本は、入口の返却ポストに入れてください。\nただし、CDやDVDは壊れる【2】がありますので、返却ポストには入れないでください。休館中に予約した本は、5月21日【3】受け取ることができます。",
-"blanks":[{"a":"のため","d":["のおかげで","にとって","について"]},{"a":"おそれ","d":["はず","わけ","つもり"]},{"a":"以降","d":["以内","以外","以下"]}],
-"questions":[{"q":"休館中にDVDを返したい人はどうすればいいか。","a":"図書館が開いてから返す。","d":["返却ポストに入れる。","入口に置いておく。","電話で連絡する。"]}]},
-{"id":"r09","title":"Tình nguyện viên","type":"Bài luận (論説)","text":"ボランティアというと、特別な人がするものだと考える人が多い。【1】、実際には、公園の掃除や、お年寄りの話し相手など、だれにでもできる活動もたくさんある。\n大切なのは、無理をしない【2】。自分にできる範囲で続けることが、結果的に多くの人の役に立つの【3】。",
-"blanks":[{"a":"しかし","d":["だから","そこで","それに"]},{"a":"ことだ","d":["ものか","わけがない","はずがない"]},{"a":"ではないだろうか","d":["に違いないだろうか","とは限らないか","わけにはいかないか"]}],
-"questions":[{"q":"筆者の考えに最も近いものはどれか。","a":"自分にできることを無理なく続けるのがよい。","d":["ボランティアは特別な人がするべきだ。","できるだけ多くの活動に参加すべきだ。","お年寄りの世話は専門家に任せるべきだ。"]}]},
-{"id":"r10","title":"Điện thoại thông minh và trẻ em","type":"Bài báo (記事)","text":"小学生がスマートフォンを持つことについて、さまざまな意見がある。連絡が取りやすく安心だという親がいる【1】、使いすぎて勉強の時間が減るのではないかと心配する親もいる。\nある調査【2】、小学生の約半数がスマートフォンを使っているそうだ。持たせる【3】、家庭でルールを決めておくことが必要だろう。",
-"blanks":[{"a":"一方で","d":["うえに","ばかりか","ついでに"]},{"a":"によると","d":["に対して","をこめて","にかけては"]},{"a":"からには","d":["くせに","ものの","わりに"]}],
-"questions":[{"q":"この文章で筆者が一番言いたいことは何か。","a":"子どもに持たせるなら、家でルールを作るべきだ。","d":["小学生はスマートフォンを持つべきではない。","スマートフォンは勉強に役立つ。","小学生の半数がルールを守っていない。"]}]}
+ {
+  "id": "r01",
+  "title": "Thư cảm ơn",
+  "type": "Thư (手紙)",
+  "text": "山田先生\n\nいつもお世話になっております。先日は、お忙しい【1】、私の作文を見てくださって、ありがとうございました。先生にご指導いただいた【2】、コンテストで二位に入ることができました。\n来月、大学の日本語クラブで発表をすることになりました。【3】、もう一度アドバイスをいただけないでしょうか。ご都合のよい日を教えていただければ幸いです。\n\nグエン・ミン",
+  "blanks": [
+   {
+    "a": "ところ",
+    "d": [
+     "うちに",
+     "あいだに",
+     "ばかり"
+    ],
+    "why": "お忙しいところ = \"trong lúc (thầy) đang bận\" – cách nói lịch sự khi cảm ơn/xin lỗi vì làm phiền. うちに là \"trong khi còn\", あいだに là \"trong khoảng\", ばかり là \"toàn/vừa mới\" – không hợp."
+   },
+   {
+    "a": "おかげで",
+    "d": [
+     "せいで",
+     "くせに",
+     "わりに"
+    ],
+    "why": "おかげで = \"nhờ có\" (kết quả tốt). せいで là \"tại vì\" (kết quả xấu), くせに là \"vậy mà\" (trách móc), わりに là \"so với\"."
+   },
+   {
+    "a": "つきましては",
+    "d": [
+     "ところが",
+     "それなのに",
+     "なぜなら"
+    ],
+    "why": "つきましては = \"vì vậy, nhân đây\" – mở đầu lời nhờ vả trong thư trang trọng. ところが/それなのに là \"thế nhưng\", なぜなら là \"bởi vì\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "グエンさんがこの手紙で一番伝えたいことは何か。",
+    "a": "お礼を言って、もう一度アドバイスをお願いしたい。",
+    "d": [
+     "コンテストの結果が悪かったことを謝りたい。",
+     "日本語クラブに先生を招待したい。",
+     "作文の締め切りを延ばしてほしい。"
+    ],
+    "vi": "Điều Nguyễn muốn truyền đạt nhất trong thư là gì?",
+    "avi": "Cảm ơn và muốn xin lời khuyên một lần nữa.",
+    "dvi": [
+     "Muốn xin lỗi vì kết quả cuộc thi không tốt.",
+     "Muốn mời thầy đến câu lạc bộ tiếng Nhật.",
+     "Muốn xin lùi hạn nộp bài văn."
+    ],
+    "why": "Thư cảm ơn thầy rồi dùng つきましては để xin lời khuyên trước buổi thuyết trình. Kết quả là giải nhì (tốt), không có lời mời hay xin lùi hạn."
+   }
+  ],
+  "vi": "Kính gửi thầy Yamada,\n\nEm luôn nhận được sự giúp đỡ của thầy. Hôm trước, dù thầy đang bận, thầy vẫn xem bài văn cho em, em xin cảm ơn thầy. Nhờ được thầy hướng dẫn, em đã đạt giải nhì trong cuộc thi.\nTháng sau em sẽ thuyết trình ở câu lạc bộ tiếng Nhật của trường đại học. Vì vậy, thầy có thể cho em xin lời khuyên một lần nữa được không ạ? Nếu thầy cho em biết ngày thầy thuận tiện thì em rất biết ơn.\n\nNguyễn Minh"
+ },
+ {
+  "id": "r02",
+  "title": "Thông báo của khu chung cư",
+  "type": "Thông báo (お知らせ)",
+  "text": "【ごみの出し方が変わります】\n\n4月1日から、燃えるごみの日が月・木曜日【1】火・金曜日に変わります。ペットボトルは、ふたとラベルを取って【2】出してください。\nなお、決められた日以外にごみを出すと、カラスが集まる原因になります。ルールを守っていただけない【3】、マンションの全員が困ることになります。ご協力をお願いします。\n\n管理人",
+  "blanks": [
+   {
+    "a": "から",
+    "d": [
+     "まで",
+     "より",
+     "ほど"
+    ],
+    "why": "月・木曜日から火・金曜日に変わる = \"đổi TỪ thứ 2, 5 SANG thứ 3, 6\". まで là \"đến\", より là \"hơn\", ほど là \"khoảng/mức\"."
+   },
+   {
+    "a": "から",
+    "d": [
+     "まま",
+     "ながら",
+     "うちに"
+    ],
+    "why": "〜てから = \"sau khi ... rồi mới\": tháo nắp và nhãn rồi mới bỏ. まま là \"giữ nguyên\", ながら là \"vừa ... vừa\", うちに là \"trong lúc\"."
+   },
+   {
+    "a": "と",
+    "d": [
+     "ても",
+     "のに",
+     "ので"
+    ],
+    "why": "〜ないと = \"nếu không ... thì (sẽ)\": hệ quả tất yếu. ても là \"dù\", のに là \"vậy mà\", ので là \"vì\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "4月から、燃えるごみはいつ出すか。",
+    "a": "火曜日と金曜日",
+    "d": [
+     "月曜日と木曜日",
+     "毎日",
+     "決められた日以外"
+    ],
+    "vi": "Từ tháng 4, rác cháy được bỏ vào lúc nào?",
+    "avi": "Thứ Ba và thứ Sáu",
+    "dvi": [
+     "Thứ Hai và thứ Năm",
+     "Hằng ngày",
+     "Ngoài những ngày quy định"
+    ],
+    "why": "Câu đầu: 月・木曜日から火・金曜日に変わります – từ tháng 4 là thứ Ba và thứ Sáu. Thứ Hai, Năm là lịch cũ."
+   },
+   {
+    "q": "ペットボトルを出すとき、どうしなければならないか。",
+    "a": "ふたとラベルを取る。",
+    "d": [
+     "ふたをしたまま出す。",
+     "燃えるごみと一緒に出す。",
+     "管理人に渡す。"
+    ],
+    "vi": "Khi bỏ chai nhựa PET phải làm gì?",
+    "avi": "Tháo nắp và nhãn.",
+    "dvi": [
+     "Để nguyên nắp mà bỏ.",
+     "Bỏ chung với rác cháy được.",
+     "Giao cho ban quản lý."
+    ],
+    "why": "ふたとラベルを取ってから出してください – phải tháo nắp và nhãn."
+   }
+  ],
+  "vi": "【Cách bỏ rác thay đổi】\n\nTừ ngày 1/4, ngày bỏ rác cháy được sẽ đổi từ thứ Hai, thứ Năm sang thứ Ba, thứ Sáu. Chai nhựa PET hãy tháo nắp và nhãn rồi mới bỏ.\nNgoài ra, nếu bỏ rác vào ngày không quy định sẽ khiến quạ tụ tập. Nếu mọi người không tuân thủ quy định thì tất cả cư dân chung cư sẽ gặp phiền phức. Rất mong mọi người hợp tác.\n\nBan quản lý"
+ },
+ {
+  "id": "r03",
+  "title": "Thói quen buổi sáng",
+  "type": "Bài luận ngắn (随筆)",
+  "text": "私は毎朝五時に起きることにしている。以前は夜遅くまで起きていて、朝はいつもぎりぎりに家を出ていた。【1】、ある本を読んだ【2】、生活を変えてみようと思った。\n早く起きると、静かな時間に本を読んだり、散歩をしたりできる。最初はつらかったが、続けている【3】、体の調子もよくなってきた。今では、朝の一時間が一日で一番大切な時間になっている。",
+  "blanks": [
+   {
+    "a": "しかし",
+    "d": [
+     "そのうえ",
+     "つまり",
+     "たとえば"
+    ],
+    "why": "しかし = \"thế nhưng\": chuyển từ thói quen xấu trước đây sang việc thay đổi. そのうえ là \"hơn nữa\", つまり là \"tóm lại\", たとえば là \"ví dụ\"."
+   },
+   {
+    "a": "のをきっかけに",
+    "d": [
+     "にもかかわらず",
+     "にかわって",
+     "をこめて"
+    ],
+    "why": "〜のをきっかけに = \"nhân dịp, lấy ... làm cơ hội\". にもかかわらず là \"mặc dù\", にかわって là \"thay cho\", をこめて là \"gửi gắm (tình cảm)\"."
+   },
+   {
+    "a": "うちに",
+    "d": [
+     "最中に",
+     "とたん",
+     "かわりに"
+    ],
+    "why": "〜ているうちに = \"trong lúc đang ... thì (dần dần)\". 最中に là \"đang giữa lúc\" (bị gián đoạn), とたん là \"vừa ... thì\", かわりに là \"thay vào đó\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "筆者が生活を変えた理由は何か。",
+    "a": "ある本を読んだから。",
+    "d": [
+     "医者に注意されたから。",
+     "会社が遠くなったから。",
+     "友だちに誘われたから。"
+    ],
+    "vi": "Lý do tác giả thay đổi lối sống là gì?",
+    "avi": "Vì đã đọc một cuốn sách.",
+    "dvi": [
+     "Vì bị bác sĩ nhắc nhở.",
+     "Vì công ty chuyển ra xa.",
+     "Vì được bạn bè rủ."
+    ],
+    "why": "ある本を読んだのをきっかけに – nhân dịp đọc một cuốn sách."
+   },
+   {
+    "q": "筆者にとって、今、朝の時間はどんな時間か。",
+    "a": "一日で一番大切な時間",
+    "d": [
+     "まだつらい時間",
+     "仕事をする時間",
+     "寝不足になる時間"
+    ],
+    "vi": "Đối với tác giả, bây giờ thời gian buổi sáng là thời gian như thế nào?",
+    "avi": "Thời gian quan trọng nhất trong ngày",
+    "dvi": [
+     "Thời gian vẫn còn vất vả",
+     "Thời gian làm việc",
+     "Thời gian bị thiếu ngủ"
+    ],
+    "why": "Câu cuối: 朝の一時間が一日で一番大切な時間になっている. \"Vất vả\" chỉ là lúc đầu (最初は)."
+   }
+  ],
+  "vi": "Tôi duy trì thói quen dậy lúc 5 giờ mỗi sáng. Trước đây tôi thức đến khuya và sáng nào cũng ra khỏi nhà sát giờ. Thế nhưng, nhân dịp đọc một cuốn sách, tôi quyết định thử thay đổi lối sống.\nDậy sớm thì tôi có thể đọc sách, đi dạo trong khoảng thời gian yên tĩnh. Lúc đầu thì vất vả, nhưng trong lúc duy trì, sức khỏe cũng tốt dần lên. Giờ đây, một tiếng buổi sáng đã trở thành khoảng thời gian quan trọng nhất trong ngày."
+ },
+ {
+  "id": "r04",
+  "title": "Mua sắm trên mạng",
+  "type": "Bài luận (論説)",
+  "text": "最近、インターネットで買い物をする人が増えている。店に行かなくても、家にいる【1】欲しい物が手に入るので便利だ。【2】、実際に商品を見たり触ったりできないため、届いた物が思っていたものと違うこともある。\n便利さ【3】、問題点もよく理解した上で、上手に利用することが大切だろう。",
+  "blanks": [
+   {
+    "a": "まま",
+    "d": [
+     "ながら",
+     "うちは",
+     "とたん"
+    ],
+    "why": "家にいるまま = \"cứ ở nguyên trong nhà\". ながら là \"vừa ... vừa\", うちは là \"trong khi còn\", とたん là \"vừa ... thì\"."
+   },
+   {
+    "a": "一方で",
+    "d": [
+     "そのため",
+     "それで",
+     "すると"
+    ],
+    "why": "一方で = \"mặt khác\": chuyển từ ưu điểm sang nhược điểm. そのため/それで là \"vì thế\", すると là \"thế là\"."
+   },
+   {
+    "a": "だけでなく",
+    "d": [
+     "にかわって",
+     "をはじめ",
+     "によって"
+    ],
+    "why": "〜だけでなく = \"không chỉ ... mà cả\". にかわって là \"thay cho\", をはじめ là \"tiêu biểu là\", によって là \"tùy theo/do\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "筆者の考えに合うものはどれか。",
+    "a": "インターネットの買い物は、問題点も知って使うべきだ。",
+    "d": [
+     "インターネットの買い物はやめたほうがいい。",
+     "商品は必ず店で買うべきだ。",
+     "インターネットの買い物には問題がない。"
+    ],
+    "vi": "Điều nào phù hợp với suy nghĩ của tác giả?",
+    "avi": "Mua sắm trên mạng nên dùng khi đã biết cả những vấn đề của nó.",
+    "dvi": [
+     "Nên bỏ mua sắm trên mạng.",
+     "Nhất định phải mua hàng ở cửa hàng.",
+     "Mua sắm trên mạng không có vấn đề gì."
+    ],
+    "why": "Kết luận: 問題点もよく理解した上で、上手に利用することが大切 – hiểu cả vấn đề rồi dùng khéo léo, không phải bỏ hẳn."
+   }
+  ],
+  "vi": "Gần đây số người mua sắm trên mạng đang tăng lên. Không cần đến cửa hàng, cứ ở nhà cũng có được thứ mình muốn nên rất tiện. Mặt khác, vì không thể tận mắt xem hay sờ vào sản phẩm nên đôi khi đồ nhận được khác với điều mình nghĩ.\nKhông chỉ sự tiện lợi, mà sau khi hiểu rõ cả những vấn đề, việc sử dụng một cách khéo léo có lẽ là điều quan trọng."
+ },
+ {
+  "id": "r05",
+  "title": "Email đổi lịch hẹn",
+  "type": "Email (メール)",
+  "text": "件名：打ち合わせの日程について\n\n佐藤様\n\nお世話になっております。ABC商事の田中です。\n来週火曜日の打ち合わせですが、急な出張が入ってしまい、伺うことができなくなりました。申し訳ございません。\n【1】、木曜日か金曜日の午後に変更していただくことは可能でしょうか。ご都合が悪い【2】、ほかの日でも構いません。\nお手数ですが、ご返信【3】よろしくお願いいたします。\n\n田中",
+  "blanks": [
+   {
+    "a": "つきましては",
+    "d": [
+     "ところで",
+     "それなのに",
+     "すると"
+    ],
+    "why": "つきましては = \"vì vậy (xin được đề nghị)\" trong thư trang trọng. ところで là \"nhân tiện\" (đổi chủ đề), それなのに là \"vậy mà\", すると là \"thế là\"."
+   },
+   {
+    "a": "ようでしたら",
+    "d": [
+     "ものの",
+     "とたん",
+     "うちに"
+    ],
+    "why": "〜ようでしたら = \"nếu (như) ...\" – cách nói lịch sự của なら. ものの là \"tuy\", とたん là \"vừa ... thì\", うちに là \"trong lúc\"."
+   },
+   {
+    "a": "のほど",
+    "d": [
+     "ばかり",
+     "しだい",
+     "ほか"
+    ],
+    "why": "ご返信のほど = cách nói mềm, lịch sự khi nhờ (〜のほどよろしくお願いいたします). ばかり, しだい, ほか không dùng trong cụm này."
+   }
+  ],
+  "questions": [
+   {
+    "q": "田中さんは佐藤さんに何をお願いしているか。",
+    "a": "打ち合わせの日を変えてほしい。",
+    "d": [
+     "出張に一緒に行ってほしい。",
+     "火曜日に会社に来てほしい。",
+     "打ち合わせを中止してほしい。"
+    ],
+    "vi": "Anh Tanaka đang nhờ anh/chị Sato điều gì?",
+    "avi": "Muốn đổi ngày cuộc họp.",
+    "dvi": [
+     "Muốn cùng đi công tác.",
+     "Muốn đến công ty vào thứ Ba.",
+     "Muốn hủy cuộc họp."
+    ],
+    "why": "木曜日か金曜日の午後に変更していただくことは可能でしょうか – nhờ đổi ngày, không phải hủy."
+   }
+  ],
+  "vi": "Tiêu đề: Về lịch cuộc họp\n\nKính gửi anh/chị Sato,\n\nCảm ơn anh/chị đã luôn giúp đỡ. Tôi là Tanaka của công ty thương mại ABC.\nVề cuộc họp thứ Ba tuần sau, do có chuyến công tác đột xuất nên tôi không thể đến được. Thành thật xin lỗi.\nVì vậy, liệu có thể đổi sang buổi chiều thứ Năm hoặc thứ Sáu được không ạ? Nếu anh/chị không tiện thì ngày khác cũng được.\nPhiền anh/chị, rất mong nhận được hồi âm.\n\nTanaka"
+ },
+ {
+  "id": "r06",
+  "title": "Ngủ trưa ở Nhật",
+  "type": "Bài báo (記事)",
+  "text": "短い昼寝は、午後の仕事の効率を上げると言われている。ある会社では、昼休みに十五分ほど眠れる部屋を作った。その結果、社員のミスが減った【1】。\nただし、三十分以上寝ると、【2】頭がぼんやりしてしまう【3】。昼寝は「短く」がポイントだそうだ。",
+  "blanks": [
+   {
+    "a": "という",
+    "d": [
+     "わけがない",
+     "ばかりだ",
+     "ことか"
+    ],
+    "why": "〜という = \"nghe nói, người ta nói\" (truyền đạt). わけがない là \"không có lý nào\", ばかりだ là \"ngày càng\", ことか là \"biết bao\"."
+   },
+   {
+    "a": "かえって",
+    "d": [
+     "せっかく",
+     "やっと",
+     "さっそく"
+    ],
+    "why": "かえって = \"ngược lại\": ngủ để tỉnh táo mà lại thành lơ mơ. せっかく là \"mất công\", やっと là \"cuối cùng\", さっそく là \"ngay lập tức\"."
+   },
+   {
+    "a": "恐れがある",
+    "d": [
+     "ことはない",
+     "わけにはいかない",
+     "しかない"
+    ],
+    "why": "〜恐れがある = \"có nguy cơ (điều xấu)\". ことはない là \"không cần\", わけにはいかない là \"không thể\", しかない là \"chỉ còn cách\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "昼寝について、正しいものはどれか。",
+    "a": "長く寝すぎるとよくない。",
+    "d": [
+     "長く寝るほど仕事がよくできる。",
+     "昼寝はミスを増やす。",
+     "昼寝をする会社は減っている。"
+    ],
+    "vi": "Về ngủ trưa, điều nào đúng?",
+    "avi": "Ngủ quá lâu thì không tốt.",
+    "dvi": [
+     "Càng ngủ lâu càng làm việc tốt.",
+     "Ngủ trưa làm tăng lỗi.",
+     "Số công ty cho ngủ trưa đang giảm."
+    ],
+    "why": "三十分以上寝ると、かえって頭がぼんやりしてしまう恐れがある – ngủ quá 30 phút thì không tốt; còn ngủ ngắn thì lỗi giảm."
+   }
+  ],
+  "vi": "Người ta nói rằng ngủ trưa ngắn giúp tăng hiệu quả công việc buổi chiều. Một công ty đã làm một căn phòng có thể ngủ khoảng 15 phút trong giờ nghỉ trưa. Nghe nói kết quả là nhân viên mắc lỗi ít đi.\nTuy nhiên, nếu ngủ trên 30 phút thì ngược lại đầu óc có nguy cơ bị lơ mơ. Nghe nói điểm mấu chốt của ngủ trưa là \"ngắn\"."
+ },
+ {
+  "id": "r07",
+  "title": "Lần đầu đi Nhật",
+  "type": "Nhật ký (日記)",
+  "text": "日本に来て【1】、もう半年になる。来たばかりのころは、言葉が分からなくて、スーパーで買い物をするのも大変だった。\n【2】、近所のおばあさんが毎日のように声をかけてくれた【3】、少しずつ日本語で話せるようになった。今では、そのおばあさんと一緒に料理を作るほど仲良くなった。",
+  "blanks": [
+   {
+    "a": "以来",
+    "d": [
+     "までに",
+     "うちに",
+     "最中"
+    ],
+    "why": "〜て以来 = \"kể từ khi ... (đến nay)\". までに là \"trước (hạn)\", うちに là \"trong lúc\", 最中 là \"đang giữa lúc\"."
+   },
+   {
+    "a": "でも",
+    "d": [
+     "だから",
+     "つまり",
+     "たとえば"
+    ],
+    "why": "でも = \"nhưng\": chuyển từ khó khăn sang sự thay đổi tốt. だから là \"vì vậy\", つまり là \"tóm lại\", たとえば là \"ví dụ\"."
+   },
+   {
+    "a": "おかげで",
+    "d": [
+     "せいで",
+     "くせに",
+     "わりに"
+    ],
+    "why": "おかげで = \"nhờ có\" (kết quả tốt: nói được tiếng Nhật). せいで là \"tại vì\" (xấu), くせに là \"vậy mà\", わりに là \"so với\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "筆者が日本語を話せるようになったのはなぜか。",
+    "a": "近所のおばあさんがよく話しかけてくれたから。",
+    "d": [
+     "日本語学校に毎日通ったから。",
+     "スーパーで働いたから。",
+     "料理教室に通ったから。"
+    ],
+    "vi": "Vì sao tác giả nói được tiếng Nhật?",
+    "avi": "Vì bà cụ hàng xóm hay bắt chuyện với mình.",
+    "dvi": [
+     "Vì ngày nào cũng đi học trường tiếng Nhật.",
+     "Vì làm việc ở siêu thị.",
+     "Vì đi học lớp nấu ăn."
+    ],
+    "why": "おばあさんが毎日のように声をかけてくれたおかげで – nhờ bà cụ bắt chuyện. Nấu ăn là chuyện sau khi đã thân."
+   }
+  ],
+  "vi": "Từ khi đến Nhật đến nay đã được nửa năm. Hồi mới đến, tôi không hiểu tiếng nên ngay cả việc đi mua sắm ở siêu thị cũng vất vả.\nNhưng nhờ có một bà cụ hàng xóm hầu như ngày nào cũng bắt chuyện với tôi, tôi dần dần nói được tiếng Nhật. Giờ đây tôi đã thân với bà đến mức cùng nhau nấu ăn."
+ },
+ {
+  "id": "r08",
+  "title": "Thông báo thư viện",
+  "type": "Thông báo (お知らせ)",
+  "text": "市立図書館からのお知らせ\n\n館内の工事【1】、5月10日から5月20日まで休館いたします。休館中に返却する本は、入口の返却ポストに入れてください。\nただし、CDやDVDは壊れる【2】がありますので、返却ポストには入れないでください。休館中に予約した本は、5月21日【3】受け取ることができます。",
+  "blanks": [
+   {
+    "a": "のため",
+    "d": [
+     "のおかげで",
+     "にとって",
+     "について"
+    ],
+    "why": "〜のため = \"do, vì\" (thông báo trang trọng). のおかげで là \"nhờ\", にとって là \"đối với\", について là \"về\"."
+   },
+   {
+    "a": "おそれ",
+    "d": [
+     "はず",
+     "わけ",
+     "つもり"
+    ],
+    "why": "〜おそれがある = \"có nguy cơ\". はず là \"chắc chắn\", わけ là \"lý do\", つもり là \"dự định\"."
+   },
+   {
+    "a": "以降",
+    "d": [
+     "以内",
+     "以外",
+     "以下"
+    ],
+    "why": "〜以降 = \"từ ... trở đi\". 以内 là \"trong vòng\", 以外 là \"ngoài\", 以下 là \"dưới\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "休館中にDVDを返したい人はどうすればいいか。",
+    "a": "図書館が開いてから返す。",
+    "d": [
+     "返却ポストに入れる。",
+     "入口に置いておく。",
+     "電話で連絡する。"
+    ],
+    "vi": "Người muốn trả DVD trong thời gian thư viện đóng cửa thì nên làm thế nào?",
+    "avi": "Trả sau khi thư viện mở cửa.",
+    "dvi": [
+     "Bỏ vào hộp trả sách.",
+     "Để sẵn ở lối vào.",
+     "Liên lạc bằng điện thoại."
+    ],
+    "why": "CDやDVDは…返却ポストには入れないでください – không được bỏ vào hộp, nên phải đợi thư viện mở lại."
+   }
+  ],
+  "vi": "Thông báo từ Thư viện thành phố\n\nDo thi công trong thư viện, thư viện sẽ đóng cửa từ ngày 10/5 đến ngày 20/5. Sách trả trong thời gian đóng cửa hãy bỏ vào hộp trả sách ở lối vào.\nTuy nhiên, CD và DVD có nguy cơ bị hỏng nên xin đừng bỏ vào hộp trả sách. Sách đặt trước trong thời gian đóng cửa có thể nhận từ ngày 21/5 trở đi."
+ },
+ {
+  "id": "r09",
+  "title": "Tình nguyện viên",
+  "type": "Bài luận (論説)",
+  "text": "ボランティアというと、特別な人がするものだと考える人が多い。【1】、実際には、公園の掃除や、お年寄りの話し相手など、だれにでもできる活動もたくさんある。\n大切なのは、無理をしない【2】。自分にできる範囲で続けることが、結果的に多くの人の役に立つの【3】。",
+  "blanks": [
+   {
+    "a": "しかし",
+    "d": [
+     "だから",
+     "そこで",
+     "それに"
+    ],
+    "why": "しかし = \"thế nhưng\": phản bác suy nghĩ phổ biến. だから là \"vì vậy\", そこで là \"do đó (làm gì)\", それに là \"hơn nữa\"."
+   },
+   {
+    "a": "ことだ",
+    "d": [
+     "ものか",
+     "わけがない",
+     "はずがない"
+    ],
+    "why": "〜ことだ = \"điều quan trọng là / nên\" (lời khuyên). ものか là \"đời nào\", わけがない/はずがない là \"không thể nào\"."
+   },
+   {
+    "a": "ではないだろうか",
+    "d": [
+     "に違いないだろうか",
+     "とは限らないか",
+     "わけにはいかないか"
+    ],
+    "why": "〜のではないだろうか = \"chẳng phải là ... sao\" (nêu ý kiến nhẹ nhàng). Ba lựa chọn còn lại là cách nói sai ngữ pháp."
+   }
+  ],
+  "questions": [
+   {
+    "q": "筆者の考えに最も近いものはどれか。",
+    "a": "自分にできることを無理なく続けるのがよい。",
+    "d": [
+     "ボランティアは特別な人がするべきだ。",
+     "できるだけ多くの活動に参加すべきだ。",
+     "お年寄りの世話は専門家に任せるべきだ。"
+    ],
+    "vi": "Điều nào gần nhất với suy nghĩ của tác giả?",
+    "avi": "Nên duy trì những việc mình làm được mà không quá sức.",
+    "dvi": [
+     "Tình nguyện là việc người đặc biệt nên làm.",
+     "Nên tham gia càng nhiều hoạt động càng tốt.",
+     "Việc chăm sóc người già nên giao cho chuyên gia."
+    ],
+    "why": "大切なのは、無理をしないことだ。自分にできる範囲で続けることが… – không quá sức, làm trong khả năng."
+   }
+  ],
+  "vi": "Nói đến tình nguyện, nhiều người nghĩ đó là việc của những người đặc biệt. Thế nhưng trên thực tế, có rất nhiều hoạt động ai cũng làm được như dọn dẹp công viên hay trò chuyện cùng người già.\nĐiều quan trọng là đừng quá sức. Chẳng phải việc duy trì trong phạm vi mình làm được, rốt cuộc lại giúp ích cho nhiều người hay sao?"
+ },
+ {
+  "id": "r10",
+  "title": "Điện thoại thông minh và trẻ em",
+  "type": "Bài báo (記事)",
+  "text": "小学生がスマートフォンを持つことについて、さまざまな意見がある。連絡が取りやすく安心だという親がいる【1】、使いすぎて勉強の時間が減るのではないかと心配する親もいる。\nある調査【2】、小学生の約半数がスマートフォンを使っているそうだ。持たせる【3】、家庭でルールを決めておくことが必要だろう。",
+  "blanks": [
+   {
+    "a": "一方で",
+    "d": [
+     "うえに",
+     "ばかりか",
+     "ついでに"
+    ],
+    "why": "一方で = \"mặt khác\": đặt hai nhóm ý kiến đối lập. うえに là \"hơn nữa\", ばかりか là \"không những\", ついでに là \"nhân tiện\"."
+   },
+   {
+    "a": "によると",
+    "d": [
+     "に対して",
+     "をこめて",
+     "にかけては"
+    ],
+    "why": "〜によると = \"theo (nguồn tin)\", đi với 〜そうだ. に対して là \"đối với\", をこめて là \"gửi gắm\", にかけては là \"về mặt (giỏi)\"."
+   },
+   {
+    "a": "からには",
+    "d": [
+     "くせに",
+     "ものの",
+     "わりに"
+    ],
+    "why": "〜からには = \"một khi đã ... thì\". くせに là \"vậy mà\", ものの là \"tuy\", わりに là \"so với\"."
+   }
+  ],
+  "questions": [
+   {
+    "q": "この文章で筆者が一番言いたいことは何か。",
+    "a": "子どもに持たせるなら、家でルールを作るべきだ。",
+    "d": [
+     "小学生はスマートフォンを持つべきではない。",
+     "スマートフォンは勉強に役立つ。",
+     "小学生の半数がルールを守っていない。"
+    ],
+    "vi": "Điều tác giả muốn nói nhất trong bài là gì?",
+    "avi": "Nếu cho con dùng thì nên đặt quy tắc ở nhà.",
+    "dvi": [
+     "Học sinh tiểu học không nên có điện thoại thông minh.",
+     "Điện thoại thông minh có ích cho việc học.",
+     "Một nửa học sinh tiểu học không tuân thủ quy tắc."
+    ],
+    "why": "Câu cuối: 持たせるからには、家庭でルールを決めておくことが必要だろう. \"Một nửa\" là số người đang dùng, không phải số không giữ quy tắc."
+   }
+  ],
+  "vi": "Có nhiều ý kiến khác nhau về việc học sinh tiểu học có điện thoại thông minh. Có phụ huynh cho rằng dễ liên lạc nên yên tâm, mặt khác cũng có phụ huynh lo lắng rằng con dùng quá nhiều sẽ giảm thời gian học.\nTheo một cuộc khảo sát, nghe nói khoảng một nửa học sinh tiểu học đang dùng điện thoại thông minh. Một khi đã cho con dùng thì có lẽ cần đặt ra quy tắc trong gia đình."
+ }
 ]

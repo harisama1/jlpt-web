@@ -1,0 +1,185 @@
+# Vietnamese translation of grammar quiz sentences (id|vi), merged by build_data.py
+g0.0|Tôi là sinh viên.
+g1.0|Đây là sách tiếng Nhật.
+g4.0|Căn phòng này rộng và sáng sủa.
+g5.0|Tôi thích âm nhạc.
+g7.0|Thịt và cá, bạn thích cái nào hơn?
+g8.0|Trong các loại trái cây, bạn thích loại nào nhất?
+g9.0|Ai đã đến vậy?
+g10.0|Tôi đi dạo trong công viên.
+g10.1|Tôi xuống tàu điện.
+g11.0|Tôi thức dậy lúc 7 giờ.
+g11.1|Tôi viết thư cho bạn.
+g12.0|Tôi đi Nhật Bản.
+g13.0|Tôi đi học bằng xe buýt.
+g14.0|Tôi xem phim cùng bạn.
+g15.0|Tôi làm việc từ 9 giờ đến 5 giờ.
+g16.0|Tôi đã mua táo, quýt, v.v.
+g17.0|Tôi cũng đi.
+g17.1|Tôi đã đợi những 3 tiếng đồng hồ.
+g18.0|Trời đẹp nhỉ.
+g19.0|Khoảng 3 giờ tôi sẽ đến nơi.
+g19.1|Mất khoảng 1 tiếng.
+g20.0|Có quyển sách ở trên bàn.
+g21.0|Tôi muốn có một cái máy tính mới.
+g22.0|Tôi muốn đi Nhật Bản.
+g24.0|Cùng đi xem phim với tôi không?
+g24.1|Để tôi mang hành lý giúp nhé?
+g25.0|Hãy viết tên vào đây.
+g26.0|Trời đang mưa.
+g26.1|Tôi đã kết hôn (đang trong tình trạng đã kết hôn).
+g27.0|Tôi chụp ảnh ở đây có được không?
+g29.0|Rửa tay xong rồi mới ăn.
+g30.0|Xin đừng hút thuốc ở đây.
+g31.0|Phải uống thuốc.
+g32.0|Ngày mai không đến cũng được.
+g33.0|Tôi có thể đọc được chữ Hán.
+g34.0|Trước khi ngủ tôi đánh răng.
+g35.0|Tôi đã từng leo núi Phú Sĩ.
+g36.0|Ngày nghỉ tôi lúc thì đọc sách, lúc thì xem phim.
+g37.0|Sau giờ làm, tôi đi uống.
+g38.0|Tôi vẫn chưa ăn trưa.
+g39.0|Tôi nghĩ ngày mai trời sẽ mưa.
+g40.0|Ngày mai có lẽ trời sẽ nắng.
+g41.0|Hồi nhỏ tôi hay chơi ở sông.
+g44.0|Tôi đang định sang năm sẽ đi du học Nhật Bản.
+g45.0|Năm nay tôi định không đi du lịch.
+g46.0|Cuộc họp dự kiến kết thúc lúc 3 giờ.
+g47.0|Trước chuyến du lịch, tôi đặt khách sạn sẵn.
+g48.0|Trên tường có treo sẵn tờ lịch.
+g51.0|Tôi đi mua chút đồ uống rồi về ngay.
+g55.0|Anh/chị có thể giải thích lại một lần nữa giúp tôi được không ạ?
+g56.0|Vì trời đang mưa nên tôi không ra ngoài.
+g57.0|Đã uống thuốc rồi mà vẫn không hạ sốt.
+g58.0|Dù trời mưa thì vẫn thi đấu.
+g60.0|Tôi vừa nghe nhạc vừa học.
+g61.0|Tôi đang tiết kiệm tiền để mua nhà.
+g62.0|Tôi ghi chú lại để không quên.
+g63.0|Tôi đã đến trường mà không ăn sáng.
+g65.0|Khi đến ga thì hãy gọi điện cho tôi.
+g66.0|Hễ bấm nút này là trà chảy ra.
+g67.0|Nếu đi Kyoto thì mùa thu là đẹp nhất đấy.
+g68.0|Cái bánh này trông có vẻ ngon.
+g69.0|Theo dự báo thời tiết thì nghe nói ngày mai có tuyết.
+g70.0|Hình như có ai đó ở đây.
+g71.0|Nghe đâu cửa hàng đó tháng sau sẽ đóng cửa.
+g72.0|Buổi chiều có thể trời sẽ mưa.
+g73.0|Chắc chắn anh ấy sẽ đến.
+g75.0|Hãy cho tôi biết mấy giờ cuộc họp bắt đầu.
+g75.1|Tôi không biết là có đi được hay không.
+g78.0|Đi ngủ sớm đi!
+g78.1|Nộp báo cáo trước thứ Sáu.
+g79.0|Chữ Hán này khó viết.
+g81.0|Tôi đang chuẩn bị ra ngoài đây.
+g83.0|Trong lúc còn ở Nhật, tôi muốn thử leo núi Phú Sĩ một lần.
+g83.1|Hãy ăn nhanh trước khi nó tan chảy nhé.
+g84.0|Đang nghe nhạc thì tôi ngủ thiếp đi lúc nào không hay.
+g84.1|Chẳng biết từ lúc nào bên ngoài đã tối mất rồi.
+g85.0|Nếu chưa bàn với gia đình thì tôi không thể quyết định mua hay không.
+g85.1|Phải lấy được bằng lái rồi mới được lái ô tô.
+g87.0|Vừa mở cửa sổ ra thì gió mạnh ùa vào.
+g88.0|Đang giữa cuộc họp thì điện thoại reo.
+g89.0|Đến khi bị ốm tôi mới hiểu được sức khỏe quan trọng thế nào.
+g90.0|Tôi đã đi bộ đúng như được chỉ ở đồn cảnh sát.
+g90.1|Kết quả trận đấu đúng như mong đợi.
+g91.0|Tùy từng nước mà phong tục khác nhau.
+g91.1|Tùy ngày, cũng có khi đến tận nửa đêm.
+g92.0|Ở vùng này cứ mỗi lần bão đến là lại xảy ra lũ lụt.
+g93.0|Đồ đạc càng nhiều thì dọn dẹp càng vất vả.
+g93.1|Ngày nghỉ càng nhiều càng vui.
+g94.0|Nhân tiện đi dạo, bỏ giúp tấm bưu thiếp này vào hòm thư nhé.
+g94.1|Nhân tiện dọn lối vào thì sắp xếp lại giày dép luôn.
+g95.0|Tiếng Nhật càng giỏi lên thì cuộc sống càng vui hơn.
+g96.0|Càng có tuổi thì thể lực càng giảm.
+g97.0|Đối với tôi, gia đình là quan trọng nhất.
+g98.0|Tìm hiểu về văn hóa Nhật Bản.
+g99.0|Tôi đến Nhật với tư cách là du học sinh.
+g100.0|Hội này hoạt động lấy anh Kimura làm trung tâm.
+g101.0|Từ Hokkaido đến Kyushu đều có tuyết lớn.
+g102.0|Các thành phố lớn, tiêu biểu là Tokyo, giá thuê nhà đều đắt.
+g103.0|Bánh mì của tiệm này ngon đến mức muốn ăn mỗi ngày.
+g103.1|Đột nhiên tôi thấy đau đến mức không đứng nổi.
+g104.0|Không có gì đáng ghét bằng kiểm tra.
+g105.0|Nếu phải tự làm cơm hộp mỗi sáng thì thà ăn cơm hộp cửa hàng tiện lợi còn hơn.
+g105.1|Xem phim thì vẫn là xem ở rạp là nhất.
+g106.0|So với năm ngoái, năm nay mưa nhiều hơn.
+g107.0|Quán này ngon so với giá tiền.
+g108.0|Hôm qua Osaka mưa to, trái lại Tokyo thì trời đẹp.
+g109.0|Cuộc sống thành phố có nhiều điều thú vị, nhưng mặt khác cũng nhiều căng thẳng.
+g110.0|Trong cuộc họp, hãy vừa nêu ý kiến của mình, đồng thời cũng lắng nghe kỹ người khác.
+g111.0|Chúng tôi không hẳn là bạn mà đúng hơn là đối thủ cạnh tranh tốt của nhau.
+g112.0|Làm tự do thì có nhiều thời gian rảnh, nhưng bù lại lúc nào cũng lo chuyện tiền bạc.
+g113.0|Đã hứa rồi mà anh ấy lại không đến.
+g114.0|Biết rõ mà lại không chịu chỉ cho tôi.
+g115.0|Tuy chật nhưng là mái nhà vui vẻ của chúng tôi.
+g116.0|Vì đi công tác nên xin phép cho tôi vắng mặt cuộc họp ngày mai.
+g117.0|Do thiếu nguyên liệu nên không thể sản xuất được nữa.
+g117.1|Thanh toán bằng thẻ tín dụng.
+g118.0|Vì khuôn mặt rất giống nhau nên nhìn là biết ngay hai người là cha mẹ – con.
+g119.0|Nhờ những ngày đẹp trời kéo dài nên công trình đã xong sớm.
+g119.1|Tại dạo này bận nên tôi khá mệt.
+g120.0|Thế giới rộng lớn như vậy thì có nhiều phong tục khác nhau là điều đương nhiên.
+g121.0|Nếu không dùng thì cho tôi đi.
+g121.1|Cuốn sách đó nếu đọc xong rồi thì cho tôi mượn được không?
+g122.0|Vì vừa mới phẫu thuật xong, đi thăm bệnh lúc này ngược lại còn làm phiền.
+g122.1|Nếu bây giờ mới bắt đầu xây thì trong năm nay sẽ không xong được.
+g123.0|Chỉ cần cơ thể khỏe mạnh thì việc gì cũng có thể thử thách.
+g123.1|Chỉ cần nói một câu "xin lỗi" là sẽ được tha thứ thôi.
+g124.0|Dù có đắt thì những thứ cần cho công việc vẫn phải mua.
+g125.0|Giả sử có một triệu yên thì bạn sẽ dùng vào việc gì?
+g126.0|Theo lời người bán hàng thì gạo vùng này rất ngon.
+g128.0|Nghe nói tháng sau lại đi công tác.
+g129.0|Anh Ogawa đã nói là hôm nay nghỉ đấy.
+g129.1|Nghe nói trước ga mới mở một quán đồ ăn Thái.
+g130.0|Người ta nói đậu phụ được truyền từ Trung Quốc sang Nhật khoảng 1300 năm trước.
+g131.0|Theo dự báo thời tiết thì nghe nói ngày mai trời mưa.
+g132.0|Vì là kỳ thi quốc gia nên không thể nào dễ được.
+g133.0|Đồ đắt tiền chưa chắc đã có chất lượng tốt.
+g135.0|Món cà ri này cũng không phải là không ngon, nhưng tôi thích món cay hơn.
+g135.1|Bơi thì cũng bơi được, nhưng đường dài thì không được.
+g136.0|Chắc chắn anh ấy đã xuất phát rồi.
+g137.0|Chắc chắn là ngon.
+g138.0|Từ chiều có thể trời sẽ mưa.
+g138.1|Trời có vẻ sắp mưa.
+g139.0|Tôi muốn nhờ anh/chị xem qua tài liệu này một chút ạ.
+g140.0|Hôm nay tôi phải đi Cục xuất nhập cảnh nên xin phép cho tôi về sớm ạ.
+g141.0|Báo cáo nhất định phải nộp vào thứ Hai tuần sau.
+g141.1|Vì nguy hiểm nên không được bơi ở con sông này.
+g142.0|Đã vất vả mới vào được công ty thì không nên nghỉ việc dễ dàng.
+g144.0|Tôi duy trì thói quen chạy bộ mỗi sáng.
+g147.0|Tôi định chỉ nói đùa thôi, nhưng anh ấy làm vẻ mặt như đang giận.
+g152.0|Chữ này nhỏ nên khó nhìn.
+g154.0|Mùa đông thường hay ru rú ở nhà.
+g154.1|Hôm nay thời tiết đúng là mùa xuân.
+g155.0|Cứ như là mơ vậy.
+g156.0|Bài văn này toàn là lỗi.
+g157.0|"アクセスする" nghĩa là gì?
+g158.0|Thực phẩm mặn thế này chẳng phải là không tốt cho cơ thể sao?
+g159.0|Tôi bị nhắc nhở là không được nói chuyện điện thoại trên tàu.
+g160.0|Tóm lại là được nghỉ liền 4 ngày.
+g162.0|Vì là đĩa CD của thư viện nên không thể không trả.
+g163.0|Đừng chỉ toàn nói chuyện với người cùng nước.
+g165.0|Chương trình này không chỉ thú vị mà còn học được nhiều điều.
+g166.0|Ngoại ngữ nếu không dùng thì sẽ ngày càng quên.
+g167.0|Bữa ăn đã chuẩn bị xong, chỉ còn chờ ăn thôi.
+g168.0|Vì mới kết hôn tháng trước nên tôi vẫn chưa quen.
+g169.0|Vừa gửi thư đi thì có thư trả lời ngay.
+g170.0|Yukiko vừa xuống máy bay là gọi điện thoại cho ai đó.
+g171.0|Vợ tôi đã uống rượu giỏi lại còn ăn nhiều đồ ngọt.
+g172.0|Từ nay dân số chắc sẽ giảm dần.
+g174.0|Ngày mai dùng nên tôi photo sẵn tài liệu.
+g174.1|Cửa sổ đang được mở sẵn.
+g175.0|Cuốn sách đang đọc dở.
+g181.0|Bánh mì vừa mới nướng.
+g182.0|Tôi ngủ mà để tivi bật suốt.
+g183.0|Xin đừng mang nguyên giày vào phòng.
+g189.0|Xin cho tôi suy nghĩ một chút.
+g190.0|Năm nay nhất định tôi muốn đi Nhật.
+g191.0|Bận đến mức ngay cả thời gian ăn cơm cũng không có.
+g192.0|Đến trẻ con cũng hiểu.
+g192.1|Hay là uống trà hay gì đó nhé?
+g193.0|Tôi thì vẫn còn kém lắm.
+g193.1|Không thể tin được là anh ấy lại kết hôn.
+g194.0|Trong ví chỉ có một nghìn yên.
+g195.0|Anh ấy không chỉ nói được tiếng Anh mà cả tiếng Pháp.
+g195.1|Cuộc họp ngày mai bắt đầu lúc mấy giờ ấy nhỉ?

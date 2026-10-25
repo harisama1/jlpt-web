@@ -13,6 +13,11 @@ Trang ôn tập nhanh cho JLPT N5–N3 (kỳ thi 06/12/2026). Mở trên điện
 | Đọc hiểu | 10 bài (thư, thông báo, email, bài luận, bài báo) | Điền chỗ trống kiểu 文章の文法 + câu hỏi nội dung |
 | Lỗi sai | Mọi câu trả lời sai được lưu lại; đúng 2 lần liên tiếp thì xoá | Ôn lại theo từng phần; xuất / nhập tiến độ dạng file JSON |
 
+Sau mỗi câu trả lời: **dịch nghĩa** câu (ngữ pháp, mẫu câu, đọc hiểu), **giải thích** vì sao đáp án đúng và nghĩa của cả 4 lựa chọn.
+Câu hỏi **không lặp lại**: mỗi phạm vi (phần + chủ đề + cấp + kiểu ôn) đi hết mọi câu rồi mới xáo lại; câu sai được đưa lên đầu lượt sau.
+**Chủ đề**: Từ vựng (43 chủ đề) và Ngữ pháp (33 nhóm) có trang chọn chủ đề kèm tiến độ, nút "Đổi chủ đề" luôn hiện trên đầu bài ôn.
+**Giao diện**: Luyện thêm → Giao diện: sáng / tối / theo máy và 5 màu chủ đạo.
+
 Tiến độ lưu trong trình duyệt (localStorage). Muốn chuyển sang máy khác: tab **Lỗi sai → Xuất file JSON**, rồi **Nhập file JSON** ở máy kia.
 
 ## Chạy trên máy
@@ -30,13 +35,15 @@ python3 -m http.server 8000      # trong thư mục này
   cộng 1.287 từ còn thiếu so với danh sách JLPT của Jonathan Waller (tanos.co.uk, bản CSV của open-anki-jlpt-decks), nghĩa tiếng Việt trong `tools/vi_part*.txt`.
 - Từ ghép của mỗi Kanji được tìm tự động trong kho từ vựng.
 - `tools/grammar_add.txt`, `tools/sentences.txt`, `data/reading.json`: câu hỏi tự soạn theo dạng đề N3 (không phải đề thi thật).
+- `tools/grammar_vi.txt`: bản dịch câu hỏi ngữ pháp. `tools/option_vi.txt` → `data/gloss.json`: nghĩa của các đáp án không có trong kho từ (thể chia, mẫu ngữ pháp, cụm từ).
+  `data/reading.json` có bản dịch đoạn văn, câu hỏi, từng đáp án và giải thích từng chỗ trống.
 
 Build lại: `python3 tools/build_data.py tools/src`
 
 ## Kiểm tra lỗi
 
 - `python3 tools/check_data.py`: kiểm tra dữ liệu (mỗi câu có đủ 4 đáp án khác nhau, không rỗng, đúng 1 chỗ trống, không dòng rác…).
-- `test.html` (mở qua `python3 -m http.server`): sinh khoảng 5.800 câu hỏi ở mọi chế độ, bấm thử mọi tab, làm hết bài đọc hiểu, ôn lỗi sai; in số lỗi logic và lỗi JavaScript.
+- `test.html` (mở qua `python3 -m http.server`): sinh khoảng 8.500 câu hỏi ở mọi chế độ, kiểm tra không lặp, mọi đáp án có giải nghĩa, chọn chủ đề, bấm thử mọi tab, làm hết bài đọc hiểu, ôn lỗi sai; in số lỗi logic và lỗi JavaScript.
 
 Giao diện: ôn theo lượt 10 câu (thanh tiến độ, màn kết quả liệt kê câu sai), nút nghe phát âm tiếng Nhật, sáng/tối.
 Điện thoại: thanh điều hướng dưới đáy, bộ lọc thu gọn. Máy tính (từ 1000px): menu bên trái, bộ lọc cạnh câu hỏi; đọc hiểu chia đôi đoạn văn / câu hỏi.
