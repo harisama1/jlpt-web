@@ -90,6 +90,14 @@ for _l in open(os.path.join(HERE, 'extra_words.tsv'), encoding='utf-8'):
     if any(v['w'] == _w for v in vocab): continue
     vocab.append({'id': 'v%d' % len(vocab), 'w': _w, 'r': _r, 'vi': _vi, 'lv': _lv, 't': 'X', 'ex': '', 'src': 'extra', 'en': _en})
 
+# ---------------- words collected from photographed textbooks (tools/photo_words.tsv: w, r, vi, en, lv) — topic "P"
+topics['P'] = {'id': 'P', 'name': 'Từ sách (ảnh 10/2026)', 'group': 'Bổ sung'}
+for _l in open(os.path.join(HERE, 'photo_words.tsv'), encoding='utf-8'):
+    if _l.startswith('#') or not _l.strip(): continue
+    _w, _r, _vi, _en, _lv = _l.rstrip('\n').split('\t')
+    if any(v['w'] == _w for v in vocab): continue
+    vocab.append({'id': 'v%d' % len(vocab), 'w': _w, 'r': _r, 'vi': _vi, 'lv': _lv, 't': 'P', 'ex': '', 'src': 'photo', 'en': _en})
+
 # ---------------- grammar
 graw = json.load(open(os.path.join(SRC, 'grammar_raw.json'), encoding='utf-8'))
 clean = []
