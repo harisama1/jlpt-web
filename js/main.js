@@ -11,6 +11,7 @@ import './sections/kanji.js';
 import './sections/practice.js';
 import './sections/reading.js';
 import { applyTheme } from './sections/review.js';
+import { now as syncNow, connected as syncOn } from './core/sync.js';
 
 const navItems = () => [section('home'), ...children('').filter(s => s.tile)];
 
@@ -42,6 +43,8 @@ applyTheme();
 loadData().then(() => {
   buildNav(); badges(); onProgress(badges);
   setRenderer(render); render();
+  // pull progress saved by other devices; redraw unless a question is on screen
+  if (syncOn()) syncNow().then(() => { if (!$('#main .qcard')) render(); });
 }).catch(err => {
   $('#main').innerHTML = `<div class="empty">Không tải được dữ liệu (${esc(err.message)}). Nếu bạn mở file trực tiếp trên máy, hãy chạy <code>python3 -m http.server</code> trong thư mục này rồi mở <code>http://localhost:8000</code>.</div>`;
 });

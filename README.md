@@ -14,6 +14,10 @@ Bố cục theo bản thiết kế `JLPT_Design.drawio` (4 trang: HOME, Từ m�
 Sau mỗi câu: dịch nghĩa câu, lý do đáp án đúng và nghĩa của cả 4 lựa chọn. Câu hỏi không lặp lại trong một phạm vi cho tới khi hết.
 Tiến độ lưu trong trình duyệt (localStorage, giữ được tiến độ của bản cũ); xuất / nhập file JSON ở **Mục khác → Giao diện & sao lưu**.
 
+**Đồng bộ nhiều thiết bị** (Mục khác → Giao diện & sao lưu): dán một token GitHub chỉ có quyền `gist` trên mỗi thiết bị; tiến độ được lưu vào
+một Gist bí mật `jlpt-web-progress.json` trong tài khoản của bạn. Khi mở trang: kéo về và gộp (mỗi mục giữ bản mới hơn, lỗi sai đã xoá không sống lại,
+số câu mỗi ngày lấy lớn hơn); vài giây sau mỗi câu trả lời và khi đóng tab: đẩy lên. Code: `js/core/sync.js`, gộp: `mergeProgress` trong `js/core/store.js`.
+
 ## Chạy trên máy
 
 ```bash

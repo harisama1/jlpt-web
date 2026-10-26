@@ -5,6 +5,7 @@ import { progress, prefs, savePrefs, saveProgress, replaceProgress } from '../co
 import { register, section, go } from '../core/router.js';
 import { round, ROUND } from '../core/quiz.js';
 import { pageHead, seg } from '../core/ui.js';
+import { sync, connect, disconnect, now as syncNow, connected } from '../core/sync.js';
 import { vocabQ } from './vocab.js';
 import { kanjiQ } from './kanji.js';
 import { grammarQ, sentQ, synQ } from './practice.js';
@@ -46,6 +47,27 @@ register({
   }
 });
 
+const TOKEN_URL = 'https://github.com/settings/tokens/new?scopes=gist&description=jlpt-web-sync';
+function syncHTML() {
+  if (connected()) return `<p class="small">Đã kết nối. Tiến độ tự đồng bộ khi mở trang và vài giây sau mỗi câu trả lời.</p>
+    <p class="small muted">Lần đồng bộ gần nhất: ${sync.last ? new Date(sync.last).toLocaleString('vi-VN') : 'chưa'}${sync.err ? ` · <span style="color:var(--bad)">Lỗi: ${esc(sync.err)}</span>` : ''}</p>
+    <div class="row"><button type="button" class="btn c" id="syncNow">Đồng bộ ngay</button><button type="button" class="btn sec" id="syncOff">Ngắt kết nối trên máy này</button></div>`;
+  return `<p class="small muted">Tiến độ được lưu vào một Gist bí mật trên GitHub của bạn, mọi thiết bị dùng chung. Làm một lần trên mỗi thiết bị:</p>
+    <ol class="small"><li>Mở <a href="${TOKEN_URL}" target="_blank" rel="noopener">trang tạo token GitHub</a> (đã chọn sẵn quyền <b>gist</b>), chọn thời hạn, bấm <b>Generate token</b>, chép token.</li>
+    <li>Dán token vào ô dưới rồi bấm Kết nối. Thiết bị thứ hai dùng cùng token (hoặc token khác của cùng tài khoản) sẽ tự nhận đúng Gist.</li></ol>
+    <label class="field"><span class="flabel">Token GitHub (chỉ quyền gist)</span><input type="password" id="syncToken" autocomplete="off" placeholder="ghp_…"></label>
+    <div class="row" style="margin-top:10px"><button type="button" class="btn c" id="syncOn">Kết nối</button></div>
+    <p class="small muted">Token chỉ lưu trong trình duyệt của thiết bị này. Đừng dùng token có quyền khác ngoài gist.</p>${sync.err ? `<p class="small" style="color:var(--bad)">Lỗi: ${esc(sync.err)}</p>` : ''}`;
+}
+function bindSync(main, redraw) {
+  const msg = t => { const c = $('#syncCard', main); c.insertAdjacentHTML('beforeend', `<p class="small">${esc(t)}</p>`); };
+  const on = $('#syncOn', main), nowB = $('#syncNow', main), off = $('#syncOff', main);
+  if (on) on.onclick = async () => { const t = $('#syncToken', main).value; if (!t.trim()) return;
+    on.disabled = true; msg('Đang kết nối…'); try { await connect(t); } catch (e) { sync.err = e.message; } redraw(); };
+  if (nowB) nowB.onclick = async () => { nowB.disabled = true; await syncNow(); redraw(); };
+  if (off) off.onclick = () => { disconnect(); redraw(); };
+}
+
 export const ACCENTS = [['indigo', 'Chàm'], ['sakura', 'Hoa anh đào'], ['matcha', 'Trà xanh'], ['ocean', 'Biển'], ['sunset', 'Hoàng hôn']];
 export function applyTheme() {
   const r = document.documentElement;
@@ -58,9 +80,11 @@ register({
     main.innerHTML = pageHead('settings', 'Giao diện & sao lưu', '', ['Mục khác', '#/more']) +
       `<div class="card"><h2>Giao diện</h2><div class="flabel" style="margin-top:10px">Chế độ</div>${seg('theme', [['auto', 'Theo máy'], ['light', 'Sáng'], ['dark', 'Tối']], prefs.theme)}
       <div class="flabel" style="margin-top:14px">Màu chủ đạo</div><div class="swatches">${ACCENTS.map(([id, n]) => `<button type="button" class="swatch" data-accent="${id}" aria-pressed="${prefs.accent === id}"><i class="sw-${id}"></i>${esc(n)}</button>`).join('')}</div></div>
+      <div class="card" id="syncCard"><h2>Đồng bộ nhiều thiết bị</h2>${syncHTML()}</div>
       <div class="card"><h2>Sao lưu tiến độ</h2><p class="small muted">Tiến độ lưu trong trình duyệt này. Xuất ra file JSON để giữ lại hoặc chuyển sang máy khác.</p>
       <div class="row"><button type="button" class="btn sec" id="exp">Xuất file JSON</button><label class="btn sec" for="imp">Nhập file JSON</label><input type="file" id="imp" accept="application/json,.json" hidden>
       <button type="button" class="btn danger" id="clr">Xoá sổ lỗi sai</button></div><p id="msg" class="small"></p></div>`;
+    bindSync(main, () => this.render(main));
     $$('[data-k="theme"]', main).forEach(b => b.onclick = () => { prefs.theme = b.dataset.v; savePrefs(); applyTheme(); this.render(main); });
     $$('[data-accent]', main).forEach(b => b.onclick = () => { prefs.accent = b.dataset.accent; savePrefs(); applyTheme(); this.render(main); });
     $('#exp', main).onclick = () => {

@@ -362,3 +362,6 @@ a.tile, a.ccard, a.kcard, a.lvbtn, a.btn, .theme-btn { text-decoration: none; }
   .tiles.four .tile-top { flex-direction: column; align-items: flex-start; gap: 6px; }
   .practice-row .row .btn { flex: 1 1 100%; text-align: center; }
 }
+
+/* default accent for pages that do not set their own --c (settings, future sections) */
+.main { --c: var(--primary); }

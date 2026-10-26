@@ -32,6 +32,13 @@ try {
   uniq('ngữ pháp', DB.gq.length, () => grammarQ(DB.gq, 'u2'));
   const t21 = DB.vocab.filter(v => v.t === '2.1'); uniq('từ vựng 2.1', t21.length, () => vocabQ('mean', t21, 'u3'));
   const tx = DB.vocab.filter(v => v.t === 'X' && v.lv === 'N3'); uniq('từ bổ sung', tx.length, () => vocabQ('mean', tx, 'u4'));
+  // merge of two devices: newer item wins, a mistake cleared later does not come back, daily counts keep the max
+  const st = await import('../js/core/store.js');
+  st.progress.r = { a: { c: 1, w: 0, s: 1, t: 100 }, b: { c: 0, w: 1, s: 0, t: 300 } }; st.progress.m = { b: { sec: 'vocab', n: 1, t: 300 } }; st.progress.day = { '2026-10-26': { n: 5, ok: 3 } };
+  st.mergeProgress({ r: { a: { c: 2, w: 0, s: 2, t: 200 }, b: { c: 2, w: 1, s: 2, t: 400 }, c: { c: 1, w: 0, s: 1, t: 50 } }, m: { a: { sec: 'vocab', n: 1, t: 10 } }, day: { '2026-10-26': { n: 9, ok: 7 } } });
+  const P = st.progress, okm = P.r.a.t === 200 && P.r.b.s === 2 && P.r.c && !P.m.a && !P.m.b && P.day['2026-10-26'].n === 9;
+  out.push('gộp tiến độ 2 thiết bị: ' + (okm ? 'OK' : 'SAI ' + JSON.stringify(P)));
+  if (!okm) fail('merge');
 } catch (e) { bad.push('EXC ' + e.message + ' ' + (e.stack || '').split('\n')[1]); }
 const report = out.join('\n') + '\n\nLỖI: ' + bad.length + '\n' + [...new Set(bad)].slice(0, 30).join('\n');
 document.getElementById('out').textContent = report;
