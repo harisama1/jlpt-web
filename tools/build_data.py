@@ -158,6 +158,17 @@ for g in grammar:
         g['q'].append({'s': e['jp'][:i] + '（　　）' + e['jp'][i + len(hit):], 'a': hit, 'd': random.sample(others, 3), 'vi': e['vi']})
         nq += 1
 print('grammar', len(grammar), collections.Counter(g['lv'] for g in grammar), '| cloze items', nq + sum(1 for g in grammar if g.get('add')))
+# theory per pattern (grammar_theory.txt: "## <p>" then C:/D:/L: lines = form / usage / notes); first block of a p wins
+theory, cur = {}, None
+for l in open(os.path.join(HERE, 'grammar_theory.txt'), encoding='utf-8'):
+    l = l.rstrip('\n')
+    if l.startswith('## '):
+        cur = None if l[3:].strip() in theory else theory.setdefault(l[3:].strip(), {})
+    elif cur is not None and l[:2] in ('C:', 'D:', 'L:'):
+        cur[{'C:': 'form', 'D:': 'use', 'L:': 'note'}[l[:2]]] = l[2:].strip()
+for g in grammar:
+    if g['p'] in theory: g['th'] = theory[g['p']]
+print('grammar theory', sum(1 for g in grammar if 'th' in g), '/', len(grammar))
 
 # ---------------- sentence patterns (文脈規定 / 言い換え)
 sents = []

@@ -37,8 +37,12 @@ register({
 
 // ---------------- Ngữ pháp: chọn nhóm → điền chỗ trống
 export function grammarInfo(g) {
+  const th = g.th || {};
   return `<div class="jp-line"><b>${esc(g.p)}</b>${lvTag(g.lv)}</div><div>${esc(g.mean)}</div>
-    ${g.struct ? `<div class="small muted">Cấu trúc: <span class="jp">${esc(g.struct)}</span></div>` : ''}
+    ${th.form || g.struct ? `<div class="th"><b>Cấu trúc</b><span class="jp">${esc(th.form || g.struct)}</span></div>` : ''}
+    ${th.use ? `<div class="th"><b>Cách dùng</b><span>${esc(th.use)}</span></div>` : ''}
+    ${th.note ? `<div class="th"><b>Lưu ý</b><span>${esc(th.note)}</span></div>` : ''}
+    ${g.ex.length ? '<div class="small muted">Ví dụ</div>' : ''}
     ${g.ex.slice(0, 2).map(e => `<div class="jp small">${esc(e.jp)} ${speakBtn(e.jp)}</div>${e.vi ? `<div class="small muted">${esc(e.vi)}</div>` : ''}`).join('')}`;
 }
 export function grammarQ(pool, scope) {
@@ -65,10 +69,10 @@ register({
     }
     const pool = DB.gq.filter(x => inLv(x) && (grp === 'all' || x.g.grp === grp)), view = prefs.gView || 'quiz';
     main.innerHTML = pageHead('grammar', grp === 'all' ? 'Tất cả mẫu ngữ pháp' : grp, 'Đã thuộc ' + countLearned(pool.map(x => x.id)) + '/' + pool.length, ['Đổi nhóm', '#/more/grammar']) +
-      `<div class="card topicbar" style="${color('grammar')}">${seg('gView', [['quiz', 'Điền chỗ trống'], ['list', 'Danh sách mẫu']], view)}</div><div class="stage" style="${color('grammar')}"></div>`;
+      `<div class="card topicbar" style="${color('grammar')}">${seg('gView', [['quiz', 'Điền chỗ trống'], ['list', 'Lý thuyết']], view)}</div><div class="stage" style="${color('grammar')}"></div>`;
     bindSeg(main, () => this.render(main, [grp]));
     const st = $('.stage', main);
-    if (view === 'list') listSearch(st, [...new Map(pool.map(x => [x.g.id, x.g])).values()].map(g => ({ text: g.p + ' ' + g.mean,
+    if (view === 'list') listSearch(st, DB.grammar.filter(g => inLv({ g }) && (grp === 'all' || g.grp === grp)).map(g => ({ text: g.p + ' ' + g.mean,
       html: `<details class="wrow"><summary><span class="jp"><b>${esc(g.p)}</b></span>${lvTag(g.lv)}<span class="small muted">${esc(g.mean.slice(0, 80))}</span></summary><div class="info">${grammarInfo(g)}</div></details>` })));
     else round(st, 'grammar', () => grammarQ(pool, 'g|' + lv + '|' + grp), { back: ['Đổi nhóm', '#/more/grammar'] });
   }

@@ -1,0 +1,1358 @@
+# Lý thuyết ngữ pháp (tự soạn). Mỗi mẫu: dòng "## <mẫu đúng như data/grammar.json>", rồi
+#   C: cấu trúc (cách ghép)   D: cách dùng, sắc thái   L: lưu ý, lỗi hay gặp, phân biệt với mẫu gần giống
+## N1はN2です／ではありません
+C: N1 は N2 です（khẳng định）／ではありません・じゃありません（phủ định）／でした（quá khứ）／ではありませんでした（quá khứ phủ định）
+D: Câu danh từ cơ bản: giới thiệu, định nghĩa, nói N1 là gì. は đánh dấu chủ đề (cái đang nói tới), です làm câu lịch sự.
+L: じゃありません là dạng nói của ではありません. Thể thường: N だ／じゃない／だった／じゃなかった. は đọc là "wa".
+## N1のN2
+C: N1 ＋ の ＋ N2
+D: Nối hai danh từ: sở hữu (私の本), thuộc tính / nguồn gốc (日本の車), nội dung (日本語の本), vị trí (机の上). N2 là danh từ chính, N1 bổ nghĩa cho nó.
+L: Thứ tự ngược tiếng Việt: 私の本 = sách của tôi. N2 hiểu rồi có thể bỏ: これは私のです.
+## こ・そ・あ・ど（これ／この／ここ…）
+C: これ・それ・あれ・どれ (đại từ, đứng một mình)／この・その・あの・どの ＋ N／ここ・そこ・あそこ・どこ (nơi chốn)／こちら… (lịch sự)
+D: こ: gần người nói; そ: gần người nghe (hoặc điều người nghe vừa nói); あ: xa cả hai (hoặc điều cả hai cùng biết); ど: câu hỏi.
+L: この／その… không đứng một mình, luôn có danh từ theo sau. Trong câu chuyện, điều vừa nhắc tới thường dùng そ.
+## Aい／Aな＋N
+C: Aい ＋ N (高い山)／Aな ＋ な ＋ N (静かな町)
+D: Tính từ đứng trước bổ nghĩa cho danh từ.
+L: Tính từ い giữ nguyên い; tính từ な thêm な. きれい, きらい, ゆうめい là tính từ な dù kết thúc bằng い. いい chia thành よくない, よかった.
+## Aくて／Aで、…
+C: Aい → bỏ い ＋ くて (安くて)／Aな・N ＋ で (静かで, 学生で)
+D: Nối hai tính chất trong một câu: "… và …", đôi khi mang nghĩa nguyên nhân nhẹ (高くて買えない).
+L: Hai vế nên cùng chiều đánh giá; khi trái chiều dùng が／けど (安いですが、おいしくない). いい → よくて.
+## 〜が好き・嫌い・上手・下手・わかる
+C: N ＋ が ＋ 好き／嫌い／上手／下手 です；N ＋ が ＋ わかります
+D: Đối tượng của thích, ghét, giỏi, kém, hiểu đánh dấu bằng が, không dùng を.
+L: 上手 dùng khen người khác, không tự khen mình (nói 得意 thay). Với động từ: Vる＋のが好き (泳ぐのが好き).
+## AはBより〜
+C: A は B より ＋ tính từ／trạng thái
+D: So sánh hơn: A hơn B. より đánh dấu cái bị đem ra làm mốc.
+L: Không cần từ "hơn" riêng: 東京は大阪より大きい. Nhấn mạnh A: AのほうがBより….
+## AとBとどちらが〜か
+C: A と B と どちらが ＋ tính từ ですか → 答: Aのほうが〜です／どちらも〜です
+D: Hỏi so sánh giữa hai thứ.
+L: Ba thứ trở lên dùng どれ／どこ／だれ／いつ ＋ が一番. Câu trả lời dùng ～のほうが, không dùng より đơn độc.
+## 〜の中で何／どこ／だれが一番〜か
+C: N（nhóm）の中で 何／どこ／だれ／いつ が 一番 ＋ tính từ ですか
+D: Hỏi cái nhất trong một nhóm (ba thứ trở lên).
+L: Nhóm có thể là phạm vi: 日本で一番高い山. Từ để hỏi phải hợp loại: người → だれ, nơi → どこ.
+## は／が
+C: N ＋ は (chủ đề)／N ＋ が (chủ ngữ)
+D: は nêu chủ đề hoặc đối chiếu (ビールは飲みますが、ワインは飲みません). が đánh dấu chủ ngữ mang thông tin mới, dùng sau từ để hỏi (だれが), trong mệnh đề phụ và với ある／いる／好き／わかる.
+L: Câu hỏi bằng だれ／何 + が thì trả lời cũng dùng が. Trong mệnh đề bổ nghĩa (私が書いた本) không dùng は.
+## を
+C: N ＋ を ＋ ngoại động từ；N（nơi）＋ を ＋ động từ di chuyển
+D: Đánh dấu tân ngữ trực tiếp (パンを食べる) và nơi đi qua, rời khỏi (公園を散歩する, 家を出る).
+L: Đọc là "o". Không dùng を với 好き, 分かる, できる, ほしい (dùng が).
+## に
+C: N ＋ に
+D: Thời điểm cụ thể (7時に), đích đến (学校に行く), nơi tồn tại (部屋にいる), người nhận (友達にあげる), mục đích (買い物に行く), tần suất (週に2回).
+L: Thời gian tương đối không dùng に: 明日, 今日, 毎日. Nơi diễn ra hành động dùng で, không dùng に.
+## へ
+C: N（nơi）＋ へ ＋ 行く／来る／帰る
+D: Chỉ hướng di chuyển. Trong thư từ: 〜へ (gửi …).
+L: Đọc là "e". Thường thay được bằng に; へ nhấn hướng, に nhấn đích đến. Trước の chỉ dùng へ: 日本への旅行.
+## で
+C: N ＋ で
+D: Nơi diễn ra hành động (図書館で勉強する), phương tiện / công cụ (バスで, はしで), nguyên liệu (木で作る), nguyên nhân (病気で休む), phạm vi (クラスで一番), giới hạn (三人で).
+L: Phân biệt 部屋にいる (tồn tại) và 部屋で読む (hành động).
+## と
+C: N ＋ と ＋ N (liệt kê đủ)／N（người）＋ と ＋ V
+D: "và" khi liệt kê đầy đủ; "cùng với" ai đó (友達と行く); trích dẫn (と言う／と思う).
+L: Liệt kê không đầy đủ dùng や. と không nối hai câu hay hai động từ (dùng て).
+## から／まで
+C: N ＋ から (từ)／N ＋ まで (đến)
+D: Điểm bắt đầu và kết thúc của thời gian, nơi chốn, số lượng. から còn chỉ người gửi (母から手紙).
+L: Hạn chót dùng までに (5時までに出す), khác まで (làm liên tục đến 5 giờ).
+## や〜など
+C: N1 や N2（など）
+D: Liệt kê vài ví dụ tiêu biểu, ngầm hiểu còn thứ khác.
+L: と là liệt kê đủ, や là liệt kê một phần. など có thể bỏ.
+## も
+C: N ＋ も (thay は／が／を)；N ＋ trợ từ khác ＋ も (にも, でも)
+D: "cũng". Với từ để hỏi + phủ định: 何も, だれも (không … gì cả). Sau số lượng: nhấn nhiều (3時間も).
+L: も thay hẳn は／が／を, không viết がも. Với に／で／へ thì giữ lại: 東京にも行きました.
+## か／ね／よ
+C: Câu ＋ か／ね／よ
+D: か: câu hỏi. ね: tìm sự đồng tình, xác nhận điều hai bên cùng biết. よ: báo cho người nghe điều họ chưa biết, nhấn mạnh.
+L: よね: vừa khẳng định vừa tìm đồng tình. Nói よ với người trên dễ thành dạy đời.
+## ぐらい・ごろ・だけ
+C: số lượng ＋ ぐらい／くらい；giờ, ngày ＋ ごろ；N・số lượng ＋ だけ
+D: ぐらい: khoảng (lượng, thời gian kéo dài); ごろ: khoảng (thời điểm); だけ: chỉ.
+L: 3時ごろ (khoảng lúc 3 giờ) và 3時間ぐらい (khoảng 3 tiếng). だけ đi với khẳng định, しか đi với phủ định.
+## 〜があります／〜がいます
+C: N ＋ が ＋ あります (vật, cây, sự kiện)／います (người, con vật)
+D: Diễn tả sự tồn tại hoặc sở hữu (時間があります, 兄がいます).
+L: Sự kiện dùng あります (会議があります). Robot, người máy thường dùng いる. Phủ định: ありません／いません.
+## Nがほしいです
+C: N ＋ が ＋ ほしいです (tính từ い)
+D: Ngôi thứ nhất muốn có một vật.
+L: Ngôi thứ ba dùng ほしがっています. Không dùng để mời người trên (ほしいですか dễ bất lịch sự).
+## Vます＋たいです
+C: Vます bỏ ます ＋ たい (tính từ い): 食べたい, 食べたくない, 食べたかった
+D: Muốn làm gì (ngôi thứ nhất, hỏi ngôi thứ hai).
+L: Tân ngữ có thể dùng が hoặc を (水が飲みたい). Ngôi thứ ba: 〜たがっている.
+## Vます／N＋に行く
+C: Vます bỏ ます ＋ に ＋ 行く／来る／帰る；N（hành động）＋ に行く
+D: Đi đâu để làm gì (mục đích di chuyển).
+L: Danh từ hành động: 買い物に行く, 旅行に行く. Nơi đến dùng に／へ đặt trước: 町へ買い物に行く.
+## 〜ませんか／〜ましょう／〜ましょうか
+C: Vます → ませんか／ましょう／ましょうか
+D: ませんか: rủ lịch sự, để người nghe chọn; ましょう: rủ cùng làm, hoặc đồng ý; ましょうか: đề nghị giúp (持ちましょうか) hoặc hỏi ý.
+L: Rủ người trên nên dùng ませんか, mềm hơn ましょう.
+## 〜てください
+C: Vて ＋ ください
+D: Nhờ, yêu cầu, hướng dẫn một cách lịch sự.
+L: Với người trên, lịch sự hơn: 〜ていただけませんか. Mời (どうぞ食べてください) cũng dùng mẫu này.
+## 〜ています
+C: Vて ＋ います
+D: Đang làm (読んでいます); trạng thái kết quả (結婚しています, 窓が開いています); thói quen, nghề nghiệp (銀行で働いています).
+L: Động từ chỉ sự thay đổi tức thời (死ぬ, 結婚する, 知る) + ている là trạng thái, không phải "đang". Nói tắt: てる.
+## 〜てもいいです／〜てはいけません
+C: Vて ＋ もいいです (được phép)／Vて ＋ はいけません (cấm)
+D: Xin phép, cho phép (〜てもいいですか), cấm đoán (quy định, luật).
+L: てはいけません nghe nghiêm, thường dùng cho quy định hoặc người trên nói với người dưới. Nói tắt: ちゃだめ.
+## V1て、V2て、…
+C: V1て、V2て、V3 (động từ cuối chia thì của cả câu)
+D: Liệt kê hành động theo trình tự thời gian.
+L: Thì và thể lịch sự chỉ thể hiện ở động từ cuối.
+## 〜てから
+C: Vて ＋ から
+D: Sau khi làm V1 rồi mới làm V2, nhấn thứ tự.
+L: Gần nghĩa たあとで; てから nhấn "phải làm cái này trước". Mốc thời gian: 日本に来てから3年.
+## 〜ないでください
+C: Vない ＋ でください
+D: Đề nghị đừng làm gì.
+L: Lịch sự hơn: 〜ないでいただけませんか. Khác なくてもいい (không cần làm).
+## 〜なければなりません
+C: Vない bỏ い ＋ ければなりません (行かなければなりません)
+D: Phải làm (nghĩa vụ, cần thiết).
+L: Dạng nói: なきゃ, なくちゃ, ないと. Gần nghĩa: なければいけません.
+## 〜なくてもいいです
+C: Vない bỏ い ＋ くてもいいです
+D: Không cần làm cũng được.
+L: Ngược nghĩa với なければなりません. Khác ないでください (yêu cầu đừng làm).
+## Vる＋ことができます
+C: Vる ＋ ことができます；N ＋ ができます
+D: Có thể làm (năng lực, khả năng, được phép).
+L: Cứng hơn thể khả năng (泳げる). Đối tượng dùng が: ピアノが弾けます.
+## Vる／Nの＋まえに
+C: Vる（luôn thể từ điển）＋ まえに；Nの ＋ まえに；thời gian ＋ まえに
+D: Trước khi làm gì.
+L: Động từ trước まえに luôn ở thể từ điển dù câu ở quá khứ: 寝る前に歯を磨いた.
+## Vた＋ことがあります
+C: Vた ＋ ことがあります
+D: Kinh nghiệm: đã từng làm.
+L: Không dùng cho việc thường ngày hay vừa xảy ra. Khác Vる＋ことがある (thỉnh thoảng có khi).
+## 〜たり〜たりします
+C: Vた＋り、Vた＋り＋する
+D: Liệt kê vài hành động tiêu biểu (không theo thứ tự); làm lúc này lúc kia (行ったり来たり).
+L: Động từ cuối する chia thì câu. Thường dùng ít nhất hai cặp たり.
+## Vた／Nの＋あとで
+C: Vた ＋ あとで；Nの ＋ あとで
+D: Sau khi …
+L: Động từ trước あとで luôn ở thể た. Khác てから (nhấn trình tự bắt buộc).
+## もう〜ました／まだ〜ていません
+C: もう ＋ Vました；まだ ＋ Vていません
+D: Đã … rồi／vẫn chưa ….
+L: Trả lời "chưa" phải dùng まだVていません, không dùng まだVませんでした.
+## 普通形＋と思います「…」と言いました／普通形＋と言いました
+C: 普通形 ＋ と思います；「câu nguyên văn」と言いました；普通形 ＋ と言いました
+D: と思います: nêu ý kiến, phỏng đoán. と言いました: trích dẫn lời người khác (trực tiếp hoặc gián tiếp).
+L: Danh từ, tính từ な cần だ: 学生だと思います. Ý kiến phủ định: 〜ないと思います, tự nhiên hơn 〜と思いません.
+## 普通形＋でしょう
+C: 普通形（N／Aな bỏ だ）＋ でしょう
+D: Phỏng đoán (明日は雨でしょう); với ngữ điệu lên: xác nhận (〜でしょう？).
+L: Phỏng đoán mạnh hơn かもしれません. Thể thường: だろう.
+## 〜とき
+C: Vる／Vた／Aい／Aな／Nの ＋ とき
+D: Khi …, lúc … (nêu thời điểm xảy ra hành động hoặc trạng thái): 子どものとき, 暇なとき, 寒いとき.
+L: Vるとき: hành động sau chưa xảy ra khi làm hành động trước (日本へ行くとき, カメラを買った: mua trước khi đi). Vたとき: hành động trước đã xong (日本へ行ったとき: mua ở Nhật).
+## 可能形（書ける・食べられる）
+C: Nhóm 1: う→え＋る (書く→書ける, 飲む→飲める)；Nhóm 2: bỏ る＋られる (食べられる)；来る→来られる；する→できる
+D: Diễn tả năng lực hoặc khả năng làm được trong hoàn cảnh nào đó (日本語が話せる, ここで写真が撮れる).
+L: Tân ngữ thường đổi を→が (漢字が読める). Văn nói hay bỏ ら ở nhóm 2 (食べれる), không chuẩn trong bài thi. Thể khả năng chia như động từ nhóm 2 (書けない, 書けた).
+## 見える・聞こえる
+C: N ＋ が ＋ 見える／聞こえる
+D: Tự nhiên nhìn thấy, nghe thấy mà không cần cố ý (窓から海が見える, 鳥の声が聞こえる).
+L: Khác 見られる／聞ける (có thể xem, nghe được nhờ điều kiện, chủ động): 映画館で映画が見られる. 見える còn nghĩa "trông có vẻ" (若く見える).
+## 〜（よ）うと思っています
+C: Thể ý chí (Nhóm 1: う→お＋う 行こう；Nhóm 2: よう 食べよう；来よう；しよう) ＋ と思っています／と思います
+D: Nói ý định của bản thân. と思っています: ý định đã có từ trước, kéo dài; と思います: vừa nảy ra lúc nói.
+L: Nói ý định của người khác chỉ dùng と思っています. Thể ý chí đứng một mình = "nào, cùng …" (行こう).
+## Vる／Vない＋つもりです
+C: Vる／Vない ＋ つもりです
+D: Dự định, quyết tâm đã xác định của người nói (来年結婚するつもりです).
+L: Chắc chắn hơn (よ)うと思う. Phủ định mạnh: するつもりはありません. Không dùng hỏi trực tiếp người trên (thất lễ).
+## Vる／Nの＋予定です
+C: Vる ＋ 予定です；Nの ＋ 予定です
+D: Kế hoạch đã sắp xếp, mang tính khách quan, thường liên quan lịch trình (会議は3時の予定です).
+L: つもり là ý chí cá nhân, 予定 là lịch đã được định (có thể do người khác quyết).
+## 〜ておきます
+C: Vて ＋ おきます (nói: 〜とく)
+D: Làm sẵn để chuẩn bị (旅行の前にホテルを予約しておく); để nguyên trạng thái (窓を開けておいてください); xử lý cho xong.
+L: Nói tắt: 予約しとく, 読んどく. Khác てある: ておく nhấn hành động chuẩn bị, てある nhấn trạng thái kết quả.
+## 〜てあります
+C: N ＋ が ＋ tha động từ て ＋ あります
+D: Trạng thái tồn tại là kết quả của việc ai đó đã làm có chủ đích (壁に絵がかけてある).
+L: Chỉ dùng tha động từ. Khác tự động từ ＋ ている (窓が開いている: chỉ tả trạng thái, không ngầm có người làm).
+## 〜てしまいます
+C: Vて ＋ しまいます (nói: ちゃう／じゃう)
+D: Làm xong hoàn toàn (宿題を全部やってしまった); lỡ làm, tiếc nuối (財布をなくしてしまった).
+L: Nghĩa nào tùy ngữ cảnh. 飲んでしまう→飲んじゃう, 食べてしまった→食べちゃった.
+## 〜てみます
+C: Vて ＋ みます
+D: Thử làm để xem kết quả thế nào (この服を着てみてもいいですか).
+L: みる viết bằng hiragana, không phải 見る nghĩa nhìn. Vてみたら: thử làm thì (phát hiện).
+## 〜ていきます／〜てきます
+C: Vて ＋ いきます／きます
+D: Không gian: đi làm gì rồi đi tiếp (食べていく) hoặc làm rồi quay lại (買ってくる). Thời gian: てくる thay đổi đến bây giờ (寒くなってきた), ていく thay đổi từ giờ về sau (増えていく).
+L: Chọn hướng theo người nói: về phía mình／hiện tại = くる, ra xa／tương lai = いく.
+## あげる／もらう／くれる
+C: (私は) N に N を あげる；(私は) N に／から N を もらう；N が (私に) N を くれる
+D: あげる: mình (hoặc người khác) cho ai. もらう: nhận từ ai. くれる: người khác cho mình hoặc người trong nhóm mình.
+L: Ai cho mình phải dùng くれる, không dùng あげる. Với người trên dùng さしあげる／いただく／くださる; với động vật, cây: やる.
+## 〜てあげる／〜てもらう／〜てくれる
+C: Vて ＋ あげる／もらう／くれる (ghép trợ từ như mẫu cho, nhận)
+D: Làm giúp ai (てあげる), được ai làm cho (てもらう: nhấn mình nhờ hoặc nhận ơn), ai làm cho mình (てくれる: nhấn lòng tốt của người đó).
+L: てあげる với người trên dễ thành kể ơn: nên nói お〜しましょうか. 友達に手伝ってもらった ＝ 友達が手伝ってくれた, chủ ngữ khác nhau.
+## さしあげる／いただく／くださる
+C: Người trên ＋ に ＋ さしあげる；Người trên ＋ に／から ＋ いただく；Người trên ＋ が ＋ くださる；Vて ＋ いただく／くださる
+D: Kính ngữ của あげる／もらう／くれる khi người kia là người trên.
+L: くださる chia ます thành くださいます. Vていただけませんか là cách nhờ lịch sự nhất ở N4.
+## 〜てくれませんか／〜ていただけませんか
+C: Vて ＋ くれませんか／もらえませんか／いただけませんか
+D: Nhờ vả lịch sự hơn てください, để người nghe có thể từ chối.
+L: Mức lịch sự tăng dần: てくれる？ < てくれませんか < てもらえませんか < ていただけませんか.
+## 〜ので
+C: 普通形 ＋ ので (N／Aな ＋ な ＋ ので)
+D: Vì … nên: nêu lý do khách quan, mềm, lịch sự; hợp để xin phép, xin lỗi (頭が痛いので、早退してもいいですか).
+L: Danh từ, tính từ な: 雨なので (không dùng 雨だので). から mạnh, chủ quan hơn; vế sau mệnh lệnh mạnh nên dùng から.
+## 〜のに
+C: 普通形 ＋ のに (N／Aな ＋ な ＋ のに)
+D: Vậy mà, thế mà: kết quả trái với mong đợi, kèm bất mãn, tiếc nuối hoặc ngạc nhiên (約束したのに、来なかった). Đứng cuối câu: tiếc (知っていれば手伝ったのに).
+L: Vế sau không dùng ý chí, mệnh lệnh, rủ rê. Khác けど／が (chỉ đối lập trung tính). Vる＋のに còn nghĩa "để làm" (作るのに3時間かかる).
+## 〜ても／〜でも
+C: Vて ＋ も；Aい bỏ い ＋ くても；Aな／N ＋ でも
+D: Dù … cũng: điều kiện ngược, vế sau không đổi (雨が降っても行く). Với từ để hỏi: 何を言っても (dù nói gì).
+L: いい → よくても. Nhấn mạnh hơn: たとえ〜ても. Khẩu ngữ: 〜たって.
+## 〜し、〜し
+C: 普通形 ＋ し (N／Aな ＋ だし)
+D: Liệt kê nhiều lý do hoặc đặc điểm cùng chiều: "vừa … vừa …, lại còn" (安いし、おいしいし、よく来る).
+L: Có thể chỉ nêu một し để ngầm còn lý do khác (疲れたし、帰ろう). Thường dùng với も: 部屋も広いし.
+## Vます＋ながら
+C: Vます bỏ ます ＋ ながら
+D: Một người làm hai hành động cùng lúc; hành động chính đặt ở vế sau (音楽を聞きながら勉強する).
+L: Hai hành động phải cùng chủ ngữ. Còn nghĩa làm song song lâu dài (働きながら大学に通う). Nghĩa "tuy … nhưng" ở N3 (〜ながらも).
+## Vる／Nの＋ために
+C: Vる ＋ ために；Nの ＋ ために
+D: Mục đích: để làm gì, vì ai (家を買うために貯金する, 家族のために働く).
+L: Động từ phải là ý chí và hai vế cùng chủ ngữ. Không ý chí, thể khả năng, phủ định thì dùng ように. ため còn nghĩa nguyên nhân ở N3.
+## Vる／Vない＋ように
+C: Vる (thường thể khả năng, động từ không ý chí)／Vない ＋ ように
+D: Để (đạt trạng thái): 聞こえるように大きな声で話す, 忘れないようにメモする.
+L: So với ために: ために đi với động từ ý chí cùng chủ ngữ; ように đi với khả năng, trạng thái, hoặc chủ ngữ khác nhau.
+## Vないで／Vずに
+C: Vない ＋ で；Vない bỏ ない ＋ ずに (する→せずに)
+D: Làm V2 trong khi không làm V1, hoặc thay vì V1 (朝ご飯を食べないで学校へ行った).
+L: ずに là văn viết, cứng hơn. Khác なくて (nêu nguyên nhân: 分からなくて困った).
+## 〜ば
+C: Nhóm 1: う→え＋ば (行けば)；Nhóm 2: bỏ る＋れば；来れば；すれば；Aい bỏ い＋ければ；Aな／N＋なら(ば)；Vない→なければ
+D: Điều kiện giả định, nhấn điều kiện cần (安ければ買う); quy luật chung (春になれば花が咲く); hối tiếc với よかった.
+L: Khi vế trước là động từ hành động và vế sau là ý chí, mệnh lệnh, không dùng ば mà dùng たら. Với tính từ, trạng thái thì vế sau tự do.
+## 〜たら
+C: Vた ＋ ら；Aかった＋ら；Aな／N＋だったら
+D: Nếu (giả định từng lần, cụ thể); sau khi/khi (確実に起こること: 駅に着いたら電話して); phát hiện trong quá khứ (家に帰ったら手紙が来ていた).
+L: Dùng rộng nhất, vế sau được dùng ý chí, mệnh lệnh, rủ rê. Thiên về văn nói.
+## 〜と
+C: Vる／Vない／Aい／Aな・N＋だ ＋ と
+D: Hễ … thì luôn …: kết quả tất yếu, quy luật tự nhiên, máy móc, chỉ đường (このボタンを押すと、ドアが開く).
+L: Vế sau không dùng ý chí, mệnh lệnh, nhờ vả, rủ rê. Kết hợp quá khứ: phát hiện (窓を開けると、雪が降っていた).
+## 〜なら
+C: 普通形 (N／Aな bỏ だ) ＋ なら
+D: Nếu (là chuyện) … thì: dựa vào điều người nghe vừa nói hoặc chủ đề hiện tại để khuyên, đề nghị (北海道へ行くなら、冬がいい).
+L: Hành động vế sau có thể xảy ra trước vế trước (日本へ行くなら、日本語を勉強したほうがいい), điều ば／たら không làm được.
+## Vます／Aい-／Aな＋そうです（様態）
+C: Vます bỏ ます ＋ そうです；Aい bỏ い ＋ そうです；Aな ＋ そうです；Phủ định: Vそうにない／Aくなさそう
+D: Trông có vẻ (dựa vào điều nhìn thấy): おいしそう, 雨が降りそう (sắp mưa).
+L: いい→よさそう, ない→なさそう. Không dùng với tính từ nhìn vào là biết (きれいそう ✗). Bổ nghĩa danh từ: おいしそうなケーキ.
+## 普通形＋そうです（伝聞）
+C: 普通形 ＋ そうです (N／Aな ＋ だ ＋ そうです)
+D: Nghe nói (truyền đạt thông tin nghe từ người khác, báo chí), thường kèm によると.
+L: Phân biệt: 降りそうです (trông như sắp mưa) và 降るそうです (nghe nói sẽ mưa). Không chia quá khứ hay phủ định ở そう.
+## 〜ようです／〜みたいです
+C: 普通形 ＋ ようです (N＋の, Aな＋な)；普通形 ＋ みたいです (N／Aな bỏ だ)
+D: Hình như: người nói tự phán đoán dựa trên cảm nhận trực tiếp (誰か来たようです). Còn dùng so sánh (夢のようだ).
+L: みたい là văn nói của よう. Khác らしい (thông tin bên ngoài, nghe thấy).
+## 〜らしいです
+C: 普通形 (N／Aな bỏ だ) ＋ らしいです
+D: Nghe nói, có vẻ: suy đoán dựa trên thông tin nghe được, khách quan (あの店は来月閉まるらしい).
+L: N＋らしい còn nghĩa "đúng chất N" (男らしい, 春らしい), khác nghĩa suy đoán.
+## 〜かもしれません
+C: 普通形 (N／Aな bỏ だ) ＋ かもしれません
+D: Có lẽ: khả năng xảy ra khoảng một nửa, không chắc.
+L: Mức chắc chắn: かもしれない < でしょう < はずだ < に違いない. Thể thường: かもしれない, nói: かも.
+## 〜はずです
+C: 普通形 ＋ はずです (Nの, Aな＋な)
+D: Chắc là, lẽ ra là: suy luận có căn cứ, lý lẽ (8時に出たから、もう着いたはずだ).
+L: Phủ định mạnh: はずがない (không thể nào). はずだった: lẽ ra đã (nhưng không).
+## 〜と言っていました／〜と伝えていただけませんか
+C: 普通形 ＋ と言っていました；普通形／Vる・Vない ＋ ように ＋ と伝えていただけませんか
+D: Truyền lại lời người khác (田中さんは明日休むと言っていました), nhờ người khác chuyển lời.
+L: と言いました: kể lại sự việc nói; と言っていました: truyền đạt nội dung cho người không có mặt.
+## 疑問詞〜か／〜かどうか
+C: 疑問詞 ＋ 普通形 ＋ か；普通形 ＋ かどうか (N／Aな bỏ だ)
+D: Câu hỏi lồng trong câu lớn: 何時に始まるか知っていますか；có hay không: 行けるかどうか分かりません.
+L: Có từ để hỏi thì không dùng かどうか.
+## Vる＋のが好き／のを忘れる
+C: Vる ＋ のが ＋ 好き・上手…；Vる ＋ のを ＋ 忘れる・知る…；Vる ＋ のは ＋ A
+D: の biến động từ thành danh từ (歌うのが好き, 鍵をかけるのを忘れた).
+L: Với động từ tri giác (見る, 聞く) dùng の, không dùng こと. ～ことです (định nghĩa, sở thích: 趣味は本を読むことです) dùng こと.
+## 〜がる／〜がっている
+C: Aい／Aな bỏ い／bỏ な ＋ がる；Vたい bỏ い ＋ がる
+D: Diễn tả cảm xúc, mong muốn của người thứ ba qua biểu hiện bên ngoài (弟は新しいゲームをほしがっている).
+L: Dạng がる dùng cho người khác, không dùng cho bản thân. Đối tượng đổi が→を: 犬を怖がる.
+## Vます＋なさい〜までに／〜まで
+C: Vます bỏ ます ＋ なさい；N（thời điểm）＋ までに／まで
+D: なさい: mệnh lệnh nhẹ của người trên (cha mẹ, thầy cô) với người dưới. まで: làm liên tục đến mốc; までに: hạn chót, xong trước mốc.
+L: Không dùng なさい với người trên. 5時まで働く (làm liên tục đến 5h) và 5時までに帰る (về trước 5h).
+## 〜すぎる／〜やすい／〜にくい
+C: Vます／Aい bỏ い／Aな ＋ すぎる；Vます ＋ やすい／にくい
+D: すぎる: quá mức (tiêu cực). やすい: dễ làm, dễ xảy ra. にくい: khó làm.
+L: いい→よすぎる, ない→なさすぎる. やすい／にくい chia như tính từ い.
+## 〜ことにする／〜ことになる
+C: Vる／Vない ＋ ことにする／ことになる
+D: ことにする: tự mình quyết định. ことになる: được quyết định (do người khác, tổ chức, hoàn cảnh).
+L: ことにしている: thói quen tự đặt ra. ことになっている: quy định. Dùng ことになる để nói việc mình quyết cũng làm câu khiêm tốn.
+## 〜ところです
+C: Vる ＋ ところ (sắp)；Vている ＋ ところ (đang)；Vた ＋ ところ (vừa xong)
+D: Diễn tả giai đoạn của hành động ngay thời điểm nói.
+L: Vたところ là ngay vừa xong; Vたばかり là cảm nhận thời gian ngắn (có thể cả tuần trước).
+## 〜させてください
+C: V thể sai khiến て ＋ ください (読ませてください, 休ませてください)
+D: Xin phép cho mình được làm gì, lịch sự.
+L: Lịch sự hơn: させていただけませんか. Thể sai khiến: nhóm 1 う→あ＋せる, nhóm 2 させる, 来させる, させる.
+## 〜うちに(1)
+C: Nの／Aい／Aな＋な／Vない／Vている ＋ うちに
+D: Nhân lúc (trạng thái hiện tại còn kéo dài) thì làm trước, vì sau đó sẽ khó (若いうちに旅行したい, 暗くならないうちに帰ろう).
+L: Vế sau là hành động có ý chí. Khác 前に: うちに nhấn "kẻo muộn".
+## 〜うちに(2)〜間／〜間に
+C: Vる／Vている ＋ うちに；Nの／Vている ＋ 間／間に
+D: うちに: trong lúc đang làm thì thay đổi xảy ra một cách tự nhiên (話しているうちに好きになった). 間: suốt khoảng thời gian (hành động kéo dài suốt). 間に: một lúc nào đó trong khoảng đó (hành động một lần).
+L: 夏休みの間ずっと国にいた (suốt) và 夏休みの間に国へ帰った (vào lúc nào đó).
+## 〜てからでないと／〜てからでなければ
+C: Vて ＋ からでないと／からでなければ ＋ (vế phủ định／khó khăn)
+D: Nếu chưa làm V1 thì không thể／khó làm V2 (料金を払ってからでないと、入れません).
+L: Vế sau mang nghĩa phủ định, không thể. Nhấn V1 là điều kiện bắt buộc trước.
+## 〜ところだ
+C: Vる (sắp)／Vている (đang)／Vた (vừa xong) ＋ ところだ；Vた＋ところだった: suýt nữa
+D: Mô tả chính xác giai đoạn hành động. Ngoài ra: Vるところだった (suýt nữa thì …: 事故に遭うところだった).
+L: ところに／ところへ: đúng lúc đó thì (người khác đến). ところを: đúng lúc (bị bắt gặp).
+## 〜とたん（に）
+C: Vた ＋ とたん（に）
+D: Vừa mới làm V1 thì V2 xảy ra ngay, thường bất ngờ, ngoài ý muốn (立ち上がったとたん、めまいがした).
+L: Vế sau là sự việc xảy ra, không dùng ý chí của người nói (✗ 家に帰ったとたん、寝よう).
+## 〜最中（に）
+C: Nの／Vている ＋ 最中（に）
+D: Đúng lúc đang giữa chừng một việc thì sự cố xảy ra, cắt ngang (会議の最中に電話が鳴った).
+L: Nhấn "đúng cao trào". 最中だ đứng cuối câu: đang bận làm.
+## 〜てはじめて
+C: Vて ＋ はじめて
+D: Phải đến khi làm V1 (trải nghiệm) mới nhận ra, mới hiểu V2 (病気になってはじめて健康の大切さが分かった).
+L: Vế sau thường là nhận thức, hiểu ra; không dùng ý chí.
+## 〜とおり（に）／〜どおり（に）
+C: Vる／Vた／Nの ＋ とおり（に）；N ＋ どおり（に）
+D: Làm đúng như (chỉ dẫn, dự định): 説明書のとおりに組み立てる, 予定どおり.
+L: Danh từ ghép trực tiếp đọc どおり (計画どおり), sau の đọc とおり. Bổ nghĩa danh từ: 〜とおりの N.
+## 〜によって／〜によっては
+C: N ＋ によって／によっては
+D: によって: tùy theo N thì khác nhau (国によって習慣が違う). によっては: tùy trường hợp, có khi (人によっては嫌がる).
+L: Vế sau của によって nêu sự khác nhau (違う, 異なる, さまざま). によっては chỉ nói một trường hợp cụ thể.
+## 〜たびに
+C: Nの／Vる ＋ たびに
+D: Cứ mỗi lần làm … thì lại … (この写真を見るたびに、故郷を思い出す).
+L: Vế sau là việc lặp lại mỗi lần, không dùng cho việc chỉ một lần. Gần với 〜と, nhưng たびに nhấn mỗi lần.
+## 〜ば〜ほど
+C: Vば＋Vる＋ほど；Aければ＋Aい＋ほど；Aなら＋Aな＋ほど；Nであれば＋Nであるほど
+D: Càng … càng … (練習すれば練習するほど上手になる).
+L: Lặp lại cùng một từ. Có thể bỏ vế ば: 練習するほど上手になる.
+## 〜ついでに
+C: Nの／Vる・Vた ＋ ついでに
+D: Nhân tiện làm việc chính thì làm luôn việc phụ (買い物のついでに、郵便局に寄った).
+L: Vế trước là việc chính. ながら: hai việc đồng thời; ついでに: việc phụ tranh thủ.
+## 〜にしたがって／〜につれて
+C: Vる／N ＋ にしたがって／につれて
+D: Cùng với sự thay đổi của vế trước thì vế sau thay đổi tương ứng (年をとるにつれて体力が落ちる).
+L: Vế trước, vế sau đều là thay đổi dần. にしたがって còn nghĩa "tuân theo" (規則にしたがって).
+## 〜とともに
+C: N ＋ とともに；Vる ＋ とともに
+D: Cùng với (người: 家族とともに); đồng thời (卒業するとともに就職した); cùng với thay đổi (時代とともに).
+L: Trang trọng, văn viết. Gần と一緒に, につれて, と同時に tùy nghĩa.
+## 〜にとって
+C: N ＋ にとって（は／も／の）
+D: Đối với (từ lập trường, góc nhìn của N): 私にとって家族は一番大切だ.
+L: Vế sau là đánh giá (大切, 難しい, 必要). Không dùng với thái độ, hành động hướng tới ai (dùng に対して).
+## 〜について／〜に関して
+C: N ＋ について／に関して；bổ nghĩa: についての N／に関する N
+D: Về, liên quan đến (chủ đề): 環境問題について話す.
+L: に関して trang trọng hơn, dùng văn bản, thông báo.
+## 〜として
+C: N ＋ として（は／も／の）
+D: Với tư cách là, như là (留学生として来日した).
+L: としては: về phía (lập trường của). Khác にとって (góc nhìn đánh giá).
+## 〜を中心に
+C: N ＋ を中心に／を中心として／を中心とした N
+D: Lấy N làm trung tâm, trọng điểm (若者を中心に人気がある).
+L: Thường đi với 広がる, 人気がある, 活動する.
+## 〜から〜にかけて
+C: N1 ＋ から ＋ N2 ＋ にかけて
+D: Từ … đến … (khoảng thời gian, khu vực một cách đại khái): 夜から朝にかけて雨が降る.
+L: から〜まで chỉ ranh giới rõ; から〜にかけて mơ hồ, liên tục trong vùng đó.
+## 〜をはじめ（として）
+C: N ＋ をはじめ（として）／をはじめとする N
+D: Tiêu biểu là, trước hết là N, ngoài ra còn những thứ khác cùng loại (社長をはじめ、社員全員が参加した).
+L: N là ví dụ tiêu biểu nhất, vế sau thường có 全員, など, いろいろ.
+## 〜くらい（だ）／〜ほど
+C: 普通形 (Aな＋な, Nの bỏ) ＋ くらい／ほど
+D: Đến mức (dùng một ví dụ để chỉ mức độ): 泣きたいくらい痛い.
+L: ほど nhấn mức cao hơn, くらい còn dùng coi nhẹ (それくらい自分でやって).
+## 〜くらい…はない／〜ほど…はない
+C: N ＋ くらい／ほど ＋ A ＋ N は ない
+D: Không có gì … bằng N (= N là nhất): 母の料理ほどおいしいものはない.
+L: Thường mang cảm xúc chủ quan của người nói.
+## 〜くらいなら〜に限る
+C: Vる ＋ くらいなら …；N／Vる／Vない ＋ に限る
+D: くらいなら: nếu phải làm việc tồi tệ đó thì thà làm cách khác còn hơn (負けるくらいなら、出ない方がいい). に限る: … là nhất (疲れた時は寝るに限る).
+L: に限る là ý kiến chủ quan của người nói.
+## 〜に比べて／〜に比べると
+C: N ＋ に比べて／に比べると
+D: So với N thì (去年に比べて、今年は暑い).
+L: Trang trọng hơn より. Không dùng cho so sánh ngang bằng.
+## 〜わりに（は）
+C: 普通形 (Nの, Aな＋な) ＋ わりに（は）
+D: So với (mức thông thường dựa theo N) thì khác mong đợi (値段のわりにおいしい).
+L: Đánh giá có thể tốt hoặc xấu. Khác にしては: にしては dùng khi biết thực tế vế trước, わりに dùng với đặc điểm có mức độ (年, 値段).
+## 〜に対して
+C: N ＋ に対して；普通形 ＋ の ＋ に対して
+D: (1) Đối với (thái độ, hành động hướng tới): 先生に対して失礼だ. (2) Trái với, ngược với (so sánh đối lập): 兄が静かなのに対して、弟は元気だ.
+L: Bổ nghĩa danh từ: に対する N. Khác にとって (góc nhìn).
+## 〜反面
+C: 普通形 (Aな＋な／である, Nである) ＋ 反面
+D: Một sự việc có cả hai mặt trái ngược (便利な反面、危険もある).
+L: Cùng một chủ thể có hai mặt. 一方 có thể nói về hai chủ thể khác nhau.
+## 〜一方（で）
+C: 普通形 (Aな＋な／である, Nである) ＋ 一方（で）
+D: Mặt khác, đồng thời (仕事をする一方で、勉強も続ける); đối lập hai sự việc (都市は人が増える一方、村は減っている).
+L: Vる＋一方だ là mẫu khác (ngày càng …).
+## 〜というより
+C: 普通形 (N／Aな bỏ だ) ＋ というより
+D: Nói đúng hơn là, đúng ra là (cách diễn đạt sau chính xác hơn): 涼しいというより寒い.
+L: Thường đi với むしろ: というより、むしろ.
+## 〜かわりに
+C: 普通形 (Aな＋な, Nの) ＋ かわりに
+D: (1) Thay vì, thay cho (行くかわりに電話する). (2) Bù lại, đổi lại (手伝うかわりに、昼ご飯をおごって).
+L: Nghĩa (2) là đổi chác hai bên.
+## 〜くせに
+C: 普通形 (Nの, Aな＋な) ＋ くせに
+D: Vậy mà (chê trách, khó chịu với người khác): 知っているくせに教えてくれない.
+L: Mạnh, văn nói, không dùng cho bản thân hoặc người trên. のに nhẹ hơn và dùng được cho mình.
+## 〜ながら（も）
+C: Vます／Aい／Aな／N ＋ ながら（も）
+D: Tuy … nhưng (nghịch lý): 狭いながらも楽しい我が家.
+L: Thường đi với 残念ながら, いつもながら, 知っていながら. Khác ながら đồng thời ở N4.
+## 〜ため（に）／〜ためだ
+C: Nの／普通形 (Aな＋な) ＋ ため（に）
+D: Vì (nguyên nhân, văn viết, thông báo): 大雨のため、電車が止まった.
+L: Nghĩa nguyên nhân: vế sau là kết quả khách quan, không dùng mệnh lệnh, ý chí. Phân biệt với ため mục đích (Vる ý chí).
+## 〜によって／〜による
+C: N ＋ によって；N ＋ による ＋ N
+D: (1) Do (nguyên nhân): 地震による被害. (2) Bởi (tác giả trong câu bị động): この絵はピカソによって描かれた. (3) Bằng (phương tiện). (4) Tùy theo.
+L: Câu bị động về sáng tạo, phát minh dùng によって, không dùng に.
+## 〜から／〜ことから
+C: N ＋ から；普通形 (Nである, Aな＋な) ＋ ことから
+D: Căn cứ vào sự thật … mà dẫn đến kết luận, tên gọi (形が星に似ていることから、星の花と呼ばれる).
+L: Văn viết. Vế sau thường là 分かる, 名付けられた, 考えられる.
+## 〜おかげで／〜せいで
+C: Nの／普通形 (Aな＋な) ＋ おかげで／せいで
+D: おかげで: nhờ (kết quả tốt, biết ơn). せいで: tại vì (kết quả xấu, đổ lỗi).
+L: おかげで dùng mỉa mai cho kết quả xấu là có thể. せいか: có lẽ tại.
+## 〜のだから（んだから）
+C: 普通形 (N／Aな＋な) ＋ のだから
+D: Vì (sự thật cả hai đều biết) nên vế sau là phán đoán, yêu cầu, khuyên tất yếu (子どもなんだから、わからなくて当然だ).
+L: Thường kèm ý trách hoặc thuyết phục.
+## 〜（の）なら
+C: 普通形 (N／Aな bỏ だ) ＋（の）なら
+D: Nếu (thật sự) là vậy thì (vế sau là ý kiến, khuyên, ý chí): 行くのなら早く準備しなさい.
+L: の nhấn "nếu đúng là". Đi theo thông tin người nghe vừa nói.
+## 〜ては／〜（の）では
+C: Vて ＋ は；Aくて ＋ は；N／Aな ＋ では
+D: Nếu … (cứ như thế) thì hậu quả xấu (こんなに寒くては、外に出られない).
+L: Vế sau mang nghĩa tiêu cực hoặc không thể. Văn nói: ちゃ／じゃ.
+## 〜さえ〜ば／〜さえ〜なら
+C: N ＋ さえ ＋ Vば／Aければ；N ＋ さえ ＋ なら；Vます ＋ さえすれば；Vて ＋ さえいれば
+D: Chỉ cần … là đủ (điều kiện tối thiểu): お金さえあれば何でもできる.
+L: Vế sau thường là kết quả tốt, đủ. Phân biệt さえ (ngay cả) đứng riêng.
+## たとえ〜ても／たとえ〜でも
+C: たとえ ＋ Vても／Aくても／N・Aなでも
+D: Dẫu cho, cho dù (giả định cực đoan) thì vẫn (たとえ反対されても、やる).
+L: たとえ chỉ nhấn mạnh, bỏ đi vẫn đúng. Khẩu ngữ: たとえ〜たって.
+## 〜としたら／〜とすれば
+C: 普通形 ＋ としたら／とすれば／とすると
+D: Giả sử là, nếu cho rằng (giả định thuần): 一億円あったとしたら、何をしますか.
+L: Vế sau thường là câu hỏi, phỏng đoán, ý kiến.
+## 〜ということだ／〜とのことだ
+C: 普通形 ＋ ということだ／とのことだ
+D: Nghe nói (truyền lại thông tin có nguồn cụ thể): 部長は今日休むとのことです.
+L: とのことだ trang trọng, hay dùng trong thư, chuyển lời. ということだ còn nghĩa "tức là".
+## 〜と言われている
+C: 普通形 ＋ と言われている
+D: Người ta nói rằng, được cho là (nhận định chung trong xã hội): 日本人は時間に正確だと言われている.
+L: Nguồn không cụ thể, khách quan.
+## 〜とか
+C: 普通形 ＋ とか（いう）
+D: Nghe đâu, nghe nói (thông tin không chắc, nói nhẹ): 来週から雨だとか.
+L: Văn nói. Khác とか liệt kê.
+## 〜って
+C: 普通形 ＋ って
+D: Văn nói: (1) trích lời "… nói là" (= と言った, そうだ). (2) chủ đề (= というのは, は): 日本の夏って暑いね.
+L: Không dùng trong văn viết trang trọng.
+## 〜という
+C: 普通形 ＋ という
+D: Tương truyền, nghe kể (văn viết, truyền thuyết): この寺は千年前に建てられたという.
+L: Nguồn mơ hồ. Khác NというN (tên gọi).
+## 〜によると／〜によれば〜そうだ
+C: N（nguồn）＋ によると／によれば ＋ 普通形 ＋ そうだ／らしい／ということだ
+D: Theo (nguồn tin) thì nghe nói (天気予報によると、明日は雪だそうだ).
+L: Vế sau phải kết bằng dạng truyền đạt (そうだ, らしい, とのことだ), không kết bằng câu khẳng định trần.
+## 〜はずがない／〜わけがない
+C: 普通形 (Nの, Aな＋な) ＋ はずがない／わけがない
+D: Chắc chắn không thể nào (phủ định mạnh dựa trên lý lẽ): 彼が嘘をつくはずがない.
+L: わけがない mang cảm xúc mạnh, văn nói hơn. Khác ないはずだ (chắc là không).
+## 〜とは限らない
+C: 普通形 ＋ とは限らない
+D: Chưa chắc đã, không hẳn lúc nào cũng (có ngoại lệ): 高いものがいいとは限らない.
+L: Thường đi với 必ずしも, いつも, 誰でも.
+## 〜わけではない／〜というわけではない／〜のではない
+C: 普通形 (Nな／Nである, Aな＋な) ＋ わけではない
+D: Không hẳn là, không có nghĩa là (phủ định một phần, sửa suy diễn của người nghe): 嫌いなわけではない.
+L: Thường đi với 全部, 必ずしも, いつも. のではない: phủ định lý do (遊びに来たのではない).
+## 〜ないことはない〜ことは〜が
+C: Vない／Aくない ＋ ことはない；Vる・A ＋ ことは ＋ Vる・A ＋ が
+D: Không phải là không (khẳng định yếu, ngập ngừng): 食べられないことはない. ことは〜が: làm thì có làm, nhưng (読むことは読んだが、分からなかった).
+L: Mang ý không hoàn toàn tích cực.
+## 〜はずだ
+C: 普通形 (Nの, Aな＋な) ＋ はずだ
+D: Chắc là, lẽ ra (suy luận dựa trên căn cứ, lý lẽ); thảo nào (hiểu ra lý do).
+L: はずだった: lẽ ra là (nhưng thực tế không). Không dùng cho ý định của mình.
+## 〜に違いない
+C: 普通形 (N／Aな bỏ だ) ＋ に違いない
+D: Chắc chắn là (người nói tin mạnh theo trực giác, phỏng đoán).
+L: Văn viết; văn nói dùng に決まっている hoặc はず.
+## 〜かもしれない〜そうだ（様態）／〜よ
+C: 普通形 ＋ かもしれない；Vます／A ＋ そうだ (trông có vẻ)
+D: かもしれない: có lẽ (khoảng 50%). そうだ (様態): nhìn bề ngoài thì có vẻ.
+L: Mức độ tin chắc thấp hơn でしょう, はず.
+## 〜てもらいたい／〜ていただきたい／〜てほしい
+C: N（người）＋ に ＋ Vて ＋ もらいたい／いただきたい／ほしい；phủ định: Vないで ＋ ほしい
+D: Muốn người khác làm gì cho mình.
+L: ていただきたい lịch sự với người trên. Nói trực tiếp với người trên dễ thành ép buộc; nên hỏi ていただけませんか.
+## 〜（さ）せてもらいたい／〜（さ）せていただきたい／〜（さ）せてほしい
+C: V thể sai khiến て ＋ もらいたい／いただきたい／ほしい
+D: Muốn được (người kia) cho phép mình làm.
+L: させていただきたい rất lịch sự, dùng trong công việc (発表させていただきたいと思います).
+## 〜こと
+C: Vる／Vない ＋ こと (đứng cuối câu)
+D: Phải …／không được … (nội quy, hướng dẫn, thông báo bằng văn bản): 提出は金曜日までにすること.
+L: Không dùng trong giao tiếp trực tiếp. Gần với なさい nhưng khách quan.
+## 〜べきだ／〜べきではない
+C: Vる ＋ べきだ／べきではない (する→するべき／すべき)；Aい→Aくあるべき；Aな／N→であるべき
+D: Nên／không nên (theo đạo lý, nghĩa vụ, lẽ phải): 約束は守るべきだ.
+L: Mạnh hơn ほうがいい, mang tính chủ quan, nói với người trên dễ thất lễ. べきだった: lẽ ra nên.
+## 〜たらどうか
+C: Vた ＋ らどうか／らどうですか／らいかがですか
+D: Thử … xem sao (khuyên, gợi ý nhẹ): 医者に行ったらどうですか.
+L: Với người trên dùng たらいかがですか. Nói tắt: 〜たら？.
+## 〜ことにする／〜ことにしている
+C: Vる／Vない ＋ ことにする／ことにしている
+D: ことにする: tự quyết định (ngay lúc nói hoặc trước đó). ことにしている: quy tắc, thói quen do mình tự đặt ra (毎朝走ることにしている).
+L: Khác ようにしている (cố gắng, mức nhẹ hơn).
+## 〜ようにする／〜ようにしている
+C: Vる／Vない ＋ ようにする／ようにしている
+D: Cố gắng làm (tạo thói quen): 野菜を食べるようにしている. ようにしてください: xin hãy chú ý làm.
+L: Mức độ nhẹ hơn ことにしている (quyết tâm).
+## 〜（よ）うとする
+C: Thể ý chí ＋ とする
+D: Định làm, sắp làm thì … (出かけようとしたとき、電話が鳴った); cố làm (nhưng không được). Phủ định: (よ)うとしない: nhất định không chịu làm (người khác).
+L: Vế sau thường là sự cản trở. Không dùng với hành động tự nhiên của người nói ở hiện tại.
+## 〜つもりだ
+C: Vる／Vない ＋ つもりだ (ý định)；普通形 (Nの, Aな＋な)／Vた・Vている ＋ つもりだ (tự cho là)
+D: (1) Định làm. (2) Cứ ngỡ, tự cho là (thực tế khác): 若いつもりだ, 鍵をかけたつもりだった.
+L: Nghĩa (2) thường đi với quá khứ và ngụ ý thực tế không như vậy.
+## 〜ようになる
+C: Vる (thể khả năng)／Vない (なくなる) ＋ ようになる
+D: Trở nên có thể (泳げるようになった), bắt đầu có thói quen (野菜を食べるようになった): thay đổi dần.
+L: Với tính từ, danh từ dùng くなる／になる, không dùng ようになる.
+## 〜ことになる
+C: Vる／Vない ＋ ことになる／ことになった
+D: Được quyết định, kết cục là (không phải do một mình mình quyết): 来月大阪へ転勤することになった.
+L: ことになっている: quy định đã có. Mang sắc thái khiêm tốn, khách quan.
+## 尊敬語依頼謙譲語
+C: Tôn kính: お＋Vます＋になる；ご＋N(漢語)＋になる；受身形 (書かれる)；động từ đặc biệt (いらっしゃる, 召し上がる, おっしゃる, なさる, ご覧になる). Nhờ: お＋Vます／ご＋N＋ください. Khiêm nhường: お＋Vます＋する／いたす；đặc biệt (参る, 申す, いただく, 拝見する, 伺う)
+D: Tôn kính nâng hành động của người trên; khiêm nhường hạ hành động của mình để tôn người nghe.
+L: Không dùng tôn kính cho bản thân hoặc người trong nhóm mình khi nói với người ngoài (社長は今いません→ 社長の田中は席を外しております).
+## 丁寧語（＝いいですか）
+C: ございます (＝あります)；でございます (＝です)；よろしいでしょうか (＝いいですか)
+D: Thể lịch sự cao (cửa hàng, khách sạn, thông báo), làm câu mềm và trang trọng.
+L: ございます không phải tôn kính của người, mà là lịch sự của câu.
+## Vます＋やすい／にくい／づらい
+C: Vます bỏ ます ＋ やすい／にくい／づらい
+D: やすい: dễ làm, dễ xảy ra. にくい: khó làm (khách quan, do tính chất). づらい: khó vì cảm giác khó chịu về thể xác, tâm lý (言いづらい).
+L: Chia như tính từ い. づらい chỉ dùng cho hành động có ý chí của người.
+## Vます＋すぎる
+C: Vます／Aい bỏ い／Aな ＋ すぎる
+D: Quá mức, làm quá (thường mang nghĩa tiêu cực): 食べすぎた.
+L: Danh từ hoá: すぎ (飲みすぎに注意).
+## Vます＋がちだN＋らしい／N＋っぽい
+C: Vます／N ＋ がちだ；N ＋ らしい；N／Vます／Aい bỏ い ＋ っぽい
+D: がち: hay có khuynh hướng (tiêu cực): 忘れがち, 病気がち. らしい: đúng chất N (男らしい). っぽい: có vẻ như, gần giống (子どもっぽい, 忘れっぽい, 白っぽい).
+L: らしい là đúng bản chất (khen), っぽい là có nét giống (thường chê).
+## Nのようだ／Nみたいだ
+C: Nの ＋ ようだ／ようなN／ように V；N ＋ みたいだ／みたいなN
+D: Giống như (so sánh): 雪のように白い; ví dụ (tiêu biểu): 東京のような大都市.
+L: みたい là văn nói. Cũng dùng phỏng đoán (xem ようです).
+## N＋だらけ
+C: N ＋ だらけ
+D: Toàn là, đầy (thường là thứ không tốt, bẩn): 間違いだらけ, 泥だらけ.
+L: Mang nghĩa tiêu cực. Khác いっぱい (trung tính).
+## 〜というのは〜のことだ
+C: N ＋ というのは ＋ 〜 ＋ のことだ／ということだ
+D: Giải thích, định nghĩa từ ngữ: "N có nghĩa là …".
+L: Khẩu ngữ: 〜って.
+## 〜のではないか
+C: 普通形 (N／Aな＋な) ＋ のではないか／んじゃないか
+D: Phải chăng là, chắc là (phỏng đoán nhẹ, nêu ý kiến mềm): 彼はもう帰ったのではないか.
+L: Ngữ điệu không lên như câu hỏi. Mềm hơn と思う.
+## 〜ように（と）＋言う・頼む
+C: Vる／Vない ＋ ように（と）＋ 言う／頼む／伝える／注意する
+D: Truyền đạt gián tiếp yêu cầu, mệnh lệnh (母に早く寝るように言われた).
+L: Trực tiếp: 「早く寝なさい」と言われた.
+## 〜わけだ
+C: 普通形 (Nな／Nである, Aな＋な) ＋ わけだ
+D: Thảo nào (hiểu ra lý do); tức là (kết luận tất yếu): 10年住んでいたから、日本語が上手なわけだ.
+L: Khác はずだ (suy đoán trước khi biết); わけだ dùng khi đã biết sự thật và hiểu ra.
+## Vる＋わけにはいかない
+C: Vる ＋ わけにはいかない
+D: Không thể làm (vì lý do đạo lý, xã hội, tâm lý, không phải năng lực): 明日試験だから、遊ぶわけにはいかない.
+L: Năng lực không làm được thì dùng 〜できない.
+## Vない＋わけにはいかない
+C: Vない ＋ わけにはいかない
+D: Không thể không làm (buộc phải làm vì hoàn cảnh, nghĩa vụ): 約束したから、行かないわけにはいかない.
+L: Gần ざるを得ない (N2).
+## N（＋助詞）＋ばかり
+C: N（＋trợ từ）＋ ばかり
+D: Chỉ toàn (lặp nhiều, thường phê phán): 肉ばかり食べる, 友達とばかり遊ぶ.
+L: Thay を／が, giữ trợ từ khác (とばかり). Khác だけ (chỉ, trung tính).
+## Vて＋ばかりいる
+C: Vて ＋ ばかりいる
+D: Suốt ngày chỉ làm (người nói không hài lòng): 寝てばかりいる.
+L: Thường là phê phán.
+## 〜ばかりでなく
+C: N／普通形 (Aな＋な) ＋ ばかりでなく ＋ 〜も
+D: Không chỉ … mà còn (= だけでなく): 英語ばかりでなく、中国語も話せる.
+L: Vế sau thường có も. Văn viết hơn だけでなく.
+## Vる＋ばかりだ
+C: Vる ＋ ばかりだ
+D: Ngày càng (chỉ theo một chiều, thường xấu): 病気は悪くなるばかりだ.
+L: Gần 一方だ.
+## Vる＋ばかりになっている
+C: Vる ＋ ばかりになっている／ばかりだ
+D: Chỉ còn mỗi việc … là xong, đã sẵn sàng (料理は食べるばかりになっている).
+L: Mẫu ít gặp, chú ý phân biệt với ばかりだ (ngày càng).
+## Vた＋ばかり
+C: Vた ＋ ばかりだ／ばかりの N
+D: Vừa mới làm (theo cảm nhận của người nói thì thời gian còn ngắn): 日本に来たばかりです.
+L: Vたところ: đúng ngay vừa xong; Vたばかり: có thể đã lâu nhưng người nói thấy ngắn.
+## 〜と…た／〜たら…た
+C: Vる ＋ と …た；Vた ＋ ら …た
+D: Khi làm V1 thì phát hiện ra, hoặc xảy ra việc bất ngờ (ドアを開けると、猫がいた).
+L: Vế sau là sự việc ngoài ý chí người nói.
+## Vる＋と
+C: Vる ＋ と ＋ Vた (cùng chủ ngữ)
+D: Vừa … là (hành động nối tiếp của người thứ ba trong truyện): 彼は家に帰ると、すぐ寝た.
+L: Văn kể chuyện. Với người nói, thường dùng てから.
+## Nも〜ばNも
+C: N1 も ＋ Vば／Aければ／Aなら ＋ N2 も
+D: Cũng … mà cũng (liệt kê hai đặc điểm cùng chiều): 彼は歌も歌えば、ダンスもする.
+L: Gần ～し、～し. Phủ định: N1 も なければ N2 も ない.
+## 〜てくる／〜ていく
+C: Vて ＋ くる／いく
+D: てくる: thay đổi tới hiện tại, xuất hiện, hướng về người nói (だんだん暖かくなってきた). ていく: thay đổi từ giờ về sau, rời xa (これからも続けていく).
+L: Chọn theo trục thời gian và hướng so với người nói.
+## 〜てしまう（〜ちゃう）
+C: Vて ＋ しまう；khẩu ngữ: てしまう→ちゃう, でしまう→じゃう
+D: (1) Làm xong hết (読んでしまった). (2) Lỡ làm, tiếc nuối (壊してしまった).
+L: Nghĩa (2) không dùng cho hành động tốt có chủ đích.
+## 〜ておく（〜とく）〜てある／〜ている
+C: Vて ＋ おく (khẩu ngữ とく)；tha động từ て ＋ ある；tự động từ て ＋ いる
+D: ておく: làm sẵn để chuẩn bị. てある: trạng thái do ai đó cố ý làm (窓が開けてある). ている (tự động từ): chỉ tả trạng thái (窓が開いている).
+L: てある dùng が với tha động từ.
+## Vます＋かける／〜かけの
+C: Vます ＋ かける／かけの N／かけだ
+D: Đang làm dở, làm chưa xong (読みかけの本); suýt (死にかける).
+L: Khác はじめる (bắt đầu).
+## Vます＋きる
+C: Vます ＋ きる／きれない
+D: Làm hết, làm trọn đến cùng (全部食べきった); hoàn toàn (疲れきった).
+L: きれない: không thể làm hết (多すぎて食べきれない).
+## Vます＋だす
+C: Vます ＋ だす
+D: Bắt đầu (đột ngột, không ngờ): 急に雨が降りだした.
+L: Không dùng cho hành động có kế hoạch (dùng はじめる).
+## Vます＋合う
+C: Vます ＋ 合う
+D: Làm cùng nhau, với nhau (hai bên tác động lẫn nhau): 話し合う, 助け合う.
+L: Chủ ngữ là nhiều người.
+## Vます＋直す
+C: Vます ＋ 直す
+D: Làm lại (để sửa, làm cho tốt hơn): 書き直す, 考え直す.
+L: Khác もう一度〜 (chỉ làm lần nữa).
+## Vます＋続ける
+C: Vます ＋ 続ける
+D: Tiếp tục làm (hành động kéo dài).
+L: Động từ tức thời (結婚する) không ghép được.
+## Vます＋たて
+C: Vます ＋ たて／たての N
+D: Vừa mới làm xong (đồ còn mới, tươi): 焼きたてのパン, 塗りたて.
+L: Dùng với đồ vật, đồ ăn; không dùng cho mọi động từ.
+## Vます＋っぱなし
+C: Vます ＋ っぱなし
+D: Để nguyên (lẽ ra nên dừng, tắt; tiêu cực): 電気をつけっぱなしで寝た; liên tục (立ちっぱなし).
+L: Mang ý phê phán. Khác たまま (trung tính).
+## Vた＋まま
+C: Vた／Vない／Nの／Aい／Aな＋な ＋ まま
+D: Giữ nguyên trạng thái, làm tiếp trong trạng thái đó (靴を履いたまま入る).
+L: Trung tính hơn っぱなし.
+## 受身（られる）
+C: Nhóm 1: う→あ＋れる (書かれる)；Nhóm 2: られる；来られる；される. Câu: N1 は N2 に V受身
+D: Bị, được: chủ thể chịu tác động (先生に褒められた). Bị động sự vật, khách quan (この本は多くの人に読まれている).
+L: Tác giả của tác phẩm: によって. Phân biệt với thể khả năng nhóm 2 (cùng dạng られる).
+## 迷惑の受身
+C: N1 は N2 に V受身 (kể cả tự động từ: 雨に降られた)
+D: Bị động gây phiền: người nói chịu ảnh hưởng xấu từ hành động người khác (隣の人にタバコを吸われた).
+L: Tiếng Việt chỉ nói "bị", tiếng Nhật đặc biệt dùng được với tự động từ (子どもに泣かれた).
+## 使役（させる）
+C: Nhóm 1: う→あ＋せる (書かせる)；Nhóm 2: させる；来させる；させる. Câu: N1 は N2 に／を V使役
+D: Bắt hoặc cho phép ai làm (母は子どもに野菜を食べさせた). Tự động từ: người bị làm thường dùng を (子どもを遊ばせる).
+L: Nghĩa bắt hay cho phép tùy ngữ cảnh.
+## （を）
+C: N（người）＋ を ＋ V使役 (tự động từ)
+D: Khi động từ gốc là tự động từ (không có tân ngữ), người bị sai khiến đánh dấu bằng を (子どもを公園で遊ばせる).
+L: Khi động từ có tân ngữ rồi, người bị sai dùng に để tránh hai を.
+## 使役受身（させられる／される）
+C: Nhóm 1: う→あ＋せられる／される (書かせられる・書かされる)；Nhóm 2: させられる；来させられる；させられる
+D: Bị bắt làm (việc không muốn): 母に部屋を掃除させられた.
+L: Rút gọn される chỉ cho nhóm 1 (không phải す kết thúc: 話させられる).
+## 〜させてください／〜させていただく
+C: V使役て ＋ ください／いただく／いただけませんか
+D: Xin cho phép tôi làm. させていただく: khiêm nhường, nói việc mình làm với sự cho phép (発表させていただきます).
+L: Lạm dụng させていただく bị coi là rườm rà.
+## 〜こそ
+C: N（＋trợ từ）＋ こそ；〜から ＋ こそ
+D: Chính … (nhấn mạnh, khẳng định là đúng nó): 今年こそ合格したい, こちらこそ.
+L: からこそ: chính vì. Không dùng nhấn tiêu cực.
+## 〜さえ
+C: N（＋trợ từ）＋ さえ；Vて ＋ さえ
+D: Ngay cả (ví dụ cực đoan, những cái khác thì càng): 名前さえ書けない.
+L: Gần でも／も. さえ〜ば là mẫu khác.
+## 〜でも
+C: N ＋ でも
+D: (1) Ngay cả (子どもでも分かる). (2) Chẳng hạn, hay là (gợi ý nhẹ, không nhất định): お茶でも飲みませんか.
+L: Với từ để hỏi: 誰でも, いつでも (bất cứ).
+## 〜など／〜なんか／〜なんて
+C: N ＋ など／なんか／なんて；普通形 ＋ なんて
+D: (1) Chẳng hạn (ví dụ). (2) Coi nhẹ, khiêm tốn (私なんかまだまだ). (3) Ngạc nhiên, không tin được (彼が遅れるなんて).
+L: なんか, なんて là văn nói.
+## 〜しか〜ない
+C: N（＋trợ từ）＋ しか ＋ V ない
+D: Chỉ (nhấn sự ít, không đủ): 100円しかない.
+L: Luôn đi với phủ định. だけ trung tính, đi với khẳng định.
+## 〜ばかりか／〜だけでなく〜っけ
+C: 普通形 (Nの bỏ, Aな＋な) ＋ ばかりか／だけでなく ＋ 〜も／まで；普通形 (だ／だった) ＋ っけ
+D: ばかりか: không chỉ … mà còn (thường thêm điều bất ngờ hơn). っけ: … nhỉ? (hỏi lại điều mình quên hoặc tự nhớ lại).
+L: っけ là văn nói, thân mật. ばかりか vế sau không dùng mệnh lệnh.
+## NにNがあります／います
+C: N（nơi）＋ に ＋ N ＋ が ＋ あります (vật)／います (người, con vật)
+D: Ở nơi đó có cái gì, có ai (thông tin mới là vật, người).
+L: Trả lời câu hỏi 何がありますか／誰がいますか.
+## NはNにあります／います
+C: N ＋ は ＋ N（nơi）＋ に ＋ あります／います
+D: Vật, người (đã biết) đang ở đâu (thông tin mới là nơi chốn).
+L: Rút gọn: N は N（nơi）です (トイレはあそこです).
+## 何も／だれも／どこも＋〜ない
+C: 疑問詞 ＋ も ＋ V ない；với trợ từ: どこへも, だれにも, 何にも
+D: Không … gì / không ai / không đâu cả (phủ định toàn bộ).
+L: Khẳng định toàn bộ: だれでも, どこでも (với でも) hoặc みんな.
+## 何か／だれか／どこか
+C: 疑問詞 ＋ か
+D: Cái gì đó, ai đó, đâu đó (không xác định).
+L: が／を thường bỏ: 何か飲みますか. Trả lời はい／いいえ trước.
+## Aく／Aに＋なる
+C: Aい → bỏ い ＋ く ＋ なる；Aな／N ＋ に ＋ なる
+D: Trở nên, trở thành (thay đổi tự nhiên).
+L: いい → よくなる.
+## Aく／Aに＋する
+C: Aい → bỏ い ＋ く ＋ する；Aな／N ＋ に ＋ する
+D: Làm cho trở nên (có chủ đích tác động): 部屋をきれいにする, 音を小さくする.
+L: なる tự thay đổi, する có người làm thay đổi.
+## AよりBのほうが〜
+C: N1 ＋ より ＋ N2 ＋ のほうが ＋ A
+D: B … hơn A (nhấn B), dùng trả lời câu hỏi どちら.
+L: Thứ tự trong câu có thể đổi: N2のほうがN1より….
+## あまり〜ない
+C: あまり ＋ V ない／Aくない／Aじゃない
+D: Không … lắm (phủ định mức độ một phần).
+L: あまり đi với phủ định; khẳng định nghĩa khác (あまりに: quá).
+## 全然〜ない
+C: 全然 ＋ V ない／A くない
+D: Hoàn toàn không.
+L: Văn nói trẻ có 全然大丈夫 (khẳng định), không chuẩn trong thi.
+## N（phương tiện）＋で
+C: N ＋ で ＋ V
+D: Bằng (phương tiện đi lại, công cụ, ngôn ngữ): バスで行く, 日本語で話す.
+L: Đi bộ: 歩いて行く (không dùng 足で).
+## Nをください
+C: N（＋số lượng）＋ を ＋ ください
+D: Xin cho tôi (mua hàng, gọi món).
+L: Số lượng đứng sau を: りんごを三つください.
+## 〜てもいいですか
+C: Vて ＋ もいいですか
+D: Xin phép: tôi … có được không?
+L: Trả lời: ええ、いいですよ／すみません、ちょっと…. Lịch sự hơn: てもよろしいでしょうか.
+## 〜んです／〜のです
+C: 普通形 (N／Aな ＋ な) ＋ んです
+D: Giải thích lý do, hoàn cảnh, hoặc hỏi để tìm hiểu (どうしたんですか). Mở lời nhờ vả: 〜んですが.
+L: Dùng quá nhiều nghe như ép. Văn viết: のです.
+## どうして〜んですか
+C: どうして ＋ 普通形 ＋ んですか；trả lời: 〜からです
+D: Hỏi lý do (tò mò, muốn biết hoàn cảnh).
+L: Trả lời có thể dùng 〜んです. なぜ: trang trọng hơn.
+## 〜ませんでした
+C: Vます → Vませんでした (thể thường: Vなかった)
+D: Đã không (phủ định quá khứ).
+L: Trả lời "chưa" thì dùng まだ〜ていません, không dùng ませんでした.
+## Aかったです／Aでした
+C: Aい → bỏ い ＋ かったです；Aな／N ＋ でした；phủ định: Aくなかったです／Aじゃありませんでした
+D: Tính từ ở quá khứ (lịch sự).
+L: ✗ 高いでした. いい → よかったです.
+## NはNが〜
+C: N1 ＋ は ＋ N2 ＋ が ＋ A
+D: N1 thì có N2 (bộ phận, đặc điểm) …: 象は鼻が長い.
+L: N1 là chủ đề, N2 là chủ thể của tính từ.
+## N（thời gian）にN回
+C: 期間 ＋ に ＋ 数 ＋ 回
+D: Tần suất: 1週間に3回 (một tuần 3 lần).
+L: Số lượng đứng sau, không cần trợ từ.
+## Nに乗る／Nを降りる
+C: N（xe）＋ に ＋ 乗る；N ＋ を ＋ 降りる
+D: Lên xe／xuống xe.
+L: Trợ từ khác nhau: に (đích) và を (rời khỏi).
+## N（nơi）＋を＋V di chuyển
+C: N ＋ を ＋ 出る／通る／散歩する／渡る／歩く
+D: Nơi đi qua hoặc rời khỏi.
+L: Đây là を nơi chốn, không phải tân ngữ.
+## Nにします
+C: N ＋ にします
+D: Chọn, quyết định là N (gọi món, mua hàng).
+L: Khác になる (trở thành).
+## 〜から〜まで（thời gian, địa điểm）
+C: N1 ＋ から ＋ N2 ＋ まで
+D: Từ … đến … (thời gian, địa điểm).
+L: Có thể dùng riêng: 9時からです.
+## 〜くらい／〜ぐらいかかります
+C: 時間・お金 ＋ くらい（ぐらい）＋ かかります
+D: Mất khoảng (thời gian, tiền).
+L: Hỏi: どのくらいかかりますか.
+## 〜ごろ
+C: 時刻・日付 ＋ ごろ（に）
+D: Khoảng (thời điểm).
+L: Chỉ dùng với thời điểm, không với khoảng thời gian.
+## まだ〜ていません
+C: まだ ＋ Vて ＋ いません
+D: Vẫn chưa làm.
+L: Đối lại với もう〜ました.
+## もう〜ました
+C: もう ＋ Vました
+D: Đã … rồi.
+L: もう＋phủ định: không … nữa (もう食べません).
+## 〜が、〜（nối câu）
+C: Câu 1 (lịch sự／thường) ＋ が、＋ câu 2
+D: …, nhưng …; cũng dùng mở lời (すみませんが…).
+L: が lịch sự, けど／けれど văn nói.
+## Vて、Vます（trình tự）
+C: V1て、V2て、V3
+D: Làm … rồi làm … (theo thứ tự).
+L: Thì câu nằm ở động từ cuối.
+## Nの＋N（sở hữu, thuộc tính）
+C: N1 ＋ の ＋ N2
+D: N2 của N1, N2 về/bằng N1.
+L: Thứ tự ngược tiếng Việt.
+## 〜が上手です／〜が下手です
+C: N ＋ が ＋ 上手／下手です
+D: Giỏi／kém (môn, kỹ năng).
+L: Không dùng 上手 tự khen mình; dùng 得意.
+## Vた＋ほうがいい
+C: Vた ＋ ほうがいい（です）
+D: Nên làm (lời khuyên mạnh, cụ thể).
+L: Vる＋ほうがいい cũng có, nhưng Vた nhấn khuyên. Với người trên nên mềm hơn.
+## Vない＋ほうがいい
+C: Vない ＋ ほうがいい（です）
+D: Không nên làm.
+L: Không dùng Vなかったほうがいい.
+## 受身（〜られる）
+C: Nhóm 1: う→あ＋れる；Nhóm 2: られる；来られる；される
+D: Bị, được (bị động). N1 は N2 に V受身.
+L: Bị động phiền toái dùng được cả với tự động từ (雨に降られた). Thể bị động nhóm 2 trùng dạng với thể khả năng (食べられる), phân biệt bằng ngữ cảnh.
+## 使役（〜させる）
+C: Nhóm 1: う→あ＋せる；Nhóm 2: させる；来させる；させる
+D: Bắt, cho phép (ai) làm.
+L: Người bị sai khiến: に khi động từ có tân ngữ, を khi là tự động từ. Bị bắt làm: させられる.
+## 〜てほしい
+C: N（người）＋ に ＋ Vて ＋ ほしい；phủ định: Vないでほしい
+D: Muốn người khác làm gì.
+L: Nói trực tiếp với người trên nên tránh.
+## Vる／Vない＋ようになる
+C: Vる (thể khả năng)／Vなく ＋ なる／ようになる
+D: Trở nên (có thể／không còn) …, thay đổi thói quen.
+L: Không dùng với tính từ.
+## Vる／Vない＋ようにする
+C: Vる／Vない ＋ ようにする／ようにしている
+D: Cố gắng làm (tạo thói quen).
+L: Mức nhẹ hơn ことにする.
+## Vる＋ことがある
+C: Vる／Vない ＋ ことがある
+D: Có khi, thỉnh thoảng (không thường xuyên).
+L: Khác Vた＋ことがある (kinh nghiệm).
+## 〜ことにしている
+C: Vる／Vない ＋ ことにしている
+D: Quy tắc tự đặt ra cho bản thân, thói quen có chủ đích.
+L: Khác ことになっている (quy định chung).
+## Vた／Vない＋まま
+C: Vた／Vない／Nの ＋ まま
+D: Để nguyên, cứ thế mà ….
+L: Vế sau là hành động trong trạng thái đó.
+## 〜たばかり
+C: Vた ＋ ばかり
+D: Vừa mới (cảm nhận thời gian ngắn).
+L: Khác Vたところ.
+## 〜場合は
+C: Vる／Vた／Vない／Aい／Aな＋な／Nの ＋ 場合は
+D: Trường hợp …, nếu … (văn bản, hướng dẫn): 雨の場合は中止します.
+L: Không dùng cho việc chắc chắn xảy ra.
+## 〜のは〜だ（nhấn mạnh）
+C: 普通形 (Nな) ＋ のは ＋ N（thông tin muốn nhấn）＋ だ
+D: Điều … chính là …: 私が生まれたのは東京です.
+L: Đưa thông tin mới, quan trọng ra cuối câu.
+## 〜ないと（いけない）
+C: Vない ＋ と（いけない／だめ）
+D: Phải (văn nói, thân mật).
+L: Thường bỏ vế sau: もう帰らないと.
+## 〜なくちゃ／〜なきゃ
+C: Vない bỏ い ＋ くちゃ／きゃ
+D: Phải (khẩu ngữ của なくては／なければ).
+L: Chỉ dùng trong văn nói thân mật.
+## お＋Vます＋になる
+C: お ＋ Vます ＋ になる
+D: Tôn kính hành động của người trên.
+L: Động từ một âm (いる, 見る) không dùng mẫu này, dùng động từ đặc biệt.
+## お＋Vます＋する
+C: お ＋ Vます ＋ する／いたす；ご ＋ N ＋ する
+D: Khiêm nhường: tôi làm cho ngài.
+L: Chỉ dùng cho hành động liên quan đến người kia.
+## 〜でございます
+C: N ＋ でございます
+D: Là (lịch sự cao của です).
+L: Không dùng với tính từ い.
+## 〜ほど〜ない
+C: N ＋ ほど ＋ Aくない／Vない
+D: Không … bằng N.
+L: Luôn đi với phủ định.
+## 〜しか〜ない
+C: N ＋ しか ＋ Vない
+D: Chỉ (nhấn sự ít ỏi).
+L: Khác だけ (khẳng định).
+## NというN
+C: N1 ＋ という ＋ N2
+D: N2 có tên là N1 (khi người nghe có thể không biết).
+L: Khẩu ngữ: っていう.
+## 〜とか〜とか
+C: N／普通形 ＋ とか ＋ N／普通形 ＋ とか
+D: Nào là … nào là … (liệt kê ví dụ, văn nói).
+L: Giống や〜など nhưng thân mật, nối được cả động từ.
+## Vます＋始める／終わる／続ける
+C: Vます ＋ 始める／終わる／続ける
+D: Bắt đầu／làm xong／tiếp tục làm.
+L: Động từ ghép chia ở phần sau.
+## Vます＋方
+C: Vます ＋ 方 (かた)
+D: Cách làm …: 書き方, 使い方.
+L: Tân ngữ đổi を→の: 漢字の書き方.
+## Aい／Aな＋さ
+C: Aい → bỏ い ＋ さ；Aな → bỏ な ＋ さ
+D: Danh từ hóa tính từ chỉ mức độ: 高さ, 大切さ.
+L: いい→よさ.
+## 〜てよかった
+C: Vて ＋ よかった；Vなくて ＋ よかった
+D: May mà đã …, thật tốt vì đã ….
+L: Khác ばよかった (hối tiếc).
+## 〜てすみません
+C: Vて ＋ すみません
+D: Xin lỗi vì đã ….
+L: Trang trọng hơn: 〜て申し訳ありません.
+## 〜ばいい
+C: Vば ＋ いい
+D: Chỉ cần … là được; nên … (hỏi cách làm: どうすればいいですか).
+L: Nghĩa khuyên nhẹ.
+## 〜あいだ／〜あいだに
+C: Vている／Nの ＋ あいだ（に）
+D: あいだ: suốt khoảng; あいだに: trong khoảng đó (một lần).
+L: Hành động sau あいだ là kéo dài.
+## 〜ために（mục đích）
+C: Vる／Nの ＋ ために
+D: Để (mục đích ý chí), vì ai.
+L: So sánh với ように (không ý chí).
+## 〜かどうか
+C: 普通形 (N／Aな bỏ だ) ＋ かどうか
+D: … hay không (câu hỏi có／không lồng trong câu).
+L: Có từ để hỏi thì dùng か.
+## 〜ものだ（hồi tưởng）
+C: Vた ＋ ものだ
+D: Hồi xưa thường hay … (hoài niệm thói quen trong quá khứ): 子どもの頃、よくこの川で泳いだものだ.
+L: Thường đi với よく, 昔は. Không dùng cho một lần duy nhất.
+## 〜ものだ（lẽ thường）
+C: Vる／Vない／Aい ＋ ものだ
+D: Lẽ thường là, vốn dĩ (chân lý chung, khuyên răn): 人の話は最後まで聞くものだ.
+L: Phủ định: ものではない (không nên). Cảm thán: 時間がたつのは早いものだ.
+## 〜ものだから／〜もんだから
+C: 普通形 (Nな, Aな＋な) ＋ ものだから
+D: Vì … nên (giải thích, biện minh lý do cá nhân, thường khi xin lỗi): 道が混んでいたものだから、遅れました.
+L: Vế sau không dùng mệnh lệnh, ý chí. もんだから là văn nói.
+## 〜ものの
+C: 普通形 (Nである, Aな＋な／である) ＋ ものの
+D: Tuy … nhưng (kết quả không như mong đợi): 買ったものの、一度も使っていない.
+L: Văn viết. Vế sau không phải ý chí.
+## 〜に決まっている
+C: 普通形 (N／Aな bỏ だ) ＋ に決まっている
+D: Chắc chắn là (khẳng định chủ quan, mạnh, văn nói): そんなの嘘に決まっている.
+L: Chủ quan hơn に違いない.
+## 〜てたまらない
+C: Aくて／Aで／Vて ＋ たまらない
+D: … không chịu nổi (cảm xúc, cảm giác cơ thể rất mạnh): 暑くてたまらない, 会いたくてたまらない.
+L: Chủ ngữ ngôi thứ nhất. Ngôi thứ ba thêm らしい／ようだ.
+## 〜てしょうがない／〜てしかたがない
+C: Aくて／Aで／Vて ＋ しょうがない／しかたがない
+D: … quá, không kìm được (cảm xúc mạnh, văn nói): 眠くてしょうがない.
+L: Gần てたまらない; しょうがない là văn nói của しかたがない.
+## 〜てならない
+C: Aくて／Aで／Vて ＋ ならない
+D: Cứ thấy … không sao ngăn được (cảm giác tự nhiên dâng lên): 将来が心配でならない.
+L: Văn viết, hay đi với 気がする, 思える, 心配.
+## 〜ずにはいられない
+C: Vない bỏ ない ＋ ずにはいられない (する→せずには)
+D: Không thể không làm (không kìm được): 笑わずにはいられない.
+L: Cảm xúc tự phát, khác ないわけにはいかない (nghĩa vụ).
+## 〜気味
+C: Vます／N ＋ 気味（だ／の）
+D: Hơi …, có vẻ … (thường là trạng thái không tốt): 風邪気味, 疲れ気味.
+L: Mức nhẹ, khác がち (khuynh hướng lặp lại).
+## 〜向き
+C: N ＋ 向き（だ／の／に）
+D: Phù hợp với (đặc tính tự nhiên hợp với đối tượng): この料理は子ども向きだ.
+L: 向け là "làm ra dành cho"; 向き là "hợp với" (dù không làm cho).
+## 〜向け
+C: N ＋ 向け（だ／の／に）
+D: Dành cho (làm ra hướng đến đối tượng): 子ども向けの番組.
+L: Khác 向き: 向け là được làm ra nhắm tới đối tượng (dù có hợp hay không), 向き là tự nhiên phù hợp.
+## 〜おきに
+C: 数量 ＋ おきに
+D: Cứ cách … một lần: 1日おきに (cách một ngày).
+L: Với khoảng cách, thời gian nhỏ (5分おき) nghĩa gần như ごとに.
+## 〜ごとに
+C: N ＋ ごとに
+D: Mỗi, cứ mỗi (đều đặn theo đơn vị): 3時間ごとに薬を飲む.
+L: 1日ごとに = mỗi ngày; 1日おきに = cách ngày.
+## 〜て以来
+C: Vて ＋ 以来；N ＋ 以来
+D: Kể từ khi … (đến nay, trạng thái kéo dài): 日本に来て以来、ずっとここに住んでいる.
+L: Vế sau là trạng thái tiếp diễn, không dùng cho việc gần đây hoặc một lần.
+## 〜をこめて
+C: N ＋ をこめて
+D: Gửi gắm, dồn (tình cảm, tâm huyết) vào: 心をこめて作る, 感謝をこめて.
+L: N thường là tình cảm: 愛, 願い, 気持ち.
+## 〜を通じて／〜を通して
+C: N ＋ を通じて／を通して
+D: (1) Thông qua (trung gian, phương tiện): 友達を通じて知り合った. (2) Suốt (thời gian): 一年を通して暖かい.
+L: を通して thiên về chủ động, có ý chí hơn.
+## 〜に代わって／〜に代わり
+C: N ＋ に代わって／に代わり
+D: Thay cho (người khác làm thay, hoặc thứ mới thay thế cũ): 社長に代わって挨拶する.
+L: Trang trọng. Khác の代わりに (đổi lấy).
+## 〜にわたって
+C: N（thời gian, phạm vi）＋ にわたって／にわたる N
+D: Suốt, trải rộng khắp (phạm vi lớn): 3日間にわたって会議が行われた.
+L: Nhấn quy mô lớn.
+## 〜に応じて
+C: N ＋ に応じて／に応じた N
+D: Tùy theo, đáp ứng phù hợp với (thay đổi theo N): 能力に応じて給料が決まる.
+L: Gần によって, nhấn "phù hợp".
+## 〜にしては
+C: 普通形 (N trực tiếp) ＋ にしては
+D: So với (thực tế) … thì khác dự đoán: 初めてにしては上手だ.
+L: Dùng khi biết rõ vế trước; khác わりに.
+## 〜にしても
+C: 普通形 (N trực tiếp) ＋ にしても
+D: Dù là … đi nữa thì cũng (công nhận vế trước nhưng vế sau vẫn khác): 忙しいにしても、連絡ぐらいはできるだろう.
+L: にしても〜にしても: dù là A hay B.
+## 〜からといって
+C: 普通形 ＋ からといって ＋ (phủ định)
+D: Không phải chỉ vì … mà (luôn) …: お金があるからといって、幸せとは限らない.
+L: Vế sau thường là phủ định (わけではない, とは限らない).
+## 〜からこそ
+C: 普通形 ＋ からこそ
+D: Chính vì … nên (nhấn lý do duy nhất, quan trọng): 好きだからこそ厳しくする.
+L: Không dùng với ので, ため.
+## 〜上で（sau khi）
+C: Vた／Nの ＋ 上で
+D: Sau khi … (làm xong bước cần thiết) rồi mới …: よく考えた上で決める.
+L: Vる＋上で: trong quá trình làm (lưu ý khi …).
+## 〜うえに
+C: 普通形 (Nの／Nである, Aな＋な) ＋ うえに
+D: Không những … mà còn (thêm vào cùng chiều): この店は安いうえに、おいしい.
+L: Hai vế cùng chiều tốt hoặc cùng chiều xấu. Vế sau không dùng mệnh lệnh.
+## 〜ふりをする
+C: 普通形 (Nの, Aな＋な) ＋ ふりをする
+D: Giả vờ: 知らないふりをする, 寝たふりをする.
+L: Hành động có ý thức.
+## 〜ばよかった
+C: Vば ＋ よかった；Vなければ ＋ よかった
+D: Giá mà đã … (hối tiếc việc đã không làm／đã làm).
+L: Thường kèm のに: もっと勉強すればよかったのに.
+## 〜ないことには
+C: Vない ＋ ことには ＋ (vế phủ định)
+D: Nếu không … thì không thể …: 実際に見ないことには、分からない.
+L: Vế sau phủ định hoặc khó khăn.
+## 〜に加えて
+C: N ＋ に加えて
+D: Thêm vào …, cộng với (văn viết): 雨に加えて、風も強くなった.
+L: Trang trọng hơn だけでなく.
+## 〜に限らず
+C: N ＋ に限らず
+D: Không chỉ (giới hạn ở) …, mà rộng hơn: 子どもに限らず、大人も楽しめる.
+L: Vế sau thường có も, みんな.
+## 〜をきっかけに
+C: N ＋ をきっかけに／をきっかけとして
+D: Nhân dịp, lấy … làm cơ hội để bắt đầu: 留学をきっかけに、料理を始めた.
+L: Vế sau là sự thay đổi, bắt đầu.
+## 〜をもとに
+C: N ＋ をもとに（して）／をもとにした N
+D: Dựa trên (tài liệu, sự thật để tạo ra cái mới): 実話をもとにした映画.
+L: Khác に基づいて (căn cứ chặt chẽ, quy tắc).
+## 〜一方だ
+C: Vる ＋ 一方だ
+D: Ngày càng … (thay đổi theo một chiều, thường xấu): 物価は上がる一方だ.
+L: Gần ばかりだ.
+## 〜つつある
+C: Vます ＋ つつある
+D: Đang dần … (thay đổi đang diễn ra từ từ, văn viết): 景気は回復しつつある.
+L: Dùng với động từ thay đổi.
+## 〜恐れがある
+C: Vる／Nの ＋ 恐れがある
+D: Có nguy cơ (điều xấu có thể xảy ra, văn viết, tin tức): 台風が上陸する恐れがある.
+L: Chỉ dùng cho điều xấu.
+## 〜せいか
+C: 普通形 (Nの, Aな＋な) ＋ せいか
+D: Có lẽ tại … (đoán nguyên nhân, không chắc): 疲れたせいか、頭が痛い.
+L: Tốt: おかげか.
+## 〜ことはない
+C: Vる ＋ ことはない
+D: Không cần phải … (khuyên, an ủi): 心配することはない.
+L: Khác ないことはない.
+## 〜ようがない
+C: Vます ＋ ようがない
+D: Không có cách nào để … (muốn làm nhưng không có cách): 連絡先がわからないから、連絡しようがない.
+L: する→しようがない. Gần không thể, nhấn thiếu phương pháp.
+## 〜しかない／〜ほかない
+C: Vる ＋ しかない／ほかない
+D: Chỉ còn cách … (không còn lựa chọn khác): 待つしかない.
+L: ほかない trang trọng hơn.
+## 〜ことだ（lời khuyên）
+C: Vる／Vない ＋ ことだ
+D: Nên, tốt nhất là (lời khuyên từ người trên): 上手になりたければ、毎日練習することだ.
+L: Không dùng với người trên.
+## なんと〜ことか
+C: なんと／どんなに ＋ 普通形 (Aな＋な) ＋ ことか
+D: … biết bao! (cảm thán): なんと美しいことか.
+L: Văn viết, cảm xúc mạnh.
+## 〜ずつ
+C: 数量 ＋ ずつ
+D: Mỗi … (chia đều), từng … một: 一人二つずつ, 少しずつ.
+L: Đứng sau số lượng hoặc từ chỉ lượng.
+## 〜わけにはいかない
+C: Vる ＋ わけにはいかない
+D: Không thể làm (vì lý do đạo đức, xã hội).
+L: Lý do là đạo lý, xã hội, tâm lý, không phải năng lực. Vない＋わけにはいかない: buộc phải làm.
+## 〜ば〜のに
+C: Vば／Aければ ＋ 〜 ＋ のに
+D: Giá mà … thì (đã) … (tiếc nuối, hoặc trách nhẹ): 早く言えばよかったのに.
+L: Vế sau là điều không thành hiện thực.
+## 〜たとたん（に）
+C: Vた ＋ とたん（に）
+D: Vừa … thì ngay lập tức (việc bất ngờ).
+L: Vế sau không phải ý chí người nói.
+## 〜にかけては
+C: N ＋ にかけては
+D: Về mặt … thì (không ai bằng, khen khả năng): 料理にかけては、彼の右に出る者はいない.
+L: Vế sau là đánh giá tốt về năng lực.
+## 〜ほど（mức độ）
+C: Vる／Vない／Aい／Aな＋な／N ＋ ほど
+D: Đến mức …: 死ぬほど疲れた.
+L: ほど nhấn mức độ cao hơn くらい; ほど không dùng để coi nhẹ (それくらい). Thường lấy ví dụ cực đoan (死ぬほど, 泣くほど).
+## 〜とは限らない
+C: 普通形 ＋ とは限らない
+D: Không hẳn là, chưa chắc.
+L: Thường đi với 必ずしも.
+## 〜である
+C: N／Aな ＋ である；phủ định: ではない；quá khứ: であった
+D: Là (thể văn viết của です／だ, báo chí, luận văn).
+L: Không trộn với です／ます trong cùng văn bản.
+## N1へのN2
+C: N1 ＋ への ＋ N2
+D: N2 hướng tới／gửi tới N1: 母への手紙.
+L: Trợ từ に không ghép với の (✗ にの), phải dùng へ. Tương tự: からの, での, との.
+## 〜に際して
+C: N／Vる ＋ に際して／に際し
+D: Nhân dịp, khi (bắt đầu một việc quan trọng, trang trọng): 入学に際して.
+L: Văn bản, lời phát biểu.
+## 〜の際（は）
+C: N ＋ の際（は／に）；Vる／Vた ＋ 際
+D: Khi, lúc (thông báo, hướng dẫn): お帰りの際は、鍵を返してください.
+L: Trang trọng hơn とき.
+## Vます＋きれない
+C: Vます ＋ きれない
+D: Không thể … hết／xuể (vì quá nhiều): 数えきれない.
+L: Khẳng định: きれる.
+## 〜んですけど（前置き）
+C: 普通形 (N／Aな＋な) ＋ んですけど／んですが
+D: Mở lời, nêu hoàn cảnh trước khi nhờ vả hoặc hỏi: 道に迷ったんですけど….
+L: Vế sau thường được bỏ, người nghe tự hiểu.
+## 〜ということなんです
+C: 普通形 ＋ ということなんです
+D: Tức là, nghĩa là (giải thích lại, tóm ý).
+L: Văn nói lịch sự.
+## せっかく〜のに
+C: せっかく ＋ 普通形 ＋ のに
+D: Mất công … vậy mà (kết quả uổng phí): せっかく作ったのに、誰も食べなかった.
+L: せっかく〜から: đã mất công thì hãy (tận dụng).
+## Vてみたら
+C: Vて ＋ みたら
+D: Thử … thì (phát hiện điều bất ngờ): 食べてみたら、おいしかった.
+L: Vế sau ở quá khứ.
+## 〜といけないから
+C: Vる／Vない ＋ といけないから
+D: Phòng khi, kẻo (chuẩn bị trước): 雨が降るといけないから、傘を持っていく.
+L: Vế sau là hành động phòng ngừa.
+## 〜ようでしたら
+C: 普通形 (Nの／Aな＋な) ＋ ようでしたら
+D: Nếu như (lịch sự, kinh doanh): ご都合が悪いようでしたら、ご連絡ください.
+L: Lịch sự hơn なら.
+## 〜てもよろしいでしょうか
+C: Vて ＋ もよろしいでしょうか
+D: Tôi … có được không ạ? (xin phép rất lịch sự).
+L: Dùng với người trên, khách hàng.
+## 〜のことで
+C: N ＋ のことで
+D: Về việc, liên quan đến (thường mở đầu chủ đề muốn bàn): 来週の会議のことで、相談があります.
+L: Văn nói lịch sự.
+## Vない＋ざるを得ない
+C: Vない bỏ ない ＋ ざるを得ない (する→せざるを得ない)
+D: Buộc phải, không thể không làm (dù không muốn): 中止せざるを得ない.
+L: Trang trọng, văn viết.
+## 〜ものですから
+C: 普通形 (Nな, Aな＋な) ＋ ものですから
+D: Vì … (giải thích, biện minh lịch sự).
+L: Lịch sự hơn ものだから, hợp khi xin lỗi, giải thích với người trên. Vế sau không dùng mệnh lệnh hay ý chí.
+## 〜ことにしておく
+C: 普通形 ＋ ことにしておく
+D: Tạm coi như là (dù thực tế khác): 今日は会わなかったことにしておこう.
+L: Thường dùng khi giữ bí mật hoặc xử lý tạm.
+## 〜かしら
+C: 普通形 (N／Aな bỏ だ) ＋ かしら
+D: … nhỉ? (tự hỏi, hơi nữ tính, văn nói).
+L: Nam giới dùng かな.
+## 〜んじゃないか
+C: 普通形 (Nな／Aな＋な) ＋ んじゃないか
+D: Chẳng phải là … sao, chắc là … (phỏng đoán, văn nói).
+L: Lịch sự: んじゃないでしょうか.
+## 〜にしたらどうですか
+C: N ＋ にしたらどうですか
+D: Chọn … thì sao? (gợi ý).
+L: Lịch sự hơn: にしたらいかがですか.
+## 〜といいと思います
+C: Vる ＋ といいと思います
+D: Tôi nghĩ … thì tốt (khuyên nhẹ).
+L: Mềm hơn ほうがいい.
+## どうも〜ようだ／そうだ
+C: どうも ＋ 普通形 ＋ ようだ／らしい
+D: Hình như, có vẻ (không rõ lắm nhưng cảm thấy vậy).
+L: どうも còn nghĩa "cảm ơn" khi đứng riêng.
+## 〜だけではなく、〜も
+C: N／普通形 ＋ だけではなく ＋ 〜も
+D: Không chỉ … mà còn ….
+L: Văn nói: だけじゃなく.
+## 〜とは思うが／思うんですが
+C: 普通形 ＋ とは思うが／とは思うんですが
+D: Tôi nghĩ là … nhưng (mở lời nêu ý kiến khác một cách khéo).
+L: Dùng khi phản biện nhẹ.
+## Vます＋そうもない
+C: Vます ＋ そうもない／そうにない
+D: Không có vẻ gì là …, khó mà …: 雨はやみそうもない.
+L: Phủ định của Vます＋そうだ.
+## Vる／Vないように言う
+C: Vる／Vない ＋ ように言う
+D: Bảo ai làm／đừng làm (truyền đạt gián tiếp).
+L: Trích trực tiếp: 「〜てください」と言う. Gián tiếp với ように không còn ください. Có thể thay 言う bằng 頼む, 注意する, 伝える.
+## 〜んだって／んですって
+C: 普通形 (Nな／Aな＋な) ＋ んだって
+D: Nghe nói là (văn nói).
+L: んですって hơi nữ tính.
+## 〜たって（＝〜ても）
+C: Vた ＋ って；Aくたって；N／Aな ＋ だって
+D: Dù … đi nữa (văn nói của ても).
+L: Không dùng văn viết.
+## かえって
+C: かえって ＋ V／A
+D: Ngược lại, trái lại (kết quả ngược với mong đợi): 薬を飲んだら、かえって悪くなった.
+L: Khác 逆に (trái chiều trung tính).
+## 〜はともかく
+C: N ＋ はともかく（として）
+D: Khoan bàn về …, … thì chưa nói (gác lại một điều, ưu tiên điều khác).
+L: Trang trọng.
+## なんとか〜
+C: なんとか ＋ V
+D: Bằng cách nào đó cũng (xoay xở được): なんとか間に合った.
+L: なんとかする: tìm cách giải quyết.
+## 〜としては
+C: N ＋ としては
+D: Về phía, đối với (lập trường): 私としては反対です.
+L: Thường đi với ý kiến, đánh giá của một bên (私としては, 会社としては). Khác にとっては (góc nhìn chịu ảnh hưởng).
+## 〜の代わりに
+C: Nの ＋ 代わりに；Vる ＋ 代わりに
+D: Thay cho, thay vì.
+L: Hai nghĩa: thay thế (肉の代わりに魚を使う) và bù lại, đổi lại (手伝う代わりに〜). Với người: 父の代わりに (thay cha).
+## Vます＋出す
+C: Vます ＋ 出す
+D: Bắt đầu (đột ngột).
+L: Đột ngột, ngoài dự tính (泣き出す, 降り出す). Hành động có kế hoạch dùng 始める.
+## 〜と同時に
+C: N／Vる ＋ と同時に
+D: Cùng lúc với, đồng thời (hai việc xảy ra cùng lúc hoặc một sự việc có hai mặt).
+L: Trang trọng hơn とともに.

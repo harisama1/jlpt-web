@@ -204,6 +204,8 @@ u.mark { text-decoration: none; border-bottom: 3px solid var(--c); padding-botto
 .verdict { font-weight: 800; display: flex; align-items: center; gap: 8px; }
 .feedback.ok .verdict { color: var(--ok); } .feedback.bad .verdict { color: var(--bad); }
 .info { display: flex; flex-direction: column; gap: 6px; }
+.info .th { display: flex; flex-direction: column; gap: 2px; padding: 6px 10px; border-left: 3px solid var(--primary); background: color-mix(in srgb, currentColor 5%, transparent); border-radius: 4px; line-height: 1.55; }
+.info .th > b { font-size: 12px; opacity: .7; text-transform: uppercase; letter-spacing: .03em; }
 .info .jp-line { font-family: var(--font-jp); font-size: 19px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .lv { display: inline-block; font-size: 11px; font-weight: 800; color: var(--c, var(--primary)); border: 1.5px solid currentColor; border-radius: 6px; padding: 0 5px; margin-left: 6px; vertical-align: 2px; font-family: var(--font-ui); }
 .next-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
