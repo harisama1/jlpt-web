@@ -158,6 +158,32 @@ for g in grammar:
         g['q'].append({'s': e['jp'][:i] + '（　　）' + e['jp'][i + len(hit):], 'a': hit, 'd': random.sample(others, 3), 'vi': e['vi']})
         nq += 1
 print('grammar', len(grammar), collections.Counter(g['lv'] for g in grammar), '| cloze items', nq + sum(1 for g in grammar if g.get('add')))
+# hand-checked wrong options for the cloze items above (grammar_fix.txt: "D|<id>.<i>|w1;w2;w3|ok/FIX note")
+byid = {g['id']: g for g in grammar}
+if os.path.exists(os.path.join(HERE, 'grammar_fix.txt')):
+    nfix = 0
+    for l in open(os.path.join(HERE, 'grammar_fix.txt'), encoding='utf-8'):
+        f = l.rstrip('\n').split('|')
+        if len(f) < 3 or f[0] not in ('D', 'S'): continue
+        gid, i = f[1].rsplit('.', 1); g = byid.get(gid)
+        if not g or int(i) >= len(g['q']): continue
+        if f[0] == 'D': g['q'][int(i)]['d'] = f[2].split(';'); nfix += 1
+        else:                                          # S: replace the whole item (broken sentence)
+            m = re.search(r'【(.+?)】', f[2]); g['q'][int(i)] = {'s': f[2].replace(m.group(0), '（　　）'), 'a': m.group(1), 'd': f[4].split(';'), 'vi': f[3]}; nfix += 1
+    print('grammar cloze wrong options replaced', nfix)
+# more practice / examples per pattern (grammar_more.txt: "Q|<p>|<sentence with 【answer】>|<vi>|w1;w2;w3" and "E|<p>|<jp>|<vi>")
+if os.path.exists(os.path.join(HERE, 'grammar_more.txt')):
+    byp = {g['p']: g for g in grammar}; nq2 = ne2 = 0; miss = collections.Counter()
+    for l in open(os.path.join(HERE, 'grammar_more.txt'), encoding='utf-8'):
+        f = l.rstrip('\n').split('|')
+        if not f or f[0] not in ('Q', 'E') or len(f) < 4: continue
+        g = byp.get(f[1])
+        if not g: miss[f[1]] += 1; continue
+        if f[0] == 'E': g['ex'].append({'jp': f[2], 'vi': f[3]}); ne2 += 1; continue
+        m = re.search(r'【(.+?)】', f[2])
+        if not m or len(f) < 5: continue
+        g['q'].append({'s': f[2].replace(m.group(0), '（　　）'), 'a': m.group(1), 'd': f[4].split(';'), 'vi': f[3]}); nq2 += 1
+    print('grammar_more: +%d questions, +%d examples' % (nq2, ne2), ('| unknown patterns: %s' % dict(miss)) if miss else '')
 # theory per pattern (grammar_theory.txt: "## <p>" then C:/D:/L: lines = form / usage / notes); first block of a p wins
 theory, cur = {}, None
 for l in open(os.path.join(HERE, 'grammar_theory.txt'), encoding='utf-8'):

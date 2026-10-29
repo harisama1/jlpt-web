@@ -1,6 +1,6 @@
 <!doctype html><meta charset="utf-8"><body><iframe id="f" style="width:1200px;height:900px"></iframe><pre id="o"></pre>
 <script>
-const routes = ['home','vocab','vocab/N3','vocab/N5/all','vocab/N3/2.1','kanji','kanji/N4','kanji/N5/quiz/hv','kanji/N3/quiz/wread','sent','more','more/read','more/read/r01','more/syn','more/grammar','more/grammar/all','more/listen','more/miss','more/mix','more/settings','vocab/N1'];
+const routes = ['home','vocab','vocab/N3','vocab/N5/all','vocab/N3/2.1','kanji','kanji/N4','kanji/N5/quiz/hv','kanji/N3/quiz/wread','sent','more','more/read','more/read/r01','more/syn','more/grammar','more/grammar/all','more/grammar/p/g0','more/grammar/p/g198','more/grammar/p/g999','more/listen','more/miss','more/mix','more/settings','vocab/N1'];
 const out = [], f = document.getElementById('f'); let i = 0;
 f.src = '../index.html#/home';
 f.onload = () => { f.contentWindow.onerror = (m, s, l) => out.push('JS ERROR ' + m + ' @' + s + ':' + l); setTimeout(step, 1500); };

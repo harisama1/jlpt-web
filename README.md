@@ -9,7 +9,7 @@ Bố cục theo bản thiết kế `JLPT_Design.drawio` (4 trang: HOME, Từ m�
 | Từ mới | Chọn cấp N5…N1 → lưới chủ đề có tiến độ → luyện (từ → nghĩa, kanji → cách đọc, nghĩa → từ, danh sách). Chủ đề **Từ bổ sung**: 361 từ ngoài giáo trình (nghĩa dịch máy, ghi chú trong phần xem thêm) |
 | Kanji | Chọn cấp → lưới chữ (âm Hán Việt + từ ghép). Bấm một chữ để luyện các từ ghép của chữ đó; câu "cách đọc" có đáp án nhiễu đọc gần giống nhau. Có nút luyện cả cấp |
 | Mẫu câu | 文脈規定 và 言い換え類義 |
-| Mục khác | Đọc hiểu · Từ đồng nghĩa · Ngữ pháp (theo nhóm) · Nghe hiểu (phát triển sau) · Lỗi sai · Ôn nhanh · Giao diện & sao lưu |
+| Mục khác | Đọc hiểu · Từ đồng nghĩa · Ngữ pháp (theo nhóm; mỗi mẫu có trang riêng: lý thuyết + ví dụ + **luyện riêng mẫu đó**; tìm được bằng chữ Nhật, tiếng Việt hoặc romaji như "ni naru") · Nghe hiểu (phát triển sau) · Lỗi sai · Ôn nhanh · Giao diện & sao lưu |
 
 Sau mỗi câu: dịch nghĩa câu, lý do đáp án đúng và nghĩa của cả 4 lựa chọn. Câu hỏi không lặp lại trong một phạm vi cho tới khi hết.
 Tiến độ lưu trong trình duyệt (localStorage, giữ được tiến độ của bản cũ); xuất / nhập file JSON ở **Mục khác → Giao diện & sao lưu**.
@@ -58,9 +58,12 @@ rồi thêm một dòng `import './sections/ten.js'` trong `js/main.js`. Thẻ �
 - `vocab.json`, `kanji.json`, `grammar.json`: bóc từ bộ PDF ôn N5–N3 bằng `tools/parse_*.py` + danh sách JLPT của Jonathan Waller; nghĩa tiếng Việt trong `tools/vi_part*.txt`.
   Build lại: `python3 tools/build_data.py tools/src`.
 - `sentences.json`, `synonyms.json`, `reading.json`, `gloss.json`: câu hỏi tự soạn theo dạng đề (không phải đề thi thật), có bản dịch và giải thích.
+- Ngữ pháp: 368 mẫu (N5 83 · N4 92 · N3 190 · N2 3), 1478 câu điền chỗ trống, ≥ 4 câu cho hầu hết các mẫu. `tools/grammar_more.txt` (câu luyện + ví dụ thêm cho từng mẫu), `tools/grammar_fix.txt` (đáp án nhiễu viết lại cho câu sinh từ PDF), mẫu mới ở cuối `grammar_add.txt` + `grammar_theory.txt`.
 - `tools/extra_words.tsv`: từ bổ sung (từ, cách đọc, nghĩa Việt, nghĩa Anh JMdict, cấp), build_data.py nạp vào chủ đề "Từ bổ sung". Từ thuộc danh sách N2/N1 được gán N2/N1 và hiện khi mở cấp đó.
 
 ## Kiểm tra
 
+- `python3 tools/check_grammar.py [data/grammar.json | file.txt]`: chính tả tiếng Việt (từng âm tiết: vần hợp lệ, một dấu thanh), một chỗ trống, 4 lựa chọn khác nhau, lựa chọn lặp chữ trước chỗ trống, đáp án nhiễu là biến thể của chính mẫu (cần xem lại).
+- `python3 tests/run_browser_test.py quiz|routes`: chạy trang test trong một Firefox headless, tự thoát (không để tiến trình sót lại).
 - `python3 tools/check_data.py`: dữ liệu (4 đáp án khác nhau, không rỗng, đúng 1 chỗ trống…).
 - `tests/quiz.html` và `tests/routes.html` (mở qua `python3 -m http.server`): sinh câu ở mọi chế độ, kiểm không lặp, mọi đáp án có giải nghĩa, đi qua mọi trang; in số lỗi.

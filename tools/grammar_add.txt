@@ -144,3 +144,32 @@ N3|〜としては|Về phía …, đối với … (lập trường)|N＋とし
 N3|〜の代わりに|Thay cho …, thay vì …|N＋の代わりに／Vる＋代わりに|父【の代わりに】私が会議に出た。|Tôi đi họp thay bố.|のかわりで;のおかげで;のついでに
 N3|Vます＋出す|Bắt đầu … (đột ngột)|Vます＋出す|急に雨が降り【出した】。|Trời đột nhiên đổ mưa.|かけた;きった;すぎた
 N3|〜と同時に|Cùng lúc với …, đồng thời|N／Vる＋と同時に|ベルが鳴る【と同時に】、学生が教室を出た。|Chuông vừa reo thì học sinh ra khỏi lớp.|とたんで;うちに;間で
+# 2026-10-29: 11 N5 + 19 N4 patterns that were missing (written by an agent, checked by tools/check_grammar.py + review pass)
+N5|疑問詞|Từ để hỏi, dùng để hỏi về sự vật, nơi chốn, thời gian, người, lựa chọn, tính chất, giá tiền, số lượng|疑問詞（何・どこ・いつ・だれ・どれ・どんな・いくら・いくつ）＋助詞＋V・A・N＋か|【いつ】日本へ行きましたか。|Bạn đã đi Nhật khi nào?|どこ;だれ;いくら
+N5|Aく／Aに＋V|Tính từ đuôi い đổi thành trạng từ bằng cách bỏ い rồi thêm く, tính từ đuôi な đổi thành に, để bổ nghĩa cho động từ|Aい→Aく＋V；Aな→Aに＋V|みんな、元気【に】挨拶しました。|Mọi người chào hỏi rất vui vẻ.|く;い;だ
+N5|〜の|Thay thế danh từ đã được nhắc đến hoặc hiểu ngầm, tránh lặp lại (cái, chiếc, người)|Aい＋の（赤いの・大きいの）、Aな＋の（静かなの）|このかばんは大きいですが、小さい【の】がほしいです。|Cái cặp này to, nhưng tôi muốn cái nhỏ hơn.|こと;だ;ので
+N5|AかB|Hoặc: đưa ra hai (hoặc nhiều) lựa chọn|N1か N2；V・Aか V・Aか|飲み物はお茶【か】水にします。|Đồ uống tôi chọn là trà hoặc nước lọc.|に;で;を
+N5|〜はどうですか／いかがですか|Hỏi ý kiến hoặc mời ai đó một việc gì, dịch là "thế nào?" hoặc "anh/chị dùng ... nhé?"|N＋はどうですか／いかがですか|コーヒーは【いかがですか】。|Anh/chị dùng cà phê nhé?|どこですか;いつですか;なにですか
+N5|もっと＋A／V|Hơn nữa, nhiều hơn: diễn tả mức độ hoặc số lượng tăng thêm so với hiện tại hoặc mong muốn|もっと＋Aい／Aな（に）／V|【もっと】ゆっくり話してください。|Làm ơn nói chậm hơn nữa.|もうすぐ;いちばん;ほとんど
+N5|普通形|Thể thường, dùng trong hội thoại thân mật, không dùng です・ます|V・Aい・Aな・N ở thể thường（見る・高い・静かだ・学生だ）と các dạng phủ định, quá khứ tương ứng|昨日、映画を【見た】？|Hôm qua cậu có xem phim không?|見る;見て;見ます
+N5|Nに会います|Gặp (ai đó), dùng に để chỉ người được gặp|Nに会います（会いました・会いたい）|空港で母【に】会いました。|Tôi đã gặp mẹ ở sân bay.|を;が;へ
+N5|数＋助数詞|Số đếm kết hợp với đơn vị đếm phù hợp với loại đối tượng|数＋助数詞（〜つ・〜人・〜枚・〜本・〜台・〜回）|りんごを三【つ】買いました。|Tôi đã mua ba quả táo.|人;枚;台
+N5|そして／それから／でも|Liên từ đầu câu: そして (và, rồi), それから (sau đó, thêm nữa), でも (nhưng, tuy nhiên)|文。＋そして／それから／でも、＋文。|朝ごはんを食べました。【それから】、学校へ行きました。|Tôi đã ăn sáng. Sau đó tôi đi học.|でも;しかし;いいえ
+N5|Aくないです／Aではありません|Phủ định của tính từ: đuôi い đổi thành くないです, tính từ đuôi な và danh từ dùng ではありません|Aい→Aくないです；Aな・N→Aではありません|この部屋は暗【くない】です。|Căn phòng này không tối.|い;かった;くて
+N4|尊敬語の特別な動詞|Động từ kính ngữ đặc biệt, dùng để nói về hành động của người trên với lòng kính trọng|いらっしゃる・召し上がる・おっしゃる・ご覧になる・なさる（chia theo ます形）|先生が教室に【いらっしゃいました】。|Thầy giáo đã đến lớp.|参りました;伺いました;申しました
+N4|謙譲語の特別な動詞|Động từ khiêm nhường đặc biệt, hạ thấp hành động của bản thân hoặc người trong nhóm mình|参る・申す・いたす・拝見する・伺う（chia theo ます形）|資料を【拝見しました】。|Tôi đã xem tài liệu của quý khách.|ご覧になりました;召し上がりました;いらっしゃいました
+N4|〜がする|Diễn tả cảm nhận qua giác quan (âm thanh, mùi, vị, giọng) hoặc cảm giác mơ hồ|名詞（音・におい・味・声・気）＋がする|台所から、いいにおい【がします】。|Từ bếp có mùi thơm.|をします;になります;でします
+N4|〜だろう／〜だろうと思う|Có lẽ là, chắc là (phỏng đoán có căn cứ); 〜だろうと思う nghe nhẹ nhàng hơn|普通形＋だろう（行くだろう・高いだろう・静かだろう・学生だろう）|彼女はもう家に着いている【だろう】。|Chắc cô ấy đã về đến nhà rồi.|です;ます;でした
+N4|数量＋も|Nhấn mạnh số lượng, thời gian hoặc mức độ nhiều hơn mong đợi (tới tận, tới những).|数量＋も（例：三時間も、十本も）|昨日は宿題に三時間【も】かかりました。|Hôm qua làm bài tập về nhà tốn tới ba tiếng đồng hồ.|で;を;から
+N4|〜のような／〜のように|Giống như, như là (dùng để ví von hoặc đưa ví dụ).|N＋のような＋N ／ N＋のように＋V|彼女は、まるで女優【のような】美しい人です。|Cô ấy là người đẹp như một nữ diễn viên vậy.|のように;ような;のよう
+N4|〜たがる|Có vẻ muốn, muốn (nói về mong muốn của người khác).|Vます（bỏ ます）＋たがる|妹は、いつも私の服を着【たがります】。|Em gái tôi lúc nào cũng muốn mặc quần áo của tôi.|たい;たくて;たがって
+N4|〜けど／〜けれども|Nhưng, tuy... nhưng (nối hai vế tương phản một cách nhẹ nhàng).|普通形＋けど／けれども（〜ですけど、〜ますけど）|明日は雨が降る【けど】、遠足は予定どおり行きます。|Ngày mai tuy có mưa nhưng chuyến dã ngoại vẫn đi theo đúng kế hoạch.|から;ので;ながら
+N4|〜てもかまわない|Cũng được, không sao nếu... (cho phép).|Vて形＋もかまわない|食べたくなければ、残し【てもかまいません】。|Nếu không muốn ăn thì để lại cũng không sao.|てはいけません;ないでください;なければなりません
+N4|まだ〜ている|Vẫn còn đang... (vẫn chưa...).|まだ＋Vて形＋いる|彼は、まだ会議室で話し【ています】。|Anh ấy vẫn còn đang nói chuyện trong phòng họp.|ました;たばかりです;ていません
+N4|〜でしょうか|Xin hỏi có phải... không ạ? (hỏi lịch sự).|普通形＋でしょうか|失礼ですが、先生は今、お時間がある【でしょうか】。|Xin lỗi, bây giờ thầy có rảnh không ạ?|でしょう;でした;ですね
+N4|〜という意味です／〜と読みます|Có nghĩa là... / đọc là... (giải thích nghĩa hoặc cách đọc).|「言葉」は「X」という意味です ／ 「漢字」は「よみ」と読みます|「おいしい」は、英語で「delicious」【という意味です】。|Trong tiếng Anh, 「おいしい」 có nghĩa là "delicious".|と読みます;という意味でした;という意味ではありません
+N4|〜と同じ／〜と違う|Giống với... / khác với...|N1は、N2と同じ／と違う|私の時計は、兄の時計【と同じ】です。|Đồng hồ của tôi giống với đồng hồ của anh trai tôi.|と違う;に同じ;で同じ
+N4|疑問詞＋でも|Bất cứ ai, cái gì, lúc nào... (không giới hạn).|疑問詞＋でも（何でも、だれでも、いつでも）|うちの子は、【何でも】よく食べます。|Con nhà tôi ăn cái gì cũng ngon lành.|何も;何を;何に
+N4|自動詞と他動詞|Phân biệt tự động từ (tự xảy ra) và tha động từ (có người làm).|自動詞：Nが＋V（開く）／他動詞：Nを＋V（開ける）|風で窓が【開いて】いました。|Cửa sổ đã mở ra do gió.|開けて;開けられて;開けさせて
+N4|〜ことになっている|Được quy định là, đã được quyết định là.|Vる／Vない＋ことになっている|会社では、毎週月曜日に会議をする【ことになっています】。|Ở công ty, theo quy định mỗi thứ Hai đều có họp.|ことにしています;ことがあります;ことができます
+N4|Nでも|Hay là... / ví dụ như... (gợi ý nhẹ).|N＋でも|疲れたので、お茶【でも】飲みませんか。|Mệt quá, hay là uống chút trà nhé?|で;か;に

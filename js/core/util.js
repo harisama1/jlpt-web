@@ -27,4 +27,19 @@ const P = {
   check: '<path d="M5 12l5 5 9-10"/>', x: '<path d="M6 6l12 12M18 6L6 18"/>', back: '<path d="M15 5l-7 7 7 7"/>', lock: '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/>'
 };
 export const icon = (n, cls = 'ic') => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n] || P.more}</svg>`;
+// kana -> romaji (Hepburn-ish) so patterns can be searched as "ni naru"; kanji and symbols are dropped
+const K1 = 'あ a い i う u え e お o か ka き ki く ku け ke こ ko さ sa し shi す su せ se そ so た ta ち chi つ tsu て te と to な na に ni ぬ nu ね ne の no は ha ひ hi ふ fu へ he ほ ho ま ma み mi む mu め me も mo や ya ゆ yu よ yo ら ra り ri る ru れ re ろ ro わ wa を o ん n が ga ぎ gi ぐ gu げ ge ご go ざ za じ ji ず zu ぜ ze ぞ zo だ da ぢ ji づ zu で de ど do ば ba び bi ぶ bu べ be ぼ bo ぱ pa ぴ pi ぷ pu ぺ pe ぽ po ぁ a ぃ i ぅ u ぇ e ぉ o'.split(' ');
+const KR = {}; for (let i = 0; i < K1.length; i += 2) KR[K1[i]] = K1[i + 1];
+export function romaji(s) {
+  const h = String(s).replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+  let out = '';
+  for (let i = 0; i < h.length; i++) {
+    const c = h[i], n = h[i + 1];
+    if (c === 'っ') { const r = KR[n] || ''; out += r ? r[0] : ''; continue; }
+    if (c === 'ー') { out += out.slice(-1); continue; }
+    if ('ゃゅょ'.includes(n) && KR[c]) { const v = { 'ゃ': 'a', 'ゅ': 'u', 'ょ': 'o' }[n], b = KR[c]; out += (/^(shi|chi|ji)$/.test(b) ? b.slice(0, -1) : b.slice(0, -1) + 'y') + v; i++; continue; }
+    out += KR[c] !== undefined ? KR[c] : ' ';
+  }
+  return out.replace(/\s+/g, ' ').trim();
+}
 export const color = id => `--c: var(--c-${id}, var(--primary))`;

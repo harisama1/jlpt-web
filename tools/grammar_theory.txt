@@ -1356,3 +1356,123 @@ L: Đột ngột, ngoài dự tính (泣き出す, 降り出す). Hành động 
 C: N／Vる ＋ と同時に
 D: Cùng lúc với, đồng thời (hai việc xảy ra cùng lúc hoặc một sự việc có hai mặt).
 L: Trang trọng hơn とともに.
+## 疑問詞
+C: Đặt từ để hỏi vào đúng vị trí của thông tin cần hỏi, ví dụ 何を食べますか、どこへ行きますか. Câu hỏi thường kết thúc bằng か.
+D: Dùng để hỏi thông tin: 何 (cái gì), どこ (ở đâu), いつ (khi nào), だれ (ai), どれ (cái nào trong nhóm), どんな (như thế nào), いくら (bao nhiêu tiền), いくつ (bao nhiêu cái).
+L: 何 đọc là なん trước だ, の, で (なんですか). Lỗi thường gặp là dùng どれ để hỏi người (đúng là だれ) hoặc dùng いくら để hỏi số lượng (đúng là いくつ). どれ chọn trong một nhóm đã biết, còn どこ chỉ nơi chốn.
+## Aく／Aに＋V
+C: Tính từ đuôi い: bỏ い rồi thêm く (早い→早く). Tính từ đuôi な: bỏ な rồi thêm に (静か→静かに). Đặt ngay trước động từ.
+D: Dùng để bổ nghĩa cho động từ, cho biết hành động diễn ra như thế nào (nhanh, chậm, yên lặng, tử tế...).
+L: Không đặt い hoặc な trực tiếp trước động từ (lỗi thường gặp). Khác với 〜くなる／〜になる (trở nên), cũng dùng く và に nhưng đi với なる để chỉ sự thay đổi.
+## 〜の
+C: Tính từ đuôi い hoặc な＋の, đứng thay cho danh từ đã nhắc đến (赤いの là 赤い傘, 赤いもの). Ví dụ: 赤いのがほしい、静かなのがいい.
+D: Dùng để thay cho danh từ đã được nói tới hoặc hiểu được từ ngữ cảnh, giúp câu gọn và tránh lặp lại (cái này, cái kia, cái nào).
+L: Chỉ dùng khi danh từ được hiểu từ ngữ cảnh. Không nhầm với の sở hữu (私の本). Không nhầm với 〜のです dùng để giải thích.
+## AかB
+C: N1か N2; V・Aの thể thường＋か V・Aの thể thường＋か (行くか行かないか). Đặt か giữa các lựa chọn.
+D: Đưa ra hai lựa chọn để người nghe chọn, hoặc diễn tả sự không chắc chắn về một việc.
+L: Khác với と (và, liệt kê đầy đủ) và や (và các thứ khác, liệt kê không đầy đủ). Thường dùng trong câu hỏi hoặc câu nói không chắc chắn.
+## 〜はどうですか／いかがですか
+C: N＋はどうですか／いかがですか; V（辞書形）＋のはどうですか để gợi ý làm việc gì. いかがです là dạng lịch sự hơn どうです.
+D: Hỏi ý kiến của người nghe về một việc hoặc vật, hoặc đưa ra lời mời, lời gợi ý một cách lịch sự.
+L: Với gợi ý hành động, dùng 〜のはどうですか, không dùng trực tiếp 〜はどうですか sau động từ. いかが lịch sự hơn どう khi mời đồ ăn, đồ uống. Khác với 〜ませんか (rủ rê trực tiếp).
+## もっと＋A／V
+C: もっと＋Aい（もっと大きい）、もっと＋Aな（もっと静かに）、もっと＋V（もっと食べる）. もっと đứng ngay trước tính từ hoặc động từ.
+D: Diễn đạt mức độ, số lượng tăng thêm, hoặc mong muốn có nhiều hơn so với hiện tại.
+L: Không nhầm với もう (đã, thêm một lần nữa như もう一度) và もうすぐ (sắp). Khi so sánh hai đối tượng dùng 〜のほうが…もっと hoặc 〜より.
+## 普通形
+C: Động từ: 行く／行かない／行った／行かなかった. Tính từ い: 高い／高くない／高かった. Tính từ な và danh từ: 静かだ／静かじゃない／静かだった; 学生だ／学生じゃない／学生だった.
+D: Dùng trong hội thoại thân mật với bạn bè, người thân, và trong câu thể thường khi đứng trước と思う hoặc khi trích dẫn.
+L: Không dùng với người trên hay khách hàng; khi đó dùng です／ます. 〜じゃない tương đương 〜ではない, còn 〜ではありません là lịch sự. Không nhầm thể thường với thể từ điển trong câu lịch sự.
+## Nに会います
+C: Người＋に＋会います／会いました／会いたい／会う.
+D: Diễn đạt việc gặp một người nào đó, có hẹn trước hoặc tình cờ.
+L: Lỗi thường gặp là dùng を với 会う (友だちを会います là sai). 〜と会います (gặp nhau, hẹn gặp) cũng có thể dùng nhưng nhấn mạnh việc cùng gặp.
+## 数＋助数詞
+C: Số đếm＋助数詞: 〜つ (đồ vật chung, đến mười), 〜人 (người), 〜枚 (vật mỏng, phẳng như giấy, áo), 〜本 (vật dài như bút, chai), 〜台 (máy móc, xe), 〜回 (số lần). Một số cách đọc đặc biệt: 一人（ひとり）、二人（ふたり）.
+D: Dùng khi đếm đối tượng, số đếm và đơn vị đặt trước động từ hoặc trợ từ thích hợp.
+L: Lỗi thường gặp là dùng sai đơn vị (三本 cho người) hoặc đọc sai 一人 và 二人. Khi không chắc loại đồ vật, có thể dùng 〜つ cho đồ vật thông thường.
+## そして／それから／でも
+C: 文。＋そして／それから／でも、＋文。 Đứng đầu câu mới, sau dấu 。.
+D: そして: và, rồi (nối các việc, liệt kê). それから: sau đó, thêm nữa (theo trình tự thời gian hoặc bổ sung). でも: nhưng, tuy nhiên (đối lập với ý trước).
+L: Không dùng でも để nối ý liệt kê hay trình tự thời gian. それから thiên về trình tự và bổ sung hơn là đối lập. しかし có nghĩa tương tự でも nhưng mang tính văn viết trang trọng hơn.
+## Aくないです／Aではありません
+C: Aい: bỏ い rồi thêm くないです (寒くないです). Aな và danh từ: thêm ではありません (静かではありません、学生ではありません). いい đặc biệt đổi thành よくないです.
+D: Phủ định tính chất hoặc trạng thái, danh tính ở thể lịch sự: "không …".
+L: Lỗi thường gặp là viết 〜いくない hoặc dùng 〜くないです cho tính từ な. 〜ではないです có thể dùng nhưng ít tự nhiên hơn 〜ではありません. Thể thân mật tương ứng là 〜くない và 〜じゃない.
+## 尊敬語の特別な動詞
+C: 行く・来る・いる→いらっしゃる; 食べる・飲む→召し上がる; 言う→おっしゃる; 見る→ご覧になる; する→なさる. Chia theo ます: いらっしゃいます、召し上がりました.
+D: Dùng khi nói về hành động của người trên như thầy cô, khách hàng, cấp trên để thể hiện sự kính trọng.
+L: Không dùng dạng khiêm nhường (参る・伺う・拝見する) cho người khác và không dùng cho hành động của chính mình. Không nhầm với dạng 〜れる／られる hay お〜になる, là kính ngữ thông thường; các động từ này phải học riêng.
+## 謙譲語の特別な動詞
+C: 行く・来る→参る; 言う→申す; する→いたす; 見る→拝見する; 聞く・訪ねる→伺う. Chia theo ます: 参ります、申します、いたします、拝見します、伺います.
+D: Dùng để hạ thấp hành động của mình khi nói với người trên, thể hiện sự khiêm tốn và tôn trọng người nghe.
+L: Không dùng cho hành động của người trên (lỗi đảo ngược so với 尊敬語). 伺う (hỏi, thăm, nghe một cách khiêm tốn) khác với 聞く (nghe thông thường) và thường đi với 〜に伺う.
+## 〜がする
+C: Danh từ (音・におい・味・声・気)＋がします／がした. Ví dụ: 〜のような味がします (có vị giống như …).
+D: Dùng để nói cảm nhận từ giác quan (nghe, ngửi, nếm) hoặc cảm giác mơ hồ, dịch là "có tiếng / có mùi / có vị / có cảm giác".
+L: Không dùng を hoặc に với các danh từ này (をします là sai). Khác với 気にする (để tâm, bận tâm): 気がする là có cảm giác, còn 気にする là lo lắng.
+## 〜だろう／〜だろうと思う
+C: Thể thường＋だろう: 行くだろう／行かないだろう; 高いだろう; 静かだろう／学生だろう. Dạng lịch sự là 〜でしょう. Thêm と思う để nói nhẹ nhàng hơn.
+D: Diễn tả phỏng đoán có căn cứ về điều gì đó (chắc là, có lẽ là). 〜だろうと思う thể hiện sự phỏng đoán khiêm tốn hơn.
+L: Khi hỏi người khác không dùng だろう mà dùng 〜でしょうか hoặc 〜ですか. Không nhầm với 〜かもしれない (có thể), vì かもしれない chỉ độ chắc chắn thấp hơn. Với người trên nên dùng 〜でしょう.
+## 〜って
+C: 普通形＋って (言う・聞く・思う など); 名詞＋って (nêu chủ đề, dùng trong văn nói). Đây là dạng thân mật của 〜と／〜という.
+D: Dùng trong văn nói để trích dẫn lời đã nói, thông tin đã nghe hoặc suy nghĩ, dịch là "nghe nói là", "bảo là".
+L: Chỉ dùng trong hội thoại thân mật. Trong văn viết hoặc khi nói với người trên, dùng 〜と／〜という. Không dùng 〜って sau động từ ở thể lịch sự như 〜ですって ở văn trang trọng.
+## 数量＋も
+C: Số lượng hoặc thời gian + も (三時間も、十本も、九十歳も), đặt ngay sau con số, rồi mới đến động từ hoặc vị ngữ.
+D: Nhấn mạnh rằng số lượng, thời gian hay mức độ lớn hơn mong đợi, thường mang sắc thái ngạc nhiên hoặc hơi quá mức. Hay gặp với かかる, 遅れる, 待つ, 食べる.
+L: Không nhầm với 〜しか (chỉ… thôi, luôn đi với phủ định) và 〜だけ (chỉ), là các cách nói số lượng ít. Không thêm trợ từ giữa số lượng và も.
+## 〜のような／〜のように
+C: N＋のような＋N (bổ nghĩa cho danh từ); N＋のように＋V (bổ nghĩa cho động từ); N＋のようだ／のようです (làm vị ngữ).
+D: Dùng để ví von hoặc đưa ra ví dụ tương tự, nghĩa là "giống như, như là". Thường đi với まるで để nhấn mạnh sự giống nhau.
+L: 〜のよう không đứng trước danh từ, phải dùng 〜のような. Khác với 〜みたい (thân mật hơn) và 〜ようだ dùng để suy đoán; のよう chỉ dùng để so sánh.
+## 〜たがる
+C: Vます（bỏ ます）＋たがる; dạng thường dùng: 〜たがっている, 〜たがります, 〜たがっていた.
+D: Diễn tả mong muốn của người khác (con cái, bạn bè, người thân) mà người nói quan sát được, nghĩa là "muốn, có vẻ muốn". Ngôi thứ nhất dùng 〜たい.
+L: Không dùng 〜たがる để nói mong muốn của chính mình hay của người đối diện. Khác với 〜たい là mong muốn trực tiếp. Lỗi thường gặp: quên 〜ている khi nói về hiện tại (〜たがっている).
+## 〜けど／〜けれども
+C: Thể thường (普通形) + けど／けれども（〜だけど、〜ですけど、〜ますけど）. Dạng lịch sự hơn là 〜ですが.
+D: Nối hai vế có nội dung đối lập hoặc tương phản nhẹ, nghĩa là "nhưng, tuy... nhưng". Cũng dùng để mở đầu lời nhờ vả hoặc hỏi lịch sự rồi bỏ lửng vế sau.
+L: Không mang nghĩa nguyên nhân như 〜から hay 〜ので. けれども trang trọng hơn けど; trong hội thoại thường ngày hay dùng けど.
+## 〜てもかまわない
+C: Vて形 + もかまわない／もかまいません (thân mật: 〜てもいい).
+D: Cho phép hoặc đồng ý để người khác (hoặc chính mình) làm việc gì đó, nghĩa là "cũng được, không sao nếu...". Dạng 〜てもかまいません lịch sự, dùng khi nói với người trên.
+L: Trái nghĩa với 〜てはいけません (cấm). Khác với 〜なくてもいい (không cần làm). Lỗi thường gặp: dùng 〜てもかまいません để xin phép cho chính mình, nên dùng 〜てもいいですか.
+## まだ〜ている
+C: まだ＋Vて形＋いる（〜ています）; phủ định: まだ〜ていません (vẫn chưa…).
+D: Diễn tả việc hoặc trạng thái vẫn tiếp diễn tại thời điểm nói, dù đáng lẽ đã kết thúc hoặc thay đổi (vẫn còn đang…).
+L: Khác với 〜ている đơn thuần (đang), まだ thêm nghĩa "vẫn còn, chưa". Không dùng まだ với 〜た (đã); với 〜た thì dùng もう (đã... rồi).
+## 〜でしょうか
+C: Thể thường (普通形) + でしょうか; với N・Naだ thì だ→でしょうか (例：静かでしょうか).
+D: Hỏi một cách lịch sự, mềm mại, nhất là khi không chắc chắn hoặc khi nói với người trên, người lạ, nghĩa là "không biết có… không ạ?".
+L: Mềm hơn 〜ですか. Không dùng 〜でしょう (phỏng đoán, không phải câu hỏi) thay cho 〜でしょうか. Dùng với bạn bè thì không tự nhiên; thân mật hơn dùng 〜だろうか.
+## 〜という意味です／〜と読みます
+C: 「言葉」は、「X」＋という意味です. 「漢字」は、「よみ」＋と読みます.
+D: 〜という意味です dùng để giải nghĩa một từ hoặc thuật ngữ; 〜と読みます dùng để chỉ cách đọc của chữ Hán hoặc một từ.
+L: Phân biệt 意味 (nghĩa) và 読み (cách đọc): không dùng 〜と読みます khi nói nghĩa, và ngược lại. Hay quên 「」 hoặc dùng sai trợ từ は/で.
+## 〜と同じ／〜と違う
+C: N1は、N2と同じ／と違う（です／ます）; bổ nghĩa danh từ: N2と同じ＋N, N2と違う＋N.
+D: So sánh giống nhau hoặc khác nhau giữa hai đối tượng. 同じ nghĩa là giống, 違う nghĩa là khác.
+L: Luôn dùng と, không dùng に hay で. 同じ đứng trước danh từ trực tiếp (同じ時計), không thêm な hay の; 違う là động từ (違います).
+## 疑問詞＋でも
+C: 何でも、だれでも、いつでも、どこでも、どれでも + động từ khẳng định / Aい / です.
+D: Chỉ "bất cứ ai, cái gì, lúc nào, nơi nào..." không giới hạn; thường dùng để nói sự cho phép hay tính phổ biến.
+L: Không dùng với động từ phủ định; với phủ định dùng 疑問詞＋も (だれも来ませんでした). Khác với 疑問詞＋か (một... nào đó). Không nhầm với 〜でも (dù là).
+## Vます＋出す
+C: Vます（bỏ ます）＋出す（降り出す、泣き出す、話し出す）; quá khứ 〜出した, tiếp diễn 〜出している.
+D: Diễn tả một hành động hoặc hiện tượng bắt đầu đột ngột, ngoài dự đoán, thường là hiện tượng tự nhiên hoặc cảm xúc, nghĩa là "bắt đầu (đột nhiên)…".
+L: Khác với 〜始める (bắt đầu có chủ ý, có kế hoạch), không dùng 〜出す cho việc làm có chủ ý. Không nhầm 出す với 出る (đi ra).
+## 自動詞と他動詞
+C: Tự động từ: Nが＋V（ドアが開く）; tha động từ: Nを＋V（ドアを開ける）.
+D: Tự động từ diễn tả sự việc tự xảy ra, không có người tác động rõ. Tha động từ diễn tả có người chủ động làm việc đó. Trợ từ が/を đi theo đúng loại động từ.
+L: Các cặp hay gặp: 開く／開ける, 閉まる／閉める, つく／つける, 消える／消す, 割れる／割る. Lỗi thường gặp là dùng sai trợ từ (ドアを開く là sai). Tự động từ hay đi với 〜ている để chỉ trạng thái (ドアが開いている).
+## 〜ことになっている
+C: Vる／Vない＋ことになっている; Nの＋ことになっている.
+D: Diễn tả quy định, nội quy hoặc kế hoạch đã được định sẵn (theo luật, lịch trình), không phải do người nói tự quyết định.
+L: Khác với 〜ことにしている (quyết định hoặc thói quen của cá nhân: 毎朝走ることにしている) và 〜ことになった (quyết định thay đổi vừa được đưa ra). Lỗi thường gặp là dùng cho thói quen cá nhân hoặc quên 〜ている.
+## Nでも
+C: N＋でも（お茶でも、映画でも、散歩でも）; thường đi với 〜ませんか, 〜たらどうですか.
+D: Đưa ra gợi ý nhẹ nhàng, không ép buộc, nghĩa là "hay là... đi / thử... xem sao". Cũng dùng để nêu một ví dụ trong nhiều lựa chọn.
+L: Khác với 〜でも (dù là, ngay cả: 雨でも行きます) mang nghĩa nhượng bộ, và khác với 〜か (hoặc, lựa chọn). Dùng trong giao tiếp thân mật hoặc lịch sự nhẹ.

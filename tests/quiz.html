@@ -32,6 +32,13 @@ try {
   uniq('ngữ pháp', DB.gq.length, () => grammarQ(DB.gq, 'u2'));
   const t21 = DB.vocab.filter(v => v.t === '2.1'); uniq('từ vựng 2.1', t21.length, () => vocabQ('mean', t21, 'u3'));
   const tx = DB.vocab.filter(v => v.t === 'X' && v.lv === 'N3'); uniq('từ bổ sung', tx.length, () => vocabQ('mean', tx, 'u4'));
+  // romaji search key for grammar patterns ("ni naru" must find Aく／Aに＋なる)
+  const { romaji } = await import('../js/core/util.js');
+  const rj = romaji('Aく／Aに＋なる') + ' | ' + romaji('しゅっぱつ') + ' | ' + romaji('キャンプ');
+  out.push('romaji: ' + rj); if (!rj.includes('ni naru') || !rj.includes('shuppatsu') || !rj.includes('kyanpu')) fail('romaji ' + rj);
+  // every grammar question: one blank, 4 different options
+  for (const x of DB.gq) { const o = [x.q.a, ...x.q.d]; if (x.q.s.split('（　　）').length !== 2 || new Set(o).size !== 4) fail('grammar item ' + x.id + ' ' + x.q.s); }
+  out.push('ngữ pháp: ' + DB.grammar.length + ' mẫu, ' + DB.gq.length + ' câu, mẫu < 4 câu: ' + DB.grammar.filter(g => DB.gq.filter(x => x.g === g).length < 4).length);
   // merge of two devices: newer item wins, a mistake cleared later does not come back, daily counts keep the max
   const st = await import('../js/core/store.js');
   st.progress.r = { a: { c: 1, w: 0, s: 1, t: 100 }, b: { c: 0, w: 1, s: 0, t: 300 } }; st.progress.m = { b: { sec: 'vocab', n: 1, t: 300 } }; st.progress.day = { '2026-10-26': { n: 5, ok: 3 } };
