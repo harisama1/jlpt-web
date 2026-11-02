@@ -1,7 +1,8 @@
 // Quiz engine shared by every section.
 // A question is a plain object: {id, sec, label, tag, prompt(html), ask, opts[], answer(index), jp, say, sayAfter,
 //   full (sentence with the answer filled in), vi (translation), why, notes[] (meaning of each option), info(html)}.
-// round(el, sec, gen) asks `size` questions from gen(), shows feedback + explanation, then a result card.
+// round(el, sec, gen, {size, back, onDone}) asks `size` questions from gen(), shows feedback + explanation, then a result card;
+// onDone(state, size) runs when the result card is shown (used by the daily plan to tick off reviews).
 import { $, $$, esc, shuffle, icon, color } from './util.js';
 import { record } from './store.js';
 import { speakBtn } from './speech.js';
@@ -65,6 +66,7 @@ export function round(el, sec, gen, opts = {}) {
   }
   function result() {
     KEYS = null;
+    if (opts.onDone) opts.onDone(st, size);
     const p = Math.round(100 * st.ok / size);
     const msg = p === 100 ? 'Tuyệt vời, không sai câu nào!' : p >= 80 ? 'Rất tốt! Ôn lại vài câu sai là ổn.' : p >= 50 ? 'Khá rồi, cố thêm chút nữa.' : 'Đừng nản, các câu sai đã được lưu để ôn lại.';
     el.innerHTML = `<div class="card result" style="${color(sec)}"><div class="muted small">Kết quả lượt này</div><div class="score">${st.ok}/${size}</div><div><b>${msg}</b></div>

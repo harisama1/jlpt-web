@@ -10,6 +10,8 @@ import './sections/vocab.js';
 import './sections/kanji.js';
 import './sections/practice.js';
 import './sections/reading.js';
+import './sections/plan.js';
+import './sections/exam.js';
 import { applyTheme } from './sections/review.js';
 import { now as syncNow, connected as syncOn } from './core/sync.js';
 

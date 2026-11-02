@@ -50,6 +50,14 @@ export function grammarInfo(g, all = false) {
 const gKey = g => (g.p + ' ' + g.mean + ' ' + romaji(g.p) + ' ' + romaji(g.p).replace(/ /g, '')).toLowerCase();
 const norm = q => q.toLowerCase().trim();
 function gMatch(g, q) { q = norm(q); return !q || gKey(g).includes(q) || gKey(g).includes(q.replace(/\s+/g, '')); }
+// patterns with several usages: one block per usage (explanation + its own practice items, q.u = usage number)
+function usesCard(g, qs) {
+  if (!g.uses || !g.uses.length) return '';
+  return `<div class="card uses-card" style="${color('grammar')}"><h2>Các cách dùng (${g.uses.length})</h2><div class="wlist">${g.uses.map(u => {
+    const pool = qs.filter(x => x.q.u === u.n);
+    return `<div class="use-row"><div><b>${u.n}. ${esc(u.k)}</b><div class="small">${esc(u.d)}</div><div class="small muted">${pool.length} câu · đã thuộc ${countLearned(pool.map(x => x.id))}</div></div>
+      ${pool.length ? `<button type="button" class="btn sec" data-use="${u.n}">Luyện cách dùng này</button>` : ''}</div>`; }).join('')}</div></div>`;
+}
 function patternPage(main, id) {
   const g = DB.grammar.find(x => x.id === id);
   if (!g) { main.innerHTML = '<div class="empty">Không tìm thấy mẫu này.</div>'; return; }
@@ -57,9 +65,16 @@ function patternPage(main, id) {
   const nav = (x, t) => x ? `<a class="btn sec" href="#/more/grammar/p/${x.id}">${t} ${esc(x.p)}</a>` : '';
   main.innerHTML = pageHead('grammar', g.p, g.lv + (g.grp ? ' · ' + g.grp : ''), [g.grp || 'Ngữ pháp', g.grp ? '#/more/grammar/' + encodeURIComponent(g.grp) : '#/more/grammar']) +
     `<div class="card" style="${color('grammar')}"><h2>Lý thuyết</h2><div class="info">${grammarInfo(g, true)}</div></div>
+    ${usesCard(g, qs)}
     <div class="card" style="${color('grammar')}"><h2>Luyện mẫu này</h2><p class="small muted">${qs.length} câu điền chỗ trống, chỉ dùng mẫu ${esc(g.p)}; đã thuộc ${countLearned(qs.map(x => x.id))}/${qs.length}.</p>
     ${qs.length ? '<button type="button" class="btn c" id="gp">Bắt đầu luyện</button>' : '<p class="small">Mẫu này chưa có câu luyện tập.</p>'}</div>
     <div class="stage" style="${color('grammar')}"></div><div class="row">${nav(sib[k - 1], '←')}${nav(sib[k + 1], '→')}</div>`;
+  $$('[data-use]', main).forEach(btn => btn.onclick = () => {
+    const n = +btn.dataset.use, u = g.uses.find(x => x.n === n), pool = qs.filter(x => x.q.u === n);
+    $$('.uses-card, #gp', main).forEach(x => x.closest('.card').remove());
+    round($('.stage', main), 'grammar', () => grammarQ(pool, 'gu|' + g.id + '|' + n), { size: Math.min(ROUND, Math.max(pool.length, 3)), back: ['Lý thuyết', '#/more/grammar/p/' + g.id] });
+    $('.stage', main).insertAdjacentHTML('afterbegin', `<p class="small muted">Cách dùng ${n}: ${esc(u.k)}</p>`);
+  });
   const b = $('#gp', main);
   if (b) b.onclick = () => { b.closest('.card').remove(); round($('.stage', main), 'grammar', () => grammarQ(qs, 'gp|' + g.id), { size: Math.min(ROUND, Math.max(qs.length, 4)), back: ['Lý thuyết', '#/more/grammar/p/' + g.id] }); };
 }
@@ -74,10 +89,11 @@ function gramGloss(o, own) {
 export function grammarQ(pool, scope) {
   if (!pool.length) return null;
   const x = pickItem(pool, y => y.id, scope), opts = [x.q.a, ...x.q.d];
-  return { id: x.id, sec: 'grammar', label: x.g.p, tag: 'Ngữ pháp ' + x.g.lv + (x.g.grp ? ' · ' + x.g.grp : ''),
+  const use = x.q.u && x.g.uses ? x.g.uses.find(u => u.n === x.q.u) : null;
+  return { id: x.id, sec: 'grammar', label: x.g.p, tag: 'Ngữ pháp ' + x.g.lv + (use ? ' · cách dùng: ' + use.k : x.g.grp ? ' · ' + x.g.grp : ''),
     prompt: `<div class="sentence">${blankHTML(x.q.s)}</div>`, ask: 'Chọn mẫu điền vào chỗ trống', opts, answer: 0, jp: true,
     say: x.q.s.replace('（　　）', x.q.a), sayAfter: true, vi: x.q.vi, full: x.q.s.replace('（　　）', x.q.a),
-    notes: opts.map((o, i) => i ? (meanOf(o) || gramGloss(o, x.g)) : 'mẫu ' + x.g.p + ': ' + x.g.mean), why: `Câu cần ý "${x.g.mean}", nên dùng mẫu ${x.g.p}.`, info: grammarInfo(x.g) };
+    notes: opts.map((o, i) => i ? (meanOf(o) || gramGloss(o, x.g)) : 'mẫu ' + x.g.p + ': ' + x.g.mean), why: use ? `Câu này dùng ${x.g.p} theo cách: ${use.k}. ${use.d}` : `Câu cần ý "${x.g.mean}", nên dùng mẫu ${x.g.p}.`, info: grammarInfo(x.g) };
 }
 register({
   id: 'grammar', name: 'Ngữ pháp', icon: 'grammar', parent: 'more', order: 62, tile: { sub: 'Chọn nhóm, điền chỗ trống', stat: () => [countLearned(DB.gq.map(x => x.id)), DB.gq.length] },

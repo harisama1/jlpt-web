@@ -97,6 +97,13 @@ for _l in open(os.path.join(HERE, 'photo_words.tsv'), encoding='utf-8'):
     _w, _r, _vi, _en, _lv = _l.rstrip('\n').split('\t')
     if any(v['w'] == _w for v in vocab): continue
     vocab.append({'id': 'v%d' % len(vocab), 'w': _w, 'r': _r, 'vi': _vi, 'lv': _lv, 't': 'P', 'ex': '', 'src': 'photo', 'en': _en})
+# ---------------- words met in the practice exams (tools/exam_words.tsv: w, r, vi, en, lv) — topic "E"
+topics['E'] = {'id': 'E', 'name': 'Từ trong đề luyện (11/2026)', 'group': 'Bổ sung'}
+for _l in open(os.path.join(HERE, 'exam_words.tsv'), encoding='utf-8'):
+    if _l.startswith('#') or not _l.strip(): continue
+    _w, _r, _vi, _en, _lv = _l.rstrip('\n').split('\t')
+    if any(v['w'] == _w for v in vocab): continue
+    vocab.append({'id': 'v%d' % len(vocab), 'w': _w, 'r': _r, 'vi': _vi, 'lv': _lv, 't': 'E', 'ex': '', 'src': 'exam', 'en': _en})
 
 # ---------------- grammar
 graw = json.load(open(os.path.join(SRC, 'grammar_raw.json'), encoding='utf-8'))
@@ -184,6 +191,27 @@ if os.path.exists(os.path.join(HERE, 'grammar_more.txt')):
         if not m or len(f) < 5: continue
         g['q'].append({'s': f[2].replace(m.group(0), '（　　）'), 'a': m.group(1), 'd': f[4].split(';'), 'vi': f[3]}); nq2 += 1
     print('grammar_more: +%d questions, +%d examples' % (nq2, ne2), ('| unknown patterns: %s' % dict(miss)) if miss else '')
+# patterns with several usages (grammar_usage.txt: "## <p>", "U|n|name|explanation", "Q|n|<sentence with 【answer】>|<vi>|w1;w2;w3",
+# "T|n|<text of an existing item>"): g['uses'] = [{n, k, d}], new items get 'u': n and are appended (existing ids stay stable)
+if os.path.exists(os.path.join(HERE, 'grammar_usage.txt')):
+    byp = {g['p']: g for g in grammar}; g = None; nu = nq3 = nt = 0; miss = []
+    for l in open(os.path.join(HERE, 'grammar_usage.txt'), encoding='utf-8'):
+        l = l.rstrip('\n')
+        if l.startswith('## '):
+            g = byp.get(l[3:].strip())
+            if g is None: miss.append(l[3:].strip())
+            else: g.setdefault('uses', [])
+            continue
+        f = l.split('|')
+        if g is None or f[0] not in ('U', 'Q', 'T'): continue
+        if f[0] == 'U': g['uses'].append({'n': int(f[1]), 'k': f[2], 'd': f[3]}); nu += 1
+        elif f[0] == 'Q':
+            m = re.search(r'【(.+?)】', f[2])
+            g['q'].append({'s': f[2].replace(m.group(0), '（　　）'), 'a': m.group(1), 'd': f[4].split(';'), 'vi': f[3], 'u': int(f[1])}); nq3 += 1
+        else:
+            for q in g['q']:
+                if f[2] in q['s'].replace('（　　）', q['a']) and 'u' not in q: q['u'] = int(f[1]); nt += 1
+    print('grammar_usage: %d usages, +%d questions, %d tagged' % (nu, nq3, nt), ('| unknown patterns: %s' % miss) if miss else '')
 # theory per pattern (grammar_theory.txt: "## <p>" then C:/D:/L: lines = form / usage / notes); first block of a p wins
 theory, cur = {}, None
 for l in open(os.path.join(HERE, 'grammar_theory.txt'), encoding='utf-8'):

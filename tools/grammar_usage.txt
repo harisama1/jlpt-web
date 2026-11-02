@@ -1,0 +1,332 @@
+# Mẫu ngữ pháp có nhiều cách dùng: mỗi cách dùng có tên, giải thích và câu luyện riêng (build_data.py → g.uses, q.u).
+# ## <mẫu đúng như data/grammar.json>
+# U|<số>|<tên cách dùng>|<giải thích>
+# Q|<số>|<câu có 【đáp án】>|<dịch>|nhiễu1;nhiễu2;nhiễu3      (câu mới, gắn cách dùng <số>)
+# T|<số>|<đoạn chữ của một câu luyện đã có>                  (gắn cách dùng cho câu cũ chứa đoạn chữ đó)
+# 2026-11-03: soạn cho kế hoạch ôn N3; câu tự soạn, không chép từ đề thi.
+
+## 〜てくる／〜ていく
+U|1|Thay đổi tới bây giờ (〜てきた)|Một trạng thái thay đổi dần từ quá khứ cho đến hiện tại: 寒くなってきた, 増えてきた.
+U|2|Thay đổi từ nay về sau (〜ていく)|Thay đổi sẽ tiếp tục từ bây giờ trở đi: これからも増えていく.
+U|3|Làm rồi quay lại / hướng về người nói (〜てくる)|Đi làm việc gì rồi trở về (買ってくる), hoặc chuyển động hướng về phía người nói (走ってくる, においがしてくる).
+U|4|Làm rồi đi / rời xa người nói (〜ていく)|Làm việc gì rồi mới đi (食べていく), mang theo khi đi (持っていく), chuyển động ra xa (飛んでいく).
+Q|1|最近、日本語のニュースが少しずつわかるようになって【きました】。|Gần đây tôi đã dần dần hiểu được tin tức tiếng Nhật.|いきました;おきました;ありました
+Q|1|この町は10年前に比べて、外国人の住民が増えて【きた】。|So với 10 năm trước, cư dân người nước ngoài ở thị trấn này đã tăng lên.|いった;おいた;みた
+Q|1|夕方になって、だんだん暗くなって【きた】ね。|Đến chiều tối, trời dần tối lại rồi nhỉ.|いった;あった;みた
+Q|2|これからも、一人で暮らすお年寄りは増えて【いく】だろう。|Từ nay về sau, người già sống một mình có lẽ sẽ còn tăng.|ある;おく;みる
+Q|2|卒業してからも、日本語の勉強を続けて【いき】たいです。|Sau khi tốt nghiệp tôi vẫn muốn tiếp tục học tiếng Nhật.|き;おき;あり
+Q|2|技術はこれからますます進歩して【いく】と思います。|Tôi nghĩ từ nay kỹ thuật sẽ ngày càng tiến bộ.|きた;おいた;あった
+Q|3|ちょっとコンビニで飲み物を買って【くる】ね。|Mình ra cửa hàng tiện lợi mua đồ uống rồi về nhé.|ある;いる;あった
+Q|3|台所からカレーのいいにおいがして【きた】。|Từ bếp có mùi cà ri thơm bay tới.|いった;おいた;しまった
+Q|3|向こうから子どもが走って【きます】よ。気をつけて。|Có đứa trẻ đang chạy từ phía kia lại đấy. Cẩn thận nhé.|いきます;おきます;あります
+Q|4|雨が降りそうだから、傘を持って【いった】ほうがいいよ。|Trời sắp mưa nên mang dù theo thì hơn.|あった;あり;おき
+Q|4|時間があるなら、うちでご飯を食べて【いきません】か。|Nếu có thời gian thì ăn cơm ở nhà tôi rồi hãy đi nhé?|きません;おきません;ありません
+Q|4|鳥が空の向こうへ飛んで【いった】。|Con chim đã bay về phía bên kia bầu trời.|きた;おいた;みた
+
+## 〜てしまう（〜ちゃう）
+U|1|Làm xong hết, hoàn tất|Nhấn mạnh việc đã làm trọn vẹn, hết sạch: 全部読んでしまった, 今日中にやってしまいたい.
+U|2|Lỡ làm, tiếc nuối|Việc ngoài ý muốn hoặc đáng tiếc đã xảy ra: 財布を忘れてしまった, つい食べてしまう.
+Q|1|この本はおもしろくて、一晩で全部読んで【しまった】。|Quyển sách này hay quá, tôi đọc hết trong một đêm.|あった;あり;いき
+Q|1|宿題は寝る前にやって【しまいなさい】。|Làm cho xong bài tập trước khi ngủ đi.|ありなさい;あるなさい;おくなさい
+Q|1|この仕事は今日中に終わらせて【しまいたい】。|Tôi muốn làm xong hẳn việc này trong hôm nay.|ありたい;あるたい;おくたい
+Q|2|電車の中に傘を忘れて【しまった】。|Tôi lỡ để quên dù trên tàu mất rồi.|おいた;みた;あった
+Q|2|ダイエット中なのに、ケーキを食べ【ちゃった】。|Đang ăn kiêng vậy mà lỡ ăn bánh kem mất rồi.|ておいた;てあった;てある
+Q|2|大事なコップを落として割って【しまい】、母に怒られた。|Tôi lỡ làm rơi vỡ cái cốc quý nên bị mẹ mắng.|おき;あり;み
+
+## 〜ておく（〜とく）〜てある／〜ている
+U|1|Làm sẵn, chuẩn bị trước (〜ておく)|Làm trước để chuẩn bị cho việc sau: 予約しておく, 調べておく.
+U|2|Để nguyên như vậy (〜ておく)|Cố ý giữ trạng thái: 窓を開けておく, そのままにしておく.
+U|3|Trạng thái do ai đó làm (〜てある)|Tha động từ ＋ てある: kết quả của hành động có chủ ý còn lưu lại: 壁に絵がかけてある.
+Q|1|旅行の前に、ホテルを予約して【おきます】。|Trước chuyến đi tôi đặt sẵn khách sạn.|あります;あり;おけます
+Q|1|会議の前に、資料をコピーし【ておいて】ください。|Hãy photo sẵn tài liệu trước cuộc họp.|てあって;てあり;ておき
+Q|1|パーティーの前に、飲み物を冷やし【ておこう】。|Trước bữa tiệc, ướp lạnh sẵn đồ uống thôi.|てあろう;てあり;ておき
+Q|2|暑いので、窓を開けて【おいて】ください。|Trời nóng nên cứ để cửa sổ mở nhé.|あって;あり;おき
+Q|2|使ったはさみは、元の場所に戻して【おいて】ね。|Kéo dùng xong thì để lại chỗ cũ nhé.|あって;あり;おき
+Q|2|まだ食べるから、お皿はそのままにして【おいて】。|Mình còn ăn nên cứ để nguyên đĩa đó.|あって;あり;おき
+Q|3|玄関に花が飾って【あります】。|Ở lối vào có cắm hoa (ai đó đã cắm).|おきます;います;しまいます
+Q|3|冷蔵庫にジュースが冷やして【ある】から、飲んでいいよ。|Trong tủ lạnh có nước ép đã ướp lạnh sẵn, cứ uống nhé.|いる;おく;しまう
+Q|3|黒板に明日の予定が書いて【あります】。|Trên bảng có ghi kế hoạch ngày mai.|います;おきます;きます
+
+## 〜ところだ
+U|1|Sắp làm (Vるところ)|Ngay trước khi bắt đầu hành động: 今から出かけるところだ.
+U|2|Đang làm (Vているところ)|Hành động đang diễn ra ngay lúc này: 今調べているところです.
+U|3|Vừa làm xong (Vたところ)|Hành động vừa kết thúc ngay trước đó: 今帰ってきたところだ.
+Q|1|今から家を出る【ところ】なので、あとで電話するね。|Mình sắp ra khỏi nhà nên lát gọi lại nhé.|ばかり;まま;うち
+Q|1|ちょうど晩ご飯を食べる【ところ】だから、一緒にどう？|Đúng lúc sắp ăn tối, ăn cùng không?|ばかり;ほど;ため
+Q|1|A「もう出発した？」B「ううん、これから出発する【ところ】。」|A: Xuất phát chưa? B: Chưa, giờ mới sắp đi.|ばかり;まで;うち
+Q|2|すみません、今その件について調べ【ているところ】です。|Xin lỗi, bây giờ tôi đang tìm hiểu về việc đó.|るところ;たところ;たばかり
+Q|2|母は今台所で料理を作っ【ているところ】だ。|Mẹ bây giờ đang nấu ăn trong bếp.|たところ;たばかり;たまま
+Q|2|会議中なので、部長は今お客様と話し【ているところ】です。|Đang họp nên trưởng phòng hiện đang nói chuyện với khách.|たところ;たばかり;たまま
+Q|3|たった今駅に着い【たところ】です。もうすぐ行きます。|Tôi vừa mới tới ga. Tôi đến ngay đây.|ているところ;たまま;ていること
+Q|3|A「田中さん、いますか。」B「さっき帰っ【たところ】ですよ。」|A: Anh Tanaka có đây không? B: Anh ấy vừa về rồi.|ているところ;るところ;ていたこと
+Q|3|お茶をいれ【たところ】ですから、どうぞ。|Tôi vừa pha trà xong, mời anh.|ているところ;るところ;ていたもの
+
+## 〜によって／〜による
+U|1|Do (nguyên nhân)|Nguyên nhân, thường của sự việc lớn hoặc hậu quả: 地震によって家が壊れた.
+U|2|Bằng (phương pháp, phương tiện)|Cách thức để đạt kết quả: 話し合いによって解決する.
+U|3|Bởi (người thực hiện, câu bị động)|Tác giả của tác phẩm, phát minh trong câu bị động: この絵はピカソによって描かれた.
+U|4|Tuỳ theo (khác nhau)|Vế sau nói sự khác nhau: 人によって考え方が違う.
+Q|1|台風【によって】、多くの家が被害を受けた。|Do bão, nhiều ngôi nhà bị thiệt hại.|にとって;について;に対して
+Q|1|大雨【による】事故で、電車が止まっている。|Tàu đang dừng vì tai nạn do mưa lớn.|にとっての;についての;としての
+Q|1|不注意【によって】起きた火事だった。|Đó là vụ cháy xảy ra do bất cẩn.|にとって;として;に対して
+Q|2|問題は話し合い【によって】解決するべきだ。|Vấn đề nên được giải quyết bằng thảo luận.|にとって;に対して;として
+Q|2|インターネット【によって】、世界中の情報が簡単に手に入る。|Nhờ internet, thông tin khắp thế giới dễ dàng có được.|にとって;について;に関して
+Q|2|この病気は薬【によって】治すことができる。|Bệnh này có thể chữa bằng thuốc.|にとって;に対して;について
+Q|3|この小説は有名な作家【によって】書かれた。|Cuốn tiểu thuyết này được viết bởi một nhà văn nổi tiếng.|にとって;について;として
+Q|3|電話はベル【によって】発明された。|Điện thoại được phát minh bởi Bell.|にとって;に対して;について
+Q|3|このお寺は800年前に村の人々【によって】建てられた。|Ngôi chùa này được người dân làng xây 800 năm trước.|にとって;に対して;として
+Q|4|国【によって】、習慣が違う。|Phong tục khác nhau tuỳ theo từng nước.|にとって;について;として
+Q|4|季節【によって】、店の営業時間が変わります。|Giờ mở cửa thay đổi tuỳ theo mùa.|にとって;に対して;として
+Q|4|同じ料理でも、作る人【によって】味が違う。|Cùng một món nhưng vị khác nhau tuỳ người nấu.|にとって;について;として
+
+## 〜つもりだ
+U|1|Định làm (dự định)|Vる／Vない＋つもり: ý định của người nói: 来年留学するつもりだ.
+U|2|Cứ ngỡ là, tự cho là|Vた／Aい／Nの＋つもり: tin như vậy dù thực tế khác: 鍵をかけたつもりだった.
+Q|1|夏休みは国へ帰る【つもり】です。|Kỳ nghỉ hè tôi định về nước.|まま;たび;ほど
+Q|1|もうお酒は飲まない【つもり】だ。|Tôi định không uống rượu nữa.|たび;ほど;ばかり
+Q|1|将来は日本の会社で働く【つもり】です。|Sau này tôi định làm việc ở công ty Nhật.|まま;たび;ほど
+Q|2|ドアの鍵をかけた【つもり】だったが、かかっていなかった。|Tôi cứ ngỡ đã khoá cửa, vậy mà chưa khoá.|まま;たび;ほど
+Q|2|彼は自分では若い【つもり】でいるが、もう60歳だ。|Ông ấy tự cho mình còn trẻ nhưng đã 60 tuổi rồi.|はず;ところ;わけ
+Q|2|旅行した【つもり】で、そのお金を貯金した。|Coi như đã đi du lịch, tôi để dành số tiền đó.|はず;ところ;ばかり
+
+## Vる／Vない＋ように
+U|1|Để (mục đích không ý chí)|Vる (khả năng, tự động từ)／Vない＋ように: để có thể, để không: 遅れないように早く出る.
+U|2|Như (theo như điều đã nói, đã thấy)|N の／V＋ように: như đã nói, như hình vẽ: 先ほど説明したように.
+U|3|Mong sao, cầu cho (〜ますように)|Lời cầu chúc: 合格できますように.
+Q|1|後ろの人にも聞こえる【ように】、大きい声で話してください。|Hãy nói to để người phía sau cũng nghe được.|ために;ためか;ばかりに
+Q|1|風邪をひかない【ように】、暖かくして寝てね。|Ngủ ấm vào để không bị cảm nhé.|ために;ためか;うちに
+Q|1|忘れない【ように】、手帳にメモしておこう。|Ghi vào sổ tay để khỏi quên.|ために;ばかりに;ままに
+Q|2|先ほど説明した【ように】、明日は9時に集合です。|Như tôi đã giải thích lúc nãy, ngày mai tập trung lúc 9 giờ.|ために;そうに;ほどに
+Q|2|図の【ように】、線を引いてください。|Hãy kẻ đường như trong hình.|ために;そうに;だけに
+Q|2|天気予報で言っていた【ように】、午後から雨が降ってきた。|Như dự báo thời tiết đã nói, từ chiều trời đổ mưa.|ために;ばかりに;うちに
+Q|3|試験に合格できます【ように】。|Mong sao thi đỗ.|ために;ことに;ほどに
+Q|3|明日、晴れます【ように】。|Mong ngày mai trời nắng.|ために;ことに;そうに
+Q|3|家族がみんな元気で過ごせます【ように】。|Mong cả nhà đều sống khoẻ mạnh.|ために;ことに;だけに
+
+## 〜でも
+U|1|Ngay cả, đến cả|N＋でも: ví dụ cực đoan, đến cả N cũng: 子どもでもわかる.
+U|2|Chẳng hạn, hay là (gợi ý nhẹ)|N＋でも＋mời/đề nghị: お茶でも飲みませんか.
+U|3|Bất cứ (nghi vấn từ ＋ でも)|何でも, だれでも, いつでも: không giới hạn.
+Q|1|この問題は簡単だから、小学生【でも】解ける。|Bài này dễ nên cả học sinh tiểu học cũng giải được.|しか;ほど;ばかり
+Q|1|この店は日曜日【でも】開いています。|Cửa hàng này mở cửa cả ngày chủ nhật.|しか;ほど;ばかりに
+Q|1|プロの選手【でも】、ときどき失敗する。|Ngay cả vận động viên chuyên nghiệp cũng có lúc thất bại.|しか;こそ;ほど
+Q|2|疲れたね。コーヒー【でも】飲もうか。|Mệt quá nhỉ. Hay là uống cà phê nhé.|しか;ほど;こそ
+Q|2|週末、映画【でも】見に行きませんか。|Cuối tuần đi xem phim hay gì đó không?|しか;ばかり;ほど
+Q|2|待っている間、雑誌【でも】読んでいてください。|Trong lúc chờ, anh cứ đọc tạp chí hay gì đó nhé.|しか;ほど;こそ
+Q|3|わからないことがあったら、いつ【でも】聞いてください。|Có gì không hiểu thì hỏi bất cứ lúc nào.|も;か;しか
+Q|3|このパーティーにはだれ【でも】参加できます。|Ai cũng có thể tham gia bữa tiệc này.|も;か;しか
+Q|3|うちの犬は何【でも】食べる。|Con chó nhà tôi cái gì cũng ăn.|も;か;しか
+
+## 〜など／〜なんか／〜なんて
+U|1|Chẳng hạn, như là (liệt kê)|N＋など: đưa ví dụ, còn nữa: りんごやみかんなど.
+U|2|Xem nhẹ, khiêm tốn, phủ định|N＋なんか／など: coi nhẹ người khác hoặc khiêm tốn về mình: 私なんかまだまだです.
+U|3|Ngạc nhiên, không ngờ (なんて)|普通形＋なんて: thể hiện bất ngờ, khó tin: 彼が結婚するなんて.
+Q|1|この店では、パンやケーキ【など】を売っている。|Tiệm này bán bánh mì, bánh ngọt và các thứ khác.|なんて;こそ;さえ
+Q|1|京都や奈良【など】、古い町を旅行したい。|Tôi muốn đi du lịch những phố cổ như Kyoto, Nara.|なんて;ばかり;こそ
+Q|1|休みの日は、掃除や洗濯【など】をします。|Ngày nghỉ tôi dọn dẹp, giặt giũ, v.v.|なんて;こそ;さえ
+Q|2|私【なんか】、まだまだ下手です。|Tôi thì còn kém lắm.|まで;さえ;ばかり
+Q|2|忙しくて、テレビ【なんか】見る時間がない。|Bận quá, chẳng có thời gian mà xem ti vi.|こそ;まで;ばかり
+Q|2|あんな人の言うこと【なんか】、信じないほうがいい。|Lời của người như thế thì đừng tin.|こそ;ばかり;でも
+Q|3|あの二人が結婚する【なんて】、信じられない。|Hai người đó mà cưới nhau thì thật không tin nổi.|ばかり;こそ;さえ
+Q|3|こんなに安い値段で買える【なんて】、びっくりした。|Mua được với giá rẻ thế này, tôi ngạc nhiên quá.|ばかり;こそ;でも
+Q|3|一人で外国へ行く【なんて】、すごいね。|Đi nước ngoài một mình cơ à, giỏi thật.|ばかり;こそ;さえ
+
+## 〜のに
+U|1|Vậy mà (trái với mong đợi)|普通形＋のに: kết quả ngược với điều đương nhiên, kèm bất mãn, ngạc nhiên.
+U|2|Để (dùng cho mục đích)|Vる＋のに＋使う／必要だ／便利だ／かかる: 料理するのに使う.
+U|3|Giá mà (tiếc nuối, cuối câu)|〜ばいいのに／〜たらよかったのに: mong điều không xảy ra.
+Q|1|たくさん勉強した【のに】、試験に落ちてしまった。|Học nhiều vậy mà vẫn trượt.|ので;から;ために
+Q|1|約束した【のに】、彼は来なかった。|Đã hứa rồi vậy mà anh ấy không đến.|ので;から;ように
+Q|1|もう4月な【のに】、まだ寒い。|Đã tháng tư rồi vậy mà vẫn lạnh.|ので;から;ため
+Q|2|この箱は引っ越しの荷物を運ぶ【のに】便利だ。|Cái thùng này tiện để chở đồ khi chuyển nhà.|ので;から;ほど
+Q|2|駅まで行く【のに】、30分かかる。|Để đi tới ga mất 30 phút.|ので;から;ほど
+Q|2|このナイフは魚を切る【のに】使います。|Con dao này dùng để cắt cá.|ので;から;ほど
+Q|3|そんなに眠いなら、早く寝ればいい【のに】。|Buồn ngủ thế thì đi ngủ sớm có phải hơn không.|ので;から;ように
+Q|3|あなたも来ればよかった【のに】。楽しかったよ。|Giá mà cậu cũng đến. Vui lắm.|ので;から;ために
+Q|3|もっと早く言ってくれたらよかった【のに】。|Giá mà cậu nói sớm hơn.|ので;から;ように
+
+## 〜たら
+U|1|Nếu (giả định)|Điều kiện chưa chắc xảy ra: 雨が降ったら中止です.
+U|2|Sau khi, khi (chắc chắn xảy ra)|Việc sẽ xảy ra, rồi mới làm vế sau: 駅に着いたら電話して.
+U|3|Thì ra (phát hiện, 〜たら〜た)|Làm A thì phát hiện B (quá khứ): 窓を開けたら雪が降っていた.
+Q|1|もし宝くじが当たっ【たら】、世界旅行をしたい。|Nếu trúng xổ số tôi muốn đi du lịch vòng quanh thế giới.|ても;てから;ながら
+Q|1|わからなかっ【たら】、いつでも聞いてください。|Nếu không hiểu thì cứ hỏi bất cứ lúc nào.|ても;てから;のに
+Q|1|安かっ【たら】、買おうと思う。|Nếu rẻ thì tôi định mua.|ても;のに;ので
+Q|2|仕事が終わっ【たら】、飲みに行こう。|Xong việc thì đi nhậu nhé.|ても;のに;ので
+Q|2|駅に着い【たら】、電話してください。|Tới ga thì gọi điện cho tôi.|ても;のに;ながら
+Q|2|20歳になっ【たら】、お酒が飲める。|Đủ 20 tuổi thì được uống rượu.|ても;のに;ながら
+Q|3|朝起き【たら】、外は雪で真っ白だった。|Sáng thức dậy thì thấy bên ngoài trắng xoá tuyết.|ても;のに;ながら
+Q|3|久しぶりに実家に帰っ【たら】、家が新しくなっていた。|Lâu rồi mới về quê thì thấy nhà đã được làm mới.|ても;のに;ので
+Q|3|箱を開け【たら】、中は空だった。|Mở hộp ra thì bên trong trống rỗng.|ても;のに;ので
+
+## Vる／Nの＋ために
+U|1|Để (mục đích có chủ ý)|Vる／Nの＋ために: mục đích của hành động có ý chí, cùng chủ ngữ: 留学するために貯金する.
+U|2|Vì (lợi ích của ai)|Nの＋ために: làm vì ai, vì điều gì: 家族のために働く.
+U|3|Vì, do (nguyên nhân, văn viết)|普通形／Nの＋ために: nguyên nhân, vế sau là kết quả: 事故のために電車が遅れた.
+Q|1|日本の大学に入る【ために】、毎日勉強している。|Tôi học mỗi ngày để vào đại học Nhật.|ように;ので;のに
+Q|1|健康の【ために】、毎朝ジョギングをしている。|Tôi chạy bộ mỗi sáng vì sức khoẻ.|ように;ので;のに
+Q|1|家を買う【ために】、お金を貯めています。|Tôi đang để dành tiền để mua nhà.|ように;ので;ほど
+Q|2|子どもの【ために】、おもちゃを作った。|Tôi làm đồ chơi cho con.|うちに;せいで;おかげで
+Q|2|家族の【ために】、一生懸命働いている。|Tôi làm việc chăm chỉ vì gia đình.|うちに;せいで;くせに
+Q|2|地球の【ために】、ごみを減らしましょう。|Vì trái đất, hãy giảm rác.|うちに;せいで;くせに
+Q|3|大雪の【ために】、学校が休みになった。|Do tuyết lớn, trường được nghỉ.|ように;くせに;うちに
+Q|3|事故があった【ために】、電車が遅れています。|Vì có tai nạn nên tàu đang trễ.|ように;くせに;うちに
+Q|3|熱が出た【ために】、会社を休んだ。|Vì bị sốt nên tôi nghỉ làm.|ように;くせに;ついでに
+
+## 〜に対して
+U|1|Đối với, hướng tới (đối tượng)|Hành động, thái độ hướng tới ai/cái gì: 先生に対して失礼だ.
+U|2|Trái với, ngược lại (so sánh đối lập)|普通形＋のに対して: A thì…, trái lại B thì…: 兄は背が高いのに対して、弟は低い.
+U|3|Cho mỗi (tỉ lệ)|Số lượng ＋ に対して: 学生10人に対して先生1人.
+Q|1|お客様【に対して】、丁寧な言葉で話してください。|Hãy dùng lời lẽ lịch sự với khách hàng.|にとって;によって;について
+Q|1|彼は目上の人【に対する】態度がよくない。|Thái độ của anh ấy đối với người trên không tốt.|にとっての;による;についての
+Q|1|この意見【に対して】、反対の人はいますか。|Có ai phản đối ý kiến này không?|にとって;によって;として
+Q|2|姉は活発なの【に対して】、妹はおとなしい。|Chị thì hoạt bát, trái lại em gái thì trầm.|にとって;によって;として
+Q|2|都会の人口が増えているの【に対して】、田舎は減っている。|Dân số thành phố tăng, trái lại nông thôn thì giảm.|にとって;について;として
+Q|2|昨年は雨が多かったの【に対して】、今年は少ない。|Năm ngoái mưa nhiều, trái lại năm nay ít.|にとって;によって;として
+Q|3|学生20人【に対して】、先生が一人いる。|Cứ 20 học sinh có một giáo viên.|にとって;によって;について
+Q|3|一つの質問【に対して】、5分で答えてください。|Mỗi câu hỏi hãy trả lời trong 5 phút.|にとって;によって;として
+Q|3|応募者100人【に対して】、合格者は3人だけだった。|Cứ 100 người dự tuyển chỉ có 3 người đỗ.|にとって;によって;について
+
+## 〜一方（で）
+U|1|Mặt khác, trái lại (hai mặt đối lập)|Nêu hai mặt của một vấn đề hoặc hai việc tương phản: 便利な一方で、危険もある.
+U|2|Đồng thời, bên cạnh đó (song song)|Làm A, đồng thời làm B: 仕事をする一方で、大学にも通っている.
+Q|1|インターネットは便利な【一方で】、問題も多い。|Internet tiện lợi nhưng mặt khác cũng nhiều vấn đề.|うちに;たびに;とたんに
+Q|1|この町は人口が減っている【一方】、観光客は増えている。|Thị trấn này dân số đang giảm, trái lại khách du lịch tăng.|うちに;たびに;ついでに
+Q|1|都会の生活は楽しい【一方で】、ストレスも多い。|Cuộc sống thành thị vui nhưng mặt khác cũng nhiều căng thẳng.|うちに;たびに;とおりに
+Q|2|彼は会社で働く【一方で】、夜は大学で勉強している。|Anh ấy làm ở công ty, đồng thời buổi tối học đại học.|うちに;たびに;とたんに
+Q|2|母は家事をする【一方】、ボランティア活動もしている。|Mẹ làm việc nhà, bên cạnh đó còn làm tình nguyện.|うちに;たびに;ところに
+Q|2|この会社は国内で販売する【一方で】、海外にも進出している。|Công ty này bán trong nước, đồng thời cũng vươn ra nước ngoài.|うちに;たびに;ついでに
+
+## 〜かわりに
+U|1|Thay vì, thay cho|Vる／Nの＋かわりに: làm B thay cho A, hoặc người khác làm thay: 父のかわりに会議に出る.
+U|2|Bù lại, đổi lại|普通形＋かわりに: có mặt tốt thì có mặt xấu bù lại, hoặc trao đổi: 手伝うかわりに、昼ご飯をおごって.
+Q|1|今日は社長の【かわりに】、私がご挨拶します。|Hôm nay tôi xin phát biểu thay giám đốc.|ために;おかげで;せいで
+Q|1|雨なので、テニスをする【かわりに】、家で映画を見た。|Vì mưa nên thay vì chơi tennis, tôi xem phim ở nhà.|ために;うちに;ついでに
+Q|1|最近は手紙の【かわりに】、メールを送る人が多い。|Gần đây nhiều người gửi email thay cho thư.|ために;おかげで;せいで
+Q|2|この部屋は狭い【かわりに】、家賃が安い。|Căn phòng này chật nhưng bù lại tiền thuê rẻ.|ために;うちに;ついでに
+Q|2|英語を教えてもらう【かわりに】、日本語を教えてあげた。|Đổi lại việc được dạy tiếng Anh, tôi dạy tiếng Nhật cho bạn ấy.|ために;うちに;ついでに
+Q|2|この仕事は給料が高い【かわりに】、休みが少ない。|Công việc này lương cao nhưng bù lại ít ngày nghỉ.|ために;うちに;たびに
+
+## 〜くらい（だ）／〜ほど
+U|1|Đến mức|Mức độ, so sánh bằng ví dụ: 泣きたいくらい痛い.
+U|2|Khoảng, chừng (số lượng)|Số lượng ＋ くらい／ほど: 1時間くらい, 10人ほど.
+U|3|Ít nhất thì, chỉ cỡ… (xem nhẹ)|N＋くらい: việc tối thiểu, đơn giản: あいさつくらいしなさい.
+Q|1|お腹が痛くて、立てない【くらい】だった。|Đau bụng đến mức không đứng nổi.|ばかり;しか;まで
+Q|1|昨日は死ぬ【ほど】疲れた。|Hôm qua mệt muốn chết.|ばかり;だけ;しか
+Q|1|声が出なくなる【くらい】、大きな声で応援した。|Tôi cổ vũ to đến mức mất cả giọng.|ばかり;しか;こそ
+Q|2|駅から歩いて10分【くらい】です。|Từ ga đi bộ khoảng 10 phút.|ばかりに;だけに;しか
+Q|2|パーティーには20人【ほど】集まった。|Khoảng 20 người đã tụ tập ở bữa tiệc.|しか;だけに;こそ
+Q|2|1週間【くらい】で、手紙が届くと思います。|Tôi nghĩ khoảng một tuần thư sẽ tới.|しか;こそ;さえ
+Q|3|忙しくても、電話【くらい】してよ。|Dù bận thì ít ra cũng gọi điện chứ.|しか;ばかり;こそ
+Q|3|自分の部屋の掃除【くらい】、自分でしなさい。|Ít nhất việc dọn phòng mình thì tự làm đi.|しか;ばかり;ほど
+Q|3|ひらがな【くらい】、すぐ覚えられるよ。|Cỡ hiragana thì học thuộc ngay thôi.|しか;ばかり;さえも
+
+## 〜って
+U|1|Nói rằng, là (trích dẫn ＝ と)|普通形＋って＋言う／思う: văn nói của と: 行くって言ってた.
+U|2|Nghe nói (cuối câu)|普通形＋って: truyền đạt tin nghe được: 明日休みだって.
+U|3|… là (nêu chủ đề ＝ というのは／は)|N＋って: hỏi hoặc định nghĩa: 「ワサビ」って何？
+Q|1|田中さんは明日来ない【って】言ってたよ。|Anh Tanaka nói là mai không đến đấy.|から;ので;のに
+Q|1|母に、早く帰る【って】伝えておいて。|Nhắn mẹ giùm là tôi về sớm nhé.|から;ので;ように
+Q|1|彼女はもう大丈夫だ【って】思ったけど、まだ熱があるらしい。|Tôi tưởng cô ấy ổn rồi, nhưng hình như vẫn còn sốt.|から;ので;のに
+Q|2|ねえ、聞いた？来週テストがあるんだ【って】。|Này, nghe chưa? Nghe nói tuần sau có kiểm tra.|から;ので;のに
+Q|2|山田さん、結婚するんだ【って】。|Nghe nói anh Yamada sắp cưới đấy.|から;ので;ほど
+Q|2|あの店のケーキ、すごくおいしい【って】。|Nghe nói bánh tiệm đó ngon lắm.|から;ので;ほど
+Q|3|「ゆかた」【って】、何ですか。|"Yukata" là gì vậy?|から;ので;しか
+Q|3|日本の夏【って】、本当に暑いね。|Mùa hè Nhật đúng là nóng thật nhỉ.|から;ので;しか
+Q|3|一人暮らし【って】、思ったより大変だ。|Sống một mình hoá ra vất vả hơn tôi nghĩ.|から;ので;しか
+
+## 〜を通じて／〜を通して
+U|1|Thông qua (trung gian, phương tiện)|N＋を通じて: nhờ người/vật trung gian: 友人を通じて知り合った.
+U|2|Suốt (toàn bộ thời gian, phạm vi)|Thời gian ＋ を通じて: 一年を通じて暖かい.
+Q|1|この仕事は、友達【を通じて】紹介してもらった。|Công việc này tôi được giới thiệu thông qua bạn bè.|にとって;に対して;について
+Q|1|インターネット【を通じて】、世界中の人と話せる。|Thông qua internet có thể nói chuyện với người khắp thế giới.|にとって;に対して;について
+Q|1|スポーツ【を通して】、たくさんのことを学んだ。|Thông qua thể thao tôi đã học được nhiều điều.|にとって;に対して;について
+Q|2|この島は一年【を通じて】暖かい。|Hòn đảo này ấm áp quanh năm.|にとって;に対して;によって
+Q|2|この公園には、四季【を通して】多くの人が訪れる。|Công viên này suốt bốn mùa đều có nhiều người đến.|にとって;に対して;について
+Q|2|彼は生涯【を通じて】、絵を描き続けた。|Suốt cả cuộc đời ông ấy vẫn vẽ tranh.|にとって;に対して;について
+
+## 〜てあげる／〜てもらう／〜てくれる
+U|1|Làm cho người khác (〜てあげる)|Mình (hoặc người phía mình) làm việc gì vì người khác: 友達に傘を貸してあげた.
+U|2|Được người khác làm cho (〜てもらう)|Mình nhờ/được ai làm cho: 先輩に教えてもらった. Người làm đi với に.
+U|3|Người khác làm cho mình (〜てくれる)|Ai đó làm cho mình hoặc người phía mình; chủ ngữ là người làm: 友達が手伝ってくれた.
+Q|1|弟に宿題を教えて【あげた】。|Tôi đã dạy bài tập cho em trai.|くれた;もらった;いただいた
+Q|1|おばあさんの荷物を持って【あげました】。|Tôi đã xách đồ giúp bà cụ.|くれました;もらいました;くださいました
+Q|1|困っている友達に、お金を貸して【あげた】。|Tôi đã cho người bạn đang gặp khó mượn tiền.|くれた;もらった;いただいた
+Q|2|先生に作文を直して【もらいました】。|Tôi được thầy sửa bài văn cho.|くれました;あげました;くださいました
+Q|2|友達に駅まで送って【もらった】。|Tôi được bạn đưa ra ga.|くれた;あげた;さしあげた
+Q|2|姉に髪を切って【もらった】。|Tôi được chị cắt tóc cho.|くれた;あげた;やった
+Q|3|田中さんが引っ越しを手伝って【くれた】。|Anh Tanaka đã giúp tôi chuyển nhà.|もらった;あげた;いただいた
+Q|3|母がお弁当を作って【くれました】。|Mẹ đã làm cơm hộp cho tôi.|もらいました;あげました;いただきました
+Q|3|知らない人が道を教えて【くれた】。|Một người lạ đã chỉ đường cho tôi.|もらった;あげた;さしあげた
+
+## 〜ことにする／〜ことになる
+U|1|Tự quyết định (〜ことにする)|Người nói tự quyết: 来年留学することにした.
+U|2|Được quyết định, thành ra (〜ことになる)|Quyết định không do mình, hoặc kết quả tự nhiên: 大阪へ転勤することになった.
+U|3|Thói quen tự đặt (〜ことにしている)|Quy tắc bản thân duy trì: 毎朝走ることにしている.
+U|4|Quy định (〜ことになっている)|Luật lệ, quy định có sẵn: 会議は月曜日にすることになっている.
+Q|1|健康のために、タバコをやめる【ことにした】。|Vì sức khoẻ, tôi đã quyết định bỏ thuốc lá.|ことになった;ことがある;ことができた
+Q|1|夏休みは国に帰らない【ことにしました】。|Tôi đã quyết định không về nước kỳ nghỉ hè.|ことになりました;ことがありました;ことでした
+Q|1|よく考えて、この会社に入る【ことにした】。|Suy nghĩ kỹ, tôi quyết định vào công ty này.|ことになった;ことがある;ものだ
+Q|2|来月から、大阪の支店で働く【ことになりました】。|Từ tháng sau tôi sẽ (được điều) làm việc ở chi nhánh Osaka.|ことにしました;ことがありました;ことでした
+Q|2|雨のため、運動会は中止する【ことになった】。|Vì mưa nên hội thao bị quyết định huỷ.|ことにした;ことがある;ものだ
+Q|2|会議の結果、田中さんがリーダーをする【ことになった】。|Kết quả cuộc họp, anh Tanaka sẽ làm trưởng nhóm.|ことにした;ことがあった;ものだった
+Q|3|私は毎晩寝る前に日記を書く【ことにしている】。|Tôi đặt thói quen viết nhật ký mỗi tối trước khi ngủ.|ことになっている;ことがある;ことができる
+Q|3|週末はできるだけ家族と過ごす【ことにしている】。|Cuối tuần tôi cố gắng dành thời gian với gia đình (thói quen tự đặt).|ことになっている;ことができる;ものだ
+Q|3|甘いものは一日一つだけ食べる【ことにしている】。|Tôi tự đặt quy tắc mỗi ngày chỉ ăn một món ngọt.|ことになっている;ことができる;ものだ
+Q|4|この寮では、夜10時までに帰る【ことになっている】。|Ở ký túc xá này quy định phải về trước 10 giờ tối.|ことにしている;ことができる;ものだ
+Q|4|この会社では、毎朝9時に朝礼をする【ことになっている】。|Ở công ty này theo quy định 9 giờ sáng mỗi ngày đều họp đầu giờ.|ことにしている;ことがある;ものだ
+Q|4|図書館の本は2週間以内に返す【ことになっています】。|Sách thư viện theo quy định phải trả trong vòng 2 tuần.|ことにしています;ことがあります;ものです
+
+## 〜らしいです
+U|1|Nghe nói, có vẻ (thông tin bên ngoài)|普通形＋らしい: phỏng đoán dựa trên điều nghe/thấy: 明日は雨らしい.
+U|2|Đúng chất, ra dáng|N＋らしい: mang đặc trưng tiêu biểu của N: 男らしい, 春らしい天気.
+Q|1|天気予報によると、明日は雪が降る【らしい】。|Theo dự báo thời tiết, nghe nói mai có tuyết.|らしさ;がち;げ
+Q|1|あの店は来月閉店する【らしい】よ。|Nghe nói tiệm đó tháng sau đóng cửa đấy.|らしさ;がち;げ
+Q|1|田中さんは風邪をひいた【らしく】、今日は休んでいる。|Anh Tanaka hình như bị cảm nên hôm nay nghỉ.|らしさで;がちに;げに
+Q|2|今日は暖かくて、春【らしい】天気だ。|Hôm nay ấm áp, đúng là thời tiết mùa xuân.|らしさ;そうな;がちな
+Q|2|彼は学生【らしく】、毎日まじめに勉強している。|Đúng chất sinh viên, cậu ấy chăm chỉ học mỗi ngày.|らしさに;そうに;がちに
+Q|2|もっと子ども【らしく】、元気に遊びなさい。|Hãy chơi đùa hồn nhiên ra dáng trẻ con hơn đi.|らしさに;そうに;がちに
+
+## 〜ようです／〜みたいです
+U|1|Hình như (người nói tự phán đoán)|普通形（Nの／Aな）＋ようだ／みたいだ: suy đoán từ cảm nhận của mình: 誰もいないようだ.
+U|2|Giống như (so sánh, ví von)|N＋のようだ／みたいだ: まるで夢のようだ.
+U|3|Như là (đưa ví dụ ＋ danh từ)|N＋のような／みたいな＋N: 東京のような大都市.
+Q|1|電気が消えている。誰もいない【ようだ】。|Đèn tắt rồi. Hình như không có ai.|らしさだ;っぽさだ;そうにない
+Q|1|顔が赤いですね。熱がある【みたい】ですよ。|Mặt đỏ quá. Hình như bị sốt đấy.|らしさ;っぽさ;そうもない
+Q|1|道がぬれている。夜中に雨が降った【ようだ】。|Đường ướt. Hình như đêm qua có mưa.|そうにない;らしさだ;っぽさだ
+Q|2|まるで夢の【ようです】。|Cứ như một giấc mơ vậy.|らしいです;そうです;っぽいです
+Q|2|あの子は人形【みたい】にかわいい。|Đứa bé đó dễ thương như búp bê.|らしい;そうに;っぽさ
+Q|2|今日は春【みたいに】暖かい。|Hôm nay ấm như mùa xuân.|らしい;そうな;っぽさに
+Q|3|東京の【ような】大都市に住みたい。|Tôi muốn sống ở thành phố lớn như Tokyo.|ように;らしく;そうな
+Q|3|ラーメン【みたいな】温かいものが食べたい。|Tôi muốn ăn món gì nóng như mì ramen.|っぽさ;らしく;そうな
+Q|3|私も先輩の【ような】先生になりたい。|Tôi cũng muốn trở thành giáo viên như đàn anh.|らしい;そうな;っぽさ
+
+## 〜ても／〜でも
+U|1|Dù … cũng|Vて／Aくて／N・Aなで＋も: dù điều kiện vậy, kết quả vẫn không đổi: 雨が降っても行く.
+U|2|Dù thế nào … cũng (nghi vấn từ ＋ ても)|何回〜ても, どんなに〜ても: いくら頼んでもだめだ.
+Q|1|雨が降っ【ても】、試合は行われます。|Dù mưa thì trận đấu vẫn diễn ra.|たら;ので;から
+Q|1|この薬は苦く【ても】、飲まなければならない。|Thuốc này dù đắng cũng phải uống.|たら;ので;から
+Q|1|日曜日【でも】、仕事に行かなければならない。|Dù là chủ nhật tôi vẫn phải đi làm.|しか;ほど;ばかりに
+Q|2|何回電話し【ても】、彼は出なかった。|Gọi bao nhiêu lần anh ấy cũng không nghe máy.|たら;ので;から
+Q|2|どんなに忙しく【ても】、朝ご飯は食べます。|Dù bận thế nào tôi cũng ăn sáng.|たら;ので;から
+Q|2|いくら考え【ても】、答えがわからない。|Nghĩ bao nhiêu cũng không ra đáp án.|たら;ので;から
+
+## 〜さえ
+U|1|Ngay cả, đến cả (ví dụ cực đoan)|N＋さえ: đến cả điều tối thiểu cũng không: ひらがなさえ書けない.
+U|2|Chỉ cần (〜さえ〜ば)|Nさえ＋ば／Vますさえすれば: chỉ cần điều kiện đó là đủ: お金さえあれば.
+Q|1|忙しくて、ご飯を食べる時間【さえ】ない。|Bận đến mức không có cả thời gian ăn cơm.|ほど;ばかり;こそ
+Q|1|この漢字は日本人で【さえ】読めない。|Chữ Hán này đến người Nhật cũng không đọc được.|ばかり;こそ;ほど
+Q|1|疲れて、立つこと【さえ】できなかった。|Mệt đến mức không đứng nổi.|ほど;ばかり;こそ
+Q|2|この薬を飲み【さえ】すれば、すぐ治ります。|Chỉ cần uống thuốc này là khỏi ngay.|だけ;しか;ほど
+Q|2|時間【さえ】あれば、もっと旅行したい。|Chỉ cần có thời gian là tôi muốn đi du lịch thêm.|しか;ほど;ばかり
+Q|2|あなた【さえ】よければ、明日一緒に行きましょう。|Chỉ cần bạn thấy được thì mai đi cùng nhé.|しか;ほど;ばかり
+
+## 〜ようになる
+U|1|Có thể làm được (khả năng mới)|Thể khả năng ＋ ようになる: 泳げるようになった.
+U|2|Bắt đầu làm / không còn làm (thói quen thay đổi)|Vる／Vない＋ようになる: 毎朝走るようになった, 食べないようになった.
+Q|1|練習して、自転車に乗れる【ようになった】。|Tập luyện xong tôi đã đi được xe đạp.|ことになった;ことができた;ことにした
+Q|1|日本に来て、日本語の新聞が読める【ようになりました】。|Đến Nhật rồi tôi đã đọc được báo tiếng Nhật.|ことになりました;ことができました;ことにしました
+Q|1|赤ちゃんが歩ける【ようになった】。|Em bé đã biết đi rồi.|ことになった;ようにした;ことにした
+Q|2|結婚してから、夫は料理をする【ようになった】。|Từ khi cưới, chồng tôi bắt đầu nấu ăn.|ばかりになった;ままになった;ほどになった
+Q|2|病気をしてから、お酒を飲まない【ようになった】。|Từ khi bị bệnh, tôi không còn uống rượu nữa.|ばかりになった;ままになった;ほどになった
+Q|2|スマホを持ってから、子どもが本を読まない【ようになった】。|Từ khi có điện thoại, con tôi không còn đọc sách.|ばかりになった;ままになった;ほどになった
